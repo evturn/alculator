@@ -1,6 +1,6 @@
-module.exports = function(request, response, next) {
+module.exports = function(request, response, next){
   if (request.method === 'GET') {
-  next();
+    next();
   } else {
     response.send('Method is not allowed');
   }
