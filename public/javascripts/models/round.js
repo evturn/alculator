@@ -8,7 +8,7 @@ var Round = Backbone.Model.extend({
 		bac: '',
 		rate: ''
 	},
-	url: '/api/rounds',
+	url: '/rounds',
 });
 
 console.log('Round');

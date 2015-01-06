@@ -50,31 +50,30 @@ var alculatorView = new AlculatorView();
 			url: '/rounds',
 			method: 'POST',
 			data: {
-				lbs: document.getElementById('lbs').value,
-				hours: document.getElementById('hours').value,
-				drinks: document.getElementById('drinks').value,
-				abv: document.getElementById('abv').value,
+				lbs: parseInt(document.getElementById('lbs').value),
+				hours: parseInt(document.getElementById('hours').value),
+				drinks: parseInt(document.getElementById('drinks').value),
+				abv: parseInt(document.getElementById('abv').value),
 				sex: document.getElementById('male').value,
 			},
+			dataType: 'JSON',
 			success: function(data) {
-				console.log(lbs);
-				console.log(hours);
-				console.log(drinks);
-				console.log(abv);
-				console.log(sex);
-				rate = sex === 'male' ? 0.73 : 0.66
-				bevOz = drinks * 12,
-				alcOz = bevOz * (abv * 0.01),
-				metricOz = alcOz * 5.14,
-				metabolism = lbs * rate,
-				subLevel = metricOz /  metabolism,
-				soberingRate = 0.015 * hours,
-				bac = subLevel - soberingRate
-				var round = new Round({});
-				var roundView = new RoundView({bac: bac});
+				console.log(data);
+				rate         = sex === 'male' ? 0.73 : 0.66;
+				console.log(rate);
+				bevOz        = data.drinks * 12;
+				alcOz 		   = bevOz * (data.abv * 0.01);
+				metricOz 		 = alcOz * 5.14;
+				metabolism 	 = data.lbs * rate;
+				subLevel 		 = metricOz /  metabolism;
+				soberingRate = 0.015 * data.hours;
+				bac 			   = subLevel - soberingRate;
+				console.log(bac);
+				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
+				var roundView = new RoundView({model: round});
 			},
 			error: function() {
-				alert('Nope');
+				alert('Something went wrong');
 			}
 		});
 	});
