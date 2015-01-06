@@ -26,7 +26,9 @@ app.get('/api', function( request, response) {
 });
 
 
-
+app.get('/beers', function(response, request) {
+	response.send('id: [BREWERY_DB_KEY]', request.query)
+})
 
 app.listen(3000, function() {
 	console.log('Server running on localhost:3000 \n');
