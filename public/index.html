@@ -40,6 +40,137 @@
 
 
 <!-- Underscore templates -->
+<script type="text/template" id="beerSearchTemplate">
+<% console.log('beer clicked') %>
+	<div class="row col-lg-12 col-lg-offset-1 form-group">
+		<h3>BEER</h3>
+		<form id='beer-search'>
+	  <label for="beer">FIND A BEER</label>
+	  <input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
+	</div>
+	<div class="row col-lg-6 col-lg-offset-1">
+		<input class="btn btn-default btn-lg btn-block" type="submit" value="GRAB" id="beer-submit">
+		</form>
+	</div>
+</script>
+<script type="text/template" id="liquorSearchTemplate">
+<% console.log('liquor clicked') %>
+	<div class="row col-lg-12 col-lg-offset-1 form-group">
+		<h3>SHOTS</h3>
+		<form id='liquor-search'>
+	  <label for="Liquor">FIND A LIQUOR</label>
+	  <input class="form-control input-lg" type="password" name="query" id="liquor-query" placeholder="Liquor">
+	</div>
+	<div class="row col-lg-6 col-lg-offset-1">
+		<input class="btn btn-default btn-lg btn-block" type="submit" value="GRAB" id="liquor-submit">
+		</form>
+	</div>
+</script>
+<script type="text/template" id="wineSearchTemplate">
+	<% console.log('wine clicked') %>
+	<div class="row col-lg-12 col-lg-offset-1 form-group">
+		<h3>WINE</h3>
+		<form id='wine-search'>
+	  <label for="Wine">FIND A WINE</label>
+	  <input class="form-control input-lg" type="text" name="query" id="wine-query" placeholder="Wine">
+	</div>
+	<div class="row col-lg-6 col-lg-offset-1">
+		<input class="btn btn-default btn-lg btn-block" type="submit" value="GRAB" id="wine-submit">
+		</form>
+	</div>
+</script>
+<script type="text/template" id="beerTabTemplate">
+	<div class="row col-lg-12 col-lg-offset-1 form-group">
+		<div class="row col-lg-12 col-lg-offset-1">
+			<div class="row col-lg-3">
+				<img src="<%= labels['medium'] %>" class="fit">
+			</div>
+			<div class="col-lg-6 col-lg-offset-3">
+				<h4><%= name %>
+				<%= style['abvMax'] %>%</h4>
+				<input class="btn btn-default btn-md btn-block" type="submit" value="&#8776; ALCULATE">
+			</div>
+		</div>
+		<div class="row col-lg-12">
+			<div class="col-lg-6 col-lg-offset-6">
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="alculatorTemplate">
+	<div class="row col-lg-12 col-lg-offset-1 form-group" id="sex">
+		<h3>ALCULATE</h3>
+		<div class="col-lg-6">
+			<label>
+	  	<input type="radio" value="male" id="male" name="male">
+	  	MALE</label>
+		</div>
+		<div class="col-lg-6">
+			<label>
+	  	<input type="radio" value="female" id="female" name="female">
+			FEMALE</label>
+		</div>
+	</div>
+	<div class="row col-lg-12 col-lg-offset-1 form-group">
+		<div class="col-lg-6">
+			<label for="hours">HOURS PASSED</label>
+			<select class="form-control input-lg" name="hours" id="hours">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			  <option>6</option>
+			  <option>7</option>
+			  <option>8</option>
+			  <option>9</option>
+			</select>
+		</div>
+		<div class="col-lg-6">
+			<label for="lbs">WEIGHT IN LBS</label>
+	    <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="***">
+		</div>
+	</div>
+	<div class="row col-lg-12 col-lg-offset-1 form-group">
+		<div class="col-lg-6">
+			<label for="drinks">&numero; of DRINKS</label>
+			<select class="form-control input-lg" name="drinks" id="drinks">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			  <option>6</option>
+			  <option>7</option>
+			  <option>8</option>
+			  <option>9</option>
+			</select>
+		</div>
+		<div class="col-lg-6">
+			<label for="ABV">ALCOHOL %</label>
+			<input class="form-control input-lg" type="text" id="abv" name="abv" placeholder="4.5">
+		</div>
+	</div>
+	<div class="row col-lg-12 col-lg-offset-1 align" id="bac-submit">
+		<label for="bac-submit">CHEERS WHEN YOU'RE READY</label>
+		<div class="col-lg-12 form-group">
+			<input class="btn btn-default btn-lg btn-block" type="submit" value="CHEERS" id="bac-submit-btn">
+		</div>	
+	</div>
+</script>
+
+
+<script type="text/template" id="bacMeterTemplate">
+	<h3>BAC</h3>
+
+</script>
+
+<script type="text/template" id="bacTemplate">
+	<h3>YOUR BAC LEVEL</h3>
+		<h2>&#8776; </h2>
+</script>
 
 
 
