@@ -51,7 +51,7 @@ var alculatorView = new AlculatorView();
 		console.log(abv);
 		console.log(sex);
 		$.ajax({
-			url: '/api/rounds',
+			url: '/rounds',
 			method: 'POST',
 			data: {
 				lbs: document.getElementById('lbs').value,
@@ -79,6 +79,8 @@ var alculatorView = new AlculatorView();
 		});
 	});
 
+
+// Bac Meter
 	(function() {
 	  var Needle, arc, arcEndRad, arcStartRad, barWidth, chart, chartInset, degToRad, el, endPadRad, height, margin, needle, numSections, padRad, percToDeg, percToRad, percent, radius, sectionIndx, sectionPerc, startPadRad, svg, totalPercent, width, _i;
 
