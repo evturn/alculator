@@ -45,11 +45,7 @@ var alculatorView = new AlculatorView();
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
 		console.log('Heeyutz!');
-		console.log(lbs);
-		console.log(hours);
-		console.log(drinks);
-		console.log(abv);
-		console.log(sex);
+
 		$.ajax({
 			url: '/rounds',
 			method: 'POST',
@@ -59,10 +55,14 @@ var alculatorView = new AlculatorView();
 				drinks: document.getElementById('drinks').value,
 				abv: document.getElementById('abv').value,
 				sex: document.getElementById('male').value,
-				rate: sex === 'male' ? 0.73 : 0.66,
 			},
 			success: function(data) {
-				console.log('data');
+				console.log(lbs);
+				console.log(hours);
+				console.log(drinks);
+				console.log(abv);
+				console.log(sex);
+				rate = sex === 'male' ? 0.73 : 0.66
 				bevOz = drinks * 12,
 				alcOz = bevOz * (abv * 0.01),
 				metricOz = alcOz * 5.14,
@@ -70,8 +70,8 @@ var alculatorView = new AlculatorView();
 				subLevel = metricOz /  metabolism,
 				soberingRate = 0.015 * hours,
 				bac = subLevel - soberingRate
-				var round = new Round(data);
-				var roundView = new RoundView(bac);
+				var round = new Round({});
+				var roundView = new RoundView({bac: bac});
 			},
 			error: function() {
 				alert('Nope');
