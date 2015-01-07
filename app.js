@@ -14,9 +14,9 @@ app.get('/', function(require, response) {
 });
 
 
-beerQuery = "coors"
+beerQuery = "coors+light"
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
-	var beerList = []
+	var beersList = []
 request(target, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
 			var beerResults = (JSON.parse(body));
@@ -26,16 +26,13 @@ request(target, function(err, response, body) {
 			beerObjects.forEach(function(potentialBeers) {
 				beersOnly = {};
 				if (potentialBeers.type === 'beer') {
-			  	beersOnly.name = potentialBeers.name;
-			  	beersOnly.abv	 = potentialBeers.abv;
-			 		console.log(beersOnly);
+			  	beersOnly.name  = potentialBeers.name;
+			  	beersOnly.abv	  = potentialBeers.abv;
+			 		beersList.push(beersOnly)
+			 		console.log(beersList[0]);
+			  	
 				
-				// 	beersOnly.name  = potentialBeers.name;
-				// 	beersOnly.abv   = potentialBeers.abv;
-				// 	console.log('I got your beer for' + beerQuery);
-				// 	beerResult.push(beerResult);
-				// 	console.log(beerResult);
-				// }
+
 			}
 			})
 	}
