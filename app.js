@@ -48,11 +48,11 @@ function beerChoice(searchTerm, success, error) {
 			console.log('Something went wrong', error)
 		}
 		theBeer = beersList[0];
-		console.log('success 3', success)
+		console.log('success 3', success);
 		console.log('beersList', beersList);
 		console.log('theBeer', theBeer);
 	});	
-	console.log('success 4', success)
+	console.log('success 4', success);
 };
 
 
