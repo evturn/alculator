@@ -1,10 +1,12 @@
 var DrinkInput = Backbone.View.extend({
-	el: $('#hidden-input'),
-	template: _.($('#drink-input-template').html()),
+	el: $('#drink-input'),
 	initialize: function() {
 		this.render();
 	},
+	template: _.template($('#drink-input-template').html()),
 	render: function() {
 		this.$el.html(this.template());
 	}
 });
+
+console.log('drinkInput');

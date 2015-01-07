@@ -80,7 +80,7 @@
 	</div>
 </script>
 <script type="text/template" id="beerTabTemplate">
-	<div class="row col-lg-12 col-lg-offset-1 form-group">
+	<div class="row col-lg-12 col-lg-offset-1 form-group" id="beer-results">
 		<div class="row col-lg-12">
 			<div class="row col-lg-4">
 				<img src="images/bottle.png" class="fit">
@@ -89,10 +89,14 @@
 					<h3><%= name %></h3>
 				</div>
 				<div class="col-lg-4">
-					<h3 id="#selected-abv"><%= abv %>%</h3>
+				<ul>
+					<li id="#selected-abv">
+						<h3><%= abv %>%</h3>
+					</li>
+				</ul>
 				</div>
-			<div class="row col-lg-12">
-				<input class="btn btn-default btn-lg btn-block" type="submit" value="&#8776; ALCULATE" id="add-beer">
+			<div class="row col-lg-12" id="add-beer">
+				<input class="btn btn-default btn-lg btn-block" type="submit" value="&#8776; ALCULATE">
 			</div>
 		</div>
 </script>
@@ -132,8 +136,26 @@
 		</div>
 	</div>
 
-// hiddenInput
+
 	<div class="row col-lg-12 col-lg-offset-1 form-group" id="drink-input">
+	<div class="col-lg-6">
+			<label for="drinks">&numero; of DRINKS</label>
+			<select class="form-control input-lg" name="drinks" id="drinks">
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			  <option>5</option>
+			  <option>6</option>
+			  <option>7</option>
+			  <option>8</option>
+			  <option>9</option>
+			</select>
+		</div>
+		<div class="col-lg-6">
+			<label for="ABV">ALCOHOL %</label>
+			<input class="form-control input-lg" type="text" id="abv" name="abv" placeholder="4.5" >
+		</div>
 	</div>
 
 
@@ -168,7 +190,7 @@
 	</script>
 
 
-<script type="text/template id="bacMeterTemplate">
+<script type="text/template id="bac-meter-template">
 	<h3>BAC</h3>
 
 </script>
@@ -199,6 +221,7 @@
 <script src="javascripts/models/beer.js"></script>
 <script src="javascripts/views/alculator.js"></script>
 <script src="javascripts/views/bacMeter.js"></script>
+<script src="javascripts/views/drinkInput.js"></script>
 <script src="javascripts/views/barTab.js"></script>
 <script src="javascripts/views/round.js"></script>
 <script src="javascripts/views/beer.js"></script>

@@ -2,7 +2,7 @@
 $(function() {
 
 var beerView = new BeerView();
-var bacMeterView = new BacMeterView();
+// var bacMeterView = new BacMeterView();
 var alculatorView = new AlculatorView();
 
 
@@ -79,9 +79,13 @@ var alculatorView = new AlculatorView();
 		});
   })
 
-  $('#search-container').on('click', '#add-beer', function(){
+  $('#beer-results').on('click #add-beer', function(e){
+  	e.preventDefault();
+  	console.log(this);
     var abv = $('#selected-abv').text();
+    console.log('abv', abv);
     $('input[name="abv"]').last().attr('value', abv);
+    var drinkInput = new DrinkInput();
 
 
 });

@@ -3,7 +3,7 @@ var BacMeterView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
-	template: _.template($('#bacMeterTemplate').html()),
+	template: _.template($('#bac-meter-template').html()),
 	render: function() {
 		this.$el.html(this.template());
     return this;
