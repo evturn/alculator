@@ -19,11 +19,12 @@ app.get('/', function(require, response) {
 
 
 
-request.get('http://api.brewerydb.com/v2/search?q=coors' + '&key=' + process.env.BREWERY_DB_KEY)
+request.get('http://api.brewerydb.com/v2/search?q="coors"' + '&key=' + process.env.BREWERY_DB_KEY)
 			 .on('response', function(response) {
     console.log(response.statusCode) // 200
-    console.log(response.headers['content-type'])
-    console.log(response)
+    console.log(response.headers['content-type']);
+    
+    
 });
 
 
