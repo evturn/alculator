@@ -28,8 +28,9 @@ h3 {
 }
 
 .fit {
-	height: 80px;
-	width: 80px;
+	height: 100px;
+	width: 100px;
+	padding-left: -20px;
 }
 
 svg {
