@@ -16,6 +16,7 @@ app.get('/', function(require, response) {
 
 
 
+
 app.get('/beers', function(request, response) {	
 	var requestQuery = request.query;
 	beerQuery 			 = requestQuery.name;

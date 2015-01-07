@@ -34,9 +34,9 @@ var alculatorView = new AlculatorView();
 			},
 			dataType: 'JSON',
 			success: function(data) {
-				console.log('data', data[0]);
+				console.log('data', data);
 				beer = new Beer(data[0]);
-				console.log(beer);
+				console.log('beer', beer);
 				var view = new BarTabView({model: beer});
 			}
 		});
