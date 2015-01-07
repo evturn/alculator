@@ -15,19 +15,22 @@ app.get('/', function(require, response) {
 });
 
 
+var beersList = [];
 
 app.get('/beers', function(request, response) {
 
 	var requestQuery = request.query;
 	beerQuery 			 = requestQuery.name;
 	console.log(beerQuery)
-	response.json(beerChoice(beerQuery));
+	beerChoice(beerQuery);
+	response.send(beersList);
 });
+
 
 var beerChoice = function(searchTerm, success, error) {
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
 	console.log('target', target);
-	var beersList = []
+	console.log('searchTerm', searchTerm);
 	request(target, function(err, response, body) {
 		if(!err && response.statusCode === 200) {
 				var beerResults = (JSON.parse(body));
@@ -44,6 +47,8 @@ var beerChoice = function(searchTerm, success, error) {
 						console.log('searchTerm', searchTerm);
 						console.log('success', success);
 						console.log('error', err);
+						console.log('searchTerm', searchTerm);
+						console.log('beersList', beersList);
 					}
 				})
 		} else {
