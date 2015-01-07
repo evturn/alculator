@@ -6,6 +6,7 @@ var logger = require('./logger');
   app.use(logger);
 var request = require('request');
 var url = require('url');
+var http = require('http');
 
 app.use(express.static('public'));
 
@@ -14,7 +15,14 @@ app.get('/', function(require, response) {
 });
 
 
-beerQuery = "coors+light"
+http.createServer(function(req,res) { 
+	var url_parts = url.parse(req.url, true); 
+	beerQuery = url_parts.query; 
+	console.log(beerQuery); 
+});
+
+
+
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
 	var beersList = []
 request(target, function(err, response, body) {
