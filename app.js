@@ -13,17 +13,17 @@ app.get('/', function(require, response) {
 	response.render('index.html');
 });
 
+		// var searchURL = 'http://api.brewerydb.com/v2/search?q=' + request.query + '&key=' + process.env.BREWERY_DB_KEY;
 
-app.get("/beers", function(req, res) {
-    var searchURL = 'http://api.brewerydb.com/v2/search?q=' + req.query.search + '&key=' + process.env.BREWERY_DB_KEY;
-    request(searchURL, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            var results = {
-                brews: JSON.parse(body).Search 
-            }
-            res.send(results);
-        };
-    });
+
+
+
+
+request.get('http://api.brewerydb.com/v2/search?q=coors' + '&key=' + process.env.BREWERY_DB_KEY)
+			 .on('response', function(response) {
+    console.log(response.statusCode) // 200
+    console.log(response.headers['content-type'])
+    console.log(response)
 });
 
 

@@ -26,19 +26,20 @@ var alculatorView = new AlculatorView();
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerQuery = $('#beer-query').val();
-		$.ajax({
-			url: '/beers',
-			method: 'get',
-			data: {
-				query: beerQuery
-			},
-			dataType: 'JSON',
-			success: function(data) {
-				beer = new Beer(data);
-				console.log(beer);
-				var view = new BarTabView({model: beer});
-			}
-		});
+		// $.ajax({
+		// 	url: '/beers',
+		// 	method: 'get',
+		// 	data: {
+		// 		query: beerQuery
+		// 	},
+		// 	dataType: 'JSON',
+		// 	success: function(data) {
+		// 		console.log(data);
+		// 		beer = new Beer(data);
+		// 		console.log(beer);
+		// 		var view = new BarTabView({model: beer});
+		// 	}
+		// });
 	});
 
 
