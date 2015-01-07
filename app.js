@@ -24,7 +24,7 @@ app.get('/beers', function(request, response) {
 	response.json(beersList);
 });
 
-var beersList = [];
+var	beersList = [];
 
 var beerChoice = function(searchTerm, success, error) {
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
@@ -34,23 +34,24 @@ var beerChoice = function(searchTerm, success, error) {
 		if(!err && response.statusCode === 200) {
 				var beerResults = (JSON.parse(body));
 				var beerObjects = beerResults.data;
+				
 				beerObjects.forEach(function(potentialBeers) {
 					beersOnly = {};
 					if (potentialBeers.type === 'beer') {
 				  	beersOnly.name  = potentialBeers.name;
 				  	beersOnly.abv	  = potentialBeers.abv;
 				 		beersList.push(beersOnly);
-				 		theBeer = beersList[0];
-						return theBeer;
-					} 
+					} 	
 				})
-
+			
+			console.log('success', success)
 		} else {
 			console.log('something is fucked', error)
 		}
+		theBeer = beersList[0];
 		console.log('beersList', beersList);
-	});
-	return beersList;
+		console.log('theBeer', theBeer);
+	});	
 };
 
 
