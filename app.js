@@ -24,8 +24,9 @@ app.get('/beers', function(request, response) {
 	response.json(beerChoice(beerQuery));
 });
 
-var beerChoice = function(beerQuery, success, error) {
+var beerChoice = function(searchTerm, success, error) {
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
+	console.log('target', target);
 	var beersList = []
 	request(target, function(err, response, body) {
 		if(!err && response.statusCode === 200) {
@@ -37,21 +38,19 @@ var beerChoice = function(beerQuery, success, error) {
 				  	beersOnly.name  = potentialBeers.name;
 				  	beersOnly.abv	  = potentialBeers.abv;
 				 		beersList.push(beersOnly)
-				 		yourBeer = beersList[0];
+				 		theBeer = beersList[0];
+						console.log('theBeer', theBeer);
+						console.log('beerQuery', beerQuery);
+						console.log('searchTerm', searchTerm);
+						console.log('success', success);
+						console.log('error', err);
 					}
 				})
-				console.log(yourBeer);
-				
 		} else {
 			console.log('You got problems', err);
 		}
 	});
 };
-
-// var grabBeer = function(beerQuery, success, error) {
-// };
-
-// var searchTerm = {name:req.query}
 
 
 var rounds = {}
