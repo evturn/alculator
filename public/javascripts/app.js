@@ -34,9 +34,24 @@ var alculatorView = new AlculatorView();
 			},
 			dataType: 'JSON',
 			success: function(data) {
-				console.log(data);
+				// beerObj.forEach(function(potentialBeers) {
+				// 	beersOnly = {};
+				// 	if (potentialBeers.type === 'beer') {
+				//   	beersOnly.name  = potentialBeers.name;
+				//   	beersOnly.abv	  = potentialBeers.abv;
+				//  		beersList.push(beersOnly)
+				//  		theBeer = beersList[0];
+				// 		console.log('theBeer', theBeer.name);
+				// 		console.log('beerQuery', beerQuery);
+				// 		console.log('searchTerm', searchTerm);
+				// 		console.log('success', success);
+				// 		console.log('error', err);
+				// 		console.log('searchTerm', searchTerm);
+				// 	}
+				// })				
+				console.log('data', data);
 				beer = new Beer(data);
-				console.log(beer);
+				console.log('beer', beer);
 				var view = new BarTabView({model: beer});
 			}
 		});

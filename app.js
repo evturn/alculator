@@ -19,33 +19,23 @@ app.get('/', function(require, response) {
 app.get('/beers', function(request, response) {
 
 	var requestQuery = request.query;
+	console.log('requestQuery', requestQuery);
 	beerQuery 			 = requestQuery.name;
-	console.log(beerQuery)
-	response.json(beerChoice(beerQuery));
+	console.log('beerQuery', beerQuery)
+	var beerObj = beerChoice(beerQuery);
+	response.json(beerObjects);
 });
 
-var beerChoice = function(searchTerm, success, error) {
+var beerChoice = function(searchTerm) {
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
 	console.log('target', target);
+	console.log('searchTerm', searchTerm);
 	var beersList = []
 	request(target, function(err, response, body) {
 		if(!err && response.statusCode === 200) {
 				var beerResults = (JSON.parse(body));
 				var beerObjects = beerResults.data;
-				beerObjects.forEach(function(potentialBeers) {
-					beersOnly = {};
-					if (potentialBeers.type === 'beer') {
-				  	beersOnly.name  = potentialBeers.name;
-				  	beersOnly.abv	  = potentialBeers.abv;
-				 		beersList.push(beersOnly)
-				 		theBeer = beersList[0];
-						console.log('theBeer', theBeer);
-						console.log('beerQuery', beerQuery);
-						console.log('searchTerm', searchTerm);
-						console.log('success', success);
-						console.log('error', err);
-					}
-				})
+				console.log('beerObjects', beerObjects);
 		} else {
 			console.log('You got problems', err);
 		}
