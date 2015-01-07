@@ -16,15 +16,13 @@ app.get('/', function(require, response) {
 		// var searchURL = 'http://api.brewerydb.com/v2/search?q=' + request.query + '&key=' + process.env.BREWERY_DB_KEY;
 
 
+var target = 'http://api.brewerydb.com/v2/search?q="coors"' + '&key=' + process.env.BREWERY_DB_KEY;
 
 
-
-request.get('http://api.brewerydb.com/v2/search?q="coors"' + '&key=' + process.env.BREWERY_DB_KEY)
-			 .on('response', function(response) {
-    console.log(response.statusCode) // 200
-    console.log(response.headers['content-type']);
-    
-    
+request(target, function(err, response, body) {
+	if(!err && response.statusCode === 200) {
+			console.log(body);
+	}
 });
 
 
