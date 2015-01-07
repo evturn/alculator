@@ -29,11 +29,8 @@ request(target, function(err, response, body) {
 			  	beersOnly.name  = potentialBeers.name;
 			  	beersOnly.abv	  = potentialBeers.abv;
 			 		beersList.push(beersOnly)
-			 		console.log(beersList[0]);
-			  	
-				
-
-			}
+			 		yourBeer = beersList[0];
+				}
 			})
 	}
 });
