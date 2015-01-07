@@ -26,8 +26,8 @@ app.get('/beers', function(request, response) {
 
 var	beersList = [];
 
-var beerChoice = function(searchTerm, success, error) {
-	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
+function beerChoice(searchTerm, success, error) {
+	target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
 	console.log('target', target);
 	console.log('searchTerm', searchTerm);
 	request(target, function(err, response, body) {
@@ -36,22 +36,26 @@ var beerChoice = function(searchTerm, success, error) {
 				var beerObjects = beerResults.data;
 				
 				beerObjects.forEach(function(potentialBeers) {
-					beersOnly = {};
+					var beersOnly = {};
 					if (potentialBeers.type === 'beer') {
 				  	beersOnly.name  = potentialBeers.name;
 				  	beersOnly.abv	  = potentialBeers.abv;
-				 		beersList.push(beersOnly);
+				 		console.log('success 1', success)
+					 	beersList.push(beersOnly);
+						console.log('success 2', success)
 					} 	
 				})
 			
-			console.log('success', success)
+			console.log('success 3', success)
 		} else {
-			console.log('something is fucked', error)
+			console.log('something went wrong', error)
 		}
 		theBeer = beersList[0];
+		console.log('success 3', success)
 		console.log('beersList', beersList);
 		console.log('theBeer', theBeer);
 	});	
+	console.log('success 4', success)
 };
 
 
