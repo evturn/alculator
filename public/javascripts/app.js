@@ -34,7 +34,7 @@ var alculatorView = new AlculatorView();
 			},
 			dataType: 'JSON',
 			success: function(data) {
-				console.log('data', data);
+				console.log('data', data[0]);
 				beer = new Beer(data);
 				console.log('beer', beer);
 				var view = new BarTabView({model: beer});
