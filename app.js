@@ -24,11 +24,11 @@ request(target, function(err, response, body) {
 			var beerObjects = beerResults.data;
 			// console.log(beerObjects[0]);
 			beerObjects.forEach(function(potentialBeers) {
-				// beersOnly = {};
+				beersOnly = {};
 				if (potentialBeers.type === 'beer') {
-			  beerList.push(potentialBeers)
-
-			 	console.log(beerList);
+			  	beersOnly.name = potentialBeers.name;
+			  	beersOnly.abv	 = potentialBeers.abv;
+			 		console.log(beersOnly);
 				
 				// 	beersOnly.name  = potentialBeers.name;
 				// 	beersOnly.abv   = potentialBeers.abv;
