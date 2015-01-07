@@ -15,33 +15,38 @@ app.get('/', function(require, response) {
 });
 
 
-http.createServer(function(req,res) { 
-	var url_parts = url.parse(req.url, true); 
-	beerQuery = url_parts.query; 
-	console.log(beerQuery); 
+
+app.get('/beers', function(request, response) {
+
+	var requestQuery = request.query;
+	beerQuery 			 = requestQuery.name;
+	console.log(beerQuery)
+	response.json(beerChoice(beerQuery));
 });
 
-
-
+var beerChoice = function(beerQuery, success, error) {
 	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
 	var beersList = []
-request(target, function(err, response, body) {
-	if(!err && response.statusCode === 200) {
-			var beerResults = (JSON.parse(body));
-			// console.log(foundBeer);	
-			var beerObjects = beerResults.data;
-			// console.log(beerObjects[0]);
-			beerObjects.forEach(function(potentialBeers) {
-				beersOnly = {};
-				if (potentialBeers.type === 'beer') {
-			  	beersOnly.name  = potentialBeers.name;
-			  	beersOnly.abv	  = potentialBeers.abv;
-			 		beersList.push(beersOnly)
-			 		yourBeer = beersList[0];
-				}
-			})
-	}
-});
+	request(target, function(err, response, body) {
+		if(!err && response.statusCode === 200) {
+				var beerResults = (JSON.parse(body));
+				var beerObjects = beerResults.data;
+				beerObjects.forEach(function(potentialBeers) {
+					beersOnly = {};
+					if (potentialBeers.type === 'beer') {
+				  	beersOnly.name  = potentialBeers.name;
+				  	beersOnly.abv	  = potentialBeers.abv;
+				 		beersList.push(beersOnly)
+				 		yourBeer = beersList[0];
+					}
+				})
+				console.log(yourBeer);
+				
+		} else {
+			console.log('You got problems', err);
+		}
+	});
+};
 
 // var grabBeer = function(beerQuery, success, error) {
 // };
