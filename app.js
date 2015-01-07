@@ -48,7 +48,7 @@ function beerChoice(searchTerm, success, error) {
 			
 			console.log('success 3', success)
 		} else {
-			console.log('something went wrong', error)
+			console.log('Something went wrong', error)
 		}
 		theBeer = beersList[0];
 		console.log('success 3', success)
