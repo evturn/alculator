@@ -20,7 +20,7 @@ app.get('/beers', function(request, response) {
 });
 
 
-function beerChoice(searchTerm, success, error) {
+var beerChoice = function(searchTerm, success, error) {
 	var	beersList = [];
 	target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
 	console.log('target', target);
