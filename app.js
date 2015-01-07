@@ -13,7 +13,6 @@ app.get('/', function(require, response) {
 	response.render('index.html');
 });
 
-		// var searchURL = 'http://api.brewerydb.com/v2/search?q=' + request.query + '&key=' + process.env.BREWERY_DB_KEY;
 
 
 var target = 'http://api.brewerydb.com/v2/search?q="coors"' + '&key=' + process.env.BREWERY_DB_KEY;
@@ -21,10 +20,12 @@ var target = 'http://api.brewerydb.com/v2/search?q="coors"' + '&key=' + process.
 
 request(target, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
-			console.log(body);
+			var foundBeer = (JSON.parse(body));
+			console.log(foundBeer);
 	}
 });
 
+// var searchTerm = {name:req.query}
 
 
 var rounds = {}
