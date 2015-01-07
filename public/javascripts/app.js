@@ -77,8 +77,14 @@ var alculatorView = new AlculatorView();
 				alert('Something went wrong');
 			}
 		});
-	});
+  })
 
+  $('#search-container').on('click', '#add-beer', function(){
+    var abv = $('#selected-abv').text();
+    $('input[name="abv"]').last().attr('value', abv);
+
+
+});
 
 // Bac Meter
 	(function() {

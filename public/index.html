@@ -89,7 +89,7 @@
 					<h3><%= name %></h3>
 				</div>
 				<div class="col-lg-4">
-					<h3><%= abv %>%</h3>
+					<h3 id="#selected-abv"><%= abv %>%</h3>
 				</div>
 			<div class="row col-lg-12">
 				<input class="btn btn-default btn-lg btn-block" type="submit" value="&#8776; ALCULATE" id="add-beer">
@@ -135,7 +135,6 @@
 		<div class="col-lg-6">
 			<label for="drinks">&numero; of DRINKS</label>
 			<select class="form-control input-lg" name="drinks" id="drinks">
-			  <option>0</option>
 			  <option>1</option>
 			  <option>2</option>
 			  <option>3</option>
@@ -149,7 +148,7 @@
 		</div>
 		<div class="col-lg-6">
 			<label for="ABV">ALCOHOL %</label>
-			<input class="form-control input-lg" type="text" id="abv" name="abv" placeholder="4.5">
+			<input class="form-control input-lg" type="text" id="abv" name="abv" placeholder="4.5" >
 		</div>
 	</div>
 	<div class="row col-lg-12 col-lg-offset-1 align" id="bac-submit">
