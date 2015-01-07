@@ -14,16 +14,35 @@ app.get('/', function(require, response) {
 });
 
 
-
-var target = 'http://api.brewerydb.com/v2/search?q="coors"' + '&key=' + process.env.BREWERY_DB_KEY;
-
-
+beerQuery = "coors"
+	var target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
+	var beerList = []
 request(target, function(err, response, body) {
 	if(!err && response.statusCode === 200) {
-			var foundBeer = (JSON.parse(body));
-			console.log(foundBeer);
+			var beerResults = (JSON.parse(body));
+			// console.log(foundBeer);	
+			var beerObjects = beerResults.data;
+			// console.log(beerObjects[0]);
+			beerObjects.forEach(function(potentialBeers) {
+				// beersOnly = {};
+				if (potentialBeers.type === 'beer') {
+			  beerList.push(potentialBeers)
+
+			 	console.log(beerList);
+				
+				// 	beersOnly.name  = potentialBeers.name;
+				// 	beersOnly.abv   = potentialBeers.abv;
+				// 	console.log('I got your beer for' + beerQuery);
+				// 	beerResult.push(beerResult);
+				// 	console.log(beerResult);
+				// }
+			}
+			})
 	}
 });
+
+// var grabBeer = function(beerQuery, success, error) {
+// };
 
 // var searchTerm = {name:req.query}
 
