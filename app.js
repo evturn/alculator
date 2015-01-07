@@ -16,8 +16,7 @@ app.get('/', function(require, response) {
 
 
 
-app.get('/beers', function(request, response) {
-	
+app.get('/beers', function(request, response) {	
 	var requestQuery = request.query;
 	beerQuery 			 = requestQuery.name;
 	beerChoice(beerQuery);
@@ -33,8 +32,7 @@ function beerChoice(searchTerm, success, error) {
 	request(target, function(err, response, body) {
 		if(!err && response.statusCode === 200) {
 				var beerResults = (JSON.parse(body));
-				var beerObjects = beerResults.data;
-				
+				var beerObjects = beerResults.data;			
 				beerObjects.forEach(function(potentialBeers) {
 					var beersOnly = {};
 					if (potentialBeers.type === 'beer') {
@@ -45,7 +43,6 @@ function beerChoice(searchTerm, success, error) {
 						console.log('success 2', success)
 					} 	
 				})
-			
 			console.log('success 3', success)
 		} else {
 			console.log('Something went wrong', error)
