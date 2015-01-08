@@ -2,7 +2,6 @@
 $(function() {
 
 var beerView = new BeerView();
-// var bacMeterView = new BacMeterView();
 var alculatorView = new AlculatorView();
 
 
@@ -79,17 +78,18 @@ var alculatorView = new AlculatorView();
 		});
   })
 
-  $('#beer-results').on('click #add-beer', function(e){
+  $('#search-results').on('click #add-beer', function(e){
   	e.preventDefault();
-  	console.log(this);
     var abv = $('#selected-abv').text();
     console.log('abv', abv);
     $('input[name="abv"]').last().attr('value', abv);
-    var drinkInput = new DrinkInput();
 
 
+
+ });
 });
 
+console.log('app');
 // Bac Meter
 	(function() {
 	  var Needle, arc, arcEndRad, arcStartRad, barWidth, chart, chartInset, degToRad, el, endPadRad, height, margin, needle, numSections, padRad, percToDeg, percToRad, percent, radius, sectionIndx, sectionPerc, startPadRad, svg, totalPercent, width, _i;
@@ -196,10 +196,3 @@ var alculatorView = new AlculatorView();
 
 	  needle.animateOn(chart, percent);
 	}).call(this);
-
-});
-
-
-
-
-console.log('app');
