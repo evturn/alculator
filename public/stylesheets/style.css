@@ -10,6 +10,18 @@ a {
 	color: white;
 }
 
+
+.yellow {
+	color: #E1CE5D;
+}
+
+.orange {
+	color: #C99E5A;
+}
+.red {
+	color: #9F6153;
+}
+
 h1 {
 	text-align: center;
 	font-size: 75px;
