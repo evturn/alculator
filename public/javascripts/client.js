@@ -1,15 +1,11 @@
 
 $(function() {
 
+var liquorView = new LiquorView();
 var beerView = new BeerView();
 var alculatorView = new AlculatorView();
 
 
-
-	$('#liquor-tab').on('click',
-		function(e) {
-			e.preventDefault();
-			var liquorView = new LiquorView();
 	});
 	$('#wine-tab').on('click',
 		function(e) {
@@ -22,6 +18,10 @@ var alculatorView = new AlculatorView();
 			var beerView = new BeerView();
 	});
 
+	$('#liquor-tab').on('click',
+		function(e) {
+			e.preventDefault();
+			var liquorView = new LiquorView();
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerField = $('#beer-query').val();
@@ -43,6 +43,7 @@ var alculatorView = new AlculatorView();
 
 	$('#booze-search').on('submit', function(e) {
 		e.preventDefault();
+		console.log('Secrets of the Booze');
 		boozeField = $('#booze-query').val();
 		$.ajax({
 			url: '/booze',
@@ -61,7 +62,6 @@ var alculatorView = new AlculatorView();
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
 		console.log('Heeyutz!');
-
 		$.ajax({
 			url: '/rounds',
 			method: 'POST',

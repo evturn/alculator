@@ -28,9 +28,12 @@ app.get('/beers', function(request, response) {
 });
 
 app.get('/booze', function(request, response) {
-	var requestQuery = request.query;
-	console.log('requestQuery', requestQuery);
+	var boozeRequestQuery = request.query;
+	boozeQuery			 			= boozeRequestQuery.name;
+	console.log('requestQuery', boozeQuery);
 });
+
+
 
 var booze;
 fs.readFile('./liquor.json', 'utf8', function(error, data) {
@@ -38,8 +41,6 @@ fs.readFile('./liquor.json', 'utf8', function(error, data) {
 	booze = JSON.parse(data);
 	console.log('booze', booze);
 });
-
-
 
 
 var beerChoice = function(responseObject) {
