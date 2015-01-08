@@ -41,6 +41,11 @@ var alculatorView = new AlculatorView();
 		});
 	});
 
+	$('#booze-search').on('submit', function(e) {
+		e.preventDefault();
+		boozeField = $('#booze-query');
+	});
+
 
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;

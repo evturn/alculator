@@ -27,15 +27,13 @@ app.get('/beers', function(request, response) {
 	beerChoice(response);
 });
 
-var liquor;
+var booze;
 fs.readFile('./liquor.json', 'utf8', function(error, data) {
 	if (error) throw error;
-	liquor = JSON.parse(data);
-	console.log('booze', liquor);
+	booze = JSON.parse(data);
+	console.log('booze', booze);
 });
 
-
-fs.readFile('')
 
 
 
