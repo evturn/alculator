@@ -6,7 +6,12 @@ var beerView = new BeerView();
 var alculatorView = new AlculatorView();
 
 
+	$('#liquor-tab').on('click',
+		function(e) {
+			e.preventDefault();
+			var liquorView = new LiquorView();
 	});
+
 	$('#wine-tab').on('click',
 		function(e) {
 			e.preventDefault();
@@ -18,10 +23,6 @@ var alculatorView = new AlculatorView();
 			var beerView = new BeerView();
 	});
 
-	$('#liquor-tab').on('click',
-		function(e) {
-			e.preventDefault();
-			var liquorView = new LiquorView();
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerField = $('#beer-query').val();
@@ -85,6 +86,9 @@ var alculatorView = new AlculatorView();
 				soberingRate = 0.015 * data.hours;
 				bac 			   = (subLevel - soberingRate).toFixed(2);
 				console.log(bac);
+				if (bac > 0.02) {
+					
+				}
 				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
 				var roundView = new RoundView({model: round});
 			},
