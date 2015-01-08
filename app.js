@@ -33,16 +33,6 @@ app.get('/booze', function(request, response) {
 	console.log('requestQuery', boozeQuery);
 });
 
-
-
-var booze;
-fs.readFile('./liquor.json', 'utf8', function(error, data) {
-	if (error) throw error;
-	booze = JSON.parse(data);
-	console.log('booze', booze);
-});
-
-
 var beerChoice = function(responseObject) {
 	var	beersList = [];
 	target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
@@ -69,8 +59,14 @@ var beerChoice = function(responseObject) {
 	return beersList;
 };
 
-
-
 app.listen(3000, function() {
 	console.log('Server running on localhost:3000 \n');
 });
+
+//JSON file obsolete
+// var booze;
+// fs.readFile('./liquor.json', 'utf8', function(error, data) {
+// 	if (error) throw error;
+// 	booze = JSON.parse(data);
+// 	console.log('booze', booze);
+// });
