@@ -83,10 +83,9 @@ var alculatorView = new AlculatorView();
     var abv = beer.attributes
     console.log('abv', abv.abv);
     $('input[name="abv"]').last().attr('value', abv.abv);
+ 	});
 
 
-
- });
 });
 
 console.log('app');
