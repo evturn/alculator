@@ -27,6 +27,17 @@ app.get('/beers', function(request, response) {
 	beerChoice(response);
 });
 
+var liquor;
+fs.readFile('./liquor.json', 'utf8', function(error, data) {
+	if (error) throw error;
+	liquor = JSON.parse(data);
+	console.log('booze', liquor);
+});
+
+
+fs.readFile('')
+
+
 
 var beerChoice = function(responseObject) {
 	var	beersList = [];
