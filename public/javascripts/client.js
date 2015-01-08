@@ -27,7 +27,7 @@ var alculatorView = new AlculatorView();
 		beerField = $('#beer-query').val();
 		$.ajax({
 			url: '/beers',
-			method: 'get',
+			method: 'GET',
 			data: {
 				name: beerField
 			},
@@ -43,7 +43,18 @@ var alculatorView = new AlculatorView();
 
 	$('#booze-search').on('submit', function(e) {
 		e.preventDefault();
-		boozeField = $('#booze-query');
+		boozeField = $('#booze-query').val();
+		$.ajax({
+			url: '/booze',
+			method: 'GET',
+			data: {
+				name: boozeField
+			},
+			dataType: 'JSON',
+			success: function(data) {
+				console.log(data);
+			}
+		});
 	});
 
 

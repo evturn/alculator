@@ -27,6 +27,8 @@ app.get('/beers', function(request, response) {
 	beerChoice(response);
 });
 
+
+
 var booze;
 fs.readFile('./liquor.json', 'utf8', function(error, data) {
 	if (error) throw error;
