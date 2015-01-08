@@ -80,9 +80,9 @@ var alculatorView = new AlculatorView();
 
   $('#search-results').on('click #add-beer', function(e){
   	e.preventDefault();
-    var abv = $('#selected-abv').text();
-    console.log('abv', abv);
-    $('input[name="abv"]').last().attr('value', abv);
+    var abv = beer.attributes
+    console.log('abv', abv.abv);
+    $('input[name="abv"]').last().attr('value', abv.abv);
 
 
 
