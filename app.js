@@ -7,12 +7,19 @@ var logger 					= require('./logger');
 var request 				= require('request');
 var url 						= require('url');
 var http 						= require('http');
-var promise 				= require('express-promise');
-var async						= require('async');
+var fs 							= require('fs');
 
 app.use(express.static('public'));
-app.use(require('express-promise')());
 
+app.get('/', function(require, response) {
+	response.render('index.html');
+});
+
+var rounds = {}
+app.post('/rounds', parseUrlencoded, function(request, response) {
+	var newRound = request.body;
+	response.status(201).json(newRound);
+});
 
 app.get('/beers', function(request, response) {	
 	var requestQuery = request.query;
@@ -42,23 +49,12 @@ var beerChoice = function(responseObject) {
 		} else {
 			console.log
 		}
-		// console.log('success 3', success);
-		console.log('beersList', beersList);
-		// console.log('theBeer', theBeer);
+		console.log('beersList', beersList);	
 	});	
 	return beersList;
-	// console.log('success 4', success);
 };
 
-app.get('/', function(require, response) {
-	response.render('index.html');
-});
 
-var rounds = {}
-app.post('/rounds', parseUrlencoded, function(request, response) {
-	var newRound = request.body;
-	response.status(201).json(newRound);
-});
 
 app.listen(3000, function() {
 	console.log('Server running on localhost:3000 \n');
