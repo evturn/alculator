@@ -1,5 +1,6 @@
 var StageView = Backbone.View.extend({
 	el: $('#stage'),
+	// stageZero: _.template($('#stage-zero-template').htm;()),
 	stageOne: _.template($('#stage-one-template').html()),
 	initialize: function() {
 		this.render();
