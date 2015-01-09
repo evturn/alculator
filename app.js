@@ -36,7 +36,7 @@ bacStages = [
 
 
 app.get('/stages', function(request, response) {
-	response.json(bacStages);
+	response.send(bacStages);
 });
 
 app.get('/booze', function(request, response) {

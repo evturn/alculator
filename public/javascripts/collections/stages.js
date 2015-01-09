@@ -5,7 +5,7 @@ var Stages = Backbone.Collection.extend({
 		this.fetch({
 			success: function() {
 				console.log('got your collection');
-				var stageView = new StageView({collection: this.collection});
+				console.log(this.collection);
 			}
 		});
 	}
