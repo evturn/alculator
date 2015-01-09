@@ -10,4 +10,4 @@ var BarTabView = Backbone.View.extend({
 	}
 });
 
-console.log('BeerTabView');
+console.log('BarTabView');

@@ -8,3 +8,5 @@ var AlculatorView = Backbone.View.extend({
 		this.$el.html(this.template());
 	}
 });
+
+console.log('AlculatorView');
