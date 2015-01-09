@@ -5,22 +5,6 @@ var liquorView = new LiquorView();
 var beerView = new BeerView();
 var alculatorView = new AlculatorView();
 
-stages = [
-	{
-		stage: 0,
-		effect: "No significant trace of alcohol in your blood"
-	},
-	{
-		stage: 1,
-		effect: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded"
-	},
-	{
-		stage: 2,
-		effect: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)"
-	}
-];
-
-
 	$('#liquor-tab').on('click',
 		function(e) {
 			e.preventDefault();
@@ -102,7 +86,6 @@ stages = [
 				console.log(bac);
 				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
 				var roundView = new RoundView({model: round});
-				var stageView = new StageView();
 			},
 			error: function() {
 				alert('Something went wrong');
