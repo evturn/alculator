@@ -7,18 +7,18 @@ var alculatorView = new AlculatorView();
 
 stages = [
 	{
-		stage: Zero,
+		stage: 0,
 		effect: "No significant trace of alcohol in your blood"
 	},
 	{
-		stage: One,
+		stage: 1,
 		effect: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded"
 	},
 	{
-		stage: Two,
+		stage: 2,
 		effect: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)"
 	}
-]
+];
 
 
 	$('#liquor-tab').on('click',
@@ -91,23 +91,18 @@ stages = [
 			dataType: 'JSON',
 			success: function(data) {
 				console.log(data);
-				rate         = sex === 'male' ? 0.73 : 0.66;
-				console.log(rate);
-				bevOz        = data.drinks * 12;
-				alcOz 		   = bevOz * (data.abv * 0.01);
-				metricOz 		 = alcOz * 5.14;
-				metabolism 	 = data.lbs * rate;
-				subLevel 		 = metricOz /  metabolism;
-				soberingRate = 0.015 * data.hours;
-				bac 			   = (subLevel - soberingRate).toFixed(2);
+				rate          = sex === 'male' ? 0.73 : 0.66;
+				bevOz         = data.drinks * 12;
+				alcOz 		    = bevOz * (data.abv * 0.01);
+				metricOz 		  = alcOz * 5.14;
+				metabolism 	  = data.lbs * rate;
+				subLevel 		  = metricOz /  metabolism;
+				soberingRate  = 0.015 * data.hours;
+				bac 			    = (subLevel - soberingRate).toFixed(2);
 				console.log(bac);
 				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
 				var roundView = new RoundView({model: round});
-				
-
-
-				var stage = new Stage();
-				var stageView = new StageView({model: stage});
+				var stageView = new StageView();
 			},
 			error: function() {
 				alert('Something went wrong');
