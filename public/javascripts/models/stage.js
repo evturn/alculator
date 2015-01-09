@@ -1,5 +1,8 @@
 var Stage = Backbone.Model.extend({
 	defaults: {
-		caption: ''
+		stage: '',
+		effect: ''
 	}
 });
+
+console.log('Stage');

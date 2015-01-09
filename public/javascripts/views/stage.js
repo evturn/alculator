@@ -6,9 +6,9 @@ var StageView = Backbone.View.extend({
 		this.render();
 	},
 	render: function() {
-		this.$el.html(this.stageOne());
+		this.$el.html(this.stageOne(this.model.toJSON()));
 		return this;
 	}
 });
 
-console.log('StageViews');
+console.log('StageView');
