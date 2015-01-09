@@ -1,7 +1,7 @@
 var Stage = Backbone.Model.extend({
 	defaults: {
-		stage: '',
-		effect: ''
+		stage: 'Oops',
+		effect: 'Something went wrong.'
 	}
 });
 
