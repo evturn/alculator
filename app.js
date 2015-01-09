@@ -27,14 +27,16 @@ app.get('/beers', function(request, response) {
 	beerChoice(response);
 });
 
-stages = [
+bacStages = [
 	{stage: 0, effect: "No significant trace of alcohol in your blood"},
 	{stage: 1, effect: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded"},
 	{stage: 2, effect: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)"}
 ];
 
+
+
 app.get('/stages', function(request, response) {
-	response.json(stages);
+	response.json(bacStages);
 });
 
 app.get('/booze', function(request, response) {

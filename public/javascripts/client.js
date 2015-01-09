@@ -86,6 +86,7 @@ var alculatorView = new AlculatorView();
 				console.log(bac);
 				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
 				var roundView = new RoundView({model: round});
+				var stages = new Stages();
 			},
 			error: function() {
 				alert('Something went wrong');
