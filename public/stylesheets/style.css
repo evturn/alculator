@@ -50,10 +50,31 @@ h3 {
 	background-color: #689b6e;
 }
 
-.stage-one {
+.stage-color-one {
 	height: 30px;
 	background-color: #689b6e;
 }
+
+.stage-color-two {
+	height: 30px;
+	background-color: #5a81c1;
+}
+
+.stage-color-three {
+	height: 30px;
+	background-color: #ead345;
+}
+
+.stage-color-four {
+	height: 30px;
+	background-color: #e09e4a;
+}
+
+.stage-color-five {
+	height: 30px;
+	background-color: #bd574b;
+}
+
 
 svg {
 	height: 220px;
