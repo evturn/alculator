@@ -39,6 +39,10 @@ h3 {
 	text-align: center;
 }
 
+.align img {
+	margin-left: -22px;
+}
+
 .fit {
 	height: 100px;
 	width: 100px;
