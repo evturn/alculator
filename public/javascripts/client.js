@@ -5,22 +5,29 @@ var wineView = new WineView();
 var liquorView = new LiquorView();
 var beerView = new BeerView();
 var alculatorView = new AlculatorView();
+$beerView = $('#beer-container');
+$wineView = $('#wine-container');
+$liquorView = $('#liquor-container');
+
 
 	$('#liquor-tab').on('click',
 		function(e) {
 			e.preventDefault();
 			var liquorView = new LiquorView();
+			
 	});
 
 	$('#wine-tab').on('click',
 		function(e) {
 			e.preventDefault();
 			var wineView = new WineView();
+			
 	});
 	$('#beer-tab').on('click',
 		function(e) {
 			e.preventDefault();
 			var beerView = new BeerView();
+			
 	});
 
 	$('#beer-search').on('submit', function(e) {
