@@ -27,12 +27,12 @@ app.get('/beers', function(request, response) {
 	beerChoice(response);
 });
 
-bacStages = [
+// bacStages = [
 	// {stage: 0, effect: "No significant trace of alcohol in your blood"},
-	{stage: 1, effect: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded"},
-	{stage: 2, effect: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)"},
-	{stage: 3, effect: "Slight impairment of balance, speech, vision, reaction time, and hearing. Judgment and self-control are reduced, and caution, reason and memory are impaired, .08 is legally impaired and it is illegal to drive at this level. You probably believe that you are functioning better than you really are."}
-];
+// 	{stage: 1, effect: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded"},
+// 	{stage: 2, effect: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)"},
+// 	{stage: 3, effect: "Slight impairment of balance, speech, vision, reaction time, and hearing. Judgment and self-control are reduced, and caution, reason and memory are impaired, .08 is legally impaired and it is illegal to drive at this level. You probably believe that you are functioning better than you really are."}
+// ];
 
 
 
