@@ -45,6 +45,16 @@ h3 {
 	padding-left: -20px;
 }
 
+.stage-zero {
+	height: 30px;
+	background-color: #689b6e;
+}
+
+.stage-one {
+	height: 30px;
+	background-color: #689b6e;
+}
+
 svg {
 	height: 220px;
 }
