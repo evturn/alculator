@@ -1,13 +1,13 @@
 var StageZero = Backbone.View.extend({
 	el: $('#stage'),
-	stageZero: _.template($('#stage-zero-template').html()),
+	stageOne: _.template($('#stage-one-template').html()),
 	initialize: function() {
 		this.render();
 	},
 	render: function() {
-		this.$el.html(this.stageZero());
+		this.$el.html(this.stageOne());
 		return this;
 	}
 });
 
-console.log('StageZero');
+console.log('StageOne');
