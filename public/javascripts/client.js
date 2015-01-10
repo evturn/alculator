@@ -86,7 +86,31 @@ var alculatorView = new AlculatorView();
 				console.log(bac);
 				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
 				var roundView = new RoundView({model: round});
-				var stageZero = new StageZero();
+					if (bac < 0.02) {
+						var stageZero  = new StageZero();
+					} else if (bac < 0.04) {
+						var stageOne   = new StageOne();
+					} else if (bac < 0.06) {
+						var stageTwo	 = new StageTwo();
+					} else if (bac < 0.07) {
+						var stageThree = new StageThree();
+					} else if (bac < 0.10) {
+						var stageFour  = new StageFour();
+					} else if (bac < 0.13) {
+						var stageFive	 = new StageFive();
+					} else if (bac < 0.16) {
+						var stageSix	 = new StageSix();
+					} else if (bac < 0.20) {
+						var stageSeven = new StageSeven();
+					} else if (bac < 0.25) {
+						var stageEight = new StageEight();
+					} else if (bac < 0.30) {
+						var stageNine	 = new StageNine();
+					} else if (bac < 0.35) {
+						var stageTen 	 = new StageTen();
+					} else {
+						alert('You sure you entered all your info?');
+					}
 			},
 			error: function() {
 				alert('Something went wrong');
