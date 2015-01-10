@@ -5,7 +5,7 @@ var BarTabView = Backbone.View.extend({
 		this.render();
 	},
 	render: function() {
-		this.$el.html(this.template(this.model.toJSON()));
+		this.$el.append(this.template(this.model.toJSON()));
 		return this;
 	}
 });
