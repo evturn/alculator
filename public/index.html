@@ -76,43 +76,63 @@
 </script>
 <script type="text/template" id="wineSearchTemplate">
 	<% console.log('wine clicked') %>
-	<div class="row col-md-12 col-md-offset-1 form-group">
+	
 		<h3>WINE</h3>
 		
 		<div class="row col-md-12 col-md-offset-1 form-group">
+		<form id='wine-form'>
 		  <div class="row col-md-12">
-		  	<div class="col-md-4">
-		  	<img src="images/wine.png" class="fit">
-		 	 <button class="btn btn-default btn-sm" type="button" name="red-wine" id="red-wine">&#8776; ALCULATE</button>
+		  	<div class="col-md-4 align">
+		  	<img src="images/wine.png" class="fit-wine">
+		  	<form>
+		  	<label for="wine">RED</label>
+		 	 <input class="btn btn-default btn-sm" type="button" name=
+		 	 "red-wine" id="red-wine" value="+ DRINK">
+		 	 </form>
 		 	 </div>
-		 	 <div class="col-md-4">
-		 	 <img src="images/wine.png" class="fit">
-		  	<button class="btn btn-default btn-sm" type="button" name="white-wine" id="white-wine">&#8776; ALCULATE</button>
+		 	 <div class="col-md-4 align">
+		 	 <img src="images/wine.png" class="fit-wine">
+		 	<form>
+		 	<label for="wine">WHITE</label>
+		  	<input class="btn btn-default btn-sm" type="button" name="white-wine" id="white-wine" value="+ DRINK">
+		 </form>
 		  	</div>
-		  	<div class="col-md-4">
-		  	<img src="images/wine.png" class="fit">
-		 	 <button class="btn btn-default btn-sm" type="button" name="rose-wine" id="rose-wine">&#8776; ALCULATE</button>
+		  	<div class="col-md-4 align">
+		  	<img src="images/wine.png" class="fit-wine">
+		  	<form>
+		  	<label for="wine">ROSE</label>
+		 	 <input class="btn btn-default btn-sm" type="button" name="rose-wine" id="rose-wine" value="+ DRINK">
+		 	 </form>
 		 	 </div>
 		  </div>
 
 
 		  	<div class="row col-lg-12">
-		  	<div class="col-md-4">
-		  	<img src="images/champagne.png" class="fit">
-		  	<button class="btn btn-default btn-sm" type="button" name="champagne" id="champagne">&#8776; ALCULATE</button>
+		  	<div class="col-md-4 align">
+		  	<img src="images/champagne.png" class="fit-wine">
+		  	<form>
+		  	<label for="champagne">CHAMPAGNE</label>
+		  	<input class="btn btn-default btn-sm" type="button" name="champagne" id="champagne" value="+ DRINK">
+		  	</form>
 		  	</div>
-		  	<div class="col-md-4">
-		 		<img src="images/champagne.png" class="fit">
-		  	<button class="btn btn-default btn-sm" type="button" name="prosecco" id="prosecco">&#8776; ALCULATE</button>
+		  	<div class="col-md-4 align">
+		 		<img src="images/champagne.png" class="fit-wine">
+		 		<form>
+		  	<label for="prosecco">PROSECCO</label>
+		  	<input class="btn btn-default btn-sm" type="button" name="prosecco" id="prosecco" value="+ DRINK">
+		  	</form>
 		  	</div>
 		 
-		 		<div class="col-md-4">
-		  	<img src="images/wine.png" class="fit">
-		  	<button class="btn btn-default btn-sm" type="button" name="port" id="port">&#8776; ALCULATE</button>
+		 		<div class="col-md-4 align">
+		  	<img src="images/wine.png" class="fit-wine">
+		  	<form>
+		  	<label for="port">PORT</label>
+		  	<input class="btn btn-default btn-sm" type="button" name="port" id="port" value="+ DRINK">
+		  	</form>
 		  	</div>
 		  
 	  </div>
-	  </div>
+	  </form>
 	</div>
 
 </script>
