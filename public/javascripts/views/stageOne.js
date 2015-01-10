@@ -1,4 +1,4 @@
-var StageZero = Backbone.View.extend({
+var StageOne = Backbone.View.extend({
 	el: $('#stage'),
 	stageOne: _.template($('#stage-one-template').html()),
 	initialize: function() {
