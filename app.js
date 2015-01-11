@@ -29,7 +29,10 @@ app.get('/beers', function(request, response) {
 
 
 app.get('/booze', function(request, response) {
-	
+	booze = [
+	{name: 'Cocktail', abv="40"},
+	{name: 'Coors', abv="5"}
+	]
 });
 
 
