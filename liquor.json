@@ -1,8 +1,6 @@
-liquor = [
-{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
-{name: "low", abv: "", img: "images/low.png", ounces: 7},
-{name: "high", abv: "", img: "images/high.png", ounces: 8},
-{name: "cocktail", abv: "", img: "images/cocktail.png", ounces: 5},
-{name: "margarita", abv: "", img: "images/margarita.png", ounces: 9},
-{name: "cordial", abv: "", img: "images/cordial.png", ounces: 2}
-]
+[{"name": "shot", "abv": "40", "img": "images/shot.png", "ounces": "1.5"},
+{"name": "low", "abv": "", "img": "images/low.png", "ounces": "7"},
+{"name": "high", "abv": "", "img": "images/high.png", "ounces": "8"},
+{"name": "cocktail", "abv": "", "img": "images/cocktail.png", "ounces": "5"},
+{"name": "margarita", "abv": "", "img": "images/margarita.png", "ounces": "9"},
+{"name": "cordial", "abv": "", "img": "images/cordial.png", "ounces": "2"}]

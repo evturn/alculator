@@ -29,15 +29,8 @@ app.get('/beers', function(request, response) {
 
 
 app.get('/booze', function(request, response) {
-	var allBooze = [
-	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png',
-	 status: 'incomplete'},
-	{name: 'Coors', abv: 5, img: 'images/bottle.png',
-	 status: 'incomplete'},
-	 {name: 'Champagne (GLASS)', abv: 11, img: 'images/champagne.png',
-	 status: 'incomplete'}
-	];
-	response.json(allBooze);
+
+	// response.json();
 });
 
 app.post('/booze', function(request, response) {
@@ -46,6 +39,16 @@ app.post('/booze', function(request, response) {
 
 app.delete('/booze', function(request, response) {
 
+});
+
+app.get('/liquor', function(request, response) {
+	var jsonLiquor;
+	fs.readFile('./liquor.json', 'utf8', function(error, data) {
+		if (error) throw error;
+			jsonLiquor = JSON.parse(data);
+			console.log('liquor', jsonLiquor);
+	});
+	response.json(jsonLiquor);
 });
 
 
@@ -79,10 +82,3 @@ app.listen(3000, function() {
 	console.log('Server running on localhost:3000 \n');
 });
 
-//JSON file obsolete
-// var booze;
-// fs.readFile('./liquor.json', 'utf8', function(error, data) {
-// 	if (error) throw error;
-// 	booze = JSON.parse(data);
-// 	console.log('booze', booze);
-// });
