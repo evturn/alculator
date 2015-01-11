@@ -10,7 +10,9 @@ $wineView = $('#wine-container');
 $liquorView = $('#liquor-container');
 
 
+var boozeList = new BoozeList();
 
+var boozeListView = new BoozeListView({collection: boozeList});
 
 
 
