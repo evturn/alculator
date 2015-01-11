@@ -52,13 +52,13 @@ app.get('/liquor', function(request, response) {
 });
 
 app.get('/beers', function(request, response) {
-	var jsonBeer;
-	fs.readFile('./beer.json', 'utf8', function(error, data) {
+	var jsonbeers;
+	fs.readFile('./beers.json', 'utf8', function(error, data) {
 		if (error) throw error;
-			jsonLiquor = JSON.parse(data);
-			console.log('beer', jsonBeer);
+			jsonbeers = JSON.parse(data);
+			console.log('beers', jsonbeers);
 	});
-	response.json(jsonBeer);
+	response.json(jsonbeers);
 });
 
 

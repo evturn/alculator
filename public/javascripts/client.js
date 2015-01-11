@@ -1,7 +1,6 @@
 var boozeList = new BoozeList({});
-var boozeListView = new BoozeListView({collection: boozeList});
-
 var router = new Router({boozeList: boozeList});
+
 
 $(function() {
  router.start();
@@ -9,7 +8,6 @@ $(function() {
 var wineView = new WineView();
 var liquorView = new LiquorView();
 var beerView = new BeerView();
-var beerItemView = new BeerItemView();
 var alculatorView = new AlculatorView();
 
 
