@@ -3,10 +3,8 @@ var BoozeItemView = Backbone.View.extend({
 	id: 'booze-view',
 	className: 'booze',
 	render: function() {
-		var html = '<h4>' + this.model.get('name') + '</h4>'
-							 '<h4>' + this.model.get('abv') + '</h4>'
-						   '<img src="' + this.model.get('img') + '"></h4>';
-		$(this.el).html(html);
+		var html = '<h4>' + this.model.get('name') + '</h4><h4>' + this.model.get('abv') + '</h4><img src="' + this.model.get('img') + '">';
+		this.$el.html(html);
 	}
 });
 
