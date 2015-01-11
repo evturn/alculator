@@ -56,15 +56,45 @@
 	<div class="row col-lg-12" id="beer-container">
 		<div class="row col-lg-12 col-lg-offset-1 form-group">
 			<h3>BEER</h3>
+			<form id='beer-form'>
+				  <div class="row col-md-12 drink-container">
+				  	<div class="col-xs-4 align drink-space">
+				  		<img src="images/bottle.png" class="fit-wine">
+				  		<form>
+				  			<h5 for="light">LIGHT</h5>
+				 	 			<button class="btn btn-danger btn-lg" type="button" name="light" id="light" value="40.0">+</button>
+				 	 		</form>
+				 		</div>
+				 			<div class="col-xs-4 align drink-space">
+					  		<img src="images/bottle.png" class="fit-wine">
+					  		<form>
+					  			<h5 for="standard">STANDARD</h5>
+					 	 			<button class="btn btn-danger btn-lg" type="button" name="standard" id="standard" value="40.0">+</button>
+					 	 		</form>
+					 		</div>
+					  	<div class="col-xs-4 align drink-space">
+					  		<img src="images/bottle.png" class="fit-wine">
+					  		<form>
+					  			<h5 for="strong">STRONG</h5>
+					 	 			<button class="btn btn-danger btn-lg" type="button" name="strong" id="strong" value="40.0">+</button>
+					 	 		</form>
+					 	 	</div>
+					 	 </form>
+					 	</div>
+					</div>
+						<div class="row col-lg-12 col-lg-offset-1 form-group">
+					 <h3>SEARCH</h3>
 			<form id='beer-search'>
 		  <label for="beer">FIND A BEER</label>
 		  <input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
 		</div>
 		<div class="row col-lg-6 col-lg-offset-1">
-			<input class="btn btn-default btn-lg btn-block" type="submit" value="GRAB" id="beer-submit">
+			<input class="btn btn-default btn-lg btn-block" type="submit" value="SEARCH" id="beer-submit">
 			</form>
 		</div>
+		</div>
 	</div>
+
 </script>
 <script type="text/template" id="liquorSearchTemplate">
 <% console.log('liquor clicked') %>
@@ -90,7 +120,7 @@
 					  	<div class="col-xs-4 align drink-space">
 					  		<img src="images/high.png" class="fit-wine">
 					  		<form>
-					  			<h5 for="shot">HIGH</h5>
+					  			<h5 for="high">HIGH</h5>
 					 	 			<button class="btn btn-danger btn-lg" type="button" name="high" id="high" value="40.0">+</button>
 					 	 		</form>
 					 		</div>
@@ -99,14 +129,14 @@
 				 		<div class="col-xs-4 align drink-space">
 				  		<img src="images/cocktail.png" class="fit-wine">
 				  		<form>
-				  			<h5 for="shot">COCKTAIL</h5>
+				  			<h5 for="cocktail">COCKTAIL</h5>
 				 	 			<button class="btn btn-danger btn-lg" type="button" name="cocktail" id="cocktail" value="50.0">+</button>
 				 	 		</form>
 				 		</div>
 							<div class="col-xs-4 align drink-space">
 				  		<img src="images/margarita.png" class="fit-wine">
 				  		<form>
-				  			<h5 for="shot">MARGARITA</h5>+</button>
+				  			<h5 for="margarita">MARGARITA</h5>
 				 	 			<button class="btn btn-danger btn-lg" type="button" name="margarita" id="margarita" value="35.0">+</button>
 				 	 		</form>
 				 		</div>
@@ -197,7 +227,7 @@
 					<h3 id="#selected-abv"><%= abv %>%</h3>
 				</div>
 			<div class="row col-lg-12">
-				<input class="btn btn-default btn-lg btn-block" type="submit" value="&#8776; ALCULATE" id="add-beer">
+				<input class="btn btn-danger btn-lg btn-block" type="submit" value="+" id="add-beer">
 			</div>
 		</div>
 </script>
