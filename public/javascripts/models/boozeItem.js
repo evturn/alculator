@@ -1,7 +1,8 @@
 var BoozeItem = Backbone.Model.extend({
 	defaults: {
 		name: '',
-		abv: ''
+		abv: '',
+		img: ''
 	}
 });
 
