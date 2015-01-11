@@ -5,7 +5,9 @@ var BoozeItemView = Backbone.View.extend({
 		this.model.on('hide', this.remove, this);
 	},
 	render: function() {
-		this.$el.html(this.template())
+		var html = '<h4>' + this.model.get('name') + '</h4>'
+							 '<h4>' + this.model.get('abv') + '</h4>'
+							 '<h4>' + this.model.get('img') + '</h4>'
 	}
 });
 

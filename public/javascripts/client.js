@@ -15,9 +15,9 @@ var boozeItem = new BoozeItem(
 	);
 var boozeView = new BoozeView({model: boozeItem});
 
-var boozeList = new BoozeList();
+// var boozeList = new BoozeList();
 
-var boozeListView = new BoozeListView({collection: boozeList});
+// var boozeListView = new BoozeListView({collection: boozeList});
 
 
 
