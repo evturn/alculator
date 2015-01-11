@@ -10,6 +10,10 @@ $wineView = $('#wine-container');
 $liquorView = $('#liquor-container');
 
 
+
+
+
+
 	$('#liquor-tab').on('click',
 		function(e) {
 			e.preventDefault();

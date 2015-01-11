@@ -28,6 +28,11 @@ app.get('/beers', function(request, response) {
 });
 
 
+app.get('/booze', function(request, response) {
+
+});
+
+
 var beerChoice = function(responseObject) {
 	var	beersList = [];
 	target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
