@@ -31,9 +31,11 @@ app.get('/beers', function(request, response) {
 app.get('/booze', function(request, response) {
 	var booze = [
 	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png',
-	 unwanted: false},
+	 status: 'incomplete'},
 	{name: 'Coors', abv: 5, img: 'images/bottle.png',
-	 unwanted: false}
+	 status: 'incomplete'},
+	 {name: 'Champagne (GLASS)', abv: 11, img: 'images/champagne.png',
+	 status: 'incomplete'}
 	]
 })
 

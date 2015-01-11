@@ -2,7 +2,7 @@ var boozeItem1 = new BoozeItem(
 	{name: 'Cocktail',
 	 abv: 40,
 	 img: 'images/cocktail.png',
-	 unwanted: false
+	 status: 'incomplete'
 	}
 );
 var boozeItemView = new BoozeItemView({model: boozeItem1});
@@ -13,11 +13,21 @@ boozeItem2.set(
 	{name: 'Margarita',
 	 abv: 30,
 	 img: 'images/margarita.png',
-	 unwanted: false
+	 status: 'incomplete'
 	}
 );
-boozeItem2.save();
 
+
+var boozeList = new BoozeList();
+
+boozeList.reset[
+	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png',
+	 status: 'incomplete'},
+	{name: 'Coors', abv: 5, img: 'images/bottle.png',
+	 status: 'incomplete'},
+	 {name: 'Champagne (GLASS)', abv: 11, img: 'images/champagne.png',
+	 status: 'incomplete'}
+	]
 
 $(function() {
 console.log(boozeItemView.el);
@@ -33,9 +43,8 @@ $liquorView = $('#liquor-container');
 
 
 
-// var boozeList = new BoozeList();
 
-// var boozeListView = new BoozeListView({collection: boozeList});
+
 
 
 
