@@ -1,4 +1,3 @@
-
 var boozeList = new BoozeList();
 var router = new Router({boozeList: boozeList});
 
@@ -12,16 +11,6 @@ var wineView = new WineView();
 var liquorView = new LiquorView();
 var beerView = new BeerView();
 var alculatorView = new AlculatorView();
-$beerView = $('#beer-container');
-$wineView = $('#wine-container');
-$liquorView = $('#liquor-container');
-
-
-
-
-
-
-
 
 
 	$('#liquor-tab').on('click',
