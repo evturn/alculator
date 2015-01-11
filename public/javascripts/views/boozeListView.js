@@ -1,4 +1,5 @@
 var BoozeListView = Backbone.View.extend({
+	tagName: 'li',
 	initialize: function() {
 		this.collection.on('add', this.addOne, this);
 		this.collection.on('reset', this.addAll, this);

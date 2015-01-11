@@ -40,6 +40,7 @@
 		</div>
 		<div class="row col-lg-12 col-lg-offset-1" id="booze">
 			<h3>YOUR TAB</h3>
+			<ul id="booze-list"></ul>
 		</div>
 	</div>
 
@@ -379,16 +380,21 @@
 
 
 <script type="text/template" id="booze-item-view-template">
-	<div class="row col-md-12 align col-md-offset-1">
-		<div class="row col-md-6 align drink-space">
+	<ul id="filters">
+		<li>
+		<div class="row col-md-12 align col-md-offset-1">
+			<div class="row col-md-6 align drink-space">
 			<img class="fit-wine" src="<%= img %>">
-		</div>	
-		<div class="col-md-6 align drink-space">
-			<h3 class="<%= status %>">
-			<input type=checkbox <% if (status === "complete") print("checked") %>/><%= name%></h3>
-			<h4><% abv %></h4>
+			</div>	
+			<div class="col-md-6 align drink-space">
+				<h3 class="<%= status %>">
+				<input type=checkbox <% if (status === "complete") print("checked") %>/><%= name%></h3>
+				<button class="destroy"></button>
+				<h4><% abv %></h4>
+			</div>
 		</div>
-	</div>
+		</li>
+	</ul>
 </script>
 
 
