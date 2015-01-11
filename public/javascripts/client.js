@@ -36,7 +36,7 @@ var alculatorView = new AlculatorView();
 		e.preventDefault();
 		beerField = $('#beer-query').val();
 		$.ajax({
-			url: '/beers',
+			url: '/search/beers',
 			method: 'GET',
 			data: {
 				name: beerField
