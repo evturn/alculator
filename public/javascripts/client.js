@@ -9,6 +9,7 @@ $(function() {
 var wineView = new WineView();
 var liquorView = new LiquorView();
 var beerView = new BeerView();
+var beerItemView = new BeerItemView();
 var alculatorView = new AlculatorView();
 
 
