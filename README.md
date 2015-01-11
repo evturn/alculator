@@ -1,4 +1,4 @@
-Alculator
+# Alculator
 
 Alculator is an alcohol calculator. 
 
