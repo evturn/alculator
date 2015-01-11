@@ -20,14 +20,14 @@ boozeItem2.set(
 
 var boozeList = new BoozeList();
 
-boozeList.reset[
-	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png',
-	 status: 'incomplete'},
-	{name: 'Coors', abv: 5, img: 'images/bottle.png',
-	 status: 'incomplete'},
-	 {name: 'Champagne (GLASS)', abv: 11, img: 'images/champagne.png',
-	 status: 'incomplete'}
-	]
+
+
+boozeList.fetch();
+
+
+
+
+
 
 $(function() {
 console.log(boozeItemView.el);

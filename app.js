@@ -29,15 +29,16 @@ app.get('/beers', function(request, response) {
 
 
 app.get('/booze', function(request, response) {
-	var booze = [
+	var allBooze = [
 	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png',
 	 status: 'incomplete'},
 	{name: 'Coors', abv: 5, img: 'images/bottle.png',
 	 status: 'incomplete'},
 	 {name: 'Champagne (GLASS)', abv: 11, img: 'images/champagne.png',
 	 status: 'incomplete'}
-	]
-})
+	];
+	response.json(allBooze);
+});
 
 app.post('/booze', function(request, response) {
 		
