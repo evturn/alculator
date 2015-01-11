@@ -1,3 +1,12 @@
+var boozeItem = new BoozeItem(
+	{name: 'Cocktail',
+	 abv: 40,
+	 img: 'images/cocktail.png',
+	 unwanted: false
+	}
+);
+var boozeItemView = new BoozeItemView({model: boozeItem});
+boozeItemView.render();
 
 $(function() {
 
@@ -9,11 +18,12 @@ $beerView = $('#beer-container');
 $wineView = $('#wine-container');
 $liquorView = $('#liquor-container');
 
+var booze = [
+	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png'},
+	{name: 'Coors', abv: 5, img: 'images/bottle.png'}
+	]
 
-var boozeItem = new BoozeItem(
-	{name: 'Cocktail', abv: 40, img: "images/cocktail.png"}
-	);
-var boozeView = new BoozeView({model: boozeItem});
+console.log(boozeItemView.el);
 
 // var boozeList = new BoozeList();
 
