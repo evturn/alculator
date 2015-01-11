@@ -6,7 +6,15 @@ var BoozeList = Backbone.Collection.extend({
 	},
 	hideModel: function(model) {
 		model.trigger('hide');
-	}
+	},
+	completed: function() {
+  	return this.filter(function(boozeItem) {
+    	return boozeItem.get('completed');
+  	});
+  },
+	remaining: function() {
+  	return this.without.apply(this, this.completed() );
+  },
 });
 
 console.log('BoozeList');

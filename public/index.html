@@ -38,10 +38,15 @@
 		</div>
 		<div class="row col-lg-12 col-lg-offset-1" id="stage">
 		</div>
+	
+
 		<div class="row col-lg-12 col-lg-offset-1" id="booze">
 			<h3>YOUR TAB</h3>
 			<ul id="booze-list"></ul>
 		</div>
+	
+
+
 	</div>
 
 	<div class="row col-lg-4" id="alculator">
@@ -378,19 +383,21 @@
 		<h4 align="justify">You have little comprehension of where you are. You may pass out suddenly and be difficult to awaken</h4>
 </script>
 
+<script type="text/template" id="drink-stats-view-template">
+	 <span id="tab-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
+</script>
 
 <script type="text/template" id="booze-item-view-template">
 	<ul id="filters">
 		<li>
-		<div class="row col-md-12 align col-md-offset-1">
+		<div class="row col-md-12 align">
 			<div class="row col-md-6 align drink-space">
-			<img class="fit-wine" src="<%= img %>">
+				<h3 class="<%= status %>"><%= name%></h3>
+				<h4><%= abv %>%</h4>
 			</div>	
 			<div class="col-md-6 align drink-space">
-				<h3 class="<%= status %>">
-				<input type=checkbox <% if (status === "complete") print("checked") %>/><%= name%></h3>
-				<button class="destroy"></button>
-				<h4><% abv %></h4>
+				<img class="fit-wine" src="<%= img %>">
+					<button class="destroy"></button>
 			</div>
 		</div>
 		</li>
@@ -423,6 +430,7 @@
 <script src="javascripts/views/wine.js"></script>
 <script src="javascripts/views/boozeItemView.js"></script>
 <script src="javascripts/views/boozeListView.js"></script>
+<script src="javascripts/views/drinkStatsView.js"></script>
 <script src="javascripts/views/stageZero.js"></script>
 <script src="javascripts/views/stageOne.js"></script>
 <script src="javascripts/views/stageTwo.js"></script>

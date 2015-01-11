@@ -1,16 +1,15 @@
 var BoozeItemView = Backbone.View.extend({
-	el: $('#booze'),
+	el: $('#booze-list'),
 	tagName: 'li',
 	template: _.template($('#booze-item-view-template').html()),
-	id: 'booze-item-view',
 	className: 'booze',
 	events: {
-		'change input': 'toggleStatus'
+		'click .destroy': 'clear',
 	},
 	initialize: function() {
-		this.model.on('change', this.render, this);
-		this.model.on('destroy', this.remove, this);
-		this.model.on('hide', this.remove, this);
+		this.listenTo(this.model, 'change', this.render);
+    this.listenTo(this.model, 'destroy', this.remove);
+		
 		this.render();
 	},
 	toggleStatus: function() {
@@ -22,7 +21,10 @@ var BoozeItemView = Backbone.View.extend({
 	},
 	remove: function() {
 		this.$el.remove();
-	}
+	},
+	clear: function() {
+    this.model.destroy();
+  }
 });
 
 console.log('BoozeItemView');
