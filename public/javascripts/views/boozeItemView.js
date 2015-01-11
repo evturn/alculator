@@ -6,9 +6,11 @@ var BoozeItemView = Backbone.View.extend({
 	events: {
 		'change input': 'toggleStatus'
 	},
+	initialize: function() {
+		this.model.on('change', this.render, this);
+	},
 	toggleStatus: function() {
 		this.model.toggleStatus();
-		this.render();
 	},
 	render: function() {
 		var attributes = this.model.toJSON();
