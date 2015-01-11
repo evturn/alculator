@@ -6,6 +6,7 @@ var BoozeItem = Backbone.Model.extend({
 		img: 'images/alc.png',
 		status: 'incomplete'
 	},
+	localStorage: new Backbone.LocalStorage('booze-rounds'),
 	toggleStatus: function() {
 				if (this.get('status') === 'incomplete') {
 			this.set({'status': 'complete'});
