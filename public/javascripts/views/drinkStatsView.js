@@ -1,6 +1,6 @@
 var DrinkStatsView = Backbone.View.extend({
 	el: '#booze-stats',
-	template: _.template($('#drink-stats-view-template').html());
+	template: _.template($('#drink-stats-view-template').html()),
 	initialize: function() {
 		this.listenTo(boozeList, 'add', this.addOne);
     this.listenTo(boozeList, 'reset', this.addAll);
@@ -11,7 +11,7 @@ var DrinkStatsView = Backbone.View.extend({
     boozelist.each(this.addOne, this);
   },
 	render: function() {
-		var completed = boozeList.completed().length;
+		// var completed = boozeList.completed().length;
 		this.$el.html(this.template());
 	}
 });
