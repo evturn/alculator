@@ -12,6 +12,7 @@ boozeItemView.render();
 
 var boozeList = new BoozeList();
 
+Backbone.history.start();
 
 $(function() {
 boozeList.fetch();
