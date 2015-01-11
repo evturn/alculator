@@ -28,16 +28,6 @@ app.get('/beers', function(request, response) {
 });
 
 
-app.get('/stages', function(request, response) {
-	response.send(bacStages);
-});
-
-app.get('/booze', function(request, response) {
-	var boozeRequestQuery = request.query;
-	boozeQuery			 			= boozeRequestQuery.name;
-	console.log('requestQuery', boozeQuery);
-});
-
 var beerChoice = function(responseObject) {
 	var	beersList = [];
 	target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;
