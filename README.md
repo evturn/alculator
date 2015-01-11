@@ -9,3 +9,5 @@ The drinks are added to the calculator where along with the user's information i
 The output also gives a description of the level of intoxication along with a 5 Stage color scheme ranging from low traces to impending death.
 
 There are eleven desriptions that the user can receive depending on their blood alcohol level.
+
+![Alt text](/relative/public/images/screenshot1.png?raw=true "Screenshot")
