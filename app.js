@@ -35,6 +35,10 @@ app.get('/booze', function(request, response) {
 	{name: 'Coors', abv: 5, img: 'images/bottle.png',
 	 unwanted: false}
 	]
+})
+
+app.post('/booze', function(request, response) {
+		
 });
 
 
