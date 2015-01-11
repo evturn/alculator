@@ -14,6 +14,8 @@ var boozeItem = new BoozeItem(
 	{name: 'Cocktail', abv: 40, img: "images/cocktail.png"}
 	);
 
+var boozeView = new BoozeView({model: boozeItem});
+
 var boozeList = new BoozeList();
 
 var boozeListView = new BoozeListView({collection: boozeList});
