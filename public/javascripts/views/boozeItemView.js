@@ -1,7 +1,7 @@
 var BoozeItemView = Backbone.View.extend({
 	el: $('#booze'),
-	template: _.template('<h3 class="<%+ status %>">' + '<input type=checkbox ' + '<% if (status === "complete") print("checked") %>/>' + '<%= name%></h3>' + '<h4><%= abv %></h4>' + '<img class="fit-wine" src="<%= img %>">'),
-	id: 'booze-view',
+	template: _.template($('#booze-item-view-template').html()),
+	id: 'booze-item-view',
 	className: 'booze',
 	events: {
 		'change input': 'toggleStatus'
