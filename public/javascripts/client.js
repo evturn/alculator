@@ -10,6 +10,10 @@ $wineView = $('#wine-container');
 $liquorView = $('#liquor-container');
 
 
+var boozeItem = new BoozeItem(
+	{name: 'Cocktail', abv: 40, img: "images/cocktail.png"}
+	);
+
 var boozeList = new BoozeList();
 
 var boozeListView = new BoozeListView({collection: boozeList});
