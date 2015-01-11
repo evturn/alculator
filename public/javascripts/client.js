@@ -18,10 +18,7 @@ $beerView = $('#beer-container');
 $wineView = $('#wine-container');
 $liquorView = $('#liquor-container');
 
-var booze = [
-	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png'},
-	{name: 'Coors', abv: 5, img: 'images/bottle.png'}
-	]
+
 
 console.log(boozeItemView.el);
 

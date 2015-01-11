@@ -29,7 +29,12 @@ app.get('/beers', function(request, response) {
 
 
 app.get('/booze', function(request, response) {
-
+	var booze = [
+	{name: 'Cocktail', abv: 40, img: 'images/cocktail.png',
+	 unwanted: false},
+	{name: 'Coors', abv: 5, img: 'images/bottle.png',
+	 unwanted: false}
+	]
 });
 
 
