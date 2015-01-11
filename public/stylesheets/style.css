@@ -55,6 +55,14 @@ h3 {
 	margin-top: 10px;
 }
 
+.drink-space {
+	padding-right: 60px;
+}
+
+.drink-container {
+	width: 320px;
+}
+
 .stage-zero {
 	height: 30px;
 	background-color: #689b6e;
