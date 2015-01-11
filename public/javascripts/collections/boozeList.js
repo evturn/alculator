@@ -1,12 +1,7 @@
 var BoozeList = Backbone.Collection.extend({
 	model: BoozeItem,
 	url: '/booze',
-	initialize: function() {
-		this.on('remove', this.hideModel);
-	},
-	hideModel: function(model) {
-		model.trigger('hide');
-	},
+	localStorage: new Backbone.LocalStorage('booze-rounds'),
 	completed: function() {
   	return this.filter(function(boozeItem) {
     	return boozeItem.get('completed');

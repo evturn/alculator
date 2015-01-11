@@ -5,9 +5,7 @@ var BoozeItem = Backbone.Model.extend({
 		abv: 'none',
 		img: 'images/alc.png',
 		completed: false
-	},
-	localStorage: new Backbone.LocalStorage('booze-rounds'),
-
+	}
 });
 
 console.log('BoozeItem');
