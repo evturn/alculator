@@ -4,7 +4,7 @@ var BoozeItem = Backbone.Model.extend({
 		name: 'No name',
 		abv: 'none',
 		img: 'images/alc.png',
-		unwanted: false
+		status: 'incomplete'
 	}
 });
 
