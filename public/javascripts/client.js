@@ -20,6 +20,7 @@ boozeItem2.save();
 
 
 $(function() {
+console.log(boozeItemView.el);
 
 var wineView = new WineView();
 var liquorView = new LiquorView();
@@ -31,7 +32,6 @@ $liquorView = $('#liquor-container');
 
 
 
-console.log(boozeItemView.el);
 
 // var boozeList = new BoozeList();
 
