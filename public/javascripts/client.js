@@ -1,22 +1,11 @@
-var newBoozeItem = new BoozeItem({
-	name: 'Champagne (GLASS)',
-	abv: 11,
-	img: 'images/champagne.png',
-	status: 'incomplete'
-});
-
-var boozeItem1 = new BoozeItem({name: 'Champagne (GLASS)', abv: 11, img: 'images/champagne.png',
-	 status: 'incomplete'});
-var boozeItemView = new BoozeItemView({model: boozeItem1});
-boozeItemView.render();
 
 var boozeList = new BoozeList();
+var router = new Router({boozeList: boozeList});
 
-Backbone.history.start();
+
 
 $(function() {
-boozeList.fetch();
-console.log(boozeList);
+ router.start();
 
 
 var wineView = new WineView();

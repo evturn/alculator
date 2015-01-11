@@ -4,8 +4,8 @@ var BoozeListView = Backbone.View.extend({
 		this.collection.on('reset', this.addAll, this);
 	},
 	addOne: function(boozeItem) {
-		var boozeView = new BoozeView({model: boozeItem});
-		this.$el.append(boozeView.render().el);
+		var boozeItemView = new BoozeItemView({model: boozeItem});
+		this.$el.append(boozeItemView.render.el);
 	},
 	addAll: function() {
 		this.collection.forEach(this.addOne, this);
