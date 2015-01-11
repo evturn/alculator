@@ -5,6 +5,13 @@ var BoozeItem = Backbone.Model.extend({
 		abv: 'none',
 		img: 'images/alc.png',
 		status: 'incomplete'
+	},
+	toggleStatus: function() {
+				if (this.get('status') === 'incomplete') {
+			this.set({'status': 'complete'});
+		} else {
+			this.set({'status': 'incomplete'});
+		}
 	}
 });
 

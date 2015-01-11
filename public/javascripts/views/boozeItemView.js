@@ -4,19 +4,11 @@ var BoozeItemView = Backbone.View.extend({
 	id: 'booze-view',
 	className: 'booze',
 	events: {
-		'click h4': 'alertStatus',
 		'change input': 'toggleStatus'
 	},
 	toggleStatus: function() {
-		if (this.model.get('status') === 'incomplete') {
-			this.mode.set({'status': 'complete'});
-		} else {
-			this.model.set({'status': 'incomplete'});
-		}
+		this.model.toggleStatus();
 	},
-	alertStatus: function(e) {
-		alert('You clicked on this h3');
-	}
 	render: function() {
 		var attributes = this.mode.toJSON();
 		this.$el.html(this.template(attributes));
