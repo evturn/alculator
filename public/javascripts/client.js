@@ -1,12 +1,23 @@
-var boozeItem = new BoozeItem(
+var boozeItem1 = new BoozeItem(
 	{name: 'Cocktail',
 	 abv: 40,
 	 img: 'images/cocktail.png',
 	 unwanted: false
 	}
 );
-var boozeItemView = new BoozeItemView({model: boozeItem});
+var boozeItemView = new BoozeItemView({model: boozeItem1});
 boozeItemView.render();
+
+var boozeItem2 = new BoozeItem();
+boozeItem2.set(
+	{name: 'Margarita',
+	 abv: 30,
+	 img: 'images/margarita.png',
+	 unwanted: false
+	}
+);
+boozeItem2.save();
+
 
 $(function() {
 
