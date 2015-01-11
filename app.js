@@ -51,6 +51,16 @@ app.get('/liquor', function(request, response) {
 	response.json(jsonLiquor);
 });
 
+app.get('/beers', function(request, response) {
+	var jsonBeer;
+	fs.readFile('./beer.json', 'utf8', function(error, data) {
+		if (error) throw error;
+			jsonLiquor = JSON.parse(data);
+			console.log('beer', jsonBeer);
+	});
+	response.json(jsonBeer);
+});
+
 
 var beerChoice = function(responseObject) {
 	var	beersList = [];
