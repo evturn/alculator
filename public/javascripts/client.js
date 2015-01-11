@@ -1,11 +1,15 @@
-var boozeList = new BoozeList();
+
+
+var boozeItem = new BoozeItem({})
+var boozeItemView = new BoozeItemView({model: boozeItem});
+var boozeList = new BoozeList({});
+var boozeListView = new BoozeListView({collection: boozeList});
+
+
 var router = new Router({boozeList: boozeList});
-
-
 
 $(function() {
  router.start();
-
 
 var wineView = new WineView();
 var liquorView = new LiquorView();

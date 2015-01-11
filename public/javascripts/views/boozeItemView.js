@@ -10,13 +10,14 @@ var BoozeItemView = Backbone.View.extend({
 		this.model.on('change', this.render, this);
 		this.model.on('destroy', this.remove, this);
 		this.model.on('hide', this.remove, this);
+		this.render();
 	},
 	toggleStatus: function() {
 		this.model.toggleStatus();
 	},
 	render: function() {
 		var attributes = this.model.toJSON();
-		this.$el.html(this.template(attributes));
+		this.$el.append(this.template(attributes));
 	},
 	remove: function() {
 		this.$el.remove();
