@@ -1,10 +1,10 @@
 var BoozeItemView = Backbone.View.extend({
 	tagName: 'div',
-	template: _.template('<h3>x</h3><h4><%= name%></h4><h4><%= abv %></h4><img src="<%= img %>">'),
+	template: _.template('<h4>' + '<input type=checkbox ' + '<% if (unwanted === true) print("got it") %>/>' + '<%= name%></h4>' + '<h4><%= abv %></h4>' + '<img src="<%= img %>">'),
 	id: 'booze-view',
 	className: 'booze',
 	events: {
-		"click .booze": "alertStatus"
+		"click h4": "alertStatus"
 	},
 	alertStatus: function(e) {
 		alert('You clicked on this h3');
