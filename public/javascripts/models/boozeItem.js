@@ -12,7 +12,8 @@ var BoozeItem = Backbone.Model.extend({
 		} else {
 			this.set({'status': 'incomplete'});
 		}
-	}
+		this.save();
+	},
 });
 
 console.log('BoozeItem');
