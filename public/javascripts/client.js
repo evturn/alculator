@@ -1,10 +1,5 @@
-
-
-var boozeItem = new BoozeItem({})
-var boozeItemView = new BoozeItemView({model: boozeItem});
 var boozeList = new BoozeList({});
 var boozeListView = new BoozeListView({collection: boozeList});
-
 
 var router = new Router({boozeList: boozeList});
 

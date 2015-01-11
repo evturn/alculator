@@ -41,7 +41,11 @@ app.get('/booze', function(request, response) {
 });
 
 app.post('/booze', function(request, response) {
-		
+	
+});
+
+app.delete('/booze', function(request, response) {
+
 });
 
 
