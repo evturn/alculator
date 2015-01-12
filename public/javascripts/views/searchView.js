@@ -3,7 +3,7 @@ var SearchView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
-	template: _.template($("#beerSearchTemplate").html()),
+	template: _.template($("#beer-search-template").html()),
 	render: function() {
 		this.$el.html(this.template());
     return this;
