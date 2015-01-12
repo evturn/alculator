@@ -4,11 +4,8 @@ var BeerItemView = Backbone.View.extend({
 	events: {
 		'click input.add-booze': 'addBooze'
 	},
-	initialize: function(){
-    this.listenTo(this.model, 'add', this.render);
-  },
   render: function(){
-    this.$el.html(this.template(this.model.toJSON()));
+    this.$el.append(this.template(this.model.toJSON()));
     return this;
   },
 	addBooze: function(e) {

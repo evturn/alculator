@@ -4,9 +4,7 @@ $(function() {
 new AlculatorView();
 new BoozeItemsView();
 new SearchView();
-
-new BeerItemsView();
-
+new BeerItemsView({collection: beerItems});
 // new LiquorItemsView();
 // new WineItemsView();
 
