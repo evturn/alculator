@@ -15,4 +15,4 @@ console.log('BeerItemView');
 
 
 var beerItem = new BeerItem();
-var beerItemView = new BeerItemView({model: beerItem})
+// var beerItemView = new BeerItemView({model: beerItem})

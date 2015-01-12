@@ -1,6 +1,5 @@
 var boozeList = new BoozeList({});
 var router = new Router({boozeList: boozeList});
-var beerItems = new BeerItems();
 
 
 $(function() {
@@ -12,8 +11,8 @@ var beerView = new BeerView();
 var alculatorView = new AlculatorView();
 
 
-beerItems.fetch();
 console.log(beerItems);
+new BeerItemsView();
 
 
 
