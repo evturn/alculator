@@ -14,11 +14,6 @@ var alculatorView = new AlculatorView();
 console.log(beerItems);
 new BeerItemsView();
 
-
-
-
-
-
 	$('#liquor-tab').on('click',
 		function(e) {
 			e.preventDefault();
@@ -38,6 +33,12 @@ new BeerItemsView();
 			var searchView = new SearchView();
 			
 	});
+
+	$('#beer-items').on('click', function(e) {
+
+	});
+
+
 
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();

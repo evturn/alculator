@@ -3,6 +3,7 @@ var BoozeItem = Backbone.Model.extend({
 	defaults: {
 		name: 'No name',
 		abv: 'none',
+		ounces: '',
 		img: 'images/alc.png',
 		completed: false
 	}

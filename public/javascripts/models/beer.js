@@ -1,5 +1,3 @@
-var Beer = Backbone.Model.extend({
-	url: '/search'
-});
+var Beer = Backbone.Model.extend({});
 
 console.log('Beer');
