@@ -12,7 +12,3 @@ var BeerItemView = Backbone.View.extend({
 });
 
 console.log('BeerItemView');
-
-
-var beerItem = new BeerItem();
-// var beerItemView = new BeerItemView({model: beerItem})

@@ -5,7 +5,7 @@ var BeerItemsView = Backbone.View.extend({
 	},
   addOne: function(beerModel) {
   var view = new BeerItemView({model: beerModel});
-  $('#beer-items').append( view.render().el );
+  $('#beer-items').append(view.render().el );
   },
   addAll: function() {
     this.$('#beer-items').html('');

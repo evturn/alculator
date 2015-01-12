@@ -43,7 +43,7 @@ new BeerItemsView();
 		e.preventDefault();
 		beerField = $('#beer-query').val();
 		$.ajax({
-			url: '/search/beers',
+			url: '/search',
 			method: 'GET',
 			data: {
 				name: beerField

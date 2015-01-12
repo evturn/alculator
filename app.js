@@ -21,7 +21,7 @@ app.post('/rounds', parseUrlencoded, function(request, response) {
 	response.status(201).json(newRound);
 });
 
-app.get('/search/beers', function(request, response) {	
+app.get('/search', function(request, response) {	
 	var requestQuery = request.query;
 	beerQuery 			 = requestQuery.name;
 	beerChoice(response);
