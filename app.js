@@ -28,18 +28,11 @@ app.get('/search', function(request, response) {
 });
 
 
-app.get('/booze', function(request, response) {
+app.get('/booze', function(request, response) {});
 
-	// response.json();
-});
+app.post('/booze', function(request, response) {});
 
-app.post('/booze', function(request, response) {
-	
-});
-
-app.delete('/booze', function(request, response) {
-
-});
+app.delete('/booze', function(request, response) {});
 
 app.get('/liquor', function(request, response) {
 	var jsonLiquor;
