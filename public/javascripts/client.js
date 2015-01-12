@@ -1,5 +1,6 @@
 var boozeList = new BoozeList({});
 var router = new Router({boozeList: boozeList});
+var beerItems = new BeerItems();
 
 
 $(function() {
@@ -9,6 +10,14 @@ var wineView = new WineView();
 var liquorView = new LiquorView();
 var beerView = new BeerView();
 var alculatorView = new AlculatorView();
+
+
+beerItems.fetch();
+console.log(beerItems);
+
+
+
+
 
 
 	$('#liquor-tab').on('click',

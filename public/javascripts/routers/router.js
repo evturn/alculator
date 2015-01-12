@@ -13,10 +13,7 @@ var Router = Backbone.Router.extend({
 	},
 	index: function() {
 		this.boozeList.fetch();
-	},
-	show: function(id) {
-		this.boozeList.focusOnBoozeItem(id);
-	},
+	}
 });
 
 console.log('Router');

@@ -52,13 +52,10 @@ app.get('/liquor', function(request, response) {
 });
 
 app.get('/beers', function(request, response) {
-	var jsonbeers;
-	fs.readFile('./beers.json', 'utf8', function(error, data) {
-		if (error) throw error;
-			jsonbeers = JSON.parse(data);
-			console.log('beers', jsonbeers);
-	});
-	response.json(jsonbeers);
+	allBeers = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
+	{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 7},
+	{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 8}];
+	response.json(allBeers);
 });
 
 
