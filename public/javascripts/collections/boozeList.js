@@ -1,5 +1,4 @@
 var BoozeList = Backbone.Collection.extend({
-	model: BoozeItem,
 	url: '/booze',
 	localStorage: new Backbone.LocalStorage('booze-rounds'),
 	completed: function() {

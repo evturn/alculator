@@ -5,40 +5,14 @@ var router = new Router({boozeList: boozeList});
 $(function() {
  router.start();
 
-
 var searchView = new SearchView();
 var alculatorView = new AlculatorView();
 
 
 console.log(beerItems);
 new BeerItemsView();
-new LiquorItemsView();
-new WineItemsView();
-
-
-	$('#liquor-tab').on('click',
-		function(e) {
-			e.preventDefault();
-			var liquorItemsView = new LiquorItemsView();
-			
-	});
-
-	$('#wine-tab').on('click',
-		function(e) {
-			e.preventDefault();
-			var wineView = new WineView();
-			
-	});
-	$('#beer-tab').on('click',
-		function(e) {
-			e.preventDefault();
-			var searchView = new SearchView();
-			
-	});
-
-
-
-
+// new LiquorItemsView();
+// new WineItemsView();
 
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
