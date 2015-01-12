@@ -25,6 +25,13 @@
 
 
 	<div class="row col-lg-4" id="booze-content">
+		<div class="row col-lg-12" id="beer-container">
+			<div class="row col-lg-12 col-lg-offset-1 form-group">
+				<h3>BEER</h3>
+		  	<div class="row col-md-12 drink-container" id="beer-items">
+		  	</div>
+		  </div>
+		</div>
 		<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-container">
 		</div>
 		<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-results">
@@ -59,10 +66,7 @@
 
 <!-- Underscore templates -->
 <script type="text/template" id="beer-item-view-template">
-	<div class="row col-lg-12" id="beer-container">
-		<div class="row col-lg-12 col-lg-offset-1 form-group">
-			<h3>BEER</h3>
-		  <div class="row col-md-12 drink-container">
+
 		  	<div class="col-xs-4 align drink-space">
 		  		<img src="<%= img %>" class="fit-wine">
 		  		<form>
@@ -70,20 +74,6 @@
 		 	 			<button class="btn btn-danger btn-lg" type="button" name="<%= name %>">+</button>
 		 	 		</form>
 		 		</div>
-		 		<div class="col-xs-4 align drink-space">
-			  	<img src="images/bottle.png" class="fit-wine">
-			  	<form>
-			  		<h5 for="standard">STANDARD</h5>
-			 	 		<button class="btn btn-danger btn-lg" type="button" name="standard" id="standard" value="40.0">+</button>
-			 	 	</form>
-			 	</div>
-			  <div class="col-xs-4 align drink-space">
-			  	<img src="images/bottle.png" class="fit-wine">
-			  	<form>
-			  		<h5 for="strong">STRONG</h5>
-			 	 		<button class="btn btn-danger btn-lg" type="button" name="strong" id="strong" value="40.0">+</button>
-			 	 	</form>
-			 	</div>
 			</div>
 		</div>
 	</div>
