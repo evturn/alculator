@@ -54,6 +54,10 @@ app.get('/liquor', function(request, response) {
 	response.status(200).json(allLiquor);
 });
 
+app.get('/wine', function(request, response) {
+	response.status(200).json(allWine);
+});
+
 app.get('/search', function(request, response) {	
 	var requestQuery = request.query;
 	beerQuery 			 = requestQuery.name;
