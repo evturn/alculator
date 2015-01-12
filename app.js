@@ -24,10 +24,11 @@ app.post('/rounds', parseUrlencoded, function(request, response) {
 
 app.get('/booze', function(request, response) {});
 
-app.post('/booze', function(request, response) {
-	var boozeSelection = request.body;
-	response.status(201).json(boozeSelection);
-});
+// app.post('/booze', parseUrlencoded, function(request, response) {
+// 	var boozeSelection = request.body;
+// 	console.log(boozeSelection);
+// 	response.status(201).json(boozeSelection);
+// });
 
 app.delete('/booze', function(request, response) {});
 
@@ -39,15 +40,15 @@ app.get('/beers', function(request, response) {
 	response.status(200).json(allBeers);
 });
 
-app.get('/liquor', function(request, response) {
-	var jsonLiquor;
-	fs.readFile('./liquor.json', 'utf8', function(error, data) {
-		if (error) throw error;
-			jsonLiquor = JSON.parse(data);
-			console.log('liquor', jsonLiquor);
-	});
-	response.json(jsonLiquor);
-});
+// app.get('/liquor', function(request, response) {
+// 	var jsonLiquor;
+// 	fs.readFile('./liquor.json', 'utf8', function(error, data) {
+// 		if (error) throw error;
+// 			jsonLiquor = JSON.parse(data);
+// 			console.log('liquor', jsonLiquor);
+// 	});
+// 	response.json(jsonLiquor);
+// });
 
 app.get('/search', function(request, response) {	
 	var requestQuery = request.query;

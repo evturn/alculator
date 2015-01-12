@@ -34,9 +34,7 @@ new BeerItemsView();
 			
 	});
 
-	$('#beer-items').on('click', function(e) {
 
-	});
 
 
 
@@ -59,22 +57,7 @@ new BeerItemsView();
 		});
 	});
 
-	$('#booze-search').on('submit', function(e) {
-		e.preventDefault();
-		console.log('Secrets of the Booze');
-		boozeField = $('#booze-query').val();
-		$.ajax({
-			url: '/booze',
-			method: 'GET',
-			data: {
-				name: boozeField
-			},
-			dataType: 'JSON',
-			success: function(data) {
-				console.log(data);
-			}
-		});
-	});
+
 
 
 	$('#bac-submit-btn').on('click', function(e) {
@@ -136,12 +119,12 @@ new BeerItemsView();
 		});
   })
 
-  $('#search-results').on('click #add-beer', function(e){
-  	e.preventDefault();
-    var abv = beer.attributes
-    console.log('abv', abv.abv);
-    $('input[name="abv"]').last().attr('value', abv.abv);
- 	});
+  // $('#search-results').on('click #add-beer', function(e){
+  // 	e.preventDefault();
+  //   var abv = beer.attributes
+  //   console.log('abv', abv.abv);
+  //   $('input[name="abv"]').last().attr('value', abv.abv);
+ 	// });
 
 
 });
