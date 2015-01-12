@@ -24,31 +24,27 @@ app.post('/rounds', parseUrlencoded, function(request, response) {
 
 app.get('/booze', function(request, response) {});
 
-// app.post('/booze', parseUrlencoded, function(request, response) {
-// 	var boozeSelection = request.body;
-// 	console.log(boozeSelection);
-// 	response.status(201).json(boozeSelection);
-// });
+app.post('/booze', parseUrlencoded, function(request, response) {});
 
 app.delete('/booze', function(request, response) {});
 
 
 app.get('/beers', function(request, response) {
 	allBeers = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
-	{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 7},
-	{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 8}];
+		{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 7},
+		{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 8}];
 	response.status(200).json(allBeers);
 });
 
-// app.get('/liquor', function(request, response) {
-// 	var jsonLiquor;
-// 	fs.readFile('./liquor.json', 'utf8', function(error, data) {
-// 		if (error) throw error;
-// 			jsonLiquor = JSON.parse(data);
-// 			console.log('liquor', jsonLiquor);
-// 	});
-// 	response.json(jsonLiquor);
-// });
+app.get('/liquor', function(request, response) {
+	allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
+		{name: "Lowball", abv: 40, img: "images/low.png", ounces: 7},
+		{name: "Highball", abv: 40, img: "images/high.png", ounces: 8},
+		{name: "Cocktail", abv: 45, img: "images/cocktail.png", ounces: 5},
+		{name: "Margarita", abv: 37, img: "images/margarita.png", ounces: 9},
+		{name: "Cordial", abv: 20, img: "images/cordial.png", ounces: 2}]
+	response.status(200).json(allLiquor);
+});
 
 app.get('/search', function(request, response) {	
 	var requestQuery = request.query;
