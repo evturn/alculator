@@ -65,6 +65,16 @@
 
 
 <!-- Underscore templates -->
+<script type="text/template" id="wine-item-view-template">
+	<div class="col-xs-4 align drink-space wine-item">
+		<img src="<%= img %>" class="fit-wine">
+		<form>
+			<h5><%= name %></h5>
+	 		<input class="btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-name="<%= name %>" data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>">
+	 	</form>
+	</div>
+</script>
+
 <script type="text/template" id="liquor-item-view-template">
 	<div class="col-xs-4 align drink-space liquor-item">
 		<img src="<%= img %>" class="fit-wine">
@@ -74,9 +84,6 @@
 	 	</form>
 	</div>
 </script>
-
-
-
 
 <script type="text/template" id="beer-item-view-template">
 	<div class="col-xs-4 align drink-space beer-item">

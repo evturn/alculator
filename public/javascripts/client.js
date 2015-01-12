@@ -13,6 +13,7 @@ var alculatorView = new AlculatorView();
 console.log(beerItems);
 new BeerItemsView();
 new LiquorItemsView();
+new WineItemsView();
 
 
 	$('#liquor-tab').on('click',
