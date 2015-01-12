@@ -20,13 +20,13 @@ app.post('/rounds', parseUrlencoded, function(request, response) {
 	response.status(201).json(newRound);
 });
 
-boozeMan = [{name: "Tequila", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
+seedData = [{name: "Tequila", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
 		{name: "Urine", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
 		{name: "Blood", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
 		{name: "Poop", abv: 40, img: "images/bottle-champagne.png", ounces: 25},];
 
 app.get('/booze', function(request, response) {
-	response.status(200).json(boozeMan);
+	response.status(200).json();
 });
 
 app.post('/booze', parseUrlencoded, function(request, response) {});
