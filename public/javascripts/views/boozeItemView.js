@@ -1,5 +1,5 @@
 var BoozeItemView = Backbone.View.extend({
-	el: $('#booze-list'),
+	el: $('#booze-items'),
 	tagName: 'li',
 	template: _.template($('#booze-item-view-template').html()),
 	className: 'booze',

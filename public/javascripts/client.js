@@ -1,7 +1,7 @@
-var boozeItems = new BoozeItems({});
-var router = new Router({boozeItems: boozeList});
+var boozeItems = new BoozeItems({model: boozeMan});
+var router = new Router({boozeItems: boozeItems});
 
-var boozeMan = BoozeItem({name: "Tequila", abv: 40, ounces: 26, img: "images/bottle-champange.png"})
+var boozeMan = new BoozeItem({name: "Tequila", abv: 40, ounces: 26, img: "images/bottle-champange.png"})
 
 $(function() {
  router.start();
@@ -12,6 +12,9 @@ var alculatorView = new AlculatorView();
 
 console.log(beerItems);
 new BeerItemsView();
+console.log('BoozeItems?',boozeItems);
+
+new BoozeStatsView();
 // new LiquorItemsView();
 // new WineItemsView();
 
