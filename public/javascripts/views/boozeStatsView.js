@@ -4,14 +4,15 @@ var BoozeStatsView = Backbone.View.extend({
 	initialize: function() {
 		this.listenTo(boozeItems, 'add', this.addOne);
     this.listenTo(boozeItems, 'reset', this.addAll);
-
+    this.render();
 	},
 	addAll: function() {
     this.$('#booze-list').html('');
     boozelist.each(this.addOne, this);
   },
 	render: function() {
-		// var completed = boozeList.completed().length;
+		completed = 0;
+		remaining = 0;
 		this.$el.html(this.template());
 	}
 });

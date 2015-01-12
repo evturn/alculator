@@ -15,14 +15,16 @@ app.get('/', function(require, response) {
 	response.render('index.html');
 });
 
-
 app.post('/rounds', parseUrlencoded, function(request, response) {
 	var newRound = request.body;
 	response.status(201).json(newRound);
 });
 
+boozeMan = [{name: "Tequila", abv: 40, ounces: 26, img: "images/bottle-champange.png"}];
 
-app.get('/booze', function(request, response) {});
+app.get('/booze', function(request, response) {
+	response.status(200).json(boozeMan);
+});
 
 app.post('/booze', parseUrlencoded, function(request, response) {});
 
