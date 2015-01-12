@@ -4,15 +4,15 @@ var Router = Backbone.Router.extend({
 		'booze/:id': "show"
 	},
 	initialize: function(options) {
-		this.boozeList = options.boozeList;
-		this.boozeListView = new BoozeListView({collection: this.boozeList});
-		$('#booze').append(this.boozeListView.el);
+		this.boozeItems = options.boozeItems;
+		this.boozeItemsView = new BoozeItemsView({collection: this.boozeItems});
+		$('#booze').append(this.boozeItemsView.el);
 	},
 	start: function() {
 		Backbone.history.start({pushState: true});
 	},
 	index: function() {
-		this.boozeList.fetch();
+		this.boozeItems.fetch();
 	}
 });
 

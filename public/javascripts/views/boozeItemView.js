@@ -12,8 +12,8 @@ var BoozeItemView = Backbone.View.extend({
 		this.render();
 	},
 	render: function() {
-		var attributes = this.model.toJSON();
-		this.$el.append(this.template(attributes));
+		var boozeAttributes = this.model.toJSON();
+		this.$el.append(this.template(boozeAttributes));
 		return this;
 	},
 	clear: function() {

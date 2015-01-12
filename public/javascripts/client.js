@@ -1,6 +1,7 @@
-var boozeList = new BoozeList({});
-var router = new Router({boozeList: boozeList});
+var boozeItems = new BoozeItems({});
+var router = new Router({boozeItems: boozeList});
 
+var boozeMan = BoozeItem({name: "Tequila", abv: 40, ounces: 26, img: "images/bottle-champange.png"})
 
 $(function() {
  router.start();

@@ -1,4 +1,4 @@
-var BoozeListView = Backbone.View.extend({
+var BoozeItemsView = Backbone.View.extend({
 	initialize: function() {
 		this.collection.on('add', this.addOne, this);
 		this.collection.on('reset', this.addAll, this);
@@ -16,4 +16,4 @@ var BoozeListView = Backbone.View.extend({
 	}
 });
 
-console.log('BoozeListView');
+console.log('BoozeItemsView');
