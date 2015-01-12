@@ -1,19 +1,16 @@
 var BoozeItemsView = Backbone.View.extend({
 	initialize: function() {
-		this.collection.on('add', this.addOne, this);
-		this.collection.on('reset', this.addAll, this);
+		this.listenTo(boozeItems, 'add', this.addOne);
+    this.listenTo(boozeItems, 'reset', this.addAll);
 	},
-	addOne: function(boozeItem) {
-		var boozeItemView = new BoozeItemView({model: boozeItem});
-		this.$el.append(boozeItemView.render.el);
-	},
-	addAll: function() {
-		this.collection.forEach(this.addOne, this);
-		
-	},
-	render: function() {
-		this.addAll();
-	}
+  addOne: function(boozeModel) {
+  var viewOfBooze = new BoozeItemView({model: boozeModel});
+  $('#booze-items').append(viewOfBooze.render().el );
+  },
+  addAll: function() {
+    this.$('#booze-items').html('');
+    boozeItems.each(this.addOne, this);
+  },
 });
 
 console.log('BoozeItemsView');

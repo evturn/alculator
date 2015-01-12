@@ -9,11 +9,8 @@ var searchView = new SearchView();
 var alculatorView = new AlculatorView();
 
 
-console.log(beerItems);
 new BeerItemsView();
-
-
-new BoozeStatsView();
+new BoozeItemsView();
 // new LiquorItemsView();
 // new WineItemsView();
 

@@ -1,12 +1,10 @@
 var BoozeItem = Backbone.Model.extend({
-	urlRoot: '/booze',
 	defaults: {
-		name: 'No name',
+		name: 'Uh oh',
 		abv: 'none',
-		ounces: '',
-		img: 'images/alc.png',
-		completed: false
+		img: 'images/bottle-champagne.png',
+		ounces: 'none'
 	}
 });
 
-console.log('BoozeItem');
+console.log('BeerItem');
