@@ -24,35 +24,38 @@
 	</div>
 
 
-	<div class="row col-lg-4" id="booze-content">
-		<div class="row col-lg-12" id="beverage-container">
-			<div class="row col-lg-12 col-lg-offset-1 form-group">
-				<h3>BEVERAGES</h3>
-		  	<div class="row col-md-12 drink-container" id="beverage-items">
-		  	</div>
-		  </div>
-		</div>
-		<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-container">
-		</div>
-		<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-results">
-		</div>
+<div class="row col-lg-4" id="left-column">
+	
+	<div class="row col-lg-12" id="beverage-container">
+		<div class="row col-lg-12 col-lg-offset-1 form-group">
+			<h3>BEVERAGES</h3>
+	  	<div class="row col-md-12 drink-container" id="beverage-items">
+	  	</div>
+	  </div>
 	</div>
 
-	<div class="row col-lg-4" id="bac">
-		<div class="row col-lg-12 col-lg-offset-1" id="bac-meter">
-		</div>
-		<div class="row col-lg-12 col-lg-offset-1" id="bac-container">
-		</div>
-		<div class="row col-lg-12 col-lg-offset-1" id="stage">
-		</div>
+	<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-container">
+	</div>
+	<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-results">
+	</div>
+</div>
+
+
+<div class="row col-lg-4" id="middle-column">
+	<div class="row col-lg-12 col-lg-offset-1" id="bac-meter">
+	</div>
+	<div class="row col-lg-12 col-lg-offset-1" id="bac-calculation">
+	</div>
+	<div class="row col-lg-12 col-lg-offset-1" id="stage">
+	</div>
 	
 
-		<div class="row col-lg-12 col-lg-offset-1" id="booze">
-			<h3>YOUR TAB</h3>
-			<div id="booze-stats">
-				<ul id="booze-items"></ul>
-			</div>
+	<div class="row col-lg-12 col-lg-offset-1" id="booze-container">
+		
+		<h3>YOUR TAB</h3>
 		</div>
+			  	<div class="row col-md-12 drink-container" id="beverage-items">
+	</div>
 	</div>
 	<div class="row col-lg-4" id="alculator">
 	</div>
@@ -64,19 +67,12 @@
 </script>
 
 <script type="text/template" id="booze-item-view-template">
-	
-		<li>
-		<div class="row col-md-12 align">
-			<div class="row col-md-6 align drink-space">
-				<h3 class="<%= status %>"><%= name%></h3>
-				<h4><%= abv %>%</h4>
-			</div>	
-			<div class="col-md-6 align drink-space">
-				<img class="fit-wine" src="<%= img %>">
-					<button class="destroy"></button>
-			</div>
-		</div>
-		
+	<div class="col-xs-4 align drink-space wine-item">
+		<img src="<%= img %>" class="fit-wine">
+		<h3 class="<%= status %>"><%= name%></h3>
+		<h4><%= abv %>% <%= ounces %>oz</h4>
+		<button class="destroy"></button>		
+	</div>
 </script>
 
 
@@ -216,12 +212,9 @@
 	</script>
 
 
-<script type="text/template id="bac-meter-template">
-	<h3>BAC</h3>
 
-</script>
 
-<script type="text/template" id="bacTemplate">
+<script type="text/template" id="bac-calculation-template">
 	<h3>YOUR BAC LEVEL</h3>
 		<h1 align="center">&#8776; <%= bac %></h1>
 </script>

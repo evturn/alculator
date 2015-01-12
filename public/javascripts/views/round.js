@@ -1,8 +1,8 @@
 var RoundView = Backbone.View.extend({
-	el: $('#bac-container'),
+	el: $('#bac-calculation'),
 	model: Round,	
 	url: '/rounds',
-	template: _.template($('#bacTemplate').html()),
+	template: _.template($('#bac-calculation-template').html()),
 	initialize: function() {
 		this.render();
 	},
