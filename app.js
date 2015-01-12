@@ -48,7 +48,7 @@ app.get('/beers', function(request, response) {
 	allBeers = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
 	{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 7},
 	{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 8}];
-	response.json(allBeers);
+	response.status(200).json(allBeers);
 });
 
 

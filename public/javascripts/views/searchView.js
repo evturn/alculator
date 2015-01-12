@@ -1,4 +1,4 @@
-var BeerView = Backbone.View.extend({
+var SearchView = Backbone.View.extend({
 	el: $('#search-container'),
 	initialize: function() {
 		this.render();
@@ -10,4 +10,4 @@ var BeerView = Backbone.View.extend({
 	}
 });
 
-console.log('BeerView');
+console.log('SearchView');

@@ -7,7 +7,7 @@ $(function() {
 
 var wineView = new WineView();
 var liquorView = new LiquorView();
-var beerView = new BeerView();
+var searchView = new SearchView();
 var alculatorView = new AlculatorView();
 
 
@@ -35,7 +35,7 @@ new BeerItemsView();
 	$('#beer-tab').on('click',
 		function(e) {
 			e.preventDefault();
-			var beerView = new BeerView();
+			var searchView = new SearchView();
 			
 	});
 
