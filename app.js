@@ -28,7 +28,7 @@ app.post('/booze', parseUrlencoded, function(request, response) {});
 
 app.delete('/booze', function(request, response) {});
 
-allBeers = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
+allBeers  = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
 		{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 7},
 		{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 8}];
 
@@ -38,6 +38,13 @@ allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
 		{name: "Cocktail", abv: 45, img: "images/cocktail.png", ounces: 5},
 		{name: "Margarita", abv: 37, img: "images/margarita.png", ounces: 9},
 		{name: "Cordial", abv: 20, img: "images/cordial.png", ounces: 2}];
+
+allWine		= [{name: "Red (Glass)", abv: 13, img: "images/redglass.png", ounces: 5},
+		{name: "White (Glass)", abv: 12.5, img: "images/whiteglass.png", ounces: 5},
+		{name: "Champagne (Flute)", abv: 12, img: "images/champagneglass.png", ounces: 5.5},
+		{name: "Red (Bottle)", abv: 13, img: "images/bottle-red.png", ounces: 25},
+		{name: "White (Bottle)", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
+		{name: "Champagne (Bottle)", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
 
 app.get('/beers', function(request, response) {
 	response.status(200).json(allBeers);
