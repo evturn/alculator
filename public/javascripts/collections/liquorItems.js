@@ -1,6 +1,6 @@
 var LiquorItems = Backbone.Collection.extend({
-	model: BeerItem,
-	url: '/beers'
+	model: LiquorItem,
+	url: '/liquor'
 });
 
 console.log('LiquorItems');

@@ -1,5 +1,5 @@
 var BeerItemView = Backbone.View.extend({
-	el: '#beer-items',
+	el: '#beverage-items',
 	template: _.template($('#beer-item-view-template').html()),
 	render: function() {
 		var beerAttributes = this.model.toJSON();

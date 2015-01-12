@@ -5,10 +5,10 @@ var LiquorItemsView = Backbone.View.extend({
 	},
   addOne: function(liquorModel) {
   var view = new LiquorItemView({model: liquorModel});
-  $('#liquor-items').append(view.render().el );
+  $('#beverage-items').append(view.render().el );
   },
   addAll: function() {
-    this.$('#liquor-items').html('');
+    this.$('#beverage-items').html('');
     liquorItems.each(this.addOne, this);
   },
 });
