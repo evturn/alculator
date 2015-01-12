@@ -65,16 +65,28 @@
 
 
 <!-- Underscore templates -->
+<script type="text/template" id="liquor-item-view-template">
+	<div class="col-xs-4 align drink-space liquor-item">
+		<img src="<%= img %>" class="fit-wine">
+		<form>
+			<h5><%= name %></h5>
+	 		<input class="btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-name="<%= name %>" data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>">
+	 	</form>
+	</div>
+</script>
+
+
+
+
 <script type="text/template" id="beer-item-view-template">
 	<div class="col-xs-4 align drink-space beer-item">
 		<img src="<%= img %>" class="fit-wine">
 		<form>
-			<h5><%= name %> Beer</h5>
-	 			<input class="btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-name="<%= name %>" data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>">
-	 		</form>
-		</div>
+		<h5><%= name %> Beer</h5>
+	 		<input class="btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-name="<%= name %>" data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>">
+	 	</form>
+	</div>
 </script>
-
 
 <script type="text/template" id="beerSearchTemplate">
 <% console.log('beer clicked') %>
@@ -88,65 +100,8 @@
 					<input class="btn btn-default btn-lg btn-block" type="submit" value="SEARCH" id="beer-submit">
 				</form>
 			</div>
-
-
 </script>
-<script type="text/template" id="liquorSearchTemplate">
-<% console.log('liquor clicked') %>
-	<div class="row col-lg-12" id="liquor-container">
-		<div class="row col-lg-12 col-lg-offset-1 form-group">
-			<h3>LIQUOR</h3>
-				<form id='liquor-form'>
-				  <div class="row col-md-12 drink-container">
-				  	<div class="col-xs-4 align drink-space">
-				  		<img src="images/shot.png" class="fit-wine">
-				  		<form>
-				  			<h5 for="shot">SHOT</h5>
-				 	 			<button class="btn btn-danger btn-lg" type="button" name="shot" id="shot" value="40.0">+</button>
-				 	 		</form>
-				 		</div>
-				 			<div class="col-xs-4 align drink-space">
-					  		<img src="images/low.png" class="fit-wine">
-					  		<form>
-					  			<h5 for="low">LOW</h5>
-					 	 			<button class="btn btn-danger btn-lg" type="button" name="low" id="low" value="40.0">+</button>
-					 	 		</form>
-					 		</div>
-					  	<div class="col-xs-4 align drink-space">
-					  		<img src="images/high.png" class="fit-wine">
-					  		<form>
-					  			<h5 for="high">HIGH</h5>
-					 	 			<button class="btn btn-danger btn-lg" type="button" name="high" id="high" value="40.0">+</button>
-					 	 		</form>
-					 		</div>
-				 		
-				 		<div class="row col-md-12 drink-container">
-				 		<div class="col-xs-4 align drink-space">
-				  		<img src="images/cocktail.png" class="fit-wine">
-				  		<form>
-				  			<h5 for="cocktail">COCKTAIL</h5>
-				 	 			<button class="btn btn-danger btn-lg" type="button" name="cocktail" id="cocktail" value="50.0">+</button>
-				 	 		</form>
-				 		</div>
-							<div class="col-xs-4 align drink-space">
-				  		<img src="images/margarita.png" class="fit-wine">
-				  		<form>
-				  			<h5 for="margarita">MARGARITA</h5>
-				 	 			<button class="btn btn-danger btn-lg" type="button" name="margarita" id="margarita" value="35.0">+</button>
-				 	 		</form>
-				 		</div>
-				 		<div class="col-xs-4 align drink-space">
-				  		<img src="images/cordial.png" class="fit-wine">
-				  		<form>
-				  			<h5 for="cordial">CORDIAL</h5>
-				 	 			<button class="btn btn-danger btn-lg" type="button" name="cordial" id="cordial" value="60.0">+</button>
-				 	 		</form>
-				 		</div>
-					 	</div>
-				</form>
-		</div>
-	</div>
-</script>
+
 <script type="text/template" id="wineSearchTemplate">
 	<% console.log('wine clicked') %>
 		<div class="row col-lg-12" id="wine-container">
@@ -400,7 +355,6 @@
 <script src="javascripts/views/round.js"></script>
 <script src="javascripts/views/searchView.js"></script>
 <script src="javascripts/views/wine.js"></script>
-<script src="javascripts/views/liquor.js"></script>
 <script src="javascripts/views/liquorItemView.js"></script>
 <script src="javascripts/views/liquorItemsView.js"></script>
 <script src="javascripts/views/beerItemView.js"></script>

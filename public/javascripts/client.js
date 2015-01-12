@@ -5,19 +5,20 @@ var router = new Router({boozeList: boozeList});
 $(function() {
  router.start();
 
-var wineView = new WineView();
-var liquorView = new LiquorView();
+
 var searchView = new SearchView();
 var alculatorView = new AlculatorView();
 
 
 console.log(beerItems);
 new BeerItemsView();
+new LiquorItemsView();
+
 
 	$('#liquor-tab').on('click',
 		function(e) {
 			e.preventDefault();
-			var liquorView = new LiquorView();
+			var liquorItemsView = new LiquorItemsView();
 			
 	});
 

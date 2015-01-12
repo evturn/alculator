@@ -1,5 +1,5 @@
 var LiquorItemView = Backbone.View.extend({
-		el: '#beverage-items',
+	el: '#beverage-items',
 	template: _.template($('#liquor-item-view-template').html()),
 	render: function() {
 		var liquorAttributes = this.model.toJSON();
@@ -8,4 +8,4 @@ var LiquorItemView = Backbone.View.extend({
 	}
 });
 
-console.log('LiquorViewItem');
+console.log('LiquorItemView');
