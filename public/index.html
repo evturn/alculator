@@ -107,13 +107,12 @@
 		<img src="<%= img %>" class="fit-wine">
 		<form>
 		<h5><%= name %> Beer</h5>
-	 		<input class="btn btn-danger btn-lg add-booze" type="button" name="<%= name %>" value="+" data-name="<%= name %>" data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>">
+	 		<input class="add-booze btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-name="<%= name %>" id="<%= name %>"data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>">
 	 	</form>
 	</div>
 </script>
 
 <script type="text/template" id="beer-search-template">
-<% console.log('beer clicked') %>
 			<div class="row col-lg-12 form-group">
 				<h3>SEARCH</h3>
 				<form id='beer-search'>

@@ -14,6 +14,14 @@ new BoozeItemsView();
 // new LiquorItemsView();
 // new WineItemsView();
 
+$('#beverage-items').on('click', function(e) {
+	e.preventDefault();
+
+});
+
+
+
+
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerField = $('#beer-query').val();
@@ -95,17 +103,12 @@ new BoozeItemsView();
 		});
   })
 
-  // $('#search-results').on('click #add-beer', function(e){
-  // 	e.preventDefault();
-  //   var abv = beer.attributes
-  //   console.log('abv', abv.abv);
-  //   $('input[name="abv"]').last().attr('value', abv.abv);
- 	// });
 
+
+console.log('Client');
 
 });
 
-console.log('app');
 // Bac Meter
 	(function() {
 	  var Needle, arc, arcEndRad, arcStartRad, barWidth, chart, chartInset, degToRad, el, endPadRad, height, margin, needle, numSections, padRad, percToDeg, percToRad, percent, radius, sectionIndx, sectionPerc, startPadRad, svg, totalPercent, width, _i;
