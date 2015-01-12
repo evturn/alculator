@@ -1,16 +1,12 @@
 
-// var boozeMan = new BoozeItem({name: "Tequila", abv: 40, ounces: 26, img: "images/bottle-champange.png"})
 
-// var router = new Router({boozeItems: boozeItems});
 $(function() {
- // router.start();
-
-var searchView = new SearchView();
-var alculatorView = new AlculatorView();
-
+new AlculatorView();
+new BoozeItemsView();
+new SearchView();
 
 new BeerItemsView();
-new BoozeItemsView();
+
 // new LiquorItemsView();
 // new WineItemsView();
 
@@ -22,6 +18,7 @@ $('#beverage-items').on('click', function(e) {
 
 
 
+	
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerField = $('#beer-query').val();

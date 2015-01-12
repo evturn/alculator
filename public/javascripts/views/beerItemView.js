@@ -2,15 +2,18 @@ var BeerItemView = Backbone.View.extend({
 	el: '#beverage-items',
 	template: _.template($('#beer-item-view-template').html()),
 	events: {
-		"click input.add-booze": "foo"
+		'click input.add-booze': 'addBooze'
 	},
-	render: function() {
-		var beerAttributes = this.model.toJSON();
-		this.$el.append(this.template(beerAttributes));
-		return this;
-	},
-	foo: function foo() {
-		console.log("whooo");
+	initialize: function(){
+    this.listenTo(this.model, 'add', this.render);
+  },
+  render: function(){
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  },
+	addBooze: function(e) {
+		e.preventDefault();
+		console.log("whooo", this);
 	}
 });
 
