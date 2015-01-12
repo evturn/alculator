@@ -15,7 +15,7 @@ app.get('/', function(require, response) {
 	response.render('index.html');
 });
 
-var rounds = {}
+
 app.post('/rounds', parseUrlencoded, function(request, response) {
 	var newRound = request.body;
 	response.status(201).json(newRound);
