@@ -70,12 +70,14 @@
 </script>
 
 <script type="text/template" id="booze-item-view-template">
-	
+	<ul>
+		<li>
+	<button class="destroy"></button>
 		<img src="<%= img %>" class="fit-wine">
-		<h5 class="<%= status %>"><%= name%></h5>
-		<h5><%= abv %>% <%= ounces %>oz</h5>
-		<button class="destroy"></button>		
-	
+			<h5 class="<%= status %>"><%= name%>  <%= ounces %>oz</h5>
+			<h5><%= abv %>%</h5>
+		</ul>
+	</ul>
 </script>
 
 

@@ -97,7 +97,7 @@ h3 {
 	background-color: #bd574b;
 }
 
-#booze li .destroy {
+.booze-item li .destroy {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -112,21 +112,20 @@ h3 {
 	transition: all 0.2s;
 }
 
-#booze li .destroy:hover {
+.booze-item li .destroy:hover {
 	text-shadow: 0 0 1px #000,
 				 0 0 10px rgba(199, 107, 107, 0.8);
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
 }
 
-#booze li .destroy:after {
+.booze-item li .destroy:after {
 	content: '✖';
 }
 
-#booze li:hover .destroy {
+.booze-item li:hover .destroy {
 	display: block;
 }
-
 
 svg {
 	height: 220px;
