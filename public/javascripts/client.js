@@ -1,15 +1,17 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 var boozeItems = new BoozeItems({reset: true, merge: false});
+var liquorItems = new LiquorItems();
+liquorItems.fetch({reset: true});
 
 $(function() {
 
 new UserInputView();
 new BoozeItemsView();
 new SearchView();
+new LiquorItemsView({collection: liquorItems});
 new BeerItemsView({collection: beerItems});
 boozeQueueView = new BoozeQueueView();
-new LiquorItemsView();
 // new WineItemsView();
 
 
