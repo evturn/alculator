@@ -11,3 +11,4 @@ var SearchResultsView = Backbone.View.extend({
 });
 
 console.log('SearchResultsView');
+

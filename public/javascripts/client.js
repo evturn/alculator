@@ -42,6 +42,7 @@ $('#beer-tab').on('click', function() {
 
 
 
+
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerField = $('#beer-query').val();
