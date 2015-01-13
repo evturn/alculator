@@ -20,6 +20,12 @@ $('#liquor-tab').on('click', function() {
 	liquorItemView = new LiquorItemsView({collection: liquorItems});
 });
 
+$('#wine-tab').on('click', function() {
+	var wineItems = new WineItems();
+	wineItems.fetch({reset: true});
+	wineItemView = new WineItemsView({collection: wineItems});
+});
+
 
 
 
