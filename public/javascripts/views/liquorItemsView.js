@@ -2,6 +2,7 @@ var LiquorItemsView = Backbone.View.extend({
 	el: '#beverage-items',
   initialize: function() {
     this.listenTo(this.collection, 'reset', this.addAll);
+    this.render();
   },
   addOne: function(model) {
     var view = new LiquorItemView({model: model});

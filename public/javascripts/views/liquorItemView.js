@@ -2,7 +2,7 @@ var LiquorItemView = Backbone.View.extend({
 	className: 'col-xs-4 align drink-space liquor-item',
 	template: _.template($('#liquor-item-view-template').html()),
 	initialize: function() {
-
+		this.render();
 	},
 	events: {
 		'click input': 'addBooze'
@@ -10,8 +10,8 @@ var LiquorItemView = Backbone.View.extend({
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
     return this;
-	},
-		addBooze: function(e) {
+  },
+	addBooze: function(e) {
 		e.preventDefault();
 		var boozeOnDelivery = new BoozeItem(this.model.attributes)
 		boozeOnDelivery.set({selected: true});

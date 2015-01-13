@@ -1,18 +1,29 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 var boozeItems = new BoozeItems({reset: true, merge: false});
-var liquorItems = new LiquorItems();
-liquorItems.fetch({reset: true});
+new UserInputView();
+new SearchView();
+new BoozeItemsView();
+new BeerItemsView({collection: beerItems});
+
+
 
 $(function() {
-
-new UserInputView();
-new BoozeItemsView();
-new SearchView();
-new LiquorItemsView({collection: liquorItems});
-new BeerItemsView({collection: beerItems});
 boozeQueueView = new BoozeQueueView();
-// new WineItemsView();
+
+
+
+
+$('#liquor-tab').on('click', function() {
+	var liquorItems = new LiquorItems();
+	liquorItems.fetch({reset: true});
+	liquorItemView = new LiquorItemsView({collection: liquorItems});
+
+
+});
+
+
+
 
 
 	$('#beer-search').on('submit', function(e) {
