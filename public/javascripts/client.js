@@ -13,7 +13,6 @@ boozeQueueView = new BoozeQueueView();
 
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
-		drinks = boozeQueue
 		abvArray    = [];
 		ouncesArray = [];
 		boozeItems.shift();
@@ -23,20 +22,16 @@ boozeQueueView = new BoozeQueueView();
 			abvArray.push(drink.abv);
 			ouncesArray.push(drink.ounces);
 		});
-		console.log('abv', abvArray);
-		console.log('ounces', ouncesArray);
+		var abvSum = abvArray.reduce(function(prev, cur) {
+    	return prev + cur;
+  	});
+    var fluidOunces = ouncesArray.reduce(function(prev, cur) {
+    	return prev + cur;
+  	});
+	 	var ethanolOunces = fluidOunces * (abvSum * 0.01);
+	 	var metricOunces  = ethanolOunces * 5.14;
 
 
-		
-	 	
-	 	// var fluidOunces   = drinks * ounces;
-	 	// var ethanolOunces = fluidOunces * (abv * 0.01);
-	 	// var metricOunces  = ethanolOunces * 5.14;
-	 	// console.log('fluid ounces', fluidOunces);
-	 	// console.log('ethanol ounces', ethanolOunces);
-	 	// console.log('metric ounces', metricOunces);
-
-		console.log('drinks', drinks);
 	});
 		
 
