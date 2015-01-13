@@ -6,7 +6,7 @@ new AlculatorView();
 new BoozeItemsView();
 new SearchView();
 new BeerItemsView({collection: beerItems});
-new BoozeStatsView();
+boozeStatsView = new BoozeStatsView();
 // new LiquorItemsView();
 // new WineItemsView();
 

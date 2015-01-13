@@ -17,6 +17,7 @@ var BoozeItemView = Backbone.View.extend({
 	},
 	destroy: function() {
 		this.model.destroy();
+		boozeStatsView.render()
 	}
 });
 
