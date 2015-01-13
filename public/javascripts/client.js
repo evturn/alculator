@@ -10,7 +10,7 @@ new BeerItemsView({collection: beerItems});
 
 $(function() {
 boozeQueueView = new BoozeQueueView();
-
+$('.clockpicker').clockpicker();
 
 
 
