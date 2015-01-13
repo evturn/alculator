@@ -18,8 +18,6 @@ $('#liquor-tab').on('click', function() {
 	var liquorItems = new LiquorItems();
 	liquorItems.fetch({reset: true});
 	liquorItemView = new LiquorItemsView({collection: liquorItems});
-
-
 });
 
 
