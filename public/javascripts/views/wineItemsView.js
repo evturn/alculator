@@ -8,6 +8,7 @@ var WineItemsView = Backbone.View.extend({
     this.$el.append(view.el);
   },
   addAll: function() {
+    this.$el.empty();
     this.collection.each(function(model) {
       this.addOne(model);
     }.bind(this));

@@ -26,6 +26,12 @@ $('#wine-tab').on('click', function() {
 	wineItemView = new WineItemsView({collection: wineItems});
 });
 
+$('#beer-tab').on('click', function() {
+	var beerItems = new BeerItems();
+	beerItems.fetch({reset: true});
+	beerItemView = new BeerItemsView({collection: beerItems});
+});
+
 
 
 
