@@ -1,4 +1,4 @@
-var AlculatorView = Backbone.View.extend({
+var UserInputView = Backbone.View.extend({
 	el: $('#alculator'),
 	template: _.template($('#alculatorTemplate').html()),
 	initialize: function() {
@@ -68,4 +68,4 @@ var AlculatorView = Backbone.View.extend({
 	}
 });
 
-console.log('AlculatorView');
+console.log('UserInputView');

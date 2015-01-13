@@ -2,7 +2,7 @@ var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 var boozeItems = new BoozeItems({reset: true, merge: false});
 $(function() {
-new AlculatorView();
+new UserInputView();
 new BoozeItemsView();
 new SearchView();
 new BeerItemsView({collection: beerItems});
