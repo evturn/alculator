@@ -1,6 +1,6 @@
 var UserInputView = Backbone.View.extend({
-	el: $('#alculator'),
-	template: _.template($('#alculatorTemplate').html()),
+	el: $('#user-input'),
+	template: _.template($('#user-input-template').html()),
 	initialize: function() {
 		this.render();
 	},
