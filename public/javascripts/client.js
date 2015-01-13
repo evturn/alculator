@@ -32,13 +32,14 @@ console.log('boozeItems', boozeItems);
 
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
-		console.log(boozeItems.length); //
-		// console.log($('.booze-form').data());
+		console.log(boozeItems.length); 
+		
 	});
 
 	$('.beer-item').on('click', function(e) {
 		e.preventDefault();
-		console.log(boozeItems.where({selected: true}));
+		console.log(boozeItems.models);
+		
 	});
 
 	// $('#bac-submit-btn').on('click', function(e) {
