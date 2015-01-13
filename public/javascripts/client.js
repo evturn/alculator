@@ -9,13 +9,8 @@ new BoozeItemsView();
 new SearchView();
 new BeerItemsView({collection: beerItems});
 boozeQueueView = new BoozeQueueView();
-// new LiquorItemsView();
+new LiquorItemsView();
 // new WineItemsView();
-
-	// $('.beer-item').on('click', function(e) {
-	// 	e.preventDefault();
-	// 	console.log('boozeItems', boozeItems);
-	// });
 
 
 	$('#beer-search').on('submit', function(e) {
