@@ -8,7 +8,6 @@ var BoozeItemsView = Backbone.View.extend({
     var viewOfBooze = new BoozeItemView({model: model});
     this.$el.append(viewOfBooze.render().el );
   },
-
 });
 
 console.log('BoozeItemsView');
