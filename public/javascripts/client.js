@@ -38,7 +38,7 @@ console.log('boozeItems', boozeItems);
 
 	$('.beer-item').on('click', function(e) {
 		e.preventDefault();
-		console.log(boozeItems.length);
+		console.log(boozeItems.where({selected: true}));
 	});
 
 	// $('#bac-submit-btn').on('click', function(e) {

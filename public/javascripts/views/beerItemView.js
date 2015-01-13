@@ -13,7 +13,9 @@ var BeerItemView = Backbone.View.extend({
   },
 	addBooze: function(e) {
 		e.preventDefault();
-		boozeItems.add(this.model);
+		var boozeOnDelivery = this.model;
+		boozeOnDelivery.set({selected: true});
+		boozeItems.add(boozeOnDelivery);
 	}
 });
 
