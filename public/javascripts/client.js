@@ -1,7 +1,9 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 var boozeItems = new BoozeItems({reset: true, merge: false});
+
 $(function() {
+
 new UserInputView();
 new BoozeItemsView();
 new SearchView();
@@ -10,10 +12,10 @@ boozeQueueView = new BoozeQueueView();
 // new LiquorItemsView();
 // new WineItemsView();
 
-	$('.beer-item').on('click', function(e) {
-		e.preventDefault();
-		console.log('boozeItems', boozeItems);
-	});
+	// $('.beer-item').on('click', function(e) {
+	// 	e.preventDefault();
+	// 	console.log('boozeItems', boozeItems);
+	// });
 
 
 	$('#beer-search').on('submit', function(e) {
