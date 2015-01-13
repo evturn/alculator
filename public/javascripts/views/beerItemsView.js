@@ -1,16 +1,16 @@
 var BeerItemsView = Backbone.View.extend({
+  el: '#beverage-items',
   initialize: function() {
-    this.listenTo(this.collection, 'add', this.addOne);
+    this.listenTo(this.collection, 'reset', this.addAll);
   },
   addOne: function(model) {
     var view = new BeerItemView({model: model});
-    view.render()
+    this.$el.append(view.el);
   },
   addAll: function() {
     this.collection.each(function(model) {
-    var modelView = new BeerItemView({model: model});
-    modelView.render();
-    });
+      this.addOne(model);
+    }.bind(this));
   }
 });
 

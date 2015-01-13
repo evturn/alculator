@@ -1,15 +1,17 @@
 var BeerItemView = Backbone.View.extend({
-	el: '#beverage-items',
+	className: 'col-xs-4 align drink-space beer-item',
 	template: _.template($('#beer-item-view-template').html()),
+	initialize: function() {
+		this.render();
+	},
 	events: {
-		'click input.add-booze': 'addBooze'
+		'click input': 'addBooze'
 	},
   render: function(){
     this.$el.append(this.template(this.model.toJSON()));
     return this;
   },
 	addBooze: function(e) {
-		e.preventDefault();
 		console.log("whooo", this);
 	}
 });

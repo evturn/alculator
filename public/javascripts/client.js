@@ -1,5 +1,5 @@
 var beerItems = new BeerItems();
-beerItems.fetch();
+beerItems.fetch({reset: true});
 
 $(function() {
 new AlculatorView();
