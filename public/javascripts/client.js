@@ -22,16 +22,49 @@ boozeQueueView = new BoozeQueueView();
 			abvArray.push(drink.abv);
 			ouncesArray.push(drink.ounces);
 		});
-		var abvSum = abvArray.reduce(function(prev, cur) {
+		var abvSum 				 = abvArray.reduce(function(prev, cur) {
     	return prev + cur;
   	});
-    var fluidOunces = ouncesArray.reduce(function(prev, cur) {
+    var fluidOunces 	 = ouncesArray.reduce(function(prev, cur) {
     	return prev + cur;
   	});
-	 	var ethanolOunces = fluidOunces * (abvSum * 0.01);
-	 	var metricOunces  = ethanolOunces * 5.14;
-
-
+	 	var ethanolOunces  = fluidOunces * (abvSum * 0.01);
+	 	var metricOunces   = ethanolOunces * 5.14;
+	 	var lbs						 = parseInt(document.getElementById('lbs').value),
+		var	hours 				 = parseInt(document.getElementById('hours').value),		
+		var	sex   				 = document.getElementById('male').value,
+	 	var rate           = sex === 'male' ? 0.73 : 0.66;
+		var metabolism 	 	 = data.lbs * rate;
+		var subLevel 		 	 = metricOz /  metabolism;
+		var soberingRate   = 0.015 * data.hours;
+		var bac 			     = (subLevel - soberingRate).toFixed(2);
+		// var round          = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
+		// var roundView      = new RoundView({model: round});
+			if (bac < 0.02) {
+				var stageZero  = new StageZero();
+			} else if (bac < 0.04) {
+				var stageOne   = new StageOne();
+			} else if (bac < 0.06) {
+				var stageTwo	 = new StageTwo();
+			} else if (bac < 0.07) {
+				var stageThree = new StageThree();
+			} else if (bac < 0.10) {
+				var stageFour  = new StageFour();
+			} else if (bac < 0.13) {
+				var stageFive	 = new StageFive();
+			} else if (bac < 0.16) {
+				var stageSix	 = new StageSix();
+			} else if (bac < 0.20) {
+				var stageSeven = new StageSeven();
+			} else if (bac < 0.25) {
+				var stageEight = new StageEight();
+			} else if (bac < 0.30) {
+				var stageNine	 = new StageNine();
+			} else if (bac < 0.35) {
+				var stageTen 	 = new StageTen();
+			} else {
+				alert('You sure you entered all your info?');
+			}
 	});
 		
 
@@ -51,11 +84,11 @@ boozeQueueView = new BoozeQueueView();
 	// 		url: '/rounds',
 	// 		method: 'POST',
 	// 		data: {
-	// 			lbs: parseInt(document.getElementById('lbs').value),
-	// 			hours: parseInt(document.getElementById('hours').value),
-	// 			drinks: parseInt(document.getElementById('drinks').value),
-	// 			abv: parseInt(document.getElementById('abv').value),
-	// 			sex: document.getElementById('male').value,
+				// lbs: parseInt(document.getElementById('lbs').value),
+				// hours: parseInt(document.getElementById('hours').value),
+				// drinks: parseInt(document.getElementById('drinks').value),
+				// abv: parseInt(document.getElementById('abv').value),
+				// sex: document.getElementById('male').value,
 	// 		},
 	// 		dataType: 'JSON',
 	// 		success: function(data) {
@@ -69,33 +102,33 @@ boozeQueueView = new BoozeQueueView();
 	// 			soberingRate  = 0.015 * data.hours;
 	// 			bac 			    = (subLevel - soberingRate).toFixed(2);
 	// 			console.log(bac);
-	// 			var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
-	// 			var roundView = new RoundView({model: round});
-	// 				if (bac < 0.02) {
-	// 					var stageZero  = new StageZero();
-	// 				} else if (bac < 0.04) {
-	// 					var stageOne   = new StageOne();
-	// 				} else if (bac < 0.06) {
-	// 					var stageTwo	 = new StageTwo();
-	// 				} else if (bac < 0.07) {
-	// 					var stageThree = new StageThree();
-	// 				} else if (bac < 0.10) {
-	// 					var stageFour  = new StageFour();
-	// 				} else if (bac < 0.13) {
-	// 					var stageFive	 = new StageFive();
-	// 				} else if (bac < 0.16) {
-	// 					var stageSix	 = new StageSix();
-	// 				} else if (bac < 0.20) {
-	// 					var stageSeven = new StageSeven();
-	// 				} else if (bac < 0.25) {
-	// 					var stageEight = new StageEight();
-	// 				} else if (bac < 0.30) {
-	// 					var stageNine	 = new StageNine();
-	// 				} else if (bac < 0.35) {
-	// 					var stageTen 	 = new StageTen();
-	// 				} else {
-	// 					alert('You sure you entered all your info?');
-	// 				}
+				// var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
+				// var roundView = new RoundView({model: round});
+				// 	if (bac < 0.02) {
+				// 		var stageZero  = new StageZero();
+				// 	} else if (bac < 0.04) {
+				// 		var stageOne   = new StageOne();
+				// 	} else if (bac < 0.06) {
+				// 		var stageTwo	 = new StageTwo();
+				// 	} else if (bac < 0.07) {
+				// 		var stageThree = new StageThree();
+				// 	} else if (bac < 0.10) {
+				// 		var stageFour  = new StageFour();
+				// 	} else if (bac < 0.13) {
+				// 		var stageFive	 = new StageFive();
+				// 	} else if (bac < 0.16) {
+				// 		var stageSix	 = new StageSix();
+				// 	} else if (bac < 0.20) {
+				// 		var stageSeven = new StageSeven();
+				// 	} else if (bac < 0.25) {
+				// 		var stageEight = new StageEight();
+				// 	} else if (bac < 0.30) {
+				// 		var stageNine	 = new StageNine();
+				// 	} else if (bac < 0.35) {
+				// 		var stageTen 	 = new StageTen();
+				// 	} else {
+				// 		alert('You sure you entered all your info?');
+				// 	}
 	// 		},
 	// 		error: function() {
 	// 			alert('Something went wrong');
