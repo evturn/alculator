@@ -6,7 +6,7 @@ var BoozeStatsView = Backbone.View.extend({
     this.render();
 	},
 	render: function() {
-		que = boozeItems.models.length;
+		boozeQueue = boozeItems.where({selected: true}).length;
 		this.$el.html(this.template());
 	}
 });

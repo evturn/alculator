@@ -1,15 +1,27 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
-var boozeItems = new BoozeItems({merge: false});
+var boozeItems = new BoozeItems({reset: true, merge: false});
 $(function() {
 new AlculatorView();
 new BoozeItemsView();
 new SearchView();
 new BeerItemsView({collection: beerItems});
 new BoozeStatsView();
-console.log('boozeItems', boozeItems);
 // new LiquorItemsView();
 // new WineItemsView();
+
+
+	$('#bac-submit-btn').on('click', function(e) {
+		e.preventDefault;
+		drinks = boozeQueue
+		console.log('drinks', drinks)
+	});
+
+	$('.beer-item').on('click', function(e) {
+		e.preventDefault();
+		console.log('boozeItems', boozeItems);
+	});
+
 
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
@@ -28,19 +40,6 @@ console.log('boozeItems', boozeItems);
 				var view = new BarTabView({model: beer});
 			}
 		});
-	});
-
-	$('#bac-submit-btn').on('click', function(e) {
-		e.preventDefault;
-		console.log(boozeItems.where('selected').length); //
-		// console.log($('.booze-form').data());
-	});
-
-	$('.beer-item').on('click', function(e) {
-		e.preventDefault();
-		
-		
-		console.log();
 	});
 
 	// $('#bac-submit-btn').on('click', function(e) {
