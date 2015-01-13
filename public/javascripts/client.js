@@ -11,11 +11,6 @@ console.log('boozeItems', boozeItems);
 // new LiquorItemsView();
 // new WineItemsView();
 
-
-
-
-
-	
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();
 		beerField = $('#beer-query').val();
@@ -35,67 +30,73 @@ console.log('boozeItems', boozeItems);
 		});
 	});
 
-
-
-
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
-		console.log('Heeyutz!');
-		$.ajax({
-			url: '/rounds',
-			method: 'POST',
-			data: {
-				lbs: parseInt(document.getElementById('lbs').value),
-				hours: parseInt(document.getElementById('hours').value),
-				drinks: parseInt(document.getElementById('drinks').value),
-				abv: parseInt(document.getElementById('abv').value),
-				sex: document.getElementById('male').value,
-			},
-			dataType: 'JSON',
-			success: function(data) {
-				console.log(data);
-				rate          = sex === 'male' ? 0.73 : 0.66;
-				bevOz         = data.drinks * 12;
-				alcOz 		    = bevOz * (data.abv * 0.01);
-				metricOz 		  = alcOz * 5.14;
-				metabolism 	  = data.lbs * rate;
-				subLevel 		  = metricOz /  metabolism;
-				soberingRate  = 0.015 * data.hours;
-				bac 			    = (subLevel - soberingRate).toFixed(2);
-				console.log(bac);
-				var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
-				var roundView = new RoundView({model: round});
-					if (bac < 0.02) {
-						var stageZero  = new StageZero();
-					} else if (bac < 0.04) {
-						var stageOne   = new StageOne();
-					} else if (bac < 0.06) {
-						var stageTwo	 = new StageTwo();
-					} else if (bac < 0.07) {
-						var stageThree = new StageThree();
-					} else if (bac < 0.10) {
-						var stageFour  = new StageFour();
-					} else if (bac < 0.13) {
-						var stageFive	 = new StageFive();
-					} else if (bac < 0.16) {
-						var stageSix	 = new StageSix();
-					} else if (bac < 0.20) {
-						var stageSeven = new StageSeven();
-					} else if (bac < 0.25) {
-						var stageEight = new StageEight();
-					} else if (bac < 0.30) {
-						var stageNine	 = new StageNine();
-					} else if (bac < 0.35) {
-						var stageTen 	 = new StageTen();
-					} else {
-						alert('You sure you entered all your info?');
-					}
-			},
-			error: function() {
-				alert('Something went wrong');
-			}
-		});
-  })
+		
+		console.log('fuck');
+		console.log($('.booze-form').data());
+	});
+
+
+
+	// $('#bac-submit-btn').on('click', function(e) {
+	// 	e.preventDefault;
+	// 	console.log('Heeyutz!');
+	// 	$.ajax({
+	// 		url: '/rounds',
+	// 		method: 'POST',
+	// 		data: {
+	// 			lbs: parseInt(document.getElementById('lbs').value),
+	// 			hours: parseInt(document.getElementById('hours').value),
+	// 			drinks: parseInt(document.getElementById('drinks').value),
+	// 			abv: parseInt(document.getElementById('abv').value),
+	// 			sex: document.getElementById('male').value,
+	// 		},
+	// 		dataType: 'JSON',
+	// 		success: function(data) {
+	// 			console.log(data);
+	// 			rate          = sex === 'male' ? 0.73 : 0.66;
+	// 			bevOz         = data.drinks * 12;
+	// 			alcOz 		    = bevOz * (data.abv * 0.01);
+	// 			metricOz 		  = alcOz * 5.14;
+	// 			metabolism 	  = data.lbs * rate;
+	// 			subLevel 		  = metricOz /  metabolism;
+	// 			soberingRate  = 0.015 * data.hours;
+	// 			bac 			    = (subLevel - soberingRate).toFixed(2);
+	// 			console.log(bac);
+	// 			var round = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
+	// 			var roundView = new RoundView({model: round});
+	// 				if (bac < 0.02) {
+	// 					var stageZero  = new StageZero();
+	// 				} else if (bac < 0.04) {
+	// 					var stageOne   = new StageOne();
+	// 				} else if (bac < 0.06) {
+	// 					var stageTwo	 = new StageTwo();
+	// 				} else if (bac < 0.07) {
+	// 					var stageThree = new StageThree();
+	// 				} else if (bac < 0.10) {
+	// 					var stageFour  = new StageFour();
+	// 				} else if (bac < 0.13) {
+	// 					var stageFive	 = new StageFive();
+	// 				} else if (bac < 0.16) {
+	// 					var stageSix	 = new StageSix();
+	// 				} else if (bac < 0.20) {
+	// 					var stageSeven = new StageSeven();
+	// 				} else if (bac < 0.25) {
+	// 					var stageEight = new StageEight();
+	// 				} else if (bac < 0.30) {
+	// 					var stageNine	 = new StageNine();
+	// 				} else if (bac < 0.35) {
+	// 					var stageTen 	 = new StageTen();
+	// 				} else {
+	// 					alert('You sure you entered all your info?');
+	// 				}
+	// 		},
+	// 		error: function() {
+	// 			alert('Something went wrong');
+	// 		}
+	// 	});
+ //  })
 
 
 
