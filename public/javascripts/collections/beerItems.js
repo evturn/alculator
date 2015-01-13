@@ -5,5 +5,4 @@ var BeerItems = Backbone.Collection.extend({
 
 console.log('BeerItems');
 
-var beerItems = new BeerItems();
-beerItems.fetch();
+

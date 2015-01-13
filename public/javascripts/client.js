@@ -1,17 +1,15 @@
-
+var beerItems = new BeerItems();
+beerItems.fetch();
 
 $(function() {
 new AlculatorView();
 new BoozeItemsView();
 new SearchView();
 new BeerItemsView({collection: beerItems});
+console.log('beerItems', beerItems);
 // new LiquorItemsView();
 // new WineItemsView();
 
-$('#beverage-items').on('click', function(e) {
-	e.preventDefault();
-
-});
 
 
 
