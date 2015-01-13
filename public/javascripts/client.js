@@ -1,13 +1,13 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 var boozeItems = new BoozeItems({reset: false});
-
 $(function() {
 new AlculatorView();
 new BoozeItemsView();
 new SearchView();
 new BeerItemsView({collection: beerItems});
-console.log('beerItems', beerItems);
+new BoozeStatsView();
+console.log('boozeItems', boozeItems);
 // new LiquorItemsView();
 // new WineItemsView();
 

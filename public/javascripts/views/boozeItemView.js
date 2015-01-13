@@ -9,7 +9,7 @@ var BoozeItemView = Backbone.View.extend({
 	},
 	render: function() {
 		var newBooze = this.model.toJSON();
-		this.$el.append(this.template(newBooze));
+		this.$el.html(this.template(newBooze));
 		return this;
 	},
 	destroy: function() {

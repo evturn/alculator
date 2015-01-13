@@ -52,6 +52,8 @@
 	
 	<div class="row col-lg-12 col-lg-offset-1" id="booze-container">
 		<h3>YOUR TAB</h3>
+		<div id="booze-stats">
+		</div>
 	</div>
 	<div class="row col-md-12 col-lg-offset-1 drink-container" id="booze-items">
 	</div>
@@ -66,7 +68,8 @@
 
 <!-- Underscore templates -->
 <script type="text/template" id="booze-stats-view-template">
-	 <span id="tab-count"><strong><%= remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
+	 <span id="tab-count"><strong><%= que %></strong> <%= que === 1 ? 'item' : 'items' %> left</span>
+	 <% console.log(que); %>
 </script>
 
 <script type="text/template" id="booze-item-view-template">
