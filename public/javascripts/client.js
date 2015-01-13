@@ -1,6 +1,6 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
-var boozeItems = new BoozeItems({reset: false});
+var boozeItems = new BoozeItems({merge: false});
 $(function() {
 new AlculatorView();
 new BoozeItemsView();
@@ -32,14 +32,15 @@ console.log('boozeItems', boozeItems);
 
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
-		console.log(boozeItems.length); 
-		
+		console.log(boozeItems.where('selected').length); //
+		// console.log($('.booze-form').data());
 	});
 
 	$('.beer-item').on('click', function(e) {
 		e.preventDefault();
-		console.log(boozeItems.models);
 		
+		
+		console.log();
 	});
 
 	// $('#bac-submit-btn').on('click', function(e) {
