@@ -70,12 +70,12 @@
 </script>
 
 <script type="text/template" id="booze-item-view-template">
-	<div class="col-xs-4 align drink-space wine-item">
+	
 		<img src="<%= img %>" class="fit-wine">
-		<h3 class="<%= status %>"><%= name%></h3>
-		<h4><%= abv %>% <%= ounces %>oz</h4>
+		<h5 class="<%= status %>"><%= name%></h5>
+		<h5><%= abv %>% <%= ounces %>oz</h5>
 		<button class="destroy"></button>		
-	</div>
+	
 </script>
 
 
@@ -104,8 +104,8 @@
 
 <script type="text/template" id="beer-item-view-template">
 		<img src="<%= img %>" class="fit-wine">
-		<h5><%= name %> Beer</h5>
-	 		<input class="btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-name="<%= name %>" id="<%= name %>"data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>"></input>
+		<h5><%= name %></h5>
+	 		<input class="btn btn-danger btn-lg" type="button" name="<%= name %>" value="+" data-ounces="<%= ounces %>" data-abv="<%= abv %>" data-img="<%= img %>"></input>
 </script>
 
 <script type="text/template" id="beer-search-template">

@@ -1,5 +1,5 @@
 var BoozeItemView = Backbone.View.extend({
-	el: '#booze-items',
+	className: 'col-xs-4 align drink-space booze-item',
 	template: _.template($('#booze-item-view-template').html()),
 	render: function() {
 		var boozeAttributes = this.model.toJSON();

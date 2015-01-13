@@ -1,6 +1,6 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
-var boozeItems = new BoozeItems();
+var boozeItems = new BoozeItems({reset: false});
 
 $(function() {
 new AlculatorView();
