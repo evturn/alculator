@@ -34,8 +34,8 @@ app.post('/booze', parseUrlencoded, function(request, response) {});
 app.delete('/booze', function(request, response) {});
 
 allBeers  = [{name: "Light Beer", abv: 4, img: "images/bottle.png", ounces: 12},
-		{name: "Standard Beer", abv: 5, img: "images/bottle.png", ounces: 7},
-		{name: "Strong Beer", abv: 7, "img": "images/bottle.png", ounces: 8}];
+		{name: "Standard Beer", abv: 5, img: "images/bottle.png", ounces: 12},
+		{name: "Strong Beer", abv: 7, "img": "images/bottle.png", ounces: 12}];
 
 allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
 		{name: "Lowball", abv: 40, img: "images/low.png", ounces: 7},

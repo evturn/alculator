@@ -14,8 +14,18 @@ boozeQueueView = new BoozeQueueView();
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
 		drinks = boozeQueue
-		console.log('drinks', drinks)
+		boozeItems.each(function(model) {
+		 	var abv = model.get('abv');
+		 	var ounces = model.get('ounces');
+		 	console.log('abv', abv);
+		 	console.log('ounces', ounces);
+		 	fluidOunces =  drinks * ounces;
+		 });
+
+		console.log('drinks', drinks);
 	});
+		
+
 
 	$('.beer-item').on('click', function(e) {
 		e.preventDefault();
@@ -24,23 +34,6 @@ boozeQueueView = new BoozeQueueView();
 
 
 	$('#beer-search').on('submit', function(e) {
-		e.preventDefault();
-		beerField = $('#beer-query').val();
-		$.ajax({
-			url: '/search',
-			method: 'GET',
-			data: {
-				name: beerField
-			},
-			dataType: 'JSON',
-			success: function(data) {
-				console.log('data', data[0]);
-				beer = new Beer(data);
-				console.log('beer', beer);
-				var view = new BarTabView({model: beer});
-			}
-		});
-	});
 
 	// $('#bac-submit-btn').on('click', function(e) {
 	// 	e.preventDefault;
@@ -101,6 +94,23 @@ boozeQueueView = new BoozeQueueView();
 	// 	});
  //  })
 
+		e.preventDefault();
+		beerField = $('#beer-query').val();
+		$.ajax({
+			url: '/search',
+			method: 'GET',
+			data: {
+				name: beerField
+			},
+			dataType: 'JSON',
+			success: function(data) {
+				console.log('data', data[0]);
+				beer = new Beer(data);
+				console.log('beer', beer);
+				var view = new BarTabView({model: beer});
+			}
+		});
+	});
 
 
 console.log('Client');
