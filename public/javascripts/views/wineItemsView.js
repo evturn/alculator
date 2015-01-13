@@ -1,16 +1,17 @@
 var WineItemsView = Backbone.View.extend({
-	initialize: function() {
-		this.listenTo(wineItems, 'add', this.addOne);
-    this.listenTo(wineItems, 'reset', this.addAll);
-	},
-  addOne: function(wineModel) {
-  var viewOfWine = new LiquorItemView({model: wineModel});
-  $('#beverage-items').append(viewOfWine.render().el );
+  el: '#beverage-items',
+  initialize: function() {
+    this.listenTo(this.collection, 'reset', this.addAll);
+  },
+  addOne: function(model) {
+    var view = new WineItemView({model: model});
+    this.$el.append(view.el);
   },
   addAll: function() {
-    this.$('#beverage-items').html('');
-    wineItems.each(this.addOne, this);
-  },
+    this.collection.each(function(model) {
+      this.addOne(model);
+    }.bind(this));
+  }
 });
 
 console.log('WineItemsView');
