@@ -1,6 +1,6 @@
-var BarTabView = Backbone.View.extend({
+var SearchResultsView = Backbone.View.extend({
 	el: $('#search-results'),
-	template: _.template($('#beerTabTemplate').html()),
+	template: _.template($('#search-results-template').html()),
 	initialize: function() {
 		this.render();
 	},
@@ -10,4 +10,4 @@ var BarTabView = Backbone.View.extend({
 	}
 });
 
-console.log('BarTabView');
+console.log('SearchResultsView');

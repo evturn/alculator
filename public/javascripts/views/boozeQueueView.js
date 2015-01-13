@@ -1,6 +1,6 @@
 var BoozeQueueView = Backbone.View.extend({
-	el: '#booze-stats',
-	template: _.template($('#booze-stats-view-template').html()),
+	el: '#booze-queue',
+	template: _.template($('#booze-queue-view-template').html()),
 	initialize: function() {
 		this.listenTo(boozeItems, 'change', this.render);
     this.render();
@@ -11,4 +11,4 @@ var BoozeQueueView = Backbone.View.extend({
 	}
 });
 
-console.log('BoozeStatsView');
+console.log('BoozeQueueView');
