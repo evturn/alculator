@@ -30,16 +30,17 @@ boozeQueueView = new BoozeQueueView();
   	});
 	 	var ethanolOunces  = fluidOunces * (abvSum * 0.01);
 	 	var metricOunces   = ethanolOunces * 5.14;
-	 	var lbs						 = parseInt(document.getElementById('lbs').value),
-		var	hours 				 = parseInt(document.getElementById('hours').value),		
-		var	sex   				 = document.getElementById('male').value,
+	 	var lbs						 = parseInt(document.getElementById('lbs').value);
+		var	hours 				 = parseInt(document.getElementById('hours').value);		
+		var	sex   				 = document.getElementById('male').value;
 	 	var rate           = sex === 'male' ? 0.73 : 0.66;
-		var metabolism 	 	 = data.lbs * rate;
-		var subLevel 		 	 = metricOz /  metabolism;
-		var soberingRate   = 0.015 * data.hours;
+		var metabolism 	 	 = lbs * rate;
+		var subLevel 		 	 = metricOunces /  metabolism;
+		var soberingRate   = 0.015 * hours;
 		var bac 			     = (subLevel - soberingRate).toFixed(2);
-		// var round          = new Round({lbs: data.lbs, hours: data.hours, drinks: data.drinks, abv: data.abv, sex: data.sex, rate: rate, bac: bac});
-		// var roundView      = new RoundView({model: round});
+		console.log(bac);
+		var round          = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
+		var roundView      = new RoundView({model: round});
 			if (bac < 0.02) {
 				var stageZero  = new StageZero();
 			} else if (bac < 0.04) {
