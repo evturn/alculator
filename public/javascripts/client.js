@@ -14,13 +14,27 @@ boozeQueueView = new BoozeQueueView();
 	$('#bac-submit-btn').on('click', function(e) {
 		e.preventDefault;
 		drinks = boozeQueue
-		boozeItems.each(function(model) {
-		 	var abv = model.get('abv');
-		 	var ounces = model.get('ounces');
-		 	console.log('abv', abv);
-		 	console.log('ounces', ounces);
-		 	fluidOunces =  drinks * ounces;
-		 });
+		abvArray    = [];
+		ouncesArray = [];
+		boozeItems.shift();
+		boozeItems.forEach(function(model) {
+		 	drink = {abv: model.get('abv'),
+		 		ounces: model.get('ounces')};
+			abvArray.push(drink.abv);
+			ouncesArray.push(drink.ounces);
+		});
+		console.log('abv', abvArray);
+		console.log('ounces', ouncesArray);
+
+
+		
+	 	
+	 	// var fluidOunces   = drinks * ounces;
+	 	// var ethanolOunces = fluidOunces * (abv * 0.01);
+	 	// var metricOunces  = ethanolOunces * 5.14;
+	 	// console.log('fluid ounces', fluidOunces);
+	 	// console.log('ethanol ounces', ethanolOunces);
+	 	// console.log('metric ounces', metricOunces);
 
 		console.log('drinks', drinks);
 	});
