@@ -99,8 +99,8 @@ h4 {
 .booze-item li .destroy {
 	display: none;
 	position: absolute;
-	top: 0;
-	right: 10px;
+	top: -55px;
+	left: 60px;
 	bottom: 0;
 	width: 40px;
 	height: 40px;

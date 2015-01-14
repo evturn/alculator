@@ -8,8 +8,22 @@ new BeerItemsView({collection: beerItems});
 $('.clockpicker').clockpicker();
 
 
+
 $(function() {
 boozeQueueView = new BoozeQueueView();
+
+$('#bac-submit-btn').on('click',function() {
+	var	startTime = document.getElementById('hours').value;
+	var endTime		= new Date;
+
+	
+	console.log('converted', )
+	// console.log('START', startTime.getHours());
+	console.log('END', endTime.getHours());
+
+});
+// console.log('clock', hours);	
+
 
 
 
