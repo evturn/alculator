@@ -21,57 +21,55 @@
 		</div>
 		<ul class="nav nav-tabs" id="tabs">
 			<li role="presentation" class="active" id="beer-tab"><a href="#">BEER</a></li>
-			<li role="presentation" id="liquor-tab"><a href="#">LIQUOR</a></li>
 			<li role="presentation" id="wine-tab"><a href="#">WINE</a></li>
+			<li role="presentation" id="liquor-tab"><a href="#">LIQUOR</a></li>
 		</ul>
 	</div>
 
 <!-- Left column -->
 <div class="row col-md-4" id="left-column">
-	
-	<div class="row col-lg-12" id="beverage-container">
-		<div class="row col-lg-12 col-lg-offset-1 form-group">
-			<h3>BEVERAGES</h3>
-	  	<div class="row col-md-12 drink-container" id="beverage-items">
-	  	</div>
+	<div class="row" id="beverage-container">
+		<h3>BEVERAGES</h3>
+	  <div class="row col-md-12 col-md-offset-1" id="beverage-items">
 	  </div>
+	 </div>
+	<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-query">
 	</div>
-
-	<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-container">
-	</div>
-	<div class="row col-lg-12 col-lg-offset-1 form-group" id="search-results">
+	<div class="col-lg-12 col-lg-offset-1" id="search-results">
 	</div>
 </div>
 
 <!-- Middle column -->
-<div class="row col-md-4" id="middle-column">
-	<div class="row col-md-12 col-lg-offset-1" id="bac-meter">
+<div class="row col-md-8" id="middle-column">
+	<div class="col-md-6" id="bac-meter">
 	</div>
-	<div class="row col-lg-12 col-lg-offset-1" id="bac-calculation">
+	<div class="col-md-6" id="user-input">
 	</div>
-	<div class="row col-lg-12 col-lg-offset-1" id="stage">
+</div>
+	<div class="row" id="bac-container">
+	<div class="col-md-4" id="bac-calculation">
 	</div>
-	
-	<div class="row col-lg-12 col-lg-offset-1" id="booze-container">
-		<h3>YOUR TAB</h3>
-		<div class="row col-lg-12 col-lg-offset-1" id="booze-queue">
-		</div>
-	</div>
-	<div class="row col-md-12 col-lg-offset-1 drink-container" id="booze-items">
+	<div class="row col-md-4" id="stage">
 	</div>
 </div>
 
+		<div class="row col-md-4" id="booze-queue">
+		</div>
+	<div class="row col-md-12 drink-container" id="booze-items">
+		
+	</div>
+
 <!-- Right column -->
-<div class="row col-md-4" id="user-input">
-</div>
+
 
 <!-- End of container -->
 </div>
 
 <!-- Underscore templates -->
 <script type="text/template" id="booze-queue-view-template">
-	 <span id="tab-count"><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
-	 <% console.log(boozeQueue); %>
+	<h3>YOUR TAB</h3>
+	<span id="tab-count"><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
+	<% console.log(boozeQueue); %>
 </script>
 
 <script type="text/template" id="booze-item-view-template">
@@ -86,10 +84,6 @@
 	</ul>
 	</form>
 </script>
-
-
-
-
 
 <script type="text/template" id="wine-item-view-template">
 	<img src="<%= img %>" class="fit-wine">
@@ -110,7 +104,7 @@
 	<input class="btn btn-danger btn-lg" type="button" value="+">
 </script>
 
-<script type="text/template" id="beer-search-template">
+<script type="text/template" id="search-query-template">
 	<div class="row col-lg-12 form-group">
 		<h3>SEARCH</h3>
 			<form id='beer-search'>
