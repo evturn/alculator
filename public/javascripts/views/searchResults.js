@@ -15,7 +15,7 @@ var SearchResultsView = Backbone.View.extend({
 		e.preventDefault();
 		var boozeOnDelivery = new BoozeItem(this.model.attributes)
 		abv = parseInt(boozeOnDelivery.get('abv'))
-		boozeOnDelivery.set({selected: true, ounces: 12, img: 'images/bottle.png', abv: abv});
+		boozeOnDelivery.set({selected: true, ounces: 12, img: 'images/bottle-search.png', abv: abv});
 		console.log('boozeOnDelivery', boozeOnDelivery)
 		boozeItems.add(boozeOnDelivery);
 		boozeOnDelivery.save();

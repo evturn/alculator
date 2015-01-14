@@ -1,6 +1,0 @@
-[{"name": "shot", "abv": "40", "img": "images/shot.png", "ounces": "1.5"},
-{"name": "low", "abv": "40", "img": "images/low.png", "ounces": "7"},
-{"name": "high", "abv": "40", "img": "images/high.png", "ounces": "8"},
-{"name": "cocktail", "abv": "45", "img": "images/cocktail.png", "ounces": "5"},
-{"name": "margarita", "abv": "37", "img": "images/margarita.png", "ounces": "9"},
-{"name": "cordial", "abv": "20", "img": "images/cordial.png", "ounces": "2"}]

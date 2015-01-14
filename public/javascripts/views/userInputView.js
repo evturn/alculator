@@ -61,7 +61,7 @@ var UserInputView = Backbone.View.extend({
 				var stageEight = new StageEight();
 			} else if (bac < 0.30) {
 				var stageNine	 = new StageNine();
-			} else if (bac < 0.35) {
+			} else if (bac >= 0.30) {
 				var stageTen 	 = new StageTen();
 			} else {
 				alert('You sure you entered all your info?');
