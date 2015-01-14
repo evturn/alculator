@@ -1,5 +1,5 @@
 var WineItemView = Backbone.View.extend({
-	className: 'col-xs-4 align drink-space wine-item',
+	className: 'col-xs-3 align wine-item',
 	template: _.template($('#wine-item-view-template').html()),
 	initialize: function() {
 		this.render();

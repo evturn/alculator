@@ -145,3 +145,7 @@ svg {
 .needle {
 	fill: silver;
 }
+
+.beverage-item {
+	height: 205px;
+}
