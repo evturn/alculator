@@ -46,11 +46,6 @@ h4 {
 	margin-left: -22px;
 }
 
-.fit {
-	height: 100px;
-	width: 100px;
-	padding-left: -20px;
-}
 
 .fit-wine {
 	height: 100px;
@@ -58,9 +53,6 @@ h4 {
 	margin-top: 10px;
 }
 
-.drink-space {
-	padding-right: 60px;
-}
 
 #search-container {
 	height: 500px;
