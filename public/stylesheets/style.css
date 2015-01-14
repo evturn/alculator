@@ -11,14 +11,14 @@ a {
 }
 
 .yellow {
-	color: #E1CE5D;
+	color: #ead345;
 }
 
 .orange {
-	color: #C99E5A;
+	color: #e09e4a;
 }
 .red {
-	color: #9F6153;
+	color: #bd574b;
 }
 
 h1 {
@@ -31,10 +31,6 @@ h3 {
 }
 
 h4 {
-	text-align: center;
-}
-
-#booze-queue {
 	text-align: center;
 }
 
@@ -92,16 +88,12 @@ h4 {
 	background-color: #bd574b;
 }
 
-li {
-	list-style-type: none;
-}
-
 .booze-item li .destroy {
 	display: none;
 	position: absolute;
 	top: 0;
-	right: 20px;
-	bottom: 10px;
+	right: 10px;
+	bottom: 0;
 	width: 40px;
 	height: 40px;
 	margin: auto 0;
