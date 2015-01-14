@@ -96,16 +96,19 @@ li {
 
 #booze-items {
 	height: 100px;
-	margin-left: -15%;
+	/*margin-left: -15%;*/
 }
 
 .fit-booze {
 	height: 100px;
 	width: 100px;
 	margin-top: 10px;
+	margin-left: -1000px;
 }
 
-
+.remove-help {
+	float: left;
+}
 
 .booze-item li .destroy {
 	display: none;

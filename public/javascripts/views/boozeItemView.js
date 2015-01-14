@@ -1,5 +1,5 @@
 var BoozeItemView = Backbone.View.extend({
-	className: 'col-xs-2 align booze-item',
+	tagName: 'li',
 	template: _.template($('#booze-item-view-template').html()),
 	events: {
 		'click .destroy': 'destroy',
