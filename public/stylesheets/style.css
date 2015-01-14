@@ -96,6 +96,19 @@ li {
 	list-style-type: none;
 }
 
+#booze-items {
+	height: 100px;
+	margin-left: -15%;
+}
+
+.fit-booze {
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+}
+
+
+
 .booze-item li .destroy {
 	display: none;
 	position: absolute;
@@ -106,7 +119,7 @@ li {
 	height: 40px;
 	margin: auto 0;
 	font-size: 22px;
-	color: #a88a8a;
+	color: #bd574b;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }

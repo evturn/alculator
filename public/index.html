@@ -40,7 +40,7 @@
 	<div class="col-md-12" id="bac-calculation"></div>
 	<div class="col-md-12" id="stage"></div>
 	<div class="col-md-12" id="booze-queue"></div>
-	<div class="col-md-8" id="booze-items"></div>
+	<div class="col-md-12" id="booze-items"></div>
 </div>
 
 <div class="row col-md-4">
@@ -62,16 +62,15 @@
 </script>
 
 <script type="text/template" id="booze-item-view-template">
-	<form class="booze-form">
+	
 	<ul>
 		<li>
 	<button class="destroy"></button>
-		<img src="<%= img %>" class="fit-wine">
-			<h5 class="<%= selected %>"><%= ounces %>oz</h5>
-			<h5><%= abv %>%</h5>
-		</ul>
+		<img src="<%= img %>" class="fit-booze">
+			<h5 class="<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
+		</li>
 	</ul>
-	</form>
+	
 </script>
 
 <script type="text/template" id="wine-item-view-template">
