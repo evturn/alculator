@@ -5,7 +5,7 @@ new UserInputView();
 new SearchView();
 new BoozeItemsView();
 new BeerItemsView({collection: beerItems});
-$('.clockpicker').clockpicker();
+
 
 
 $(function() {

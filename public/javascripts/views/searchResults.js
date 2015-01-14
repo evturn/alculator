@@ -4,9 +4,21 @@ var SearchResultsView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 	},
+	events: {
+		'click input': 'addBooze'
+	},
 	render: function() {
 		this.$el.append(this.template(this.model.toJSON()));
 		return this;
+	},
+	addBooze: function(e) {
+		e.preventDefault();
+		var boozeOnDelivery = new BoozeItem(this.model.attributes)
+		abv = parseInt(boozeOnDelivery.get('abv'))
+		boozeOnDelivery.set({selected: true, ounces: 12, img: 'images/bottle.png', abv: abv});
+		console.log('boozeOnDelivery', boozeOnDelivery)
+		boozeItems.add(boozeOnDelivery);
+		boozeOnDelivery.save();
 	}
 });
 
