@@ -110,33 +110,33 @@ li {
 	float: left;
 }
 
-.booze-item li .destroy {
+#booze-items li .destroy {
 	display: none;
 	position: absolute;
 	top: 0;
-	right: -68px;
-	bottom: 10px;
+	right: 10px;
+	bottom: 0;
 	width: 40px;
 	height: 40px;
 	margin: auto 0;
 	font-size: 22px;
-	color: #bd574b;
+	color: #a88a8a;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
-.booze-item li .destroy:hover {
+#booze-items li .destroy:hover {
 	text-shadow: 0 0 1px #000,
 				 0 0 10px rgba(199, 107, 107, 0.8);
 	-webkit-transform: scale(1.3);
 	transform: scale(1.3);
 }
 
-.booze-item li .destroy:after {
+#booze-items li .destroy:after {
 	content: '✖';
 }
 
-.booze-item li:hover .destroy {
+#booze-items li:hover .destroy {
 	display: block;
 }
 
