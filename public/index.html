@@ -39,6 +39,8 @@
 	<div class="col-md-12" id="bac-meter"></div>
 	<div class="col-md-12" id="bac-calculation"></div>
 	<div class="col-md-12" id="stage"></div>
+	<div class="col-md-12" id="booze-queue"></div>
+	<div class="col-md-8" id="booze-items"></div>
 </div>
 
 <div class="row col-md-4">
@@ -46,8 +48,6 @@
 	<div class="col-md-12" id="user-input"></div>
 </div>
 
-<div class="col-md-4" id="booze-queue"></div>
-<div class="col-md-8" id="booze-items"></div>
 	
 
 </div>
@@ -62,12 +62,12 @@
 </script>
 
 <script type="text/template" id="booze-item-view-template">
-	<form class="booze-form" data-ounces="<%= ounces %>" data-abv="<%= abv %>">
+	<form class="booze-form">
 	<ul>
 		<li>
 	<button class="destroy"></button>
 		<img src="<%= img %>" class="fit-wine">
-			<h5 class="<%= selected %>"><%= name%>  <%= ounces %>oz</h5>
+			<h5 class="<%= selected %>"><%= ounces %>oz</h5>
 			<h5><%= abv %>%</h5>
 		</ul>
 	</ul>
@@ -126,7 +126,6 @@
 </script>
 <script type="text/template" id="user-input-template">
 	<div class="row col-lg-12 col-lg-offset-1 form-group" id="sex">
-		
 		<div class="col-lg-6">
 			<label>
 	  	<input type="radio" value="male" id="male" name="male">
