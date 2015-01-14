@@ -62,7 +62,9 @@ h4 {
 	padding-right: 60px;
 }
 
-
+#beverage-items {
+	height: 500px;
+}
 
 .stage-zero {
 	height: 30px;
