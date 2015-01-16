@@ -5,6 +5,8 @@ var SearchResultItemsView = Backbone.View.extend({
 	},
 	addOne: function(model) {
 		var view = new SearchResultItem({model: model});
-		this.$el.append(view.el);
+		this.$el.append(view.render().el);
 	},
 });
+
+console.log('SearchResultItemViews');

@@ -88,21 +88,9 @@
 </script>
 
 <script type="text/template" id="search-result-item-view-template">
-	<div class="row col-lg-12 form-group beverage-item" id="beer-results">
-		<div class="row col-lg-12">
-			<div class="row col-lg-4">
-				<img src="images/bottle-search.png" class="fit-wine">
-			</div>
-				<div class="col-lg-4">
-					<h3><%= name %></h3>
-				</div>
-				<div class="col-lg-4">
-					<h3 id="#selected-abv"><%= abv %>%</h3>
-				</div>
-			<div class="row col-lg-12">
-				<input class="btn btn-danger btn-lg btn-block" type="submit" value="+" id="add-beer">
-			</div>
-		</div>
+	<img src="<%= img %>" class="fit-wine">
+	<h5><%= name %></h5>
+	<input class="btn btn-danger btn-lg" type="button" value="+">
 </script>
 
 

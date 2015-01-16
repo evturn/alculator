@@ -1,5 +1,5 @@
 var SearchResultItemView = Backbone.View.extend({
-	tagName: 'li',
+	className: 'col-xs-3 align beer-item',
 	template: _.template($('#search-result-item-view-template').html()),
 	initialize: function() {
 		this.render();
@@ -13,7 +13,7 @@ var SearchResultItemView = Backbone.View.extend({
 	},
 	addBooze: function(e) {
 		e.preventDefault();
-		var boozeOnDelivery = new BoozeItem(this.model.attributes)
+		var boozeOnDelivery = new SearchResultItem(this.model.attributes)
 		abv = parseInt(boozeOnDelivery.get('abv'))
 		boozeOnDelivery.set({selected: true, ounces: 12, img: 'images/bottle-search.png', abv: abv});
 		console.log('boozeOnDelivery', boozeOnDelivery)
