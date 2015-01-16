@@ -5,6 +5,8 @@ beerItems.fetch({reset: true});
 new BeerItemsView({collection: beerItems});
 var boozeItems = new BoozeItems({reset: true, merge: false});
 new BoozeItemsView();
+var searchResultItems = new SearchResultItems({reset: true, merge: false});
+new SearchResultItemsView();
 
 $(function() {
 	boozeQueueView = new BoozeQueueView();

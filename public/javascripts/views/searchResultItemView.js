@@ -8,9 +8,7 @@ var SearchResultItemView = Backbone.View.extend({
 		'click input': 'addBooze'
 	},
 	render: function() {
-		var newSearchResult = this.model.toJSON();
-		console.log('newSearchResult', newSearchResult);
-		this.$el.append(this.template(newSearchResult));
+		this.$el.append(this.template(this.model.toJSON()));
 		return this;
 	},
 	addBooze: function(e) {
