@@ -1,5 +1,5 @@
 body {
-	background-image: url('../images/blackgridlines.jpg');
+	background-image: url('../images/blacklines.png');
 	background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -19,6 +19,10 @@ a {
 }
 .red {
 	color: #bd574b;
+}
+
+.red-danger {
+	color: #d9534f;
 }
 
 h1 {
@@ -96,7 +100,6 @@ li {
 
 #booze-items {
 	height: 100px;
-	/*margin-left: -15%;*/
 }
 
 .fit-booze {
