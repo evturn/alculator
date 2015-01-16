@@ -87,27 +87,6 @@
 	<input class="btn btn-danger btn-lg" type="button" value="+">
 </script>
 
-
-<script type="text/template" id="beer-item-view-template">
-	<img src="<%= img %>" class="fit-wine">
-	<h5><%= name %></h5>
-	<input class="btn btn-danger btn-lg" type="button" value="+">
-</script>
-
-<script type="text/template" id="search-query-template">
-	<div class="row col-lg-12 form-group">
-		<h3>SEARCH</h3>
-			<form id='beer-search'>
-		  	<label for="beer">FIND A BEER</label>
-		  	<input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
-	</div>
-	<div class="row col-lg-6">
-		<input class="btn btn-default btn-lg btn-block" type="submit" value="SEARCH" id="beer-submit">
-		</form>
-	</div>
-</script>
-
-
 <script type="text/template" id="search-results-template">
 	<div class="row col-lg-12 form-group beverage-item" id="beer-results">
 		<div class="row col-lg-12">
@@ -125,6 +104,27 @@
 			</div>
 		</div>
 </script>
+
+
+<script type="text/template" id="beer-item-view-template">
+	<img src="<%= img %>" class="fit-wine">
+	<h5><%= name %></h5>
+	<input class="btn btn-danger btn-lg" type="button" value="+">
+</script>
+
+<script type="text/template" id="search-query-template">
+	<div class="row col-lg-12 form-group">
+		<h3>SEARCH</h3>
+			<form id='beer-search'>
+		  	<label for="beer">FIND A BEER</label>
+		  	<input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
+	</div>
+	<div class="row col-lg-6">
+		<input class="btn btn-danger btn-lg btn-block" type="submit" value="SEARCH" id="beer-submit">
+		</form>
+	</div>
+</script>
+
 <script type="text/template" id="user-input-template">
 	<div class="row col-lg-12 col-lg-offset-1 form-group" id="sex">
 		<div class="col-lg-6">
