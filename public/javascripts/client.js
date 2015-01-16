@@ -56,6 +56,9 @@ $(function() {
 		});
 	});
 
+	$("[name='male']").bootstrapSwitch();
+	$("[name='female']").bootstrapSwitch();
+
 
 
 	console.log('Client');
