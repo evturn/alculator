@@ -37,8 +37,8 @@
 	<div class="col-md-12" id="bac-meter"></div>
 	<div class="col-md-12" id="bac-calculation"></div>
 	<div class="col-md-12" id="stage"></div>
-	<div class="col-md-12" id="booze-queue"></div>
-	<div class="col-md-12">
+	<div class="col-md-12" id="tab"></div>
+	<div class="col-md-12" id="booze">
 		<ul id="booze-items">
 		</ul>
 	</div>
@@ -65,10 +65,10 @@
 <script type="text/template" id="booze-item-view-template">
 	
 	
-	<div class="col-lg-2 align">
+	<div class="col-xs-2 align">
 		<button class="destroy"></button>
 		<img src="<%= img %>" class="fit-booze">
-		<h5 color="#ead345" class="<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
+		<h5<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
 	</div>	
 	
 </script>
