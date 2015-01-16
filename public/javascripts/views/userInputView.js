@@ -22,23 +22,33 @@ var UserInputView = Backbone.View.extend({
 			abvArray.push(drink.abv);
 			ouncesArray.push(drink.ounces);
 		});
-		var abvSum 				 = abvArray.reduce(function(prev, cur) {
-    	return prev + cur;
-  	});
-    var fluidOunces 	 = ouncesArray.reduce(function(prev, cur) {
-    	return prev + cur;
-  	});
-	 	var ethanolOunces  = fluidOunces * (abvSum * 0.01);
-	 	var metricOunces   = ethanolOunces * 5.14;
 	 	var lbs						 = parseInt(document.getElementById('lbs').value);
 		var	hours 				 = parseInt(document.getElementById('hours').value);		
 		var	sex   				 = document.getElementById('male').value;
 	 	var rate           = sex === 'male' ? 0.73 : 0.66;
+    var fluidOunces 	 = ouncesArray.reduce(function(prev, cur) {
+    	return prev + cur;
+  	});
+		var abvSum 				 = abvArray.reduce(function(prev, cur) {
+    	return prev + cur;
+  	});
+	 	var ethanolOunces  = fluidOunces * (abvSum * 0.01);
+	 	var metricOunces   = (ethanolOunces * 5.14).toFixed(2);
 		var metabolism 	 	 = lbs * rate;
-		var subLevel 		 	 = metricOunces /  metabolism;
+		var subLevel 		 	 = (metricOunces /  metabolism).toFixed(2);
 		var soberingRate   = 0.015 * hours;
 		var bac 			     = (subLevel - soberingRate).toFixed(2);
-		console.log(bac);
+		console.log('abvSum', abvSum);
+		console.log('fluidOunces', fluidOunces);
+		console.log('ethanolOunces', ethanolOunces);
+		console.log('metricOunces', metricOunces);
+		console.log('lbs', lbs);
+		console.log('sex', sex)
+		console.log('rate', rate);
+		console.log('metabolism', metabolism);
+		console.log('subLevel', subLevel);
+		console.log('soberingRate', soberingRate);
+		console.log('bac', bac);
 		var round          = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
 		var roundView      = new RoundView({model: round});
 			if (bac < 0.02) {
