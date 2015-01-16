@@ -58,7 +58,9 @@
 <!-- Underscore templates -->
 <script type="text/template" id="booze-queue-view-template">
 	<h3>YOUR TAB</h3>
-	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
+	<div class="col-xs-12 align">
+		<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
+	</div>
 	<% console.log(boozeQueue); %>
 </script>
 
@@ -68,7 +70,7 @@
 	<div class="col-xs-2 align">
 		<button class="destroy"></button>
 		<img src="<%= img %>" class="fit-booze">
-		<h5<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
+		<h5 class="<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
 	</div>	
 	
 </script>
