@@ -20,11 +20,6 @@ app.post('/rounds', parseUrlencoded, function(request, response) {
 	response.status(201).json(newRound);
 });
 
-seedData = [{name: "Tequila", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
-		{name: "Urine", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
-		{name: "Blood", abv: 40, img: "images/bottle-champagne.png", ounces: 25},
-		{name: "Poop", abv: 40, img: "images/bottle-champagne.png", ounces: 25},];
-
 app.get('/booze', function(request, response) {
 	response.status(200).json();
 });
@@ -35,7 +30,8 @@ app.delete('/booze', function(request, response) {});
 
 allBeers  = [{name: "Light Beer", abv: 4, img: "images/bottle.png", ounces: 12},
 		{name: "Standard Beer", abv: 5, img: "images/bottle.png", ounces: 12},
-		{name: "Strong Beer", abv: 7, "img": "images/bottle.png", ounces: 12}];
+		{name: "Strong Beer", abv: 7, "img": "images/bottle.png", ounces: 12},
+		{name: "Stronger Beer", abv: 10, "img": "images/bottle.png", ounces: 12}];
 
 allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
 		{name: "Lowball", abv: 40, img: "images/low.png", ounces: 7},
