@@ -1,4 +1,4 @@
-var SearchResultsView = Backbone.View.extend({
+var SearchResultItemView = Backbone.View.extend({
 	el: $('#search-results'),
 	template: _.template($('#search-results-template').html()),
 	initialize: function() {
@@ -22,5 +22,5 @@ var SearchResultsView = Backbone.View.extend({
 	}
 });
 
-console.log('SearchResultsView');
+console.log('SearchResultItemView');
 
