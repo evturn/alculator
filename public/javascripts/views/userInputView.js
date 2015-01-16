@@ -29,10 +29,13 @@ var UserInputView = Backbone.View.extend({
     var fluidOunces 	 = ouncesArray.reduce(function(prev, cur) {
     	return prev + cur;
   	});
+  	var manyDrinks = abvArray.length;
+  	console.log(manyDrinks);
 		var abvSum 				 = abvArray.reduce(function(prev, cur) {
     	return prev + cur;
   	});
-	 	var ethanolOunces  = fluidOunces * (abvSum * 0.01);
+  	var pureAbv = abvSum / manyDrinks;
+	 	var ethanolOunces  = fluidOunces * (pureAbv * 0.01);
 	 	var metricOunces   = (ethanolOunces * 5.14).toFixed(2);
 		var metabolism 	 	 = lbs * rate;
 		var subLevel 		 	 = (metricOunces /  metabolism).toFixed(2);
