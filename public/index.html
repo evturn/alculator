@@ -60,7 +60,7 @@
 <!-- Underscore templates -->
 <script type="text/template" id="booze-queue-view-template">
 	<h3>YOUR TAB</h3>
-	<span id="booze-queue" id="tab-count"><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
+	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
 	<% console.log(boozeQueue); %>
 </script>
 
@@ -129,7 +129,7 @@
 	<div class="row col-lg-12 col-lg-offset-1 form-group" id="sex">
 		<div class="col-lg-6">
 			<label>
-	  	<input type="radio" value="male" id="male" name="male">
+	  		<input type="radio" class="btn btn-default" value="male" id="male" name="male">
 	  	MALE</label>
 		</div>
 		<div class="col-lg-6">
