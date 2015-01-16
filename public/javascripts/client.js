@@ -5,6 +5,9 @@ var boozeItems = new BoozeItems({reset: true, merge: false});
 new UserInputView();
 new SearchView();
 new BoozeItemsView();
+$('input[name="male"]').bootstrapSwitch();
+$('input[name="female"]').bootstrapSwitch();
+
 
 $(function() {
 	boozeQueueView = new BoozeQueueView();
@@ -56,8 +59,10 @@ $(function() {
 		});
 	});
 
-	$("[name='male']").bootstrapSwitch();
-	$("[name='female']").bootstrapSwitch();
+	// $('#male').on('click', function() {
+	// 	$('#male').bootstrapSwitch('toggleState');
+	// });
+
 
 
 
