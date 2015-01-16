@@ -5,8 +5,6 @@ beerItems.fetch({reset: true});
 new BeerItemsView({collection: beerItems});
 var boozeItems = new BoozeItems({reset: true, merge: false});
 new BoozeItemsView();
-var searchResultItems = new SearchResultItems({reset: true, merge: false});
-new SearchResultItemsView(({collection: searchResultItems}));
 
 $(function() {
 	boozeQueueView = new BoozeQueueView();
@@ -51,10 +49,9 @@ $(function() {
 			dataType: 'JSON',
 			success: function(data) {
 				console.log('data', data);
-				console.log('name', data.name);
-				console.log('abv', data.abv);
-				searchResultItem = new SearchResultItem(data);
-				console.log('beer', searchResultItem);
+				newAbv = parseInt(data.abv);
+				searchResultItem = new SearchResultItem({name: data.name, abv: newAbv});
+				console.log('success', searchResultItem);
 				var view = new SearchResultItemView({model: searchResultItem});
 			}
 		});

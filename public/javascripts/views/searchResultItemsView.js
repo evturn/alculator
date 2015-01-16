@@ -1,11 +1,11 @@
 var SearchResultItemsView = Backbone.View.extend({
 	el: '#search-results',
 	initialize: function() {
-		this.listenTo(this.collection, 'reset', this.addOne);
+		this.listenTo(this.collection, 'add', this.addOne);
 	},
 	addOne: function(model) {
 		var view = new SearchResultItem({model: model});
-		this.$el.append(view.render().el);
+		this.$el.append(view.el);
 	},
 });
 
