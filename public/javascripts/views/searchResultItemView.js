@@ -1,6 +1,6 @@
 var SearchResultItemView = Backbone.View.extend({
-	el: $('#search-results'),
-	template: _.template($('#search-results-template').html()),
+	tagName: 'li',
+	template: _.template($('#search-result-item-view-template').html()),
 	initialize: function() {
 		this.render();
 	},
