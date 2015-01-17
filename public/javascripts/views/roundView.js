@@ -4,16 +4,15 @@ var RoundView = Backbone.View.extend({
 	url: '/rounds',
 	template: _.template($('#bac-calculation-template').html()),
 	initialize: function() {
-		this.listenTo(this.model, 'all', this.setStage)
-		this.render();
+		this.setStage();
 	},
 	render: function() {
     this.$el.html(this.template(this.model.toJSON()));
     return this;
 	},
 	setStage: function() {
-		var stageSetter = this.model.attributes;
-		stages.add(stageSetter);
+		var stageSetter = new Stage(this.model.attributes);
+		var stageView = new StageView({model: stageSetter});
 		console.log('stageSetter', stageSetter);
 	}
 });

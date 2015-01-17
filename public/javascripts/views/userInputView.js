@@ -30,7 +30,6 @@ var UserInputView = Backbone.View.extend({
     	return prev + cur;
   	});
   	var manyDrinks = abvArray.length;
-  	console.log(manyDrinks);
 		var abvSum 				 = abvArray.reduce(function(prev, cur) {
     	return prev + cur;
   	});

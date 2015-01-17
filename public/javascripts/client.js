@@ -1,8 +1,7 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 new BeerItemsView({collection: beerItems});
-var stages = new Stages();
-stages.fetch({reset: true});
+var stages = new Stages({reset: true});
 var boozeItems = new BoozeItems({reset: true, merge: false});
 new UserInputView();
 new SearchView();
