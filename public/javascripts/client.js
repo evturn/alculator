@@ -2,12 +2,14 @@ var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 new BeerItemsView({collection: beerItems});
 var stages = new Stages({reset: true});
+stages.fetch();
 var boozeItems = new BoozeItems({reset: true, merge: false});
 new UserInputView();
 new SearchView();
 new BoozeItemsView();
 
 $(function() {
+	console.log(stages);
 	boozeQueueView = new BoozeQueueView();
 
 	$('#liquor-tab').on('click', function() {

@@ -5,44 +5,45 @@ var StageView = Backbone.View.extend({
 		this.takeStage();
 	},
 	render: function() {
-		this.$el.html(this.template());
+		curtainClose = curtainCall.toJSON();
+		this.$el.html(this.template(curtainClose));
 		return this;
 	},
 	takeStage: function() {
 		var stageTaker = new Stage (this.model.attributes)
-		console.log('stageTaker', stageTaker);
 		stageKey = stageTaker.get('bac');
-		console.log('stageKey', stageKey);
 		this.severityCheck(stageKey);
 	},
 	severityCheck: function(key) {
 		console.log('key', key);
-			// if (results.bac < 0.02) {
-			// 	var stageZero  = new StageView({});
-			// 	debugger
-			// } else if (bac < 0.04) {
-			// 	var stageOne   = new StageView({});
-			// } else if (bac < 0.06) {
-			// 	var stageTwo	 = new StageView({});
-			// } else if (bac < 0.07) {
-			// 	var stageThree = new StageView({});
-			// } else if (bac < 0.10) {
-			// 	var stageFour  = new StageView({});
-			// } else if (bac < 0.13) {
-			// 	var stageFive	 = new StageView({});
-			// } else if (bac < 0.16) {
-			// 	var stageSix	 = new StageView({});
-			// } else if (bac < 0.20) {
-			// 	var stageSeven = new StageView({});
-			// } else if (bac < 0.25) {
-			// 	var stageEight = new StageView({});
-			// } else if (bac < 0.30) {
-			// 	var stageNine	 = new StageView({});
-			// } else if (bac >= 0.30) {
-			// 	var stageTen 	 = new StageView({});
-			// } else {
-			// 	alert('You sure you entered all your info?');
-			// }
+			if (key < 0.02) {
+				curtainCall = stages.models[0]
+				this.render();	
+			} else if (key < 0.04) {
+				curtainCall = stages.models[1]
+				this.render();
+			} else if (key < 0.06) {
+				curtainCall = stages.models[2]
+				this.render();
+			} else if (key < 0.07) {
+				curtainCall = stages.models[3]
+			} else if (key < 0.10) {
+				curtainCall = stages.models[4]
+			} else if (key < 0.13) {
+				curtainCall = stages.models[5]
+			} else if (key < 0.16) {
+				curtainCall = stages.models[6]
+			} else if (key < 0.20) {
+				curtainCall = stages.models[7]
+			} else if (key < 0.25) {
+				curtainCall = stages.models[8]
+			} else if (key < 0.30) {
+				curtainCall = stages.models[9]
+			} else if (key >= 0.30) {
+				curtainCall = stages.models[10]
+			} else {
+				alert('You sure you entered all your info?');
+			}
 	},
 });
 

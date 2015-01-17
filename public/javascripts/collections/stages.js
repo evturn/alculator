@@ -1,7 +1,6 @@
 var Stages = Backbone.Collection.extend({
 	model: Stage,
-	url: '/stages',
-	localStorage: new Backbone.LocalStorage('booze-backbone'),
+	url: '/stages'
 });
 
 console.log('StageCollecton');
