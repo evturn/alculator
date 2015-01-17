@@ -5,3 +5,6 @@ var Stages = Backbone.Collection.extend({
 });
 
 console.log('StageCollecton');
+
+var stages = new Stages();
+stages.fetch();
