@@ -15,6 +15,28 @@ app.get('/', function(require, response) {
 	response.render('index.html');
 });
 
+app.get('/beers', function(request, response) {
+	response.status(200).json(allBeers);
+});
+
+app.get('/liquor', function(request, response) {
+	response.status(200).json(allLiquor);
+});
+
+app.get('/wine', function(request, response) {
+	response.status(200).json(allWine);
+});
+
+app.get('/search', function(request, response) {	
+	var requestQuery = request.query;
+	beerQuery 			 = requestQuery.name;
+	beerChoice(response);
+});
+
+app.get('/stages', function(request, response) {
+	response.status(200).json(allStages);
+});
+
 app.post('/rounds', parseUrlencoded, function(request, response) {
 	var newRound = request.body;
 	response.status(201).json(newRound);
@@ -62,23 +84,7 @@ allStages = [
 respiratory arrest", color: "stage-color-five"}]
 
 
-app.get('/beers', function(request, response) {
-	response.status(200).json(allBeers);
-});
 
-app.get('/liquor', function(request, response) {
-	response.status(200).json(allLiquor);
-});
-
-app.get('/wine', function(request, response) {
-	response.status(200).json(allWine);
-});
-
-app.get('/search', function(request, response) {	
-	var requestQuery = request.query;
-	beerQuery 			 = requestQuery.name;
-	beerChoice(response);
-});
 
 var beerChoice = function(responseObject) {
 	var	beersList = [];
