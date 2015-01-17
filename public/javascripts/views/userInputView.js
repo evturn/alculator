@@ -41,17 +41,6 @@ var UserInputView = Backbone.View.extend({
 		var subLevel 		 	 = (metricOunces /  metabolism).toFixed(2);
 		var soberingRate   = 0.015 * hours;
 		var bac 			     = (subLevel - soberingRate).toFixed(2);
-		console.log('abvSum', abvSum);
-		console.log('fluidOunces', fluidOunces);
-		console.log('ethanolOunces', ethanolOunces);
-		console.log('metricOunces', metricOunces);
-		console.log('lbs', lbs);
-		console.log('sex', sex)
-		console.log('rate', rate);
-		console.log('metabolism', metabolism);
-		console.log('subLevel', subLevel);
-		console.log('soberingRate', soberingRate);
-		console.log('bac', bac);
 		var round          = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
 		var roundView      = new RoundView({model: round});
 			if (bac < 0.02) {
