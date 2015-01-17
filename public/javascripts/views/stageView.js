@@ -10,36 +10,39 @@ var StageView = Backbone.View.extend({
 	},
 	takeStage: function() {
 		var stageTaker = new Stage (this.model.attributes)
-		console.log('stageTaker model', stageTaker);
-		
+		console.log('stageTaker', stageTaker);
+		stageKey = stageTaker.get('bac');
+		console.log('stageKey', stageKey);
+		this.severityCheck(stageKey);
 	},
-	severityCheck: function(round) {
-			if (round.bac < 0.02) {
-				var stageZero  = new StageView({});
-				debugger
-			} else if (bac < 0.04) {
-				var stageOne   = new StageView({});
-			} else if (bac < 0.06) {
-				var stageTwo	 = new StageView({});
-			} else if (bac < 0.07) {
-				var stageThree = new StageView({});
-			} else if (bac < 0.10) {
-				var stageFour  = new StageView({});
-			} else if (bac < 0.13) {
-				var stageFive	 = new StageView({});
-			} else if (bac < 0.16) {
-				var stageSix	 = new StageView({});
-			} else if (bac < 0.20) {
-				var stageSeven = new StageView({});
-			} else if (bac < 0.25) {
-				var stageEight = new StageView({});
-			} else if (bac < 0.30) {
-				var stageNine	 = new StageView({});
-			} else if (bac >= 0.30) {
-				var stageTen 	 = new StageView({});
-			} else {
-				alert('You sure you entered all your info?');
-			}
+	severityCheck: function(key) {
+		console.log('key', key);
+			// if (results.bac < 0.02) {
+			// 	var stageZero  = new StageView({});
+			// 	debugger
+			// } else if (bac < 0.04) {
+			// 	var stageOne   = new StageView({});
+			// } else if (bac < 0.06) {
+			// 	var stageTwo	 = new StageView({});
+			// } else if (bac < 0.07) {
+			// 	var stageThree = new StageView({});
+			// } else if (bac < 0.10) {
+			// 	var stageFour  = new StageView({});
+			// } else if (bac < 0.13) {
+			// 	var stageFive	 = new StageView({});
+			// } else if (bac < 0.16) {
+			// 	var stageSix	 = new StageView({});
+			// } else if (bac < 0.20) {
+			// 	var stageSeven = new StageView({});
+			// } else if (bac < 0.25) {
+			// 	var stageEight = new StageView({});
+			// } else if (bac < 0.30) {
+			// 	var stageNine	 = new StageView({});
+			// } else if (bac >= 0.30) {
+			// 	var stageTen 	 = new StageView({});
+			// } else {
+			// 	alert('You sure you entered all your info?');
+			// }
 	},
 });
 
