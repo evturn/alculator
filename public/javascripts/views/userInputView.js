@@ -5,12 +5,12 @@ var UserInputView = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #bac-submit-btn': 'calculate'
+		'click #bac-submit-btn': 'collectBooze'
 	},
 	render: function() {
 		this.$el.html(this.template());
 	},
-	calculate: function(e) {
+	collectBooze: function(e) {
 		e.preventDefault;
 		abvArray    = [];
 		ouncesArray = [];
@@ -21,26 +21,35 @@ var UserInputView = Backbone.View.extend({
 			abvArray.push(drink.abv);
 			ouncesArray.push(drink.ounces);
 		});
-	 	var lbs						 = parseInt(document.getElementById('lbs').value);
-		var	hours 				 = parseInt(document.getElementById('hours').value);		
-		var	sex   				 = document.getElementById('male').value;
-	 	var rate           = sex === 'male' ? 0.73 : 0.66;
-    var fluidOunces 	 = ouncesArray.reduce(function(prev, cur) {
+		this.consolidateBooze();
+	},
+	consolidateBooze: function() {
+    fluidOunces = ouncesArray.reduce(function(prev, cur) {
     	return prev + cur;
   	});
-  	var manyDrinks = abvArray.length;
-		var abvSum 				 = abvArray.reduce(function(prev, cur) {
+  	totalDrinks = abvArray.length;
+		abvSum 			= abvArray.reduce(function(prev, cur) {
     	return prev + cur;
-  	});
-  	var pureAbv = abvSum / manyDrinks;
-	 	var ethanolOunces  = fluidOunces * (pureAbv * 0.01);
-	 	var metricOunces   = (ethanolOunces * 5.14).toFixed(2);
-		var metabolism 	 	 = lbs * rate;
-		var subLevel 		 	 = (metricOunces /  metabolism).toFixed(2);
-		var soberingRate   = 0.015 * hours;
-		var bac 			     = (subLevel - soberingRate).toFixed(2);
-		var round          = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
-		var roundView      = new RoundView({model: round});
+  	});	
+  	this.collectUserInfo();
+	},
+	collectUserInfo: function() {
+	 	lbs		= parseInt(document.getElementById('lbs').value);
+		hours = parseInt(document.getElementById('hours').value);		
+		sex   = document.getElementById('male').value;
+	 	rate  = sex === 'male' ? 0.73 : 0.66;
+	 	this.calculate();
+	},
+	calculate: function() {
+  	var pureAbv 			= abvSum / totalDrinks;
+	 	var ethanolOunces = fluidOunces * (pureAbv * 0.01);
+	 	var metricOunces  = (ethanolOunces * 5.14).toFixed(2);
+		var metabolism 	 	= lbs * rate;
+		var subLevel 		 	= (metricOunces /  metabolism).toFixed(2);
+		var soberingRate  = 0.015 * hours;
+		var bac 			    = (subLevel - soberingRate).toFixed(2);
+		var round         = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
+		var roundView     = new RoundView({model: round});
 	}
 });
 
