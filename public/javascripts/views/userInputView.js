@@ -44,27 +44,27 @@ var UserInputView = Backbone.View.extend({
 		var round          = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
 		var roundView      = new RoundView({model: round});
 			if (bac < 0.02) {
-				var stageZero  = new StageZero();
+				var stageZero  = new StageView({});
 			} else if (bac < 0.04) {
-				var stageOne   = new StageOne();
+				var stageOne   = new StageView({});
 			} else if (bac < 0.06) {
-				var stageTwo	 = new StageTwo();
+				var stageTwo	 = new StageView({});
 			} else if (bac < 0.07) {
-				var stageThree = new StageThree();
+				var stageThree = new StageView({});
 			} else if (bac < 0.10) {
-				var stageFour  = new StageFour();
+				var stageFour  = new StageView({});
 			} else if (bac < 0.13) {
-				var stageFive	 = new StageFive();
+				var stageFive	 = new StageView({});
 			} else if (bac < 0.16) {
-				var stageSix	 = new StageSix();
+				var stageSix	 = new StageView({});
 			} else if (bac < 0.20) {
-				var stageSeven = new StageSeven();
+				var stageSeven = new StageView({});
 			} else if (bac < 0.25) {
-				var stageEight = new StageEight();
+				var stageEight = new StageView({});
 			} else if (bac < 0.30) {
-				var stageNine	 = new StageNine();
+				var stageNine	 = new StageView({});
 			} else if (bac >= 0.30) {
-				var stageTen 	 = new StageTen();
+				var stageTen 	 = new StageView({});
 			} else {
 				alert('You sure you entered all your info?');
 			}
