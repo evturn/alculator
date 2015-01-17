@@ -47,6 +47,20 @@ allWine		= [{name: "Red (Glass)", abv: 13, img: "images/redglass.png", ounces: 5
 		{name: "White (Bottle)", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
 		{name: "Champagne (Bottle)", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
 
+allStages = [{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},
+	{name: "", description, ""},]
+
+
 app.get('/beers', function(request, response) {
 	response.status(200).json(allBeers);
 });
