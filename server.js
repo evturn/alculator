@@ -49,16 +49,17 @@ allWine		= [{name: "Red (Glass)", abv: 13, img: "images/redglass.png", ounces: 5
 
 allStages = [
 	{name: "stage-zero", description, "No significant trace of alcohol in your blood", color: "stage-color-zero"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"},
-	{name: "", description, "", "stage-color-"}]
+	{name: "stage-one", description, "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded", color: "stage-color-one"},
+	{name: "stage-two", description, "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)", color: "stage-color-one"},
+	{name: "stage-three", description, "Slight impairment of balance, speech, vision, reaction time, and hearing. Judgment and self-control are reduced, and caution, reason and memory are impaired, .08 is legally impaired and it is illegal to drive at this level. You probably believe that you are functioning better than you really are", color: "stage-color-two"},
+	{name: "stage-four", description, "Significant impairment of motor coordination and loss of good judgment. Speech may be slurred; balance, vision, reaction time and hearing will be impaired", color: "stage-color-two"},
+	{name: "stage-five", description, "Significant impairment of motor coordination and loss of good judgment. Speech may be slurred; balance, vision, reaction time and hearing will be impaired", color: "stage-color-three"},
+	{name: "stage-six", description, ">Gross motor impairment and lack of physical control. Blurred vision and major loss of balance. Euphoria is reduced and dysphoria (anxiety, restlessness) is beginning to appear. Judgment and perception are severely impaired", color: "stage-color-three"},
+	{name: "stage-seven", description, "Dysphoria predominates, nausea may appear. The drinker has the appearance of a "sloppy drunk"", color: "stage-color-four"},
+	{name: "stage-eight", description, "Felling dazed, confused or otherwise disoriented. May need help to stand or walk. If you injure yourself you may not feel the pain. Some people experience nausea and vomiting at this level. The gag reflex is impaired and you can choke if you do vomit. Blackouts are likely at this level so you may not remember what has happened", color: "stage-color-four"},
+	{name: "stage-nine", description, "You have little comprehension of where you are. You may pass out suddenly and be difficult to awaken. Coma is possible. This is the level of surgical anesthesia", color: "stage-color-five"},
+	{name: "stage-ten", description, "Onset of coma, and possible death due to
+respiratory arrest", color: "stage-color-five"}]
 
 
 app.get('/beers', function(request, response) {
