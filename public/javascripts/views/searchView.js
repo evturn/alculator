@@ -17,4 +17,3 @@ var SearchView = Backbone.View.extend({
 	}
 });
 
-console.log('SearchView');

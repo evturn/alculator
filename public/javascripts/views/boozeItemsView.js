@@ -9,4 +9,3 @@ var BoozeItemsView = Backbone.View.extend({
   },
 });
 
-console.log('BoozeItemsView');

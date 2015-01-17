@@ -4,4 +4,3 @@ var BoozeItems = Backbone.Collection.extend({
   url: '/booze',
 });
 
-console.log('BoozeItems');

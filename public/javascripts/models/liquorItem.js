@@ -7,4 +7,3 @@ var LiquorItem = Backbone.Model.extend({
 	}
 });
 
-console.log('LiquorItem');

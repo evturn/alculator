@@ -15,4 +15,3 @@ var LiquorItemsView = Backbone.View.extend({
   },
 });
 
-console.log('LiquorItemsView');

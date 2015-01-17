@@ -11,4 +11,3 @@ var Round = Backbone.Model.extend({
 	url: '/rounds',
 });
 
-console.log('Round');

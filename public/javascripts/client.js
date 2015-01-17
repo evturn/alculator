@@ -9,7 +9,6 @@ new SearchView();
 new BoozeItemsView();
 
 $(function() {
-	console.log(stages);
 	boozeQueueView = new BoozeQueueView();
 
 	$('#liquor-tab').on('click', function() {
@@ -28,7 +27,6 @@ $(function() {
 		var wineItems = new WineItems();
 		wineItems.fetch({reset: true});
 		wineItemView = new WineItemsView({collection: wineItems});
-		console.log(this);
 	});
 
 	$('#beer-tab').on('click', function() {
@@ -51,11 +49,9 @@ $(function() {
 			},
 			dataType: 'JSON',
 			success: function(data) {
-				beer = new Beer(data);
+				beer 		 = new Beer(data);
 				var view = new SearchResultsView({model: beer});
 			}
 		});
 	});
-
-	console.log('Client');
 });

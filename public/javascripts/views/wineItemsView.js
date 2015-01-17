@@ -15,4 +15,3 @@ var WineItemsView = Backbone.View.extend({
   }
 });
 
-console.log('WineItemsView');

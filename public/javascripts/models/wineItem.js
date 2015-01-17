@@ -7,4 +7,3 @@ var WineItem = Backbone.Model.extend({
 	}
 });
 
-console.log('WineItem');

@@ -11,4 +11,3 @@ var BoozeQueueView = Backbone.View.extend({
 	}
 });
 
-console.log('BoozeQueueView');

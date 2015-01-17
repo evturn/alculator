@@ -3,7 +3,5 @@ var WineItems = Backbone.Collection.extend({
 	url: '/wine'
 });
 
-console.log('WineItems');
-
 var wineItems = new WineItems();
 wineItems.fetch();

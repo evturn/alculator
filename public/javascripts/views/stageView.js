@@ -54,4 +54,3 @@ var StageView = Backbone.View.extend({
 	},
 });
 
-console.log('StageView');

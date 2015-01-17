@@ -15,10 +15,8 @@ var WineItemView = Backbone.View.extend({
 		e.preventDefault();
 		var boozeOnDelivery = new BoozeItem(this.model.attributes)
 		boozeOnDelivery.set({selected: true});
-		console.log('boozeOnDelivery', boozeOnDelivery)
 		boozeItems.add(boozeOnDelivery);
 		boozeOnDelivery.save();
 	}
 });
 
-console.log('WineItemView');

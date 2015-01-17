@@ -7,4 +7,3 @@ var Stage = Backbone.Model.extend({
 	}
 });
 
-console.log('Stage');

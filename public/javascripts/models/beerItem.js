@@ -7,4 +7,3 @@ var BeerItem = Backbone.Model.extend({
 	}
 });
 
-console.log('BeerItem');

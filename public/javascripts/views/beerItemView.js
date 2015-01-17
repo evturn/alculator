@@ -20,4 +20,4 @@ var BeerItemView = Backbone.View.extend({
 	}
 });
 
-console.log('BeerItemView');
+

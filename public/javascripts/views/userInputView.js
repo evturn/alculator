@@ -53,4 +53,3 @@ var UserInputView = Backbone.View.extend({
 	}
 });
 
-console.log('UserInputView');
