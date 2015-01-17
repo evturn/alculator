@@ -9,8 +9,8 @@ var StageView = Backbone.View.extend({
 		return this;
 	},
 	stageHandler: function(model) {
-		var stageCreation = Stage(this.model.attributes);
-		
+		var stageCreation = this.model
+		console.log('stageCreation', stageCreation);
 	},
 	severityCheck: function(round) {
 			if (round.bac < 0.02) {
