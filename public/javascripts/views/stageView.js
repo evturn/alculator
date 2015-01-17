@@ -2,7 +2,7 @@ var StageView = Backbone.View.extend({
 	el: $('#stage'),
 	template: _.template($('#stage-template').html()),
 	initialize: function() {
-		this.render();
+		this.listenTo(this.collection, 'reset', this.render);
 	},
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));
