@@ -82,10 +82,6 @@ allStages = [
 	{name: "stage-nine", description: "You have little comprehension of where you are. You may pass out suddenly and be difficult to awaken. Coma is possible. This is the level of surgical anesthesia", color: "stage-color-five", stage: 9},
 	{name: "stage-ten", description: "Onset of coma, probable death due to respitory arrest", color: "stage-color-five", stage: 10}]
 
-
-
-
-
 var beerChoice = function(responseObject) {
 	var	beersList = [];
 	target = 'http://api.brewerydb.com/v2/search?q=' + beerQuery + '&key=' + process.env.BREWERY_DB_KEY;

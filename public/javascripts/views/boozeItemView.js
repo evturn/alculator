@@ -10,7 +10,6 @@ var BoozeItemView = Backbone.View.extend({
 	},
 	render: function() {
 		var boozeOnArrival = this.model.set({url: '/booze'});
-		console.log('boozeOnArrival', boozeOnArrival);
 		var newBooze = this.model.toJSON();
 		this.$el.html(this.template(newBooze));
 		return this;

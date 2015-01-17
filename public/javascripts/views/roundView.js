@@ -12,7 +12,7 @@ var RoundView = Backbone.View.extend({
 	},
 	setStage: function() {
 		var stageSetter = new Stage(this.model.attributes);
-		var stageView = new StageView({model: stageSetter});
+		var stageView 	= new StageView({model: stageSetter});
 		this.render();
 	}
 });
