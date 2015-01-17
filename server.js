@@ -70,7 +70,7 @@ allWine		= [{name: "Red (Glass)", abv: 13, img: "images/redglass.png", ounces: 5
 		{name: "Champagne (Bottle)", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
 
 allStages = [
-	{name: "stage-zero", description: "No significant trace of alcohol in your blood", color: "stage-color-zero" stage: 0},
+	{name: "stage-zero", description: "No significant trace of alcohol in your blood", color: "stage-color-zero", stage: 0},
 	{name: "stage-one", description: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded", color: "stage-color-one", stage: 1},
 	{name: "stage-two", description: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)", color: "stage-color-one", stage: 2},
 	{name: "stage-three", description: "Slight impairment of balance, speech, vision, reaction time, and hearing. Judgment and self-control are reduced, and caution, reason and memory are impaired, .08 is legally impaired and it is illegal to drive at this level. You probably believe that you are functioning better than you really are", color: "stage-color-two", stage: 3},
