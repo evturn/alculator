@@ -12,7 +12,6 @@ var UserInputView = Backbone.View.extend({
 	},
 	calculate: function(e) {
 		e.preventDefault;
-		$('#booze-queue').hide();
 		abvArray    = [];
 		ouncesArray = [];
 		boozeItems.shift();

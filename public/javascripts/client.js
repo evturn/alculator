@@ -51,9 +51,7 @@ $(function() {
 			},
 			dataType: 'JSON',
 			success: function(data) {
-				console.log('data', data[0]);
 				beer = new Beer(data);
-				console.log('beer', beer);
 				var view = new SearchResultsView({model: beer});
 			}
 		});
