@@ -43,7 +43,10 @@ var UserInputView = Backbone.View.extend({
 		var bac 			     = (subLevel - soberingRate).toFixed(2);
 		var round          = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
 		var roundView      = new RoundView({model: round});
-	}
+		var stage = new Stage({bac: bac})
+		console.log(stage);
+	},
+	
 });
 
 console.log('UserInputView');

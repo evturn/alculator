@@ -2,15 +2,20 @@ var StageView = Backbone.View.extend({
 	el: $('#stage'),
 	template: _.template($('#stage-template').html()),
 	initialize: function() {
-		this.listenTo(this.collection, 'reset', this.render);
+		this.listenTo(this.model, 'add', this.stageHandler);
 	},
 	render: function() {
-		this.$el.html(this.template(this.model.toJSON()));
+		this.$el.html(this.template());
 		return this;
 	},
-	severityCheck: function() {
-			if (bac < 0.02) {
+	stageHandler: function(model) {
+		var stageCreation = Stage(this.model.attributes);
+		
+	},
+	severityCheck: function(round) {
+			if (round.bac < 0.02) {
 				var stageZero  = new StageView({});
+				debugger
 			} else if (bac < 0.04) {
 				var stageOne   = new StageView({});
 			} else if (bac < 0.06) {
@@ -34,7 +39,7 @@ var StageView = Backbone.View.extend({
 			} else {
 				alert('You sure you entered all your info?');
 			}
-	}
+	},
 });
 
 console.log('StageView');
