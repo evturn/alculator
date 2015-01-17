@@ -2,15 +2,15 @@ var StageView = Backbone.View.extend({
 	el: $('#stage'),
 	template: _.template($('#stage-template').html()),
 	initialize: function() {
-		this.listenTo(this.model, 'add', this.stageHandler);
+		this.listenTo(stages, 'add', this.stageTaker)
 	},
 	render: function() {
 		this.$el.html(this.template());
 		return this;
 	},
-	stageHandler: function(model) {
-		var stageCreation = this.model
-		console.log('stageCreation', stageCreation);
+	stageTaker: function(model) {
+		console.log('stageTaker model', model);
+		
 	},
 	severityCheck: function(round) {
 			if (round.bac < 0.02) {
