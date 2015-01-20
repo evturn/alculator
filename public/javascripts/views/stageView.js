@@ -15,6 +15,17 @@ var StageView = Backbone.View.extend({
 		this.severityCheck(stageKey);
 	},
 	severityCheck: function(key) {
+		// Return unless key is a number (or whatever the right check is)
+
+		var map = {
+			0.02: 0,
+			0.04: 1
+		};
+
+		var map2 = [0.02, 0.04];
+
+		stages.models[map.indexOf(key)];
+
 			if (key < 0.02) {
 				curtainCall = stages.models[0];
 				this.render();	
@@ -54,3 +65,12 @@ var StageView = Backbone.View.extend({
 	},
 });
 
+
+
+bacs = [0.30, 0.25, 0.20, 0.16];
+
+var validBac = _.reject(bacs, function(bac) {
+	return bac > 0.27;
+});
+
+_.max(validBac, function(x) { return x; });
