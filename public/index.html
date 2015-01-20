@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alculator</title>
 	<link rel="icon" type="image/png" href="images/alc.png">
 		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
@@ -21,12 +22,12 @@
 			<li role="presentation" id="liquor-tab"><a href="#">LIQUOR</a></li>
 		</ul>
 	</div>
-	<div class="row col-md-4 col-sm-4 col-xs-4">
+	<div class="row col-md-4 col-sm-12 col-xs-12">
 	  <div class="col-md-12 col-sm-12 col-xs-12" id="beverage-items"></div>
 		<div class="col-md-12 col-sm-12 col-xs-12 form-group" id="search-query"></div>
 		<div class="col-md-12 col-sm-12 col-xs-12" id="search-results"></div> 
 	</div>
-	<div class="row col-md-4 col-sm-4 col-xs-4">
+	<div class="row col-md-4 col-sm-4 col-xs-12">
 		<div class="col-md-12 col-sm-12 col-xs-12" id="bac-meter"></div>
 		<div class="col-md-12 col-sm-12 col-xs-12" id="bac-calculation"></div>
 		<div class="col-md-12 col-sm-12 col-xs-12" id="stage"></div>
@@ -35,7 +36,7 @@
 			<ul id="booze-items"></ul>
 		</div>
 	</div>
-	<div class="row col-md-4 col-sm-4 col-xs-4">
+	<div class="row col-md-4 col-sm-8 col-xs-12">
 		<div class="col-md-12 col-sm-12" id="user-input"></div>
 	</div>
 </div>
@@ -96,7 +97,7 @@
 </script>
 
 <script type="text/template" id="user-input-template">
-	<div class="row col-md-12 col-md-offset-1 form-group" id="sex">
+	<div class="row col-md-12 col-md-offset-1 col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1 form-group" id="sex">
 		<div class="col-md-6 col-sm-6 col-xs-6">
 			<label>
 	  		<input type="radio" class="btn btn-default" value="male" id="male" name="male">
@@ -108,7 +109,7 @@
 			FEMALE</label>
 		</div>
 	</div>
-	<div class="row col-md-12 col-md-offset-1 row col-sm-12 col-sm-offset-1 row col-xs-12 col-xs-offset-1 form-group">
+	<div class="row col-md-12 col-md-offset-1 row col-sm-12 col-sm-offset-1 col-xs-12 col-xs-offset-1 form-group">
 		<div class="col-md-6 col-sm-12 col-xs-12">
 			<label for="hours">HOURS PASSED</label>
 			<select class="form-control input-lg" name="hours" id="hours">
