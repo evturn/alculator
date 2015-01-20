@@ -13,7 +13,7 @@
 <body>
 
 <div class="container">
-	<div class="row col-md-12" id="page-header">
+	<div class="row col-md-12 col-sm-12 col-xs-12" id="page-header">
 		<h1><em><span class="yellow">A</span><span class="orange">L</span><span class="red">C</span></em>ULATOR</h1>
 		<ul class="nav nav-tabs" id="tabs">
 			<li role="presentation" class="active" id="beer-tab"><a href="#">BEER</a></li>
@@ -21,22 +21,22 @@
 			<li role="presentation" id="liquor-tab"><a href="#">LIQUOR</a></li>
 		</ul>
 	</div>
-	<div class="row col-md-4">
-	  <div class="col-md-12" id="beverage-items"></div>
-		<div class="col-md-12 form-group" id="search-query"></div>		
-		<div class="col-md-12" id="search-results"></div> 
+	<div class="row col-md-4 col-sm-4 col-xs-4">
+	  <div class="col-md-12 col-sm-12 col-xs-12" id="beverage-items"></div>
+		<div class="col-md-12 col-sm-12 col-xs-12 form-group" id="search-query"></div>
+		<div class="col-md-12 col-sm-12 col-xs-12" id="search-results"></div> 
 	</div>
-	<div class="row col-md-4">
-		<div class="col-md-12" id="bac-meter"></div>
-		<div class="col-md-12" id="bac-calculation"></div>
-		<div class="col-md-12" id="stage"></div>
-		<div class="col-md-12" id="tab"></div>
-		<div class="col-md-12" id="booze">
+	<div class="row col-md-4 col-sm-4 col-xs-4">
+		<div class="col-md-12 col-sm-12 col-xs-12" id="bac-meter"></div>
+		<div class="col-md-12 col-sm-12 col-xs-12" id="bac-calculation"></div>
+		<div class="col-md-12 col-sm-12 col-xs-12" id="stage"></div>
+		<div class="col-md-12 col-sm-12 col-xs-12" id="tab"></div>
+		<div class="col-md-12 col-sm-12 col-xs-12" id="booze">
 			<ul id="booze-items"></ul>
 		</div>
 	</div>
-	<div class="row col-md-4">
-		<div class="col-md-12" id="user-input"></div>
+	<div class="row col-md-4 col-sm-4 col-xs-4">
+		<div class="col-md-12 col-sm-12" id="user-input"></div>
 	</div>
 </div>
 
@@ -83,35 +83,35 @@
 </script>
 
 <script type="text/template" id="search-query-template">
-	<div class="row col-lg-12 form-group">
+	<div class="row col-md-12 form-group">
 		<h3>SEARCH</h3>
 		<form id='beer-search'>
 		  <label for="beer">FIND A BEER</label>
 		  <input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
 	</div>
-	<div class="row col-lg-6">
+	<div class="row col-md-6">
 		<input class="btn btn-danger btn-lg btn-block" type="submit" value="SEARCH" id="beer-submit">
 		</form>
 	</div>
 </script>
 
 <script type="text/template" id="user-input-template">
-	<div class="row col-lg-12 col-lg-offset-1 form-group" id="sex">
+	<div class="row col-md-12 col-md-offset-1 form-group" id="sex">
 		<div class="col-lg-6">
 			<label>
 	  		<input type="radio" class="btn btn-default" value="male" id="male" name="male">
 	  	MALE</label>
 		</div>
-		<div class="col-lg-6">
+		<div class="col-md-6">
 			<label>
 	  	<input type="radio" value="female" id="female" name="female">
 			FEMALE</label>
 		</div>
 	</div>
-	<div class="row col-lg-12 col-lg-offset-1 form-group">
-		<div class="col-lg-6">
+	<div class="row col-md-12 col-md-offset-1 row col-sm-12 col-sm-offset-1 form-group">
+		<div class="col-md-6 col-sm-6  col-xs-6">
 			<label for="hours">HOURS PASSED</label>
-			<select class="form-control input-lg" name="hours" id="hours">
+			<select class="form-control input-md" name="hours" id="hours">
 				<option>0</option>
 				<option>1</option>
 				<option>2</option>
@@ -127,7 +127,7 @@
 				<option>12</option>
 			</select>
 		</div>
-		<div class="col-lg-6">
+		<div class="col-md-6 col-sm-6  col-xs-6">
 			<label for="lbs">WEIGHT IN LBS</label>
 	    <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="***">
 		</div>
