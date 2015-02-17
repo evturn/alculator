@@ -24,7 +24,7 @@
 	    left: 20
 	  };
 
-	  width = el[0][0].offsetWidth - margin.left - margin.right;
+	  // width = el[0][0].offsetWidth - margin.left - margin.right;
 
 	  height = width;
 

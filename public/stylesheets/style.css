@@ -175,6 +175,10 @@ svg {
 	height: 205px;
 }
 
+#user-input {
+	padding-top: 50px;
+}
+
 @media (max-width: 800px) {
 	#bac-meter {
 		display: none;
