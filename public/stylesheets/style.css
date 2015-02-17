@@ -4,6 +4,8 @@ body {
   background-size: cover;
   background-position: center center;
   color: white;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
@@ -171,5 +173,11 @@ svg {
 
 .beverage-item {
 	height: 205px;
+}
+
+@media (max-width: 800px) {
+	#bac-meter {
+		display: none;
+	}
 }
 
