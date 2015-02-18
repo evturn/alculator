@@ -1,13 +1,13 @@
 body {
 	background-image: url('../images/blackstreaks.png');
 	background-repeat: repeat;
-  background-size: cover;
   background-position: center center;
   color: white;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
+.row {
+	padding-bottom: 2%;
+}
 
 .yellow {
 	color: #ead345;
@@ -20,20 +20,7 @@ body {
 	color: #bd574b;
 }
 
-.red-danger {
-	color: #d9534f;
-}
-
-h1 {
-	text-align: center;
-	font-size: 75px;
-}
-
-h3 {
-	text-align: center;
-}
-
-h4 {
+h1 h2 h3 h4 h5 h6 {
 	text-align: center;
 }
 
@@ -49,19 +36,12 @@ h4 {
 	text-align: center;
 }
 
-.align img {
-	margin-left: -22px;
-}
-
-.fit-wine {
+.beverage {
 	height: 100px;
 	width: 100px;
 	margin-top: 10px;
 }
 
-#search-container {
-	height: 500px;
-}
 
 .stage-color-zero {
 	height: 30px;
@@ -97,15 +77,12 @@ li {
 	list-style-type: none;
 }
 
-ul {
-	margin-left: -50px;
-}
 
 #booze-items {
 	height: 100px;
 }
 
-.fit-booze {
+.booze {
 	height: 100px;
 	width: 100px;
 	margin-top: 10px;
@@ -143,34 +120,6 @@ ul {
 	background-color: #d9534f;
 }
 
-svg {
-	height: 220px;
-}
-
-.chart-color1 {
-  fill: #689b6e;
-}
-
-.chart-color2 {
-  fill: #5a81c1;
-}
-
-.chart-color3 {
-  fill: #ead345;
- }
-
-.chart-color4 {
-  fill: #e09e4a;
- }
-
- .chart-color5 {
-  fill: #bd574b;
- }
-
-.needle {
-	fill: silver;
-}
-
 .beverage-item {
 	height: 205px;
 }
@@ -179,9 +128,13 @@ svg {
 	padding-top: 50px;
 }
 
-@media (max-width: 800px) {
-	#bac-meter {
-		display: none;
-	}
+#tab {
+	padding-top: 50px;
 }
 
+/*@media (max-width: 800px) {
+	.nav {
+		padding-left: 5%;
+	}
+}
+*/
