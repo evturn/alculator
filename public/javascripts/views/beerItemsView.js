@@ -1,5 +1,5 @@
 var BeerItemsView = Backbone.View.extend({
-  el: '#beverage-items',
+  el: '#beverages-list',
   initialize: function() {
     this.listenTo(this.collection, 'reset', this.addAll);
   },

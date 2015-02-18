@@ -14,7 +14,6 @@
 <body>
 
 <div class="container">
-
 	<div class="row">
 		<div class="col-xs-12 col-sm-12">
 			<h1><em><span class="yellow">A</span><span class="orange">L</span><span class="red">C</span></em>ULATOR</h1>
@@ -22,14 +21,13 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12">
-			<ul class="nav nav-tabs nav-justified" id="beverage-list">
+			<ul class="nav nav-tabs nav-justified" id="beverage-nav">
 				<li role="presentation" class="active" id="beer-tab"><a href="#">BEER</a></li>
 				<li role="presentation" id="wine-tab"><a href="#">WINE</a></li>
 				<li role="presentation" id="liquor-tab"><a href="#">LIQUOR</a></li>
 			</ul>
 		</div>
 	</div>
-	
 	<div class="row">
 		<div class="col-xs-12" id="bac-calculation"></div>
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3" id="stage"></div>
@@ -40,10 +38,11 @@
 			<ul id="booze-items"></ul>
 	</div>
 	<div class="row">
-	  <div class="col-xs-12 col-sm-6" id="beverage-items"></div>
+	  <div class="col-xs-12 col-sm-6" id="beverages">
+	  	<ul id="beverages-list"></ul>
+	  </div>
 		<div class="col-xs-12 col-sm-6" id="user-input"></div>
 	</div>
-
 </div>
 
 		<!-- 	<div class="row">
@@ -51,35 +50,34 @@
 			</div> -->
 		<!-- <div class="col-xs-3 form-group" id="search-query"></div> -->
 		<!-- <div class="col-xs-3" id="search-results"></div>  -->
-<!-- Underscore templates -->
-<script type="text/template" id="booze-queue-view-template">
-	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
-</script>
-
-<script type="text/template" id="booze-item-view-template">
-	
-	<button class="destroy"></button>
-	<img src="<%= img %>" class="booze">
-	<h5 class="<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
+<script type="text/template" id="beer-item-view-template">
+	<img src="<%= img %>" class="beverage-image">
+	<h5><%= name %></h5>
+	<input class="btn btn-default btn-lg" type="button" value="+">
 </script>
 
 <script type="text/template" id="wine-item-view-template">
-	<img src="<%= img %>" class="beverage">
+	<img src="<%= img %>" class="beverage-image">
 	<h5><%= name %></h5>
 	<input class="btn btn-default btn-lg" type="button" value="+">
 </script>
 
 <script type="text/template" id="liquor-item-view-template">
-	<img src="<%= img %>" class="beverage">
+	<img src="<%= img %>" class="beverage-image">
 	<h5><%= name %></h5>
 	<input class="btn btn-default btn-lg" type="button" value="+">
 </script>
 
-<script type="text/template" id="beer-item-view-template">
-	<img src="<%= img %>" class="beverage">
-	<h5><%= name %></h5>
-	<input class="btn btn-default btn-lg" type="button" value="+">
+<script type="text/template" id="booze-queue-view-template">
+	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
 </script>
+
+<script type="text/template" id="booze-item-view-template">	
+	<button class="destroy"></button>
+	<img src="<%= img %>" class="booze">
+	<h5 class="<%= selected %>"><%= abv %>% <%= ounces %>oz</h5>
+</script>
+
 
 <script type="text/template" id="search-results-template">
 	<div class="col-sm-3 col-xs-1 align beverage-item">
@@ -99,7 +97,6 @@
 </script>
 
 <script type="text/template" id="user-input-template">
-
 <div class="row">
 	<div class="col-xs-6 col-sm-6">
 		<label for="hours">HOURS PASSED</label>
@@ -163,14 +160,8 @@
 <script src="javascripts/lib/jquery.js"></script>
 <script src="javascripts/lib/underscore.js"></script>
 <script src="javascripts/lib/backbone.js"></script>
-<script src="javascripts/lib/d3.js"></script>
 <script src="javascripts/lib/bootstrap.js"></script>
 <script src="javascripts/lib/backbone.localStorage.js"></script>
-<script src="javascripts/lib/highlight.min.js"></script>
-<script src="javascripts/lib/html5shiv.js"></script>
-<script src="javascripts/lib/respond.min.js"></script>
-<script src="javascripts/lib/jquery-clockpicker.min.js"></script>
-<script src="javascripts/lib/bootstrap-clockpicker.min.js"></script>
 <script src="javascripts/models/round.js"></script>
 <script src="javascripts/models/beer.js"></script>
 <script src="javascripts/models/stage.js"></script>
@@ -183,7 +174,6 @@
 <script src="javascripts/collections/beerItems.js"></script>
 <script src="javascripts/collections/liquorItems.js"></script>
 <script src="javascripts/collections/wineItems.js"></script>
-<script src="javascripts/views/bacMeterView.js"></script>
 <script src="javascripts/views/userInputView.js"></script>
 <script src="javascripts/views/searchResults.js"></script>
 <script src="javascripts/views/roundView.js"></script>

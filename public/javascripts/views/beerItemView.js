@@ -1,5 +1,6 @@
 var BeerItemView = Backbone.View.extend({
-	className: 'col-xs-3 align beer-item',
+	tagName: 'li',
+	className: 'beverage-item',
 	template: _.template($('#beer-item-view-template').html()),
 	initialize: function() {
 		this.render();

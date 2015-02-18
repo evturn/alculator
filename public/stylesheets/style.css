@@ -9,21 +9,6 @@ body {
 	padding-bottom: 2%;
 }
 
-.yellow {
-	color: #ead345;
-}
-
-.orange {
-	color: #e09e4a;
-}
-.red {
-	color: #bd574b;
-}
-
-h1 h2 h3 h4 h5 h6 {
-	text-align: center;
-}
-
 #booze {
 	text-align: center;
 }
@@ -31,52 +16,6 @@ h1 h2 h3 h4 h5 h6 {
 #booze-queue {
 	text-align: center;
 }
-
-.align {
-	text-align: center;
-}
-
-.beverage {
-	height: 100px;
-	width: 100px;
-	margin-top: 10px;
-}
-
-
-.stage-color-zero {
-	height: 30px;
-	background-color: #689b6e;
-}
-
-.stage-color-one {
-	height: 30px;
-	background-color: #689b6e;
-}
-
-.stage-color-two {
-	height: 30px;
-	background-color: #5a81c1;
-}
-
-.stage-color-three {
-	height: 30px;
-	background-color: #ead345;
-}
-
-.stage-color-four {
-	height: 30px;
-	background-color: #e09e4a;
-}
-
-.stage-color-five {
-	height: 30px;
-	background-color: #bd574b;
-}
-
-li {
-	list-style-type: none;
-}
-
 
 #booze-items {
 	height: 100px;
@@ -120,8 +59,27 @@ li {
 	background-color: #d9534f;
 }
 
-.beverage-item {
-	height: 205px;
+li {
+	list-style-type: none;
+}
+
+ul {
+	width: 100%;
+	text-align: center;
+}
+
+li.beverage-item {
+	text-align: center;
+}
+
+ul#beverages-list li {
+	display: inline-block;
+}
+
+
+img.beverage-image {
+	width: 100px;
+	height: 100px;
 }
 
 #user-input {
@@ -129,12 +87,47 @@ li {
 }
 
 #tab {
+	text-align: center;
 	padding-top: 50px;
 }
 
-/*@media (max-width: 800px) {
-	.nav {
-		padding-left: 5%;
-	}
+.stage-color-zero {
+	height: 30px;
+	background-color: #689b6e;
 }
-*/
+
+.stage-color-one {
+	height: 30px;
+	background-color: #689b6e;
+}
+
+.stage-color-two {
+	height: 30px;
+	background-color: #5a81c1;
+}
+
+.stage-color-three {
+	height: 30px;
+	background-color: #ead345;
+}
+
+.stage-color-four {
+	height: 30px;
+	background-color: #e09e4a;
+}
+
+.stage-color-five {
+	height: 30px;
+	background-color: #bd574b;
+}
+
+.yellow {
+	color: #ead345;
+}
+
+.orange {
+	color: #e09e4a;
+}
+.red {
+	color: #bd574b;
+}
