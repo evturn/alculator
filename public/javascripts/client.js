@@ -1,3 +1,4 @@
+new NavView();
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 new BeerItemsView({collection: beerItems});
