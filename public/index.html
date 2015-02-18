@@ -33,8 +33,8 @@
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3" id="stage"></div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12 col-sm-12 align" id="tab"></div>
-		<div class="col-xs-7 col-xs-offset-3" id="booze">
+		<div class="col-xs-12 col-sm-12" id="tab"></div>
+		<div class="col-xs-12 col-sm-12" id="booze">
 			<ul id="booze-items"></ul>
 	</div>
 	<div class="row">
@@ -78,14 +78,10 @@
 	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
 </script>
 
-
-
 <script type="text/template" id="search-results-template">
-	
-		<img src="images/bottle-search-result.png" class="beverage-image">
-		<h5><%= name %></h5>
-		<input class="btn btn-default btn-lg" type="button" value="+">
-	
+	<img src="images/bottle-search-result.png" class="beverage-image">
+	<h5><%= name %></h5>
+	<input class="btn btn-default btn-lg" type="button" value="+">
 </script>
 
 <script type="text/template" id="search-query-template">
