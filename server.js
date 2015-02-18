@@ -51,6 +51,10 @@ app.post('/booze', parseUrlencoded, function(request, response) {});
 
 app.delete('/booze', function(request, response) {});
 
+app.get('/queries', function(request, response) {
+	response.status(200).json();
+});
+
 allBeers  = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
 		{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 12},
 		{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 12},

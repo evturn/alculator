@@ -28,8 +28,10 @@ var QueryView = Backbone.View.extend({
 			},
 			dataType: 'JSON',
 			success: function(data) {
+				$('#beer-query').val('')
 				console.log(data);
 				query = new Query(data);
+				queries.add(query);
 				var view = new SearchResultsView({model: query});
 			}
 		});

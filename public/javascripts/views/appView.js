@@ -17,8 +17,8 @@ var AppView = Backbone.View.extend({
 		return this;
 	},
 	renderApp: function() {
-		this.setWineItems();
 		stages.fetch();
+		queries.reset();
 	},
 	setBeerItems: function() {
 		$('#beer-tab').parent().find('li.active').removeClass('active');
@@ -39,6 +39,7 @@ var AppView = Backbone.View.extend({
 		$('#search-query').empty();
 	},
 	instantiateCollections: function() {
+		queries = new Queries({reset: true, merge: false})
 		boozeItems = new BoozeItems({reset: true, merge: false});
 		beerItems = new BeerItems();
 		wineItems = new WineItems();
@@ -52,5 +53,6 @@ var AppView = Backbone.View.extend({
 		new UserInputView();
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
+		this.setWineItems();
 	},
 });
