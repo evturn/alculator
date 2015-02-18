@@ -22,7 +22,7 @@ input {
 }
 
 #booze {
-	height: 140px;
+	height: 150px;
 }
 
 #booze-items {
@@ -88,6 +88,7 @@ ul {
 li.beverage-item {
 	text-align: center;
 	padding-bottom: 20px;
+	padding-top: 20px;
 }
 
 ul#beverages-list li {

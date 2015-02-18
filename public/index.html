@@ -41,22 +41,19 @@
 	<div class="row">
 	  <div class="col-xs-12 col-sm-6" id="beverages">
 	  	<ul id="beverages-list"></ul>
-	  	<div class="row">
-				<div class="col-xs-12 col-sm-5 col-sm-offset-3" id="search-query"></div>
-	  	</div>
 	  </div>
-		<div class="col-xs-12 col-sm-6" id="user-input">
-			<div class="row">
-					<div class="col-sm-6" id="bac-meter"></div>
-			</div>
-		</div>
+		<div class="col-xs-12 col-sm-6" id="user-input"></div>
 	</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-12" id="search-query"></div>
+</div>
 	<div class="row">
 		<div class="col-xs-12 col-sm-12" id="footer">
 			<a href="#">&#169; 2015 evturn.com</a>
 		</div>
 	</div>
 </div>
+
 
 <script type="text/template" id="search-results-template">
 	<li class="beverage-item">
@@ -173,12 +170,13 @@
 <script src="javascripts/lib/bootstrap.js"></script>
 <script src="javascripts/lib/backbone.localStorage.js"></script>
 <script src="javascripts/models/round.js"></script>
-<script src="javascripts/models/beer.js"></script>
+<script src="javascripts/models/query.js"></script>
 <script src="javascripts/models/stage.js"></script>
 <script src="javascripts/models/boozeItem.js"></script>
 <script src="javascripts/models/liquorItem.js"></script>
 <script src="javascripts/models/beerItem.js"></script>
 <script src="javascripts/models/wineItem.js"></script>
+<script src="javascripts/collections/queries.js"></script>
 <script src="javascripts/collections/stages.js"></script>
 <script src="javascripts/collections/boozeItems.js"></script>
 <script src="javascripts/collections/beerItems.js"></script>
@@ -188,7 +186,7 @@
 <script src="javascripts/views/userInputView.js"></script>
 <script src="javascripts/views/searchResults.js"></script>
 <script src="javascripts/views/roundView.js"></script>
-<script src="javascripts/views/searchView.js"></script>
+<script src="javascripts/views/queryView.js"></script>
 <script src="javascripts/views/wineItemView.js"></script>
 <script src="javascripts/views/wineItemsView.js"></script>
 <script src="javascripts/views/liquorItemView.js"></script>

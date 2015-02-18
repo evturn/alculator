@@ -25,7 +25,7 @@ $(function() {
 	$('#beer-tab').on('click', function() {
 		$(this).parent().find('li.active').removeClass('active');
 	  $(this).addClass('active');
-	  new SearchView();
+	  new QueryView();
 		var beerItems = new BeerItems();
 		beerItems.fetch({reset: true});
 		beerItemView = new BeerItemsView({collection: beerItems});
@@ -38,23 +38,5 @@ $(function() {
 		var wineItems = new WineItems();
 		wineItems.fetch({reset: true});
 		wineItemView = new WineItemsView({collection: wineItems});
-	});
-
-
-	$('#beer-search').on('submit', function(e) {
-		e.preventDefault();
-		beerField = $('#beer-query').val();
-		$.ajax({
-			url: '/search',
-			method: 'GET',
-			data: {
-				name: beerField
-			},
-			dataType: 'JSON',
-			success: function(data) {
-				beer 		 = new Beer(data);
-				var view = new SearchResultsView({model: beer});
-			}
-		});
 	});
 });
