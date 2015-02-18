@@ -1,6 +1,9 @@
 var beerItems = new BeerItems();
 beerItems.fetch({reset: true});
 new BeerItemsView({collection: beerItems});
+var wineItems = new WineItems();
+wineItems.fetch({reset: true});
+new WineItemsView({collection: wineItems});
 var stages = new Stages({reset: true});
 stages.fetch();
 var boozeItems = new BoozeItems({reset: true, merge: false});
@@ -20,6 +23,15 @@ $(function() {
 		liquorItemView = new LiquorItemsView({collection: liquorItems});
 	});
 
+	$('#beer-tab').on('click', function() {
+		$(this).parent().find('li.active').removeClass('active');
+	  $(this).addClass('active');
+	  $('#search-query').show();
+		var beerItems = new BeerItems();
+		beerItems.fetch({reset: true});
+		beerItemView = new BeerItemsView({collection: beerItems});
+	});
+
 	$('#wine-tab').on('click', function() {
 	  $(this).parent().find('li.active').removeClass('active');
 	  $(this).addClass('active');
@@ -29,14 +41,6 @@ $(function() {
 		wineItemView = new WineItemsView({collection: wineItems});
 	});
 
-	$('#beer-tab').on('click', function() {
-		$(this).parent().find('li.active').removeClass('active');
-	  $(this).addClass('active');
-	  $('#search-query').show();
-		var beerItems = new BeerItems();
-		beerItems.fetch({reset: true});
-		beerItemView = new BeerItemsView({collection: beerItems});
-	});
 
 	$('#beer-search').on('submit', function(e) {
 		e.preventDefault();

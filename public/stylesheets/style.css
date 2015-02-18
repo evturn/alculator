@@ -87,10 +87,15 @@ ul {
 
 li.beverage-item {
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 ul#beverages-list li {
 	display: inline-block;
+}
+
+#beverages-list {
+	height: 400px;
 }
 
 img.beverage-image {
@@ -153,4 +158,34 @@ h1.results {
 }
 .red {
 	color: #bd574b;
+}
+
+.chart-color1 {
+  fill: #689b6e;
+}
+
+.chart-color2 {
+  fill: #5a81c1;
+}
+
+.chart-color3 {
+  fill: #ead345;
+ }
+
+.chart-color4 {
+  fill: #e09e4a;
+ }
+
+ .chart-color5 {
+  fill: #bd574b;
+ }
+
+.needle {
+	fill: silver;
+}
+
+@media (max-width: 1000px) {
+	#bac-meter {
+		display: none;
+	}
 }
