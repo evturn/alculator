@@ -17,7 +17,8 @@ var QueryView = Backbone.View.extend({
 		e.preventDefault();
 		console.log('boozeItems', boozeItems);
 	},
-	fetchQueryResult: function() {
+	fetchQueryResult: function(e) {
+		e.preventDefault();
 		searchValue = $('#beer-query').val();
 		$.ajax({
 			url: '/search',
@@ -27,6 +28,7 @@ var QueryView = Backbone.View.extend({
 			},
 			dataType: 'JSON',
 			success: function(data) {
+				console.log(data);
 				query = new Query(data);
 				var view = new SearchResultsView({model: query});
 			}

@@ -29,7 +29,8 @@ app.get('/wine', function(request, response) {
 
 app.get('/search', function(request, response) {	
 	var requestQuery = request.query;
-	beerQuery 			 = requestQuery.name;
+	requestName			 = requestQuery.name;
+	beerQuery	       = requestName.split(' ').join('+');
 	beerChoice(response);
 });
 
