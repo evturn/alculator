@@ -180,7 +180,19 @@ h1.results {
 	fill: silver;
 }
 
-@media (max-width: 1000px) {
+#footer {
+	margin: 65px auto 0;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+#footer a {
+	background-color: transparent;
+	color: #fff;
+}
+
+@media (max-width: 800px) {
 	#bac-meter {
 		display: none;
 	}

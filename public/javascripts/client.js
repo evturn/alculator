@@ -8,7 +8,6 @@ var stages = new Stages({reset: true});
 stages.fetch();
 var boozeItems = new BoozeItems({reset: true, merge: false});
 new UserInputView();
-new SearchView();
 new BoozeItemsView();
 
 $(function() {
@@ -26,7 +25,7 @@ $(function() {
 	$('#beer-tab').on('click', function() {
 		$(this).parent().find('li.active').removeClass('active');
 	  $(this).addClass('active');
-	  $('#search-query').show();
+	  new SearchView();
 		var beerItems = new BeerItems();
 		beerItems.fetch({reset: true});
 		beerItemView = new BeerItemsView({collection: beerItems});
