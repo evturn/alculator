@@ -41,6 +41,9 @@
 	<div class="row">
 	  <div class="col-xs-12 col-sm-6" id="beverages">
 	  	<ul id="beverages-list"></ul>
+	  	<div class="row">
+				<div class="col-xs-3 col-sm-6" id="search-query"></div>
+			</div>
 	  </div>
 		<div class="col-xs-12 col-sm-6" id="user-input"></div>
 	</div>
@@ -49,8 +52,27 @@
 		<!-- 	<div class="row">
 				<div class="col-xs-12" id="bac-meter"></div>
 			</div> -->
-		<!-- <div class="col-xs-3 form-group" id="search-query"></div> -->
-		<!-- <div class="col-xs-3" id="search-results"></div>  -->
+		
+
+
+<script type="text/template" id="search-results-template">
+	<li class="beverage-item">
+		<img src="images/bottle-search-result.png" class="beverage-image">
+		<h5><%= name %></h5>
+		<input class="btn btn-default btn-lg" type="button" value="+">
+	</li>
+</script>
+
+<script type="text/template" id="search-query-template">
+	<form id='beer-search'>
+	<div class="form-group">
+	  <label for="beer">FIND A BEER</label>
+	  <input class="input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
+		</div>
+		<input class="btn btn-default btn-lg" type="submit" value="SEARCH" id="beer-submit">
+	</form>
+</script>
+
 <script type="text/template" id="beer-item-view-template">
 	<img src="<%= img %>" class="beverage-image">
 	<h5><%= name %></h5>
@@ -78,21 +100,6 @@
 
 <script type="text/template" id="booze-queue-view-template">
 	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
-</script>
-
-<script type="text/template" id="search-results-template">
-	<img src="images/bottle-search-result.png" class="beverage-image">
-	<h5><%= name %></h5>
-	<input class="btn btn-default btn-lg" type="button" value="+">
-</script>
-
-<script type="text/template" id="search-query-template">
-	<h3>SEARCH</h3>
-	<form id='beer-search'>
-	  <label for="beer">FIND A BEER</label>
-	  <input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Beer">
-	<input class="btn btn-default btn-lg btn-block" type="submit" value="SEARCH" id="beer-submit">
-	</form>
 </script>
 
 <script type="text/template" id="user-input-template">
@@ -134,7 +141,7 @@
   		Female</label>
 		</div>
 	</div>
-	<div class="col-xs-6 col-sm-6" id="bac-submit">
+	<div class="col-xs-3 col-sm-6" id="bac-submit">
 		<input class="btn btn-default btn-lg btn-block" type="submit" value="DONE" id="bac-submit-btn">
 	</div>	
 </div>

@@ -9,6 +9,10 @@ body {
 	background-color: #000;
 }
 
+input {
+	color: #000;
+}
+
 .true {
 	font-family: Raleway;
 }
