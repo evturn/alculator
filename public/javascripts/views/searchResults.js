@@ -10,12 +10,13 @@ var SearchResultsView = Backbone.View.extend({
 		'click input': 'addBooze'
 	},
 	render: function() {
-		$('#beverages-list').append(this.template(this.model.toJSON()));
+		this.$el.append(this.template(this.model.toJSON()));
 		return this;
 	},
 	addBooze: function(e) {
 		e.preventDefault();
-		console.log('we sending!');
+		queryModel = $(e.currentTarget)
+		console.log('we sending!', queryModel);
 		var boozeOnDelivery = new BoozeItem(this.model.attributes)
 		abv = parseInt(boozeOnDelivery.get('abv'))
 		boozeOnDelivery.set({selected: true, ounces: 12, img: 'images/bottle-search-result.png', abv: abv});
