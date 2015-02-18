@@ -12,7 +12,7 @@ var UserInputView = Backbone.View.extend({
 		'keypress #female': 'collectBoozeOnEnter'
 	},
 	render: function() {
-		this.$el.html(this.template());
+		this.$el.prepend(this.template());
 	},
 	collectBoozeOnEnter: function(e) {
 	  if (e.which === ENTER_KEY) {

@@ -34,12 +34,16 @@
 	  <div class="col-xs-12 col-sm-6" id="beverages">
 	  	<ul id="beverages-list"></ul>
 	  </div>
-		<div class="col-xs-12 col-sm-6" id="user-input"></div>
+		<div class="col-xs-12 col-sm-6" id="user-input">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12" id="search-query"></div>
+			</div>
+		</div>
 	</div>
+			
+			
 
-	<div class="row">
-		<div class="col-xs-12 col-sm-12" id="search-query"></div>
-	</div>
+	
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-12" id="footer">
@@ -66,19 +70,17 @@
 </script>
 
 <script type="text/template" id="search-query-template">
-
-
 	<div class="row">
-		<div class="col-xs-12 col-sm-12">
-	  	<input class="input-lg" type="text" name="query" id="beer-query" placeholder="Find a beer">
-	  </div>
+		<div class="col-xs-12 col-sm-6">
+		<label for="hours">FIND A BEER</label>
+			<input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Keystone Light">
+		</div>
 	</div>
 	<div class="row">
-	  <div class="col-xs-12 col-sm-12">
+		<div class="col-xs-12 col-sm-6">
 			<input class="btn btn-default btn-lg" type="submit" value="SEARCH" id="beer-submit">
 		</div>
-</form>
-
+	</div>
 </script>
 
 <script type="text/template" id="beer-item-view-template">

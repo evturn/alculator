@@ -131,6 +131,10 @@ h1.results {
 	text-align: center;
 }
 
+#search-query {
+	padding-top: 6%;
+}
+
 .stage-color-zero {
 	height: 30px;
 	background-color: #689b6e;
