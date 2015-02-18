@@ -6,6 +6,7 @@ var AppView = Backbone.View.extend({
 		this.instantiateViews();
 		this.render();
 		this.renderApp();
+		this.rotateBeer();
 	},
 	events: {
 		'click #beer-tab'  : 'setBeerItems',
@@ -54,5 +55,23 @@ var AppView = Backbone.View.extend({
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
 		this.setWineItems();
+	},
+	rotateBeer: function() {
+		setTimeout(function(){ 
+			console.log('beer view');
+			this.setBeerItems();
+			this.rotateLiquor();
+		}.bind(this), 3000);
+	},
+	rotateLiquor: function() {
+		setTimeout(function(){ 
+			this.setLiquorItems();
+			this.rotateWine();
+		}.bind(this), 2000);
+	},
+	rotateWine: function() {
+		setTimeout(function(){ 
+			this.setWineItems();
+		}.bind(this), 2000);
 	},
 });

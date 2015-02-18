@@ -6,6 +6,9 @@ $(function() {
 
 	$(document).load().scrollTop(0);
 
+	
+
+
   $('#full-cover').on({
     'mousewheel' : function(e) {
         if (e.target.id == 'el') return;
