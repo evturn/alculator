@@ -5,7 +5,9 @@ var SearchView = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .beer-item': 'logSelection'
+		'click .beer-item': 'logSelection',
+		'click #beer-tab': 'render',
+		'click #beer-submit': 'logSelection'
 	},
 	render: function() {
 		this.$el.html(this.template());

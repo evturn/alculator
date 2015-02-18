@@ -94,10 +94,6 @@ ul#beverages-list li {
 	display: inline-block;
 }
 
-#beverages-list {
-	height: 400px;
-}
-
 img.beverage-image {
 	width: 100px;
 	height: 100px;
