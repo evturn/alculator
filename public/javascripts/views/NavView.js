@@ -3,7 +3,7 @@ var NavView = Backbone.View.extend({
 	navTemplate: _.template($('#nav-template').html()),
 	initialize: function() {
 		this.instantiateCollections();
-		this.fetchCollections();
+		this.instantiateViews();
 		this.render();
 		this.renderApp();
 	},
@@ -14,23 +14,21 @@ var NavView = Backbone.View.extend({
 	},
 	renderApp: function() {
 		this.setWineItems();
-		new UserInputView();
-		new BoozeItemsView();
-		boozeQueueView = new BoozeQueueView();
+		stages.fetch();
 	},
 	render: function() {
 		this.$el.html(this.navTemplate());
 		return this;
 	},
 	setBeerItems: function() {
-		new BeerItemsView({collection: beerItems});
+		beerItems.fetch({reset: true});
 		new QueryView();
 	},
 	setWineItems: function() {
-		new WineItemsView({collection: wineItems});
+		wineItems.fetch({reset: true});
 	},
 	setLiquorItems: function() {
-		new LiquorItemsView({collection: liquorItems});
+		liquorItems.fetch({reset: true});
 	},
 	instantiateCollections: function() {
 		boozeItems = new BoozeItems({reset: true, merge: false});
@@ -39,10 +37,12 @@ var NavView = Backbone.View.extend({
 		liquorItems = new LiquorItems();
 		stages = new Stages({reset: true});
 	},
-	fetchCollections: function() {
-		stages.fetch();
-		beerItems.fetch({reset: true});
-		wineItems.fetch({reset: true});
-		liquorItems.fetch({reset: true});
+	instantiateViews: function() {
+		new BeerItemsView({collection: beerItems});
+		new WineItemsView({collection: wineItems});
+		new LiquorItemsView({collection: liquorItems});
+		new UserInputView();
+		new BoozeItemsView();
+		new BoozeQueueView();
 	},
 });

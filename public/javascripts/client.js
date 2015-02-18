@@ -1,12 +1,7 @@
 new NavView();
 
-
-
-
-
-
 $(function() {
-	boozeQueueView = new BoozeQueueView();
+	
 
 // 	$('#liquor-tab').on('click', function() {
 // 		$(this).parent().find('li.active').removeClass('active');
