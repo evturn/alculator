@@ -9,6 +9,10 @@ body {
 	background-color: #000;
 }
 
+.true {
+	font-family: Raleway;
+}
+
 .row {
 	padding-bottom: 2%;
 }
