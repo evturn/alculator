@@ -1,5 +1,5 @@
 body {
-	background-image: url('../images/padded.png');
+	background-image: url('../images/broken_noise.png');
 	background-repeat: repeat;
   background-position: center center;
   color: white;
@@ -11,10 +11,6 @@ body {
 
 input {
 	color: #000;
-}
-
-.true {
-	font-family: Raleway;
 }
 
 .row {

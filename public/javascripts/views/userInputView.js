@@ -6,7 +6,10 @@ var UserInputView = Backbone.View.extend({
 	},
 	events: {
 		'click #bac-submit-btn': 'collectBooze',
-		'keypress #lbs': 'collectBoozeOnEnter'
+		'keypress #lbs': 'collectBoozeOnEnter',
+		'keypress #hours': 'collectBoozeOnEnter',
+		'keypress #male': 'collectBoozeOnEnter',
+		'keypress #female': 'collectBoozeOnEnter'
 	},
 	render: function() {
 		this.$el.html(this.template());
@@ -18,6 +21,9 @@ var UserInputView = Backbone.View.extend({
 	  }
 	},
 	collectBooze: function() {
+		$("html, body").animate({
+			 scrollTop:0
+			},"slow");
 		abvArray    = [];
 		ouncesArray = [];
 		boozeItems.shift();
