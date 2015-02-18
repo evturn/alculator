@@ -51,6 +51,6 @@ var AppView = Backbone.View.extend({
 		new LiquorItemsView({collection: liquorItems});
 		new UserInputView();
 		new BoozeItemsView();
-		new BoozeQueueView();
+		boozeQueueView = new BoozeQueueView();
 	},
 });
