@@ -1,5 +1,6 @@
 var BoozeItemView = Backbone.View.extend({
 	tagName: 'li',
+	className: 'beverage-item',
 	template: _.template($('#booze-item-view-template').html()),
 	events: {
 		'click .destroy': 'destroy',
