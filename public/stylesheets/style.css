@@ -40,7 +40,6 @@ input {
 	margin-top: 42px;
 }
 
-
 #booze-queue {
 	text-align: center;
 }
@@ -49,7 +48,8 @@ input {
 	position: absolute;
 	height: 100px;
 	padding-bottom: 20px;
-	width: 100%;
+	width: 97%;
+	margin-right: 5px;
 }
 
 ul#booze-items li {
