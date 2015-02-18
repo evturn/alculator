@@ -5,8 +5,16 @@ body {
   color: white;
 }
 
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background-color: #000;
+}
+
 .row {
 	padding-bottom: 2%;
+}
+
+#booze-items {
+	padding-bottom: 20px;
 }
 
 #booze-queue {
@@ -61,6 +69,10 @@ ul {
 	padding-left: 0;
 }
 
+#beverages {
+	padding-bottom: 20px;
+}
+
 li.beverage-item {
 	text-align: center;
 }
@@ -79,6 +91,14 @@ img.beverage-image {
 }
 
 #tab {
+	text-align: center;
+}
+
+h1.results {
+	font-size: 100px;
+}
+
+.results {
 	text-align: center;
 }
 
