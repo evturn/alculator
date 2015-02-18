@@ -21,9 +21,9 @@ var UserInputView = Backbone.View.extend({
 	  }
 	},
 	collectBooze: function() {
-		$("html, body").animate({
-			 scrollTop:0
-			},"slow");
+		$('html, body').animate({
+			 scrollTop: 0
+			}, 'slow');
 		abvArray    = [];
 		ouncesArray = [];
 		boozeItems.shift();

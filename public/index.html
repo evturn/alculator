@@ -7,8 +7,6 @@
 	<link rel="icon" type="image/png" href="images/alc.png">
 		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-clockpicker.min.css">
-		<link rel="stylesheet" type="text/css" href="stylesheets/lib/jquery-clockpicker.min.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <body>
@@ -100,10 +98,14 @@
 </script>
 
 <script type="text/template" id="booze-item-view-template">	
-	<button class="destroy"></button>
-	<img src="<%= img %>" class="beverage-image">
-	<h5 class="<%= selected %>"><%= abv %>%</h5>
-	<h5 class="<%= selected %>"><%= ounces %> oz.</h5>
+	<div id="popup">
+		<div class="close-image"><button class="destroy"></button></div>
+	</div>
+	<div id="overlay-back">
+		<img src="<%= img %>" class="beverage-image">
+		<h5 class="<%= selected %>"><%= abv %>%</h5>
+		<h5 class="<%= selected %>"><%= ounces %> oz.</h5>
+	</div>
 </script>
 
 <script type="text/template" id="booze-queue-view-template">

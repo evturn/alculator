@@ -21,16 +21,35 @@ input {
 	height: 150px;
 }
 
-#booze-items {
-	padding-bottom: 20px;
+
+#popup {
+	position: absolute;
+	z-index: 2;
 }
+
+#overlay-back {
+	z-index: 1;
+}
+
+.close-image {
+	display: block;
+	float: right;
+	cursor: pointer;
+	z-index: 3;
+	margin-left: 40px;
+	margin-top: 42px;
+}
+
 
 #booze-queue {
 	text-align: center;
 }
 
 #booze-items {
+	position: absolute;
 	height: 100px;
+	padding-bottom: 20px;
+	width: 100%;
 }
 
 ul#booze-items li {
@@ -38,8 +57,8 @@ ul#booze-items li {
 }
 
 #booze-items li .destroy {
+	position: relative;
 	display: none;
-	position: absolute;
 	top: 0;
 	right: 10px;
 	bottom: 0;
