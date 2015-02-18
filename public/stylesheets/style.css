@@ -21,6 +21,10 @@ input {
 	padding-bottom: 2%;
 }
 
+#booze {
+	height: 140px;
+}
+
 #booze-items {
 	padding-bottom: 20px;
 }
