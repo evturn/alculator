@@ -53,7 +53,6 @@ a h1 {
 img.beverage-image {
 	width: 80px;
 	height: 80px;
-
 }
 
 .screen-click {
@@ -110,6 +109,7 @@ li.beverage-item {
 
 ul#beverages-list li {
 	display: inline-block;
+	margin-bottom: 20px;
 }
 
 .btn-group {
@@ -355,8 +355,8 @@ h1.results {
 	color: #fff;
 }
 
-@media (max-width: 800px) {
-	#bac-meter {
+@media (max-width: 568px) {
+	.add {
 		display: none;
 	}
 }
