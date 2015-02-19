@@ -11,14 +11,14 @@
 </head>
 <body>
 
-<a href="#alculator" class="smoothScroll" >
+<!-- <a href="#alculator" class="smoothScroll" >
 	<div id="full-cover">
 		<h1>sponsored by</h1>
 	<ul id="sponsorships">
 		<li><img class="blockbuster" src="images/blockbuster.png"></li>
 	</ul>
 	</div>
-</a>
+</a> -->
 
 <div class="container" id="alculator">
 	<div class="row">
@@ -88,28 +88,37 @@
 </script>
 
 <script type="text/template" id="beer-item-view-template">
+	<div class="popup">
+		<div class="close-image"><button class="add"></button></div>
+	</div>
+	<div class="overlay-back">
 	<img src="<%= img %>" class="beverage-image">
-	<h5><%= name %></h5>
-	<input class="btn btn-default btn-lg" type="button" value="+">
+	</div>
 </script>
 
 <script type="text/template" id="wine-item-view-template">
+	<div class="popup">
+		<div class="close-image"><button class="add"></button></div>
+	</div>
+	<div class="overlay-back">
 	<img src="<%= img %>" class="beverage-image">
-	<h5><%= name %></h5>
-	<input class="btn btn-default btn-lg" type="button" value="+">
+	</div>
 </script>
 
 <script type="text/template" id="liquor-item-view-template">
+	<div class="popup">
+		<div class="close-image"><button class="add"></button></div>
+	</div>
+	<div class="overlay-back">
 	<img src="<%= img %>" class="beverage-image">
-	<h5><%= name %></h5>
-	<input class="btn btn-default btn-lg" type="button" value="+">
+	</div>
 </script>
 
 <script type="text/template" id="booze-item-view-template">	
-	<div id="popup">
+	<div class="popup">
 		<div class="close-image"><button class="destroy"></button></div>
 	</div>
-	<div id="overlay-back">
+	<div class="overlay-back">
 		<img src="<%= img %>" class="beverage-image">
 		<h5 class="<%= selected %>"><%= abv %>%</h5>
 		<h5 class="<%= selected %>"><%= ounces %> oz.</h5>

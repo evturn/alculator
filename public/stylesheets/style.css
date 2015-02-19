@@ -50,6 +50,67 @@ a h1 {
 	border: 1px solid #fff;
 }
 
+img.beverage-image {
+	width: 80px;
+	height: 80px;
+
+}
+
+/*img.beverage-image:hover {
+	background-color: #020256;
+	border: 1px solid #fff;
+	border-radius: 6px;
+}*/
+
+#beverages-list li .add {
+	position: relative;
+	display: none;
+	top: 0;
+	right: 10px;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	margin: auto 0;
+	font-size: 22px;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+#beverages-list li .add:hover {
+	text-shadow: 0 0 1px #fff,
+				 0 0 10px rgba(199, 107, 107, 0.8);
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+#beverages-list li .add:after {
+	content: '+';
+}
+
+#beverages-list li:hover .add {
+	display: block;
+	background-color: #020256;
+}
+
+#beverages-list li {
+	max-height: 80px; 
+}
+
+
+#beverages {
+	padding-bottom: 20px;
+}
+
+li.beverage-item {
+	text-align: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+ul#beverages-list li {
+	display: inline-block;
+}
+
 .btn-group {
 	padding-bottom: 10px;
 	text-align: center;
@@ -76,6 +137,7 @@ input.btn-lg {
 }
 
 input.btn.btn-default.btn-lg {
+	display: none;
 	border: 1px solid #fff;
 }
 
@@ -121,14 +183,13 @@ span#booze-queue.badge {
 	height: 150px;
 }
 
-
-#popup {
+.popup {
 	position: absolute;
 	z-index: 2;
 }
 
-#overlay-back {
-	z-index: 1;
+.overlay-back {
+	z-index: 2;
 }
 
 .close-image {
@@ -136,8 +197,8 @@ span#booze-queue.badge {
 	float: right;
 	cursor: pointer;
 	z-index: 3;
-	margin-left: 40px;
-	margin-top: 42px;
+	margin-left: 31px;
+	margin-top: 28px;
 }
 
 #booze-queue {
@@ -194,25 +255,6 @@ ul {
 	width: 100%;
 	text-align: center;
 	padding-left: 0;
-}
-
-#beverages {
-	padding-bottom: 20px;
-}
-
-li.beverage-item {
-	text-align: center;
-	padding-bottom: 20px;
-	padding-top: 20px;
-}
-
-ul#beverages-list li {
-	display: inline-block;
-}
-
-img.beverage-image {
-	width: 100px;
-	height: 100px;
 }
 
 #user-input {
