@@ -48,7 +48,8 @@ var UserInputView = Backbone.View.extend({
 	collectUserInfo: function() {
 	 	lbs		= parseInt(document.getElementById('lbs').value);
 		hours = parseInt(document.getElementById('hours').value);		
-		sex   = document.getElementById('male').value;
+		radio = document.getElementById('male').value;
+		sex 	=	radio.toLowerCase();
 	 	rate  = sex === 'male' ? 0.73 : 0.66;
 	 	this.calculate();
 	},

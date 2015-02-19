@@ -50,9 +50,22 @@ a h1 {
 	border: 1px solid #fff;
 }
 
+.radio-inline {
+	padding-bottom: 20px;
+}
+
+.btn-default {
+	color: #fff;
+	background-color: #020256;
+	border: 1px solid #fff;
+	text-shadow: none;
+	border-color: #fff;
+}
+
 input {
 	font-weight: 700;
 	color: #020256;
+	border: 1px solid #fff;
 }
 
 input.btn-lg {
@@ -60,15 +73,31 @@ input.btn-lg {
 	background-color: #020256;
 }
 
-input.btn-lg {
-	color: #fff;
+input.btn.btn-default.btn-lg {
+	border: 1px solid #fff;
+}
+
+input.btn.btn-default.btn-default {
+	border: 1px solid #fff;
 	background-color: #020256;
+}
+
+input.btn.btn-default.btn-default:hover {
+	color: #020256;
+	background-color: #fff;
+}
+
+input.btn.btn-default.btn-default:after {
+	color: #020256;
+	background-color: #fff;
 }
 
 input#bac-submit-btn.form-control.input-lg {
+	text-shadow: none;
 	color: #fff;
 	background-color: #020256;	
-	float: right;
+	/*float: right;*/
+	font-weight: 500;
 }
 
 span#booze-queue.badge {
