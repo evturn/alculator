@@ -86,7 +86,7 @@ img.beverage-image {
 }
 
 #beverages-list li .add:after {
-	content: '+';
+	content: '✔';
 }
 
 #beverages-list li:hover .add {
