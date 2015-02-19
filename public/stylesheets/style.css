@@ -60,8 +60,14 @@ input.btn-lg {
 	background-color: #020256;
 }
 
-input#bac-submit-btn.btn.btn-default.btn-lg {
-	text-shadow: none;
+input.btn-lg {
+	color: #fff;
+	background-color: #020256;
+}
+
+input#bac-submit-btn.form-control.input-lg {
+	color: #fff;
+	background-color: #020256;	
 	float: right;
 }
 

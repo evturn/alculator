@@ -122,7 +122,21 @@
 
 <script type="text/template" id="user-input-template">
 <div class="row">
-	<div class="col-xs-6 col-sm-6">
+	<div class="col-xs-3 col-xs-offset-2 col-sm-6">
+		<div class="radio-inline">
+	  	<input type="radio" class="btn btn-default" value="male" id="male" name="male">
+	  	<label>Male</label>
+		</div>
+	</div>
+	<div class="col-xs-3 col-xs-offset-2 col-sm-6">
+		<div class="radio-inline">
+  		<input type="radio" class="btn btn-default" value="female" id="female" name="female">
+  		<label>Female</label>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6">
 		<label for="hours">HOURS ELAPSED</label>
 		<select class="form-control input-lg" name="hours" id="hours">
 			<option>0</option>
@@ -140,27 +154,17 @@
 			<option>12</option>
 		</select>
 	</div>
-	<div class="col-xs-6 col-sm-6">
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-6">
 		<label for="lbs">WEIGHT IN LBS</label>
 	  <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="&#x95;&#x95;&#x95;">
 	</div>
 </div>
 <div class="row">
-	<div class="col-xs-6 col-sm-6">
-	<label for="hours">ALCOHOL METABOLISM RATE</label>
-		<div class="radio-inline">
-			<label>
-	  	<input type="radio" class="btn btn-default" value="male" id="male" name="male">
-	  	Male</label>
-		</div>
-		<div class="radio-inline">
-			<label>
-  		<input type="radio" class="btn btn-default" value="female" id="female" name="female">
-  		Female</label>
-		</div>
-	</div>
-	<div class="col-xs-6 col-sm-6" id="bac-submit">
-		<input class="btn btn-default btn-lg" type="submit" value="DONE" id="bac-submit-btn">
+	<div class="col-xs-12 col-sm-6" id="bac-submit">
+		<label for="lbs">SUBMIT</label>
+		<input class="form-control input-lg" type="submit" value="DONE" id="bac-submit-btn">
 	</div>	
 </div>
 </script>
