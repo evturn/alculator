@@ -6,7 +6,7 @@ var WineItemView = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click input': 'addBooze'
+		'click .add': 'addBooze'
 	},
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
