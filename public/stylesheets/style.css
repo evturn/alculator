@@ -12,6 +12,11 @@ body {
 	z-index: 999;
 }
 
+a {
+	background-color: #020256;
+	color: #fff;
+}
+
 a:hover {
 	text-decoration: none;
 }
@@ -30,11 +35,24 @@ a h1 {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #020256;
+	background-color: #fff;
+	color: #020256;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
+	border: 1px solid #020256;
+}
+
+.nav-tabs.nav-justified > li > a {
+	border: 1px solid #fff;
 }
 
 input {
-	color: #000;
+	font-weight: 700;
+	color: #020256;
 }
 
 input.btn-lg {
@@ -45,6 +63,12 @@ input.btn-lg {
 input#bac-submit-btn.btn.btn-default.btn-lg {
 	text-shadow: none;
 	float: right;
+}
+
+span#booze-queue.badge {
+	font-size: 14px;
+	background-color: #020256;
+	border: 1px solid #fff;
 }
 
 .row {
