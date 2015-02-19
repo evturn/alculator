@@ -16,21 +16,35 @@ a:hover {
 	text-decoration: none;
 }
 
+.blockbuster {
+	width: 75%;
+}
+
 a h1 {
 	color: white;
 	font-family: Raleway;
 	text-decoration: none;
-	font-size: 100px;
+	font-size: 5em;
 	padding-top: 10%;
 	text-align: center;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #000;
+	background-color: #020256;
 }
 
 input {
 	color: #000;
+}
+
+input.btn-lg {
+	color: #fff;
+	background-color: #020256;
+}
+
+input#bac-submit-btn.btn.btn-default.btn-lg {
+	text-shadow: none;
+	float: right;
 }
 
 .row {
