@@ -6,18 +6,26 @@ var LiquorItemView = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .add': 'addBooze'
+		'click .add': 'addBooze',
+		'click img': 'acknowledge'
 	},
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
-	addBooze: function(e) {
-		e.preventDefault();
+	addBooze: function() {
 		var boozeOnDelivery = new BoozeItem(this.model.attributes)
 		boozeOnDelivery.set({selected: true});
 		boozeItems.add(boozeOnDelivery);
 		boozeOnDelivery.save();
-	}
+	},
+	acknowledge: function(e) {
+		this.addBooze();
+		console.log('i felt that!', $(e.currentTarget));
+		$(e.currentTarget).addClass('screen-click');
+		setTimeout(function() {
+			$('img').removeClass('screen-click');
+		}, 600);
+	},
 });
 

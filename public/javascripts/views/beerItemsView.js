@@ -12,7 +12,7 @@ var BeerItemsView = Backbone.View.extend({
     this.collection.each(function(model) {
       this.addOne(model);
     }.bind(this));
-  }
+  },
 });
 
 
