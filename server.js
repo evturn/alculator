@@ -70,9 +70,9 @@ allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
 allWine		= [{name: "Red (Glass)", abv: 13, img: "images/redglass.png", ounces: 5},
 		{name: "White (Glass)", abv: 12.5, img: "images/whiteglass.png", ounces: 5},
 		{name: "Champagne (Flute)", abv: 12, img: "images/champagneglass.png", ounces: 5.5},
-		{name: "Red (Bottle)", abv: 13, img: "images/bottle-red.png", ounces: 25},
-		{name: "White (Bottle)", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
-		{name: "Champagne (Bottle)", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
+		{name: "Red 25oz", abv: 13, img: "images/bottle-red.png", ounces: 25},
+		{name: "White 25oz", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
+		{name: "Champagne 25oz", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
 
 allStages = [
 	{name: "stage-zero", description: "No significant trace of alcohol in your blood", color: "stage-color-zero", stage: 0},

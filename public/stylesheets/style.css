@@ -50,8 +50,10 @@ a h1 {
 	border: 1px solid #fff;
 }
 
-.radio-inline {
-	padding-bottom: 20px;
+.btn-group {
+	padding-bottom: 10px;
+	text-align: center;
+	border-radius: 6px;
 }
 
 .btn-default {
@@ -87,7 +89,12 @@ input.btn.btn-default.btn-default:hover {
 	background-color: #fff;
 }
 
-input.btn.btn-default.btn-default:after {
+input.btn.btn-default.btn-default:before {
+	color: #020256;
+	background-color: #fff;
+}
+
+input.btn.btn-default.btn-default:focus {
 	color: #020256;
 	background-color: #fff;
 }
