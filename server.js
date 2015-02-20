@@ -67,12 +67,12 @@ allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
 		{name: "Margarita", abv: 37, img: "images/margarita.png", ounces: 9},
 		{name: "Cordial", abv: 20, img: "images/cordial.png", ounces: 2}];
 
-allWine		= [{name: "Red (Glass)", abv: 13, img: "images/redglass.png", ounces: 5},
-		{name: "White (Glass)", abv: 12.5, img: "images/whiteglass.png", ounces: 5},
-		{name: "Champagne (Flute)", abv: 12, img: "images/champagneglass.png", ounces: 5.5},
-		{name: "Red 25oz", abv: 13, img: "images/bottle-red.png", ounces: 25},
-		{name: "White 25oz", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
-		{name: "Champagne 25oz", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
+allWine		= [{name: "Red", abv: 13, img: "images/redglass.png", ounces: 5},
+		{name: "White", abv: 12.5, img: "images/whiteglass.png", ounces: 5},
+		{name: "Champagne", abv: 12, img: "images/champagneglass.png", ounces: 5.5},
+		{name: "Red", abv: 13, img: "images/bottle-red.png", ounces: 25},
+		{name: "White", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
+		{name: "Champagne", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
 
 allStages = [
 	{name: "stage-zero", description: "No significant trace of alcohol in your blood", color: "stage-color-zero", stage: 0},
