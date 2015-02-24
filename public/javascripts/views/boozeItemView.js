@@ -3,7 +3,7 @@ var BoozeItemView = Backbone.View.extend({
 	className: 'beverage-item',
 	template: _.template($('#booze-item-view-template').html()),
 	events: {
-		'click .destroy': 'destroy',
+		'click img': 'destroy',
 	},
 	initialize: function() {
 		this.listenTo(this.model, 'destroy', this.remove);

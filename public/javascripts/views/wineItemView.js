@@ -6,7 +6,6 @@ var WineItemView = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .add': 'addBooze',
 		'click img': 'acknowledge'
 	},
   render: function(){

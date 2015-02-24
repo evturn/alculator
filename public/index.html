@@ -7,6 +7,8 @@
 	<link rel="icon" type="image/png" href="images/alc.png">
 		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/lib/jquery-ui.structure.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/lib/jquery-ui.theme.min.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <body>
@@ -88,44 +90,25 @@
 </script>
 
 <script type="text/template" id="beer-item-view-template">
-	<div class="popup">
-		<div class="close-image"><button class="add"></button></div>
-	</div>
-	<div class="overlay-back">
 	<img src="<%= img %>" class="beverage-image">
 	<h5><%= name %></h5>
-	</div>
 </script>
 
 <script type="text/template" id="wine-item-view-template">
-	<div class="popup">
-		<div class="close-image"><button class="add"></button></div>
-	</div>
-	<div class="overlay-back">
 	<img src="<%= img %>" class="beverage-image">
 	<h5><%= name %></h5>
-	</div>
 </script>
 
 <script type="text/template" id="liquor-item-view-template">
-	<div class="popup">
-		<div class="close-image"><button class="add"></button></div>
-	</div>
-	<div class="overlay-back">
 	<img src="<%= img %>" class="beverage-image">
 	<h5><%= name %></h5>
-	</div>
 </script>
 
 <script type="text/template" id="booze-item-view-template">	
-	<div class="popup">
-		<div class="close-image"><button class="destroy"></button></div>
-	</div>
-	<div class="overlay-back">
-		<img src="<%= img %>" class="beverage-image">
+
+		<img src="<%= img %>" class="beverage-image booze-image">
 		<h5 class="<%= selected %>"><%= abv %>%</h5>
 		<h5 class="<%= selected %>"><%= ounces %> oz.</h5>
-	</div>
 </script>
 
 <script type="text/template" id="booze-queue-view-template">
@@ -188,6 +171,7 @@
 </script>
 
 <script src="javascripts/lib/jquery.js"></script>
+<script src="javascripts/lib/jquery-ui.min.js"></script>
 <script src="javascripts/lib/underscore.js"></script>
 <script src="javascripts/lib/backbone.js"></script>
 <script src="javascripts/lib/bootstrap.js"></script>
