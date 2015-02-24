@@ -13,8 +13,9 @@ body {
 }
 
 a {
-	background-color: #020256;
-	color: #fff;
+	background-color: #fff;
+	color: #020256;
+	font-size: 19px;
 }
 
 a:hover {
@@ -35,10 +36,9 @@ a h1 {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #fff;
-	color: #020256;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	background-color: #020256;
+	color: #fff;
+	font-size: 19px;
 }
 
 
@@ -48,6 +48,14 @@ a h1 {
 
 .nav-tabs.nav-justified > li > a {
 	border: 1px solid #fff;
+}
+
+h5 {
+	font-family: Raleway;
+}
+
+h5.true {
+	font-family: inherit;
 }
 
 img.beverage-image {
@@ -104,8 +112,10 @@ input#bac-submit-btn.form-control.input-lg {
 
 span#booze-queue.badge {
 	font-size: 14px;
-	background-color: #020256;
-	border: 1px solid #fff;
+	background-color: #fff;
+	border: 1px solid #000;
+	color: #000;
+	font-weight: normal;
 }
 
 .row {
@@ -114,24 +124,6 @@ span#booze-queue.badge {
 
 #booze {
 	height: 150px;
-}
-
-.popup {
-	position: absolute;
-	z-index: 2;
-}
-
-.overlay-back {
-	z-index: 2;
-}
-
-.close-image {
-	display: block;
-	float: right;
-	cursor: pointer;
-	z-index: 3;
-	margin-left: 31px;
-	margin-top: 28px;
 }
 
 #booze-queue {
@@ -148,36 +140,6 @@ span#booze-queue.badge {
 
 ul#booze-items li {
 	display: inline-block;
-}
-
-#booze-items li .destroy {
-	position: relative;
-	display: none;
-	top: 0;
-	right: 10px;
-	bottom: 0;
-	width: 40px;
-	height: 40px;
-	margin: auto 0;
-	font-size: 22px;
-	-webkit-transition: all 0.2s;
-	transition: all 0.2s;
-}
-
-#booze-items li .destroy:hover {
-	text-shadow: 0 0 1px #fff,
-				 0 0 10px rgba(199, 107, 107, 0.8);
-	-webkit-transform: scale(1.3);
-	transform: scale(1.3);
-}
-
-#booze-items li .destroy:after {
-	content: '✖';
-}
-
-#booze-items li:hover .destroy {
-	display: block;
-	background-color: #d9534f;
 }
 
 li {
