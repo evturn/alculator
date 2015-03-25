@@ -5,16 +5,14 @@ var UserInput = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #bac-btn'   : 'collectBooze',
-		'keypress #lbs'	   : 'collectBoozeOnEnter',
-		'keypress #hours'  : 'collectBoozeOnEnter',
-		'keypress #male'	 : 'collectBoozeOnEnter',
-		'keypress #female' : 'collectBoozeOnEnter'
+		'click #bac-btn'   		 : 'collectBooze',
+		'keypress #user-form'  : 'collectBoozeOnEnter'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
 	},
 	collectBoozeOnEnter: function(e) {
+		e.preventDefault();
 	  if (e.which === ENTER_KEY) {
 	    this.collectBooze();
 	  }

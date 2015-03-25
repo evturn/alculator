@@ -69,7 +69,7 @@ img.beverage-image:hover {
 	border: 1px solid yellow;
 }
 
-img.beverage-image.booze-image:hover {
+ul#tab-list li img:hover {
 	background-color: darkred;
 	border-radius: 6px;
 	border: 1px solid yellow;
@@ -118,38 +118,16 @@ span#booze-queue.badge {
 	font-weight: normal;
 }
 
-.row {
-	padding-bottom: 2%;
-}
-
-#booze {
-	height: 150px;
-}
-
 #booze-queue {
 	text-align: center;
 }
 
-#booze-items {
-	position: absolute;
-	height: 100px;
-	padding-bottom: 20px;
-	width: 97%;
-	margin-right: 5px;
-}
-
-ul#booze-items li {
+ul#tab-list li {
 	display: inline-block;
 }
 
 li {
 	list-style-type: none;
-}
-
-ul {
-	width: 100%;
-	text-align: center;
-	padding-left: 0;
 }
 
 #user-input {

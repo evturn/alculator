@@ -1,6 +1,5 @@
 var TabItemView = Backbone.View.extend({
 	tagName: 'li',
-	className: 'beverage-item',
 	template: _.template($('#tab-item-template').html()),
 	events: {
 		'click img': 'destroy',
