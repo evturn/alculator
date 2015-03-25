@@ -36,9 +36,6 @@ var Navbar = Backbone.View.extend({
 	init: function() {
 		new UserInput();
 		this.alternate();
-		boozeItems  = new Tab({reset: true, merge: false});
-		new BoozeItemsView();
-		boozeQueueView = new BoozeQueueView();
 		stages 			= new Stages({reset: true});
 		stages.fetch();
 	},

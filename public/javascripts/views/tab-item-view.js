@@ -1,7 +1,7 @@
-var BoozeItemView = Backbone.View.extend({
+var TabItemView = Backbone.View.extend({
 	tagName: 'li',
 	className: 'beverage-item',
-	template: _.template($('#booze-item-view-template').html()),
+	template: _.template($('#tab-item-template').html()),
 	events: {
 		'click img': 'destroy',
 	},
