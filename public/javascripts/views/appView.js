@@ -18,12 +18,11 @@ var AppView = Backbone.View.extend({
 	},
 	renderApp: function() {
 		stages.fetch();
-		queries.reset();
 	},
 	setBeerItems: function() {
 		$('#beer-tab').parent().find('li.active').removeClass('active');
 		$('#beer-tab').addClass('active');
-		beerItems.fetch({reset: true});
+		beers.fetch({reset: true});
 	},
 	setWineItems: function() {
 		$('#wine-tab').parent().find('li.active').removeClass('active');
@@ -38,15 +37,14 @@ var AppView = Backbone.View.extend({
 		$('#search-query').empty();
 	},
 	instantiateCollections: function() {
-		queries = new Queries({reset: true, merge: false})
 		boozeItems = new BoozeItems({reset: true, merge: false});
-		beerItems = new Beers();
+		beers = new Beers();
 		wineItems = new WineItems();
 		liquorItems = new LiquorItems();
 		stages = new Stages({reset: true});
 	},
 	instantiateViews: function() {
-		new BeveragesListView({collection: beerItems});
+		new BeveragesListView({collection: beers});
 		new WineItemsView({collection: wineItems});
 		new LiquorItemsView({collection: liquorItems});
 		new UserInputView();
