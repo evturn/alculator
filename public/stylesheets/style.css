@@ -2,7 +2,8 @@ body {
 	background-image: url('../images/low_contrast_linen.png');
 	background-repeat: repeat;
   background-position: center center;
-  color: white;
+  color: #fff;
+
 }
 
 #tab-list {
@@ -22,14 +23,13 @@ a:hover {
 
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #000000;
+	background-color: #000;
 	color: #fff;
-	font-size: 19px;
 }
 
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
-	border: 0.5px solid #000000;
+	border: 0.5px solid #000;
 }
 
 .nav-tabs.nav-justified > li > a {
@@ -37,8 +37,8 @@ a:hover {
 }
 
 img.beverage-image {
-	width: 80px;
-	height: 80px;
+	max-width: 80px;
+	max-height: 80px;
 }
 
 img.beverage-image:hover {
@@ -74,6 +74,10 @@ ul#beverages-list li {
 
 ul#tab-list li {
 	display: inline-block;
+}
+
+ul {
+	padding-left: 0;
 }
 
 li {
