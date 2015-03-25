@@ -1,6 +1,6 @@
 var TabItemView = Backbone.View.extend({
 	tagName: 'li',
-	template: _.template($('#tab-item-template').html()),
+	tabTemplate: _.template($('#tab-item-template').html()),
 	events: {
 		'click img': 'destroy',
 	},
@@ -9,11 +9,11 @@ var TabItemView = Backbone.View.extend({
 		this.listenTo(this.model, 'add', this.save);
 	},
 	render: function() {
-		this.$el.html(this.template(this.model.toJSON()));
+		this.$el.html(this.tabTemplate(this.model.toJSON()));
 		return this;
 	},
 	destroy: function() {
 		this.model.destroy();
-	}
+	},
 });
 

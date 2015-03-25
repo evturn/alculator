@@ -5,13 +5,6 @@ body {
   color: white;
 }
 
-#full-cover {
-	height: 1000px;
-	width: 100%;
-	background-image: url('../images/padded.png');
-	z-index: 999;
-}
-
 a {
 	background-color: #fff;
 	color: #020256;
@@ -20,10 +13,6 @@ a {
 
 a:hover {
 	text-decoration: none;
-}
-
-.blockbuster {
-	width: 75%;
 }
 
 a h1 {
@@ -102,25 +91,6 @@ ul#beverages-list li {
 	margin-bottom: 20px;
 }
 
-
-input#bac-submit-btn.form-control.input-lg {
-	text-shadow: none;
-	color: #fff;
-	background-color: #020256;	
-	font-weight: 500;
-}
-
-span#booze-queue.badge {
-	font-size: 14px;
-	background-color: #fff;
-	border: 1px solid #000;
-	color: #000;
-	font-weight: normal;
-}
-
-#booze-queue {
-	text-align: center;
-}
 
 ul#tab-list li {
 	display: inline-block;

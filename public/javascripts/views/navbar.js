@@ -34,6 +34,7 @@ var Navbar = Backbone.View.extend({
 		var beveragesList = new BeveragesListView({collection: collection});
 	},
 	init: function() {
+		
 		new UserInput();
 		this.alternate();
 		stages 			= new Stages({reset: true});

@@ -40,6 +40,11 @@
 
 	<div class="container">
 		<div class="row">
+			<div class="col-xs-12 col-sm-12 text-center" id="tab">
+				
+
+
+			</div>
 			<div class="col-xs-12 col-sm-12 text-center">
 				<ul id="tab-list">
 				
@@ -85,7 +90,7 @@
 </script>
 
 <script type="text/template" id="tab-counter-template">
-	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
+	<span class="badge" id="booze-queue" ><strong><%= tabCount %></strong> <%= tabCount === 1 ? 'item' : 'items' %> on your tab</span>
 </script>
 
 <script type="text/template" id="user-input-template">
@@ -193,7 +198,7 @@
 <script src="javascripts/views/beverages-list-view.js"></script>
 <script src="javascripts/views/tab-item-view.js"></script>
 <script src="javascripts/views/tab-list-view.js"></script>
-<!-- <script src="javascripts/views/tab-counter.js"></script> -->
+<script src="javascripts/views/tab-counter.js"></script>
 
 <script src="javascripts/views/user-input.js"></script>
 <script src="javascripts/views/searchResults.js"></script>
