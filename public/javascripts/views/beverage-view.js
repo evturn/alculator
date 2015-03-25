@@ -12,14 +12,15 @@ var BeverageView = Backbone.View.extend({
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
-	addBooze: function() {
-		var boozeOnDelivery = new Beverage(this.model.attributes);
-		boozeOnDelivery.set({selected: true});
-		boozeItems.add(boozeOnDelivery);
-		boozeOnDelivery.save();
+	select: function() {
+		var userTab  = new Tab({reset: true, merge: false});
+		var selection = new Beverage(this.model.attributes);
+		selection.set({selected: true});
+		userTab.push(selection);
+		var tabItemView = new TabItemView({model: selection});
 	},
 	 acknowledge: function(e) {
-	 	this.addBooze();
+	 	this.select();
     console.log('i felt that!', $(e.currentTarget));
     $(e.currentTarget).addClass('screen-click');
     setTimeout(function() {

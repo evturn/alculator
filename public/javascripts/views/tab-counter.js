@@ -1,4 +1,4 @@
-var BoozeQueueView = Backbone.View.extend({
+var TabCounter = Backbone.View.extend({
 	el: '#tab',
 	template: _.template($('#booze-queue-view-template').html()),
 	initialize: function() {

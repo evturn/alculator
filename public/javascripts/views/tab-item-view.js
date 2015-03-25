@@ -1,4 +1,5 @@
 var TabItemView = Backbone.View.extend({
+	el: '#booze-items',
 	tagName: 'li',
 	className: 'beverage-item',
 	template: _.template($('#tab-item-template').html()),
@@ -17,7 +18,7 @@ var TabItemView = Backbone.View.extend({
 	},
 	destroy: function() {
 		this.model.destroy();
-		boozeQueueView.render()
+		this.render()
 	}
 });
 
