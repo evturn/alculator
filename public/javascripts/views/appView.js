@@ -40,7 +40,7 @@ var AppView = Backbone.View.extend({
 	instantiateCollections: function() {
 		queries = new Queries({reset: true, merge: false})
 		boozeItems = new BoozeItems({reset: true, merge: false});
-		beerItems = new BeerItems();
+		beerItems = new Beers();
 		wineItems = new WineItems();
 		liquorItems = new LiquorItems();
 		stages = new Stages({reset: true});
