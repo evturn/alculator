@@ -33,20 +33,20 @@ var Navbar = Backbone.View.extend({
 	setLiquorItems: function() {
 		$('#liquor-tab').parent().find('li.active').removeClass('active');
 		$('#liquor-tab').addClass('active');
-		liquorItems.fetch({reset: true});
+		liquor.fetch({reset: true});
 		$('#search-query').empty();
 	},
 	instantiateCollections: function() {
 		boozeItems  = new BoozeItems({reset: true, merge: false});
 		beers 		 	= new Beers();
 		wine 				= new Wine();
-		liquorItems = new LiquorItems();
+		liquor      = new Liquor();
 		stages 			= new Stages({reset: true});
 	},
 	instantiateViews: function() {
 		var beerList 	 = new BeveragesListView({collection: beers});
 		var wineList 	 = new BeveragesListView({collection: wine});
-		var liquorList = new BeveragesListView({collection: liquorItems});
+		var liquorList = new BeveragesListView({collection: liquor});
 		new UserInputView();
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
