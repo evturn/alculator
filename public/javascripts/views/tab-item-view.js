@@ -10,9 +10,7 @@ var TabItemView = Backbone.View.extend({
 		this.listenTo(this.model, 'add', this.save);
 	},
 	render: function() {
-		var model = this.model.set({url: '/booze'});
-		var selection = this.model.toJSON();
-		this.$el.html(this.template(selection));
+		this.$el.html(this.template(this.model.toJSON()));
 		return this;
 	},
 	destroy: function() {

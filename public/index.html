@@ -66,12 +66,12 @@
 </script>
 
 <script type="text/template" id="tab-item-template">	
-		<li><img src="<%= img %>" class="beverage-image booze-image">
+		<img src="<%= img %>" class="beverage-image booze-image">
 		<h5 class="<%= selected %>"><%= abv %>%</h5>
-		<h5 class="<%= selected %>"><%= ounces %> oz.</h5></li>
+		<h5 class="<%= selected %>"><%= ounces %> oz.</h5>
 </script>
 
-<script type="text/template" id="booze-queue-view-template">
+<script type="text/template" id="tab-counter-template">
 	<span class="badge" id="booze-queue" ><strong><%= boozeQueue %></strong> <%= boozeQueue === 1 ? 'item' : 'items' %> on your tab</span>
 </script>
 
@@ -115,7 +115,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12" id="bac-submit">
 			<label for="lbs">SUBMIT</label>
-			<input class="form-control input-lg" type="submit" value="DONE" id="bac-submit-btn">
+			<input class="form-control input-lg" type="submit" value="DONE" id="bac-btn">
 		</div>	
 	</div>
 </script>

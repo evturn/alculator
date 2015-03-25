@@ -4,7 +4,7 @@ var BeverageView = Backbone.View.extend({
 	template: _.template($('#beverage-template').html()),
 	initialize: function() {
 		userTab  = new Tab({reset: true, merge: false});
-		var tabListView = new TabListView({collection: userTab});
+		new TabListView({collection: userTab});
 		this.render();
 	},
 	events: {
@@ -18,6 +18,7 @@ var BeverageView = Backbone.View.extend({
 		var selection = new Beverage(this.model.attributes);
 		selection.set({selected: true});
 		userTab.push(selection);
+		selection.save();
 	},
 });
 

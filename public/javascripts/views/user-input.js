@@ -5,18 +5,17 @@ var UserInput = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #bac-submit-btn' : 'collectBooze',
-		'keypress #lbs'					: 'collectBoozeOnEnter',
-		'keypress #hours'				: 'collectBoozeOnEnter',
-		'keypress #male'				: 'collectBoozeOnEnter',
-		'keypress #female'			: 'collectBoozeOnEnter'
+		'click #bac-btn'   : 'collectBooze',
+		'keypress #lbs'	   : 'collectBoozeOnEnter',
+		'keypress #hours'  : 'collectBoozeOnEnter',
+		'keypress #male'	 : 'collectBoozeOnEnter',
+		'keypress #female' : 'collectBoozeOnEnter'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
 	},
 	collectBoozeOnEnter: function(e) {
 	  if (e.which === ENTER_KEY) {
-	  	console.log('we here');
 	    this.collectBooze();
 	  }
 	},
@@ -26,8 +25,8 @@ var UserInput = Backbone.View.extend({
 			}, 'slow');
 		abvArray    = [];
 		ouncesArray = [];
-		boozeItems.shift();
-		boozeItems.forEach(function(model) {
+		userTab.shift();
+		userTab.forEach(function(model) {
 		 	drink = {abv: model.get('abv'),
 		 		ounces: model.get('ounces')};
 			abvArray.push(drink.abv);
@@ -61,7 +60,7 @@ var UserInput = Backbone.View.extend({
 		var subLevel 		 	= (metricOunces /  metabolism).toFixed(2);
 		var soberingRate  = 0.015 * hours;
 		var bac 			    = (subLevel - soberingRate).toFixed(2);
-		var round         = new Round({lbs: lbs, hours: hours, drinks: boozeQueue, abv: abvSum, sex: sex, rate: rate, bac: bac});
+		var round         = new Round({lbs: lbs, hours: hours, drinks: userTab.length, abv: abvSum, sex: sex, rate: rate, bac: bac});
 		var roundView     = new RoundView({model: round});
 	}
 });

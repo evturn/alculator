@@ -1,6 +1,6 @@
 var TabCounter = Backbone.View.extend({
 	el: '#tab',
-	template: _.template($('#booze-queue-view-template').html()),
+	template: _.template($('#tab-counter-template').html()),
 	initialize: function() {
 		this.listenTo(this.collection, 'change', this.render);
     this.render();
