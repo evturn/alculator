@@ -1,11 +1,10 @@
 var TabListView = Backbone.View.extend({
-	el: '#booze-items',
+	el: '#tab-list',
   initialize: function() {
-    this.listenTo(boozeItems, 'add', this.addOne);
+    this.listenTo(this.collection, 'add', this.addOne);
   },
   addOne: function(model) {
-    var viewOfBooze = new TabItemView({model: model});
-    this.$el.append(viewOfBooze.render().el );
+    var view = new TabItemView({model: model});
+    this.$el.append(view.render().el );
   },
 });
-

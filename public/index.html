@@ -31,7 +31,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-sm-12" id="tab"></div>
 		<div class="col-xs-12 col-sm-12" id="booze">
-			<ul id="booze-items"></ul>
+			<ul id="tab-list"></ul>
 		</div>
 	</div>
 	<div class="row">
@@ -66,9 +66,9 @@
 </script>
 
 <script type="text/template" id="tab-item-template">	
-		<img src="<%= img %>" class="beverage-image booze-image">
+		<li><img src="<%= img %>" class="beverage-image booze-image">
 		<h5 class="<%= selected %>"><%= abv %>%</h5>
-		<h5 class="<%= selected %>"><%= ounces %> oz.</h5>
+		<h5 class="<%= selected %>"><%= ounces %> oz.</h5></li>
 </script>
 
 <script type="text/template" id="booze-queue-view-template">
@@ -179,6 +179,7 @@
 <script src="javascripts/views/beverage-view.js"></script>
 <script src="javascripts/views/beverages-list-view.js"></script>
 <script src="javascripts/views/tab-item-view.js"></script>
+<script src="javascripts/views/tab-list-view.js"></script>
 <!-- <script src="javascripts/views/tab-counter.js"></script> -->
 
 <script src="javascripts/views/user-input.js"></script>

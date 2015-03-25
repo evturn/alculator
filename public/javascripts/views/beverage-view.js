@@ -3,6 +3,8 @@ var BeverageView = Backbone.View.extend({
 	className: 'beverage-item',
 	template: _.template($('#beverage-template').html()),
 	initialize: function() {
+		userTab  = new Tab({reset: true, merge: false});
+		var tabListView = new TabListView({collection: userTab});
 		this.render();
 	},
 	events: {
@@ -12,20 +14,11 @@ var BeverageView = Backbone.View.extend({
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
-	renderSelection: function() {
-		var userTab  = new Tab({reset: true, merge: false});
+	select: function() {
 		var selection = new Beverage(this.model.attributes);
 		selection.set({selected: true});
 		userTab.push(selection);
-		var tabItemView = new TabItemView({model: selection});
 	},
-	select: function(e) {
-	 	this.renderSelection();
-    $(e.currentTarget).addClass('screen-click');
-    setTimeout(function() {
-      $('img').removeClass('screen-click');
-    }, 600);
-  },
 });
 
 

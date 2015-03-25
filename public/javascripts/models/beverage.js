@@ -1,9 +1,2 @@
-var Beverage = Backbone.Model.extend({
-	defaults: {
-		name: 'Unknown',
-		abv: 'Unknown',
-		img: 'images/bottle-search-result.png',
-		ounces: 'Unknown'
-	}
-});
+var Beverage = Backbone.Model.extend({});
 
