@@ -1,4 +1,4 @@
-var AppView = Backbone.View.extend({
+var Navbar = Backbone.View.extend({
 	el: '#nav',
 	navTemplate: _.template($('#nav-template').html()),
 	initialize: function() {
