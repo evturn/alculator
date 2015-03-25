@@ -5,36 +5,33 @@ var Navbar = Backbone.View.extend({
 		this.instantiateCollections();
 		this.instantiateViews();
 		this.render();
-		this.renderApp();
 	},
 	events: {
-		'click #beer-tab'  : 'setBeerItems',
-		'click #liquor-tab': 'setLiquorItems',
-		'click #wine-tab'	 : 'setWineItems'
+		'click #beverage-nav' : 'activeNav',
+		'click #beer-tab'     : 'showBeers',
+		'click #wine-tab'	 		: 'showWine',
+		'click #liquor-tab'		: 'showLiquor'
 	},
 	render: function() {
 		this.$el.html(this.navTemplate());
 		return this;
 	},
-	renderApp: function() {
-		stages.fetch();
+	activeNav: function(e) {
+		e.preventDefault();
+		$('#beverage-nav').find('li.active').removeClass('active');
+		$(e.target).closest('li').addClass('active');
 	},
-	setBeerItems: function() {
-		$('#beer-tab').parent().find('li.active').removeClass('active');
-		$('#beer-tab').addClass('active');
+	showBeers: function() {
 		beers.fetch({reset: true});
+		var beerList 	 = new BeveragesListView({collection: beers});
 	},
-	setWineItems: function() {
-		$('#wine-tab').parent().find('li.active').removeClass('active');
-		$('#wine-tab').addClass('active');
+	showWine: function() {
 		wine.fetch({reset: true});
-		$('#search-query').empty();
+		var wineList 	 = new BeveragesListView({collection: wine});
 	},
-	setLiquorItems: function() {
-		$('#liquor-tab').parent().find('li.active').removeClass('active');
-		$('#liquor-tab').addClass('active');
+	showLiquor: function() {
 		liquor.fetch({reset: true});
-		$('#search-query').empty();
+		var liquorList = new BeveragesListView({collection: liquor});
 	},
 	instantiateCollections: function() {
 		boozeItems  = new Tab({reset: true, merge: false});
@@ -42,14 +39,11 @@ var Navbar = Backbone.View.extend({
 		wine 				= new Wine();
 		liquor      = new Liquor();
 		stages 			= new Stages({reset: true});
+		stages.fetch();
 	},
 	instantiateViews: function() {
-		var beerList 	 = new BeveragesListView({collection: beers});
-		var wineList 	 = new BeveragesListView({collection: wine});
-		var liquorList = new BeveragesListView({collection: liquor});
 		new UserInputView();
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
-		this.setWineItems();
 	},
 });
