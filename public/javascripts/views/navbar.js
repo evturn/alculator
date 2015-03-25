@@ -21,21 +21,22 @@ var Navbar = Backbone.View.extend({
 	},
 	alternate: function(id) {
 		if (id === 'beer-tab') {
-			collection = beers
+			collection = new Beers();	
 		} else if (id === 'wine-tab') {
-			collection = wine
+			collection = new Wine();
 		} else if (id === 'liquor-tab') {
-			collection = liquor
+			collection = new Liquor();
+		} else {
+			collection = new Wine();
 		}
+
 		collection.fetch({reset: true});
 		var beveragesList = new BeveragesListView({collection: collection});
 	},
 	init: function() {
 		new UserInput();
+		this.alternate();
 		boozeItems  = new Tab({reset: true, merge: false});
-		beers 		 	= new Beers();
-		wine 				= new Wine();
-		liquor      = new Liquor();
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
 		stages 			= new Stages({reset: true});
