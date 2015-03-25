@@ -40,13 +40,13 @@ app.post('/rounds', parseUrlencoded, function(request, response) {
 	response.status(201).json(newRound);
 });
 
-app.get('/booze', function(request, response) {
+app.get('/tab', function(request, response) {
 	response.status(200).json();
 });
 
-app.post('/booze', parseUrlencoded, function(request, response) {});
+app.post('/tab', parseUrlencoded, function(request, response) {});
 
-app.delete('/booze', function(request, response) {});
+app.delete('/tab', function(request, response) {});
 
 app.get('/queries', function(request, response) {
 	response.status(200).json();

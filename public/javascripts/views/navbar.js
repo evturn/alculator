@@ -37,7 +37,7 @@ var Navbar = Backbone.View.extend({
 		$('#search-query').empty();
 	},
 	instantiateCollections: function() {
-		boozeItems  = new BoozeItems({reset: true, merge: false});
+		boozeItems  = new Tab({reset: true, merge: false});
 		beers 		 	= new Beers();
 		wine 				= new Wine();
 		liquor      = new Liquor();

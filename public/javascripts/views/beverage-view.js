@@ -13,7 +13,7 @@ var BeverageView = Backbone.View.extend({
     return this;
   },
 	addBooze: function() {
-		var boozeOnDelivery = new BoozeItem(this.model.attributes);
+		var boozeOnDelivery = new Beverage(this.model.attributes);
 		boozeOnDelivery.set({selected: true});
 		boozeItems.add(boozeOnDelivery);
 		boozeOnDelivery.save();
