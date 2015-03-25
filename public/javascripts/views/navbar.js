@@ -6,10 +6,7 @@ var Navbar = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #beverage-nav' : 'active',
-		'click #beer-tab'     : 'showBeers',
-		'click #wine-tab'	 		: 'showWine',
-		'click #liquor-tab'		: 'showLiquor'
+		'click #beverage-nav' : 'active'	
 	},
 	render: function() {
 		this.$el.html(this.navTemplate());
@@ -19,18 +16,19 @@ var Navbar = Backbone.View.extend({
 		e.preventDefault();
 		$('#beverage-nav').find('li.active').removeClass('active');
 		$(e.target).closest('li').addClass('active');
+		var id = ($('.active').attr('id'));
+		this.alternate(id);
 	},
-	showBeers: function() {
-		beers.fetch({reset: true});
-		var beerList 	 = new BeveragesListView({collection: beers});
-	},
-	showWine: function() {
-		wine.fetch({reset: true});
-		var wineList 	 = new BeveragesListView({collection: wine});
-	},
-	showLiquor: function() {
-		liquor.fetch({reset: true});
-		var liquorList = new BeveragesListView({collection: liquor});
+	alternate: function(id) {
+		if (id === 'beer-tab') {
+			collection = beers
+		} else if (id === 'wine-tab') {
+			collection = wine
+		} else if (id === 'liquor-tab') {
+			collection = liquor
+		}
+		collection.fetch({reset: true});
+		var beveragesList = new BeveragesListView({collection: collection});
 	},
 	init: function() {
 		new UserInput();
