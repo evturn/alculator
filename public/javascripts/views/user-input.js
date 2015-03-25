@@ -12,7 +12,6 @@ var UserInput = Backbone.View.extend({
 		this.$el.prepend(this.template());
 	},
 	collectBoozeOnEnter: function(e) {
-		e.preventDefault();
 	  if (e.which === ENTER_KEY) {
 	    this.collectBooze();
 	  }

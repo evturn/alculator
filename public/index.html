@@ -20,7 +20,6 @@
 			<h1><em><span class="yellow">A</span><span class="orange">L</span><span class="red">C</span></em>ULATOR</h1>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-12" id="nav"></div>
 </div>
 
 	
@@ -38,34 +37,54 @@
 		</div>
 	</div>
 
+
 	<div class="container">
-		<div class="row" id="tab">
-			<div class="col-xs-12 col-sm-12 text-center" id="counter">
+		<div class="row"> 
+			<div class="col-xs-12 col-sm-12" id="nav">
 				
 
-
 			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row"> 
+	  	<div class="col-xs-12 col-sm-12 text-center">
+	  		<ul id="beverages-list">
+	  			
+
+	  		</ul>
+			</div>
+  	</div>
+	</div>
+		
+	<div class="container">
+		<div class="row" id="tab">
 			<div class="col-xs-12 col-sm-12 text-center">
 				<ul id="tab-list">
 				
 				
 				</ul>
 			</div>
+			<div class="col-xs-12 col-sm-12 text-center" id="counter">
+				
+
+
+			</div>
 		</div>
 	</div>
 
-
 	<div class="container">
-	  <div class="col-xs-12 col-sm-6 text-center">
-	  	<ul id="beverages-list"></ul>
-	  </div>
-		<div class="col-xs-12 col-sm-6" id="user-input">
+		<div class="row" id="user-input"> 
+			
 
+		
 		</div>
 	</div>
+
 	<div class="container">
-		<div class="col-xs-12 col-sm-12" id="footer">
-			<a href="#">&#169; 2015 evturn.com</a>
+		<div class="col-xs-12 col-sm-12 text-center">
+			<p>&#169; 2015 evturn.com</p>
 		</div>
 	</div>
 
@@ -94,47 +113,57 @@
 </script>
 
 <script type="text/template" id="user-input-template">
-	<div class="row" id="user-form">
-		<form >
-				<div class="col-xs-12 col-sm-12">
-					
-			  	<div class="form-group">	
-						<label for="sex">MALE</label>
-			  		<input type="radio" value="MALE" id="male" name="male">
-					
-			  		<label for="sex">FEMALE</label>
-		  			<input type="radio" value="FEMALE" id="female" name="female">
-					</div>
+	
+	<div class="col-xs-12 col-sm-12" id="user-form">
+		<form>
+		<div class="col-xs-12 col-sm-3">
+	  	<div class="form-group">
+	  		<input type="radio" value="MALE" id="male" name="male">
+				<label class="radio-inline">MALE</label>
 			</div>
+			<div class="form-group">
+  			<input type="radio" value="FEMALE" id="female" name="female">
+	  		<label class="radio-inline">FEMALE</label>
+			</div>
+		</div>
 		
-			<div class="col-xs-6 col-sm-6">
-				<label for="hours">HOURS ELAPSED</label>
-				<select class="form-control input-lg" name="hours" id="hours">
-					<option>0</option>
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
-					<option>6</option>
-					<option>7</option>
-					<option>8</option>
-					<option>9</option>
-					<option>10</option>
-					<option>11</option>
-					<option>12</option>
-				</select>
-			</div>
-			<div class="col-xs-6 col-sm-6">
-				<label for="lbs">WEIGHT IN LBS</label>
-			  <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="&#x95;&#x95;&#x95;">
-			</div>
-			<div class="col-xs-12 col-sm-12" id="bac-submit">
-				<label for="lbs">SUBMIT</label>
-				<input class="form-control input-lg" type="submit" value="DONE" id="bac-btn">
-			</div>
-		</form>
-	</div>
+		<div class="col-xs-12 col-sm-3">
+				<div class="form-group">
+					<label for="hours">HOURS ELAPSED</label>
+					<select class="form-control input-lg" name="hours" id="hours">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+					</select>
+				</div>
+				</div>
+			
+			<div class="col-xs-12 col-sm-3">
+				<div class="form-group">
+					<label for="lbs">WEIGHT IN LBS</label>
+				  <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="&#x95;&#x95;&#x95;">
+				</div>
+				</div>
+		
+		<div class="col-xs-12 col-sm-3"
+				<div class="form-group">
+					<label for="lbs">SUBMIT</label>
+					<input class="form-control input-lg" type="submit" value="DONE" id="bac-btn">
+				</div>
+				</div>
+			</form>
+		</div>
+	
 </script>
 
 <script type="text/template" id="bac-calculation-template">

@@ -5,6 +5,10 @@ body {
   color: white;
 }
 
+#tab-list {
+	min-height: 200px;
+}
+
 a {
 	background-color: #fff;
 	color: #020256;
@@ -15,14 +19,6 @@ a:hover {
 	text-decoration: none;
 }
 
-a h1 {
-	color: white;
-	font-family: Raleway;
-	text-decoration: none;
-	font-size: 5em;
-	padding-top: 10%;
-	text-align: center;
-}
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 	background-color: #020256;
@@ -37,14 +33,6 @@ a h1 {
 
 .nav-tabs.nav-justified > li > a {
 	border: 1px solid #fff;
-}
-
-h5 {
-	font-family: Raleway;
-}
-
-h5.true {
-	font-family: inherit;
 }
 
 img.beverage-image {
@@ -72,25 +60,16 @@ ul#tab-list li img:hover {
 	height: 100px;
 }
 
-#beverages-list li {
-	max-height: 80px; 
-}
-
-#beverages {
-	padding-bottom: 20px;
-}
-
 li.beverage-item {
 	text-align: center;
 	padding-bottom: 20px;
-	padding-top: 20px;
+	padding-top: 40px;
 }
 
 ul#beverages-list li {
 	display: inline-block;
 	margin-bottom: 20px;
 }
-
 
 ul#tab-list li {
 	display: inline-block;
@@ -159,46 +138,4 @@ h1.results {
 }
 .red {
 	color: #bd574b;
-}
-
-.chart-color1 {
-  fill: #689b6e;
-}
-
-.chart-color2 {
-  fill: #5a81c1;
-}
-
-.chart-color3 {
-  fill: #ead345;
- }
-
-.chart-color4 {
-  fill: #e09e4a;
- }
-
- .chart-color5 {
-  fill: #bd574b;
- }
-
-.needle {
-	fill: silver;
-}
-
-#footer {
-	margin: 65px auto 0;
-	color: #fff;
-	font-size: 12px;
-	text-align: center;
-}
-
-#footer a {
-	background-color: transparent;
-	color: #fff;
-}
-
-@media (max-width: 568px) {
-	.add {
-		display: none;
-	}
 }
