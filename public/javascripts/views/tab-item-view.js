@@ -4,16 +4,14 @@ var TabItemView = Backbone.View.extend({
 	className: 'beverage-item',
 	template: _.template($('#tab-item-template').html()),
 	events: {
-		'click img': 'destroy',
+		'click img': 'destroy'
 	},
 	initialize: function() {
+		this.render();
 		this.listenTo(this.model, 'destroy', this.remove);
-		this.listenTo(this.model, 'add', this.save);
 	},
 	render: function() {
-		var boozeOnArrival = this.model.set({url: '/booze'});
-		var newBooze = this.model.toJSON();
-		this.$el.html(this.template(newBooze));
+		this.$el.append(this.template(this.model.toJSON()));
 		return this;
 	},
 	destroy: function() {
