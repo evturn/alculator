@@ -24,7 +24,6 @@ var AppView = Backbone.View.extend({
 		$('#beer-tab').parent().find('li.active').removeClass('active');
 		$('#beer-tab').addClass('active');
 		beerItems.fetch({reset: true});
-		// new QueryView();
 	},
 	setWineItems: function() {
 		$('#wine-tab').parent().find('li.active').removeClass('active');

@@ -1,15 +1,15 @@
 var UserInputView = Backbone.View.extend({
-	el: $('#user-input'),
+	el: '#user-input',
 	template: _.template($('#user-input-template').html()),
 	initialize: function() {
 		this.render();
 	},
 	events: {
-		'click #bac-submit-btn': 'collectBooze',
-		'keypress #lbs': 'collectBoozeOnEnter',
-		'keypress #hours': 'collectBoozeOnEnter',
-		'keypress #male': 'collectBoozeOnEnter',
-		'keypress #female': 'collectBoozeOnEnter'
+		'click #bac-submit-btn' : 'collectBooze',
+		'keypress #lbs'					: 'collectBoozeOnEnter',
+		'keypress #hours'				: 'collectBoozeOnEnter',
+		'keypress #male'				: 'collectBoozeOnEnter',
+		'keypress #female'			: 'collectBoozeOnEnter'
 	},
 	render: function() {
 		this.$el.prepend(this.template());
