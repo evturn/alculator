@@ -1,7 +1,7 @@
-var WineItems = Backbone.Collection.extend({
-	model: WineItem,
+var Wine = Backbone.Collection.extend({
+	model: Beverage,
 	url: '/wine'
 });
 
-var wineItems = new WineItems();
-wineItems.fetch();
+var wine = new Wine();
+wine.fetch();
