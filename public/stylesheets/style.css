@@ -1,5 +1,5 @@
 body {
-	background-image: url('../images/padded.png');
+	background-image: url('../images/low_contrast_linen.png');
 	background-repeat: repeat;
   background-position: center center;
   color: white;
@@ -7,11 +7,12 @@ body {
 
 #tab-list {
 	min-height: 200px;
+	padding-top: 20px;
 }
 
 a {
 	background-color: #fff;
-	color: #020256;
+	color: #000000;
 	font-size: 19px;
 }
 
@@ -21,14 +22,14 @@ a:hover {
 
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #020256;
+	background-color: #000000;
 	color: #fff;
 	font-size: 19px;
 }
 
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
-	border: 1px solid #020256;
+	border: 0.5px solid #000000;
 }
 
 .nav-tabs.nav-justified > li > a {
@@ -41,7 +42,7 @@ img.beverage-image {
 }
 
 img.beverage-image:hover {
-	background-color: #020256;
+	background-color: #000000;
 	border-radius: 6px;
 	border: 1px solid yellow;
 }
@@ -77,14 +78,6 @@ ul#tab-list li {
 
 li {
 	list-style-type: none;
-}
-
-#user-input {
-	padding-top: 50px;
-}
-
-#tab {
-	text-align: center;
 }
 
 h1.results {

@@ -19,29 +19,24 @@
 		<div class="col-xs-12 col-sm-12">
 			<h1><em><span class="yellow">A</span><span class="orange">L</span><span class="red">C</span></em>ULATOR</h1>
 		</div>
+			<div class="col-xs-12 col-sm-12" id="nav">
+			
+				<!-- NAV -->
+
+			</div>
 	</div>
 </div>
 
-	
-	
 	<div class="container">
 		<div class="row">
 			<div id="bac-calculation">
-
+			
+				<!-- BAC RESULT -->
 
 			</div>
 			<div id="stage">
 			
-
-			</div>
-		</div>
-	</div>
-
-
-	<div class="container">
-		<div class="row"> 
-			<div class="col-xs-12 col-sm-12" id="nav">
-				
+				<!-- DESCRIPTION -->
 
 			</div>
 		</div>
@@ -52,6 +47,7 @@
 	  	<div class="col-xs-12 col-sm-12 text-center">
 	  		<ul id="beverages-list">
 	  			
+	  			<!-- BEVERAGES -->
 
 	  		</ul>
 			</div>
@@ -60,16 +56,17 @@
 		
 	<div class="container">
 		<div class="row" id="tab">
+			<div class="col-xs-12 col-sm-12 text-center" id="counter">
+				
+				<!-- COUNTER -->
+
+			</div>
 			<div class="col-xs-12 col-sm-12 text-center">
 				<ul id="tab-list">
 				
+					<!-- USER SELECTIONS -->
 				
 				</ul>
-			</div>
-			<div class="col-xs-12 col-sm-12 text-center" id="counter">
-				
-
-
 			</div>
 		</div>
 	</div>
@@ -77,7 +74,7 @@
 	<div class="container">
 		<div class="row" id="user-input"> 
 			
-
+			<!-- FORM -->
 		
 		</div>
 	</div>
@@ -89,151 +86,148 @@
 	</div>
 
 
-<script type="text/template" id="nav-template">
-	<ul class="nav nav-tabs nav-justified" id="beverage-nav">
-		<li id="wine-tab" role="presentation" class="active"><a href="#">WINE</a></li>
-		<li id="beer-tab" role="presentation"><a href="#">BEER</a></li>
-		<li id="liquor-tab" role="presentation"><a href="#">LIQUOR</a></li>
-	</ul>
-</script>
+	<script type="text/template" id="nav-template">
+		<ul class="nav nav-tabs nav-justified" id="beverage-nav">
+			<li id="wine-tab" role="presentation" class="active"><a href="#">WINE</a></li>
+			<li id="beer-tab" role="presentation"><a href="#">BEER</a></li>
+			<li id="liquor-tab" role="presentation"><a href="#">LIQUOR</a></li>
+		</ul>
+	</script>
 
-<script type="text/template" id="beverage-template">
-	<img src="<%= img %>" class="beverage-image">
-	<h5><%= name %></h5>
-</script>
+	<script type="text/template" id="beverage-template">
+		<img src="<%= img %>" class="beverage-image">
+		<h5><%= name %></h5>
+	</script>
 
-<script type="text/template" id="tab-item-template">	
+	<script type="text/template" id="tab-item-template">	
 		<img src="<%= img %>" class="beverage-image">
 		<h5 class="<%= selected %>"><%= abv %>%</h5>
 		<h5 class="<%= selected %>"><%= ounces %> oz.</h5>
-</script>
+	</script>
 
-<script type="text/template" id="tab-counter-template">
-	<span class="badge" id="booze-queue" ><strong><%= tabCount %></strong> <%= tabCount === 1 ? 'item' : 'items' %> on your tab</span>
-</script>
+	<script type="text/template" id="tab-counter-template">
+		<span class="badge" id="booze-queue" ><strong><%= tabCount %></strong> <%= tabCount === 1 ? 'item' : 'items' %> on your tab</span>
+	</script>
 
-<script type="text/template" id="user-input-template">
-	
-	<div class="col-xs-12 col-sm-12" id="user-form">
-		<form>
-		<div class="col-xs-12 col-sm-3">
-	  	<div class="form-group">
-	  		<input type="radio" value="MALE" id="male" name="male">
-				<label class="radio-inline">MALE</label>
-			</div>
-			<div class="form-group">
-  			<input type="radio" value="FEMALE" id="female" name="female">
-	  		<label class="radio-inline">FEMALE</label>
-			</div>
-		</div>
-		
-		<div class="col-xs-12 col-sm-3">
-				<div class="form-group">
-					<label for="hours">HOURS ELAPSED</label>
-					<select class="form-control input-lg" name="hours" id="hours">
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-						<option>6</option>
-						<option>7</option>
-						<option>8</option>
-						<option>9</option>
-						<option>10</option>
-						<option>11</option>
-						<option>12</option>
-					</select>
+	<script type="text/template" id="user-input-template">
+		<div class="col-xs-12 col-sm-12" id="user-form">
+			<form>
+				<div class="col-xs-12 col-sm-3">
+			  	<div class="form-group">
+			  		<input type="radio" value="MALE" id="male" name="male">
+						<label class="radio-inline">MALE</label>
+					</div>
+					<div class="form-group">
+		  			<input type="radio" value="FEMALE" id="female" name="female">
+			  		<label class="radio-inline">FEMALE</label>
+					</div>
 				</div>
+				
+				<div class="col-xs-12 col-sm-3">
+					<div class="form-group">
+						<label for="hours">HOURS ELAPSED</label>
+						<select class="form-control input-lg" name="hours" id="hours">
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+					</div>
 				</div>
-			
-			<div class="col-xs-12 col-sm-3">
-				<div class="form-group">
-					<label for="lbs">WEIGHT IN LBS</label>
-				  <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="&#x95;&#x95;&#x95;">
+					
+				<div class="col-xs-12 col-sm-3">
+					<div class="form-group">
+						<label for="lbs">WEIGHT IN LBS</label>
+					  <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="&#x95;&#x95;&#x95;">
+					</div>
 				</div>
-				</div>
-		
-		<div class="col-xs-12 col-sm-3"
-				<div class="form-group">
-					<label for="lbs">SUBMIT</label>
-					<input class="form-control input-lg" type="submit" value="DONE" id="bac-btn">
-				</div>
+				
+				<div class="col-xs-12 col-sm-3"
+					<div class="form-group">
+						<label for="lbs">SUBMIT</label>
+						<input class="form-control input-lg" type="submit" value="DONE" id="bac-btn">
+					</div>
 				</div>
 			</form>
 		</div>
-	
-</script>
+	</script>
 
-<script type="text/template" id="bac-calculation-template">
-	<h2 class="results">YOUR BAC LEVEL</h2>
-	<h1 class="results">&#8776; <%= bac %></h1>
-</script>
+	<script type="text/template" id="bac-calculation-template">
+		<h2 class="results">YOUR BAC LEVEL</h2>
+		<h1 class="results">&#8776; <%= bac %></h1>
+	</script>
 
-<script type="text/template" id="stage-template">
-	<div class="col-xs-12 col-sm-6 col-sm-offset-3 <%= color %>">
-	<h4 align="justify"><%= description %></h4>
-	</div>
-</script>
-
-<script type="text/template" id="search-query-template">
-	<div class="row">
-		<div class="col-xs-12 col-sm-6">
-		<label for="hours">FIND A BEER</label>
-			<input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Keystone Light">
+	<script type="text/template" id="stage-template">
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 <%= color %>">
+		<h4 align="justify"><%= description %></h4>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12 col-sm-6">
-			<input class="btn btn-default btn-lg" type="submit" value="SEARCH" id="beer-submit">
+	</script>
+
+	<script type="text/template" id="search-query-template">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+			<label for="hours">FIND A BEER</label>
+				<input class="form-control input-lg" type="text" name="query" id="beer-query" placeholder="Keystone Light">
+			</div>
 		</div>
-	</div>
-</script>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<input class="btn btn-default btn-lg" type="submit" value="SEARCH" id="beer-submit">
+			</div>
+		</div>
+	</script>
 
-<script type="text/template" id="search-results-template">
-	<li class="beverage-item">
-		<img src="images/bottle-search-result.png" class="beverage-image">
-		<h5><%= name %></h5>
-		<input class="btn btn-default btn-lg" type="button" value="+">
-	</li>
-</script>
+	<script type="text/template" id="search-results-template">
+		<li class="beverage-item">
+			<img src="images/bottle-search-result.png" class="beverage-image">
+			<h5><%= name %></h5>
+			<input class="btn btn-default btn-lg" type="button" value="+">
+		</li>
+	</script>
 
-<script src="javascripts/lib/jquery.js"></script>
-<script src="javascripts/lib/jquery-ui.min.js"></script>
-<script src="javascripts/lib/underscore.js"></script>
-<script src="javascripts/lib/backbone.js"></script>
-<script src="javascripts/lib/bootstrap.js"></script>
-<script src="javascripts/lib/backbone.localStorage.js"></script>
-<script src="javascripts/models/round.js"></script>
-<script src="javascripts/models/query.js"></script>
-<script src="javascripts/models/stage.js"></script>
+	<script src="javascripts/lib/jquery.js"></script>
+	<script src="javascripts/lib/jquery-ui.min.js"></script>
+	<script src="javascripts/lib/underscore.js"></script>
+	<script src="javascripts/lib/backbone.js"></script>
+	<script src="javascripts/lib/bootstrap.js"></script>
+	<script src="javascripts/lib/backbone.localStorage.js"></script>
+	<script src="javascripts/models/round.js"></script>
+	<script src="javascripts/models/query.js"></script>
+	<script src="javascripts/models/stage.js"></script>
 
-
-<script src="javascripts/models/beverage.js"></script>
-
-<script src="javascripts/collections/queries.js"></script>
-<script src="javascripts/collections/stages.js"></script>
-
-<script src="javascripts/collections/beers.js"></script>
-<script src="javascripts/collections/wine.js"></script>
-<script src="javascripts/collections/liquor.js"></script>
-<script src="javascripts/collections/tab.js"></script>
+	<script src="javascripts/models/beverage.js"></script>
 
 
+	<script src="javascripts/collections/queries.js"></script>
+	<script src="javascripts/collections/stages.js"></script>
 
-<script src="javascripts/views/navbar.js"></script>
-<script src="javascripts/views/beverage-view.js"></script>
-<script src="javascripts/views/beverages-list-view.js"></script>
-<script src="javascripts/views/tab-item-view.js"></script>
-<script src="javascripts/views/tab-list-view.js"></script>
+	<script src="javascripts/collections/beers.js"></script>
+	<script src="javascripts/collections/wine.js"></script>
+	<script src="javascripts/collections/liquor.js"></script>
+	<script src="javascripts/collections/tab.js"></script>
 
 
-<script src="javascripts/views/user-input.js"></script>
-<script src="javascripts/views/searchResults.js"></script>
-<script src="javascripts/views/roundView.js"></script>
-<script src="javascripts/views/queryView.js"></script>
-<script src="javascripts/views/stageView.js"></script>
-<script src="javascripts/client.js"></script>
+
+	<script src="javascripts/views/searchResults.js"></script>
+	<script src="javascripts/views/roundView.js"></script>
+	<script src="javascripts/views/queryView.js"></script>
+	<script src="javascripts/views/stageView.js"></script>
+	<script src="javascripts/views/user-input.js"></script>
+
+	<script src="javascripts/views/navbar.js"></script>
+	<script src="javascripts/views/beverage-view.js"></script>
+	<script src="javascripts/views/beverages-list-view.js"></script>
+	<script src="javascripts/views/tab-item-view.js"></script>
+	<script src="javascripts/views/tab-list-view.js"></script>
+	<script src="javascripts/client.js"></script>
 </body>
 </html>
