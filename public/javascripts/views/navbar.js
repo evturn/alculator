@@ -6,7 +6,7 @@ var Navbar = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click #beverage-nav' : 'activeNav',
+		'click #beverage-nav' : 'active',
 		'click #beer-tab'     : 'showBeers',
 		'click #wine-tab'	 		: 'showWine',
 		'click #liquor-tab'		: 'showLiquor'
@@ -15,7 +15,7 @@ var Navbar = Backbone.View.extend({
 		this.$el.html(this.navTemplate());
 		return this;
 	},
-	activeNav: function(e) {
+	active: function(e) {
 		e.preventDefault();
 		$('#beverage-nav').find('li.active').removeClass('active');
 		$(e.target).closest('li').addClass('active');
@@ -33,7 +33,7 @@ var Navbar = Backbone.View.extend({
 		var liquorList = new BeveragesListView({collection: liquor});
 	},
 	init: function() {
-		new UserInputView();
+		new UserInput();
 		boozeItems  = new Tab({reset: true, merge: false});
 		beers 		 	= new Beers();
 		wine 				= new Wine();

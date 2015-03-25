@@ -1,4 +1,4 @@
-var UserInputView = Backbone.View.extend({
+var UserInput = Backbone.View.extend({
 	el: '#user-input',
 	template: _.template($('#user-input-template').html()),
 	initialize: function() {
