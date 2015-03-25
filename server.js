@@ -4,10 +4,7 @@ var bodyParser 			= require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
 var logger 					= require('./logger');
   app.use(logger);
-var request 				= require('request');
-var url 						= require('url');
-var http 						= require('http');
-var fs 							= require('fs');
+
 
 app.use(express.static('public'));
 
