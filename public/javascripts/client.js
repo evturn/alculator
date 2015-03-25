@@ -13,15 +13,15 @@ $(function() {
     }
   });
 
-	setTimeout(function() {
-		$('#full-cover').trigger('click');
-	}, 2000);
+	// setTimeout(function() {
+	// 	$('#full-cover').trigger('click');
+	// }, 2000);
 
-  $('#full-cover').on('click', function() {
-			setTimeout(function(){ 
-				$('#full-cover').remove();
-				$(window).scrollTop(0);
-			}, 1500);
-	});
+ //  $('#full-cover').on('click', function() {
+	// 		setTimeout(function(){ 
+	// 			$('#full-cover').remove();
+	// 			$(window).scrollTop(0);
+	// 		}, 1500);
+	// });
 
 });
