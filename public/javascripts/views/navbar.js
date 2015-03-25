@@ -2,8 +2,7 @@ var Navbar = Backbone.View.extend({
 	el: '#nav',
 	navTemplate: _.template($('#nav-template').html()),
 	initialize: function() {
-		this.instantiateCollections();
-		this.instantiateViews();
+		this.init();
 		this.render();
 	},
 	events: {
@@ -33,17 +32,15 @@ var Navbar = Backbone.View.extend({
 		liquor.fetch({reset: true});
 		var liquorList = new BeveragesListView({collection: liquor});
 	},
-	instantiateCollections: function() {
+	init: function() {
+		new UserInputView();
 		boozeItems  = new Tab({reset: true, merge: false});
 		beers 		 	= new Beers();
 		wine 				= new Wine();
 		liquor      = new Liquor();
-		stages 			= new Stages({reset: true});
-		stages.fetch();
-	},
-	instantiateViews: function() {
-		new UserInputView();
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
+		stages 			= new Stages({reset: true});
+		stages.fetch();
 	},
 });
