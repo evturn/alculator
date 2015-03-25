@@ -14,6 +14,7 @@ var TabItemView = Backbone.View.extend({
 	},
 	destroy: function() {
 		this.model.destroy();
+		tabListView.counter();
 	},
 });
 
