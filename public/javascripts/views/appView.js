@@ -46,7 +46,7 @@ var AppView = Backbone.View.extend({
 		stages = new Stages({reset: true});
 	},
 	instantiateViews: function() {
-		new BeerItemsView({collection: beerItems});
+		new BeveragesListView({collection: beerItems});
 		new WineItemsView({collection: wineItems});
 		new LiquorItemsView({collection: liquorItems});
 		new UserInputView();
