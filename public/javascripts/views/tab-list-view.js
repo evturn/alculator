@@ -8,7 +8,8 @@ var TabListView = Backbone.View.extend({
   },
   addOne: function(model) {
     var view = new TabItemView({model: model});
-    this.$('#tab-list').append(view.render().el );
+    this.$('#tab-list').append(view.render().el);
+    return this;
   },
 	counter: function() {
 		tabCount = this.collection.where({selected: true}).length;

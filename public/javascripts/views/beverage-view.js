@@ -3,7 +3,8 @@ var BeverageView = Backbone.View.extend({
 	className: 'beverage-item',
 	template: _.template($('#beverage-template').html()),
 	initialize: function() {
-		userTab  = new Tab({reset: true, merge: false});
+		userTab  		= new Tab({reset: true, merge: false});
+		userTab.pop();
 		tabListView = new TabListView({collection: userTab});
 		this.render();
 	},
