@@ -47,8 +47,8 @@ var UserInput = Backbone.View.extend({
 		var soberingRate  = 0.015 * hours;
 		var bac 			    = (subTotal - soberingRate).toFixed(2);
 
-		var round     = new Round({bac: bac});
-		var roundView = new RoundView({model: round});
+		var product = new Round({bac: bac});
+		var results = new Results({model: product});
 	},
 	
 });
