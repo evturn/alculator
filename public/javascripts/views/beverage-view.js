@@ -1,7 +1,7 @@
 var BeverageView = Backbone.View.extend({
 	tagName: 'li',
 	className: 'beverage-item',
-	template: _.template($('#beer-item-view-template').html()),
+	template: _.template($('#beverage-template').html()),
 	initialize: function() {
 		this.render();
 	},
