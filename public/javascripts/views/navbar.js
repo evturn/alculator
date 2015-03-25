@@ -37,36 +37,19 @@ var Navbar = Backbone.View.extend({
 		$('#search-query').empty();
 	},
 	instantiateCollections: function() {
-		boozeItems = new BoozeItems({reset: true, merge: false});
-		beers = new Beers();
-		wineItems = new WineItems();
+		boozeItems  = new BoozeItems({reset: true, merge: false});
+		beers 		 	= new Beers();
+		wineItems 	= new WineItems();
 		liquorItems = new LiquorItems();
-		stages = new Stages({reset: true});
+		stages 			= new Stages({reset: true});
 	},
 	instantiateViews: function() {
-		new BeveragesListView({collection: beers});
-		new WineItemsView({collection: wineItems});
-		new LiquorItemsView({collection: liquorItems});
+		var beerList 	 = new BeveragesListView({collection: beers});
+		var wineList 	 = new BeveragesListView({collection: wineItems});
+		var liquorList = new BeveragesListView({collection: liquorItems});
 		new UserInputView();
 		new BoozeItemsView();
 		boozeQueueView = new BoozeQueueView();
 		this.setWineItems();
-	},
-	rotateBeer: function() {
-		setTimeout(function(){ 
-			this.setBeerItems();
-			this.rotateLiquor();
-		}.bind(this), 3000);
-	},
-	rotateLiquor: function() {
-		setTimeout(function(){ 
-			this.setLiquorItems();
-			this.rotateWine();
-		}.bind(this), 2000);
-	},
-	rotateWine: function() {
-		setTimeout(function(){ 
-			this.setWineItems();
-		}.bind(this), 2000);
 	},
 });
