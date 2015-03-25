@@ -1,5 +1,5 @@
 var TabListView = Backbone.View.extend({
-	el: '#tab-list',
+	el: '#tab',
 	counterTemplate: _.template($('#tab-counter-template').html()),
   initialize: function() {
     this.listenTo(this.collection, 'add', this.addOne);
@@ -7,11 +7,11 @@ var TabListView = Backbone.View.extend({
   },
   addOne: function(model) {
     var view = new TabItemView({model: model});
-    this.$el.append(view.render().el );
+    this.$('#tab-list').append(view.render().el );
   },
 	counter: function() {
 		tabCount = this.collection.where({selected: true}).length;
-		$('#tab').html(this.counterTemplate());
+		$('#counter').html(this.counterTemplate());
 		return this;
 	},
 });
