@@ -22,6 +22,11 @@ var UserInput = Backbone.View.extend({
 		var total = userTab.length;
 		var abvs  = [];
 		var ozs 	= [];
+		function getSum(array) {
+			var sum = array.reduce(function (a, b) {return a + b});
+			return sum;
+		}
+		
 
 		userTab.each(function(model) {
 			var abv 	 = model.get('abv');
@@ -31,8 +36,9 @@ var UserInput = Backbone.View.extend({
 			ozs.push(ounces);
 		});
 
-		var abvSum = abvs.reduce(function(a, b) {return a + b});
-		var ozSum = ozs.reduce(function(a, b) {return a + b});
+
+		var abvSum = getSum(abvs);
+		var ozSum = getSum(ozs);
 
 	 	var lbs		= parseInt($('#lbs').val());
 		var hours = parseInt($('#hours').val());		
