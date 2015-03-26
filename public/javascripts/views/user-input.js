@@ -25,12 +25,18 @@ var UserInput = Backbone.View.extend({
 		var abvs  		 = [];
 		var ozs 	     = [];
 		
+		function Drinker() {
+	 		this.lbs	 = parseInt($('#lbs').val());
+			this.hours = parseInt($('#hours').val());
+	 		this.rate  = $('#male').val() === 'male' ? 0.73 : 0.66;
+		}
+
 		function getSum(array) {
 			var sum = array.reduce(function (a, b) {return a + b});
 			return sum;
 		}
 	 	
-	 	function bac(abv, oz, user) {
+	 	function bac(abv, oz, drinker) {
 	 		var abvAverage 	 = abv / drinks;
 	 		var ethanolOz 	 = oz * (abvAverage * 0.01);	
 	 		var metricOz	   = (ethanolOz * 5.14).toFixed(2);
@@ -49,12 +55,6 @@ var UserInput = Backbone.View.extend({
 				ozs.push(ounces);
 			});		
 	 	}
-
-		function Drinker() {
-	 		this.lbs	 = parseInt($('#lbs').val());
-			this.hours = parseInt($('#hours').val());
-	 		this.rate  = $('#male').val() === 'male' ? 0.73 : 0.66;
-		}
 
 	 	createList(userTab);
 
