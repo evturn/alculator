@@ -19,15 +19,22 @@ var UserInput = Backbone.View.extend({
 	},
 	calculate: function(e) {
 		e.preventDefault();
-		var total = userTab.length;
+		var drinks = userTab.length;
 		var abvs  = [];
 		var ozs 	= [];
 		function getSum(array) {
 			var sum = array.reduce(function (a, b) {return a + b});
 			return sum;
 		}
-		
-
+	 	function bac(abv, oz, lbs, hours, rate) {
+	 		var abvAverage 	 = abv / drinks;
+	 		var ethanolOz 	 = oz * (abvAverage * 0.01);	
+	 		var metricOz	   = (ethanolOz * 5.14).toFixed(2);
+			var metabolism 	 = lbs * rate;
+			var subTotal 		 = (metricOz /  metabolism).toFixed(2);
+			var soberingRate = 0.015 * hours;
+			return (subTotal - soberingRate).toFixed(2);
+	 	}
 		userTab.each(function(model) {
 			var abv 	 = model.get('abv');
 			var ounces = model.get('ounces');
@@ -35,26 +42,20 @@ var UserInput = Backbone.View.extend({
 			abvs.push(abv);
 			ozs.push(ounces);
 		});
-
-
 		var abvSum = getSum(abvs);
 		var ozSum = getSum(ozs);
 
+		
 	 	var lbs		= parseInt($('#lbs').val());
-		var hours = parseInt($('#hours').val());		
+		var hours = parseInt($('#hours').val());
 		var sex 	= $('#male').val();
 	 	var rate  = sex === 'male' ? 0.73 : 0.66;
 
-  	var abvAverage  	= abvSum / total;
-	 	var ethanolOz 		= ozSum * (abvAverage * 0.01);
-	 	var metricOz	  	= (ethanolOz * 5.14).toFixed(2);
-		var metabolism 		= lbs * rate;
-		var subTotal 			= (metricOz /  metabolism).toFixed(2);
-		var soberingRate  = 0.015 * hours;
-		var bac 			    = (subTotal - soberingRate).toFixed(2);
+	 	var results = bac(abvSum, ozSum, lbs, hours, rate);
 
-		var product = new Round({bac: bac});
-		var results = new Results({model: product});
+
+		var product = new Round({bac: results});
+		var resultsModel = new Results({model: product});
 	},
 	
 });
