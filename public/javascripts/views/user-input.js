@@ -19,9 +19,10 @@ var UserInput = Backbone.View.extend({
 	},
 	calculate: function(e) {
 		e.preventDefault();
-		var drinks = userTab.length;
-		var abvs  = [];
-		var ozs 	= [];
+		var collection = userTab;
+		var drinks 		 = collection.length;
+		var abvs  		 = [];
+		var ozs 	     = [];
 		
 		function getSum(array) {
 			var sum = array.reduce(function (a, b) {return a + b});
@@ -49,8 +50,9 @@ var UserInput = Backbone.View.extend({
 	 	}
 
 	 	createList(userTab);
+
 		var abvSum = getSum(abvs);
-		var ozSum = getSum(ozs);
+		var ozSum  = getSum(ozs);
 	
 	 	var lbs		= parseInt($('#lbs').val());
 		var hours = parseInt($('#hours').val());
