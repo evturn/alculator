@@ -3,7 +3,6 @@ body {
 	background-repeat: repeat;
   background-position: center center;
   color: #fff;
-
 }
 
 #tab-list {
@@ -21,12 +20,10 @@ a:hover {
 	text-decoration: none;
 }
 
-
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 	background-color: #000;
 	color: #fff;
 }
-
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
 	border: 0.5px solid #000;
