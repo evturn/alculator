@@ -19,6 +19,7 @@ var UserInput = Backbone.View.extend({
 	},
 	calculate: function(e) {
 		e.preventDefault();
+		var user 			 = new Drinker();
 		var collection = userTab;
 		var drinks 		 = collection.length;
 		var abvs  		 = [];
@@ -29,13 +30,13 @@ var UserInput = Backbone.View.extend({
 			return sum;
 		}
 	 	
-	 	function bac(abv, oz, lbs, hours, rate) {
+	 	function bac(abv, oz, user) {
 	 		var abvAverage 	 = abv / drinks;
 	 		var ethanolOz 	 = oz * (abvAverage * 0.01);	
 	 		var metricOz	   = (ethanolOz * 5.14).toFixed(2);
-			var metabolism 	 = lbs * rate;
+			var metabolism 	 = user.lbs * user.rate;
 			var subTotal 		 = (metricOz /  metabolism).toFixed(2);
-			var soberingRate = 0.015 * hours;
+			var soberingRate = 0.015 * user.hours;
 			return (subTotal - soberingRate).toFixed(2);
 	 	}
 
@@ -49,17 +50,17 @@ var UserInput = Backbone.View.extend({
 			});		
 	 	}
 
+		function Drinker() {
+	 		this.lbs	 = parseInt($('#lbs').val());
+			this.hours = parseInt($('#hours').val());
+	 		this.rate  = $('#male').val() === 'male' ? 0.73 : 0.66;
+		}
+
 	 	createList(userTab);
 
-		var abvSum = getSum(abvs);
-		var ozSum  = getSum(ozs);
-	
-	 	var lbs		= parseInt($('#lbs').val());
-		var hours = parseInt($('#hours').val());
-	 	var rate  = $('#male').val() === 'male' ? 0.73 : 0.66;
-	 	console.log(rate);
-
-	 	var results = bac(abvSum, ozSum, lbs, hours, rate);
+		var abvSum 	= getSum(abvs);
+		var ozSum  	= getSum(ozs);
+	 	var results = bac(abvSum, ozSum, user);
 
 
 		var product = new Round({bac: results});
