@@ -62,10 +62,8 @@ var UserInput = Backbone.View.extend({
 		var ozSum  	= getSum(ozs);
 	 	var results = bac(abvSum, ozSum, user);
 
-
-		var product = new Round({bac: results});
+		var product 		 = new Round({bac: results});
 		var resultsModel = new Results({model: product});
 	},
-	
 });
 
