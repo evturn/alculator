@@ -1,4 +1,4 @@
-var Round = Backbone.Model.extend({
+var Result = Backbone.Model.extend({
 	defaults: {
 		sex: '',
 		hours: '',

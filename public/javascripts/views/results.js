@@ -1,18 +1,15 @@
 var Results = Backbone.View.extend({
 	el: $('#bac-calculation'),
-	model: Round,	
+	model: Result,	
 	template: _.template($('#bac-template').html()),
 	initialize: function() {
-		this.setStage();
+		this.render();
 	},
 	render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
-    return this;
-	},
-	setStage: function() {
 		var stageSetter = new Stage(this.model.attributes);
 		var stageView 	= new StageView({model: stageSetter});
-		this.render();
-	}
+    this.$el.html(this.template(this.model.toJSON()));
+    return this;
+  },
 });
 
