@@ -6,8 +6,8 @@ var Results = Backbone.View.extend({
 		this.render();
 	},
 	render: function() {
-		var stageSetter = new Stage(this.model.attributes);
-		var stageView 	= new StageView({model: stageSetter});
+		var description = new Stage(this.model.attributes);
+		var stageView 	= new StageView({model: description});
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
