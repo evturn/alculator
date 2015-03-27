@@ -10,8 +10,18 @@ body {
 	margin-top: 0;
 }
 
+#tab {
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 15px;
+}
+
 #tab-list {
 	min-height: 200px;
+	padding-top: 20px;
+}
+
+#user-input {
 	padding-top: 20px;
 }
 
@@ -26,16 +36,17 @@ a:hover {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #000;
-	color: #fff;
+	background-color: #fff;
+	color: #000;
+	font-size: 25px;
 }
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
-	border: 0.5px solid #000;
+	border: 0.5px solid #fff;
 }
 
 .nav-tabs.nav-justified > li > a {
-	border: 1px solid #fff;
+	border: 1px solid #000;
 }
 
 img.beverage-image {
