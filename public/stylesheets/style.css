@@ -5,6 +5,11 @@ body {
   color: #fff;
 }
 
+#title {
+	font-size: 55px;
+	margin-top: 0;
+}
+
 #tab-list {
 	min-height: 200px;
 	padding-top: 20px;
