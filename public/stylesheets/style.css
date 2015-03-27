@@ -20,7 +20,7 @@ body {
 }
 
 #tab-list {
-	min-height: 200px;
+	min-height: 160px;
 	padding-top: 20px;
 }
 
@@ -29,13 +29,12 @@ body {
 }
 
 a {
-	background-color: #fff;
-	color: #000000;
 	font-size: 19px;
 }
 
 a:hover {
 	text-decoration: none;
+	color: #000;
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
