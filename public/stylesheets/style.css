@@ -10,6 +10,10 @@ body {
 	margin-top: 0;
 }
 
+#bar {
+	min-height: 266px;
+}
+
 #tab {
   border: 1px solid white;
   border-radius: 6px;
