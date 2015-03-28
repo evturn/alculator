@@ -37,6 +37,7 @@ var UserInput = Backbone.View.extend({
 		}
 	 	
 	 	function newDrinker(collection){
+
 			collection.each(function(model) {
 				var abv 	 = model.get('abv');
 				var ounces = model.get('ounces');
@@ -45,30 +46,32 @@ var UserInput = Backbone.View.extend({
 				ozs.push(ounces);
 			});	
 
-			var user = new Drinker();
+			var drinker = new Drinker();
+	 		return drinker;
 	 		
 	 	}
 
-		var user = newDrinker(userTab);
-
-	 	function bac(drinker) {
-
-
-
+		function bac(drinker) {
 	 		var abvAverage 	 = drinker.abv / drinker.drinks;
-	 		var ethanolOz 	 = drinker.oz * (abvAverage * 0.01);	
-	 		var metricOz	   = (ethanolOz * 5.14).toFixed(2);
+	 		var ethanol 	 	 = drinker.ounces * (abvAverage * 0.01);	
+	 		var metricOz	   = (ethanol * 5.14).toFixed(2);
 			var metabolism 	 = drinker.lbs * drinker.rate;
 			var subTotal 		 = (metricOz /  metabolism).toFixed(2);
 			var soberingRate = 0.015 * drinker.hours;
-			return (subTotal - soberingRate).toFixed(2);
-	 	}
+			var bac 	  		 = (subTotal - soberingRate).toFixed(2);
+			drinker.bac      = bac; 
+			return drinker;
+ 		}
+		var user = newDrinker(userTab);
+		var bac = bac(user);
+		console.log(bac);
+	 	
 
 
-	 	var results = bac(user);
+	 	
 
-		var product 		 = new Result({bac: results});
-		var resultsModel = new Results({model: product});
+		// var product 		 = new Result({bac: results});
+		// var resultsModel = new Results({model: product});
 	},
 });
 
