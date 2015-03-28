@@ -64,7 +64,7 @@ var UserInput = Backbone.View.extend({
 		var bac  = user.calculate();
 	 	
 		var bacData = new Outcome({bac: bac});
-		var results = new BacResults({model: bacData})
+		var results = new BacResults({model: bacData});
 	},
 });
 
