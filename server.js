@@ -31,8 +31,8 @@ app.get('/search', function(request, response) {
 	beerChoice(response);
 });
 
-app.get('/stages', function(request, response) {
-	response.status(200).json(allStages);
+app.get('/outcomes', function(request, response) {
+	response.status(200).json(outcomes);
 });
 
 app.post('/rounds', parseUrlencoded, function(request, response) {
@@ -71,7 +71,7 @@ allWine		= [{name: "Red", abv: 13, img: "images/redglass.png", ounces: 5},
 		{name: "White", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
 		{name: "Champagne", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
 
-allStages = [
+outcomes = [
 	{name: "stage-zero", description: "No significant trace of alcohol in your blood", color: "zero", stage: 0},
 	{name: "stage-one", description: "No loss of coordination, slight euphoria and loss of shyness. Mildly relaxed and maybe a little lightheaded", color: "one", stage: 1},
 	{name: "stage-two", description: "Some minor impairment of reasoning and memory, lowering of caution. Your behavior may become exaggerated and emotions intensified (Good emotions are better, bad emotions are worse)", color: "one", stage: 2},
