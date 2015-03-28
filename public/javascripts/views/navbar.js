@@ -36,7 +36,5 @@ var Navbar = Backbone.View.extend({
 	init: function() {
 		new UserInput();
 		this.alternate();
-		stages = new Stages({reset: true});
-		stages.fetch();
 	},
 });

@@ -4,6 +4,5 @@ var Outcome = Backbone.Model.extend({
 		description: '',
 		color: ''
 	},
-	url: '/outcomes',
 });
 
