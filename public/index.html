@@ -90,44 +90,41 @@
 
 
 	<script type="text/template" id="results-template">
-	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
-  	<div class="modal-dialog">
-    	<div class="modal-content">
-      	
-      	<div class="modal-header">
-
-					<button type="button" class="btn btn-default" data-dismiss="modal">X</button>
-
-						<h2 class="modal-title text-center">YOUR BAC LEVEL</h2>
-					
-				</div>
-
-				<div class="modal-body">
-				<div class="container-fluid">
-          <div class="row">
-						
-						<div class="col-xs-12 col-sm-12 text-center">
-							<h1 class="results">&#8776; <%= bac %></h1>
-						</div>
-						
-						<div class="col-xs-12 col-sm-6 col-sm-offset-3 <%= color %>">
-							<!-- COLOR BAR -->
+		<div class="modal fade model-container" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+	  	<div class="modal-dialog">
+	    	<div class="modal-content">
+	      	
+	      	<div class="modal-header">
+						<button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+							<h2 class="modal-title text-center">YOUR BAC LEVEL</h2>
 						</div>
 
-						<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-							<h4 align="justify"><%= description %></h4>
+						<div class="modal-body">
+						<div class="container-fluid">
+		          <div class="row">
+								
+								<div class="col-xs-12 col-sm-12 text-center">
+									<h1 class="results">&#8776; <%= bac %></h1>
+								</div>
+								
+								<div class="col-xs-12 col-sm-8 col-sm-offset-2 <%= color %>">
+									<!-- COLOR BAR -->
+								</div>
+
+								<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+									<h4 align="justify"><%= description %></h4>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				</div>
+						</div>
 
-				<div class="modal-footer">
-					
-		    </div>
+						<div class="modal-footer">
+							
+				    </div>
 
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 	</script>
 
 
