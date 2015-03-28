@@ -1,4 +1,4 @@
-var Results = Backbone.View.extend({
+var RoundView = Backbone.View.extend({
 	el: $('#bac-calculation'),
 	model: Result,	
 	template: _.template($('#bac-template').html()),

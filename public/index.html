@@ -90,9 +90,10 @@
 
 
 	<script type="text/template" id="results-template">
-		<h2 class="results">YOUR BAC LEVEL</h2>
-		<h1 class="results">&#8776; <%= bac %></h1>
-	
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+			<h2 class="results">YOUR BAC LEVEL</h2>
+			<h1 class="results">&#8776; <%= bac %></h1>
+		</div>
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 <%= color %>">
 		</div>
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -206,15 +207,13 @@
 	<script src="javascripts/lib/backbone.js"></script>
 	<script src="javascripts/lib/bootstrap.js"></script>
 	<script src="javascripts/lib/backbone.localStorage.js"></script>
-	<script src="javascripts/models/query.js"></script>
 	<script src="javascripts/models/stage.js"></script>
 
 
-	<script src="javascripts/models/result.js"></script>
+	<!-- <script src="javascripts/models/result.js"></script> -->
 	<script src="javascripts/models/beverage.js"></script>
 
 
-	<script src="javascripts/collections/queries.js"></script>
 	<script src="javascripts/collections/stages.js"></script>
 
 	<script src="javascripts/collections/beers.js"></script>
@@ -222,12 +221,10 @@
 	<script src="javascripts/collections/liquor.js"></script>
 	<script src="javascripts/collections/tab.js"></script>
 
-
-	<script src="javascripts/views/searchResults.js"></script>
-	<script src="javascripts/views/queryView.js"></script>
-	<script src="javascripts/views/stageView.js"></script>
-
-	<script src="javascripts/views/results.js"></script>
+	
+	<!-- <script src="javascripts/views/stageView.js"></script> -->
+ 
+<!-- 	<script src="javascripts/views/results.js"></script> -->
 	<script src="javascripts/views/bac-results.js"></script>
 	<script src="javascripts/views/user-input.js"></script>
 	<script src="javascripts/views/navbar.js"></script>

@@ -1,4 +1,4 @@
-var Result = Backbone.Model.extend({
+var Round = Backbone.Model.extend({
 	defaults: {
 		bac: '',
 	},

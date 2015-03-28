@@ -1,9 +1,7 @@
 var Stage = Backbone.Model.extend({
 	defaults: {
-		name: '',
+		bac: '',
 		description: '',
-		color: 'red-danger',
-		stage: ''
 	}
 });
 

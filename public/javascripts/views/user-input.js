@@ -63,12 +63,8 @@ var UserInput = Backbone.View.extend({
 		var user = newDrinker(userTab);
 		var bac  = user.calculate();
 	 	
-
-
-	 	
-
-		// var product 		 = new Result({bac: results});
-		// var resultsModel = new Results({model: product});
+		var product 		 = new Result({bac: results});
+		var resultsModel = new Results({model: product});
 	},
 });
 
