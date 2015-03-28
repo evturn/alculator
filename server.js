@@ -3,7 +3,7 @@ var app 						= express();
 var bodyParser 			= require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
 var logger 					= require('./logger');
-  app.use(logger);
+app.use(logger);
 var request 				= require('request');
 
 app.use(express.static('public'));
@@ -13,31 +13,19 @@ app.get('/', function(require, response) {
 });
 
 app.get('/beers', function(request, response) {
-	response.status(200).json(allBeers);
+	response.status(200).json(beers);
 });
 
 app.get('/liquor', function(request, response) {
-	response.status(200).json(allLiquor);
+	response.status(200).json(liquor);
 });
 
 app.get('/wine', function(request, response) {
-	response.status(200).json(allWine);
-});
-
-app.get('/search', function(request, response) {	
-	var requestQuery = request.query;
-	requestName			 = requestQuery.name;
-	beerQuery	       = requestName.split(' ').join('+');
-	beerChoice(response);
+	response.status(200).json(wine);
 });
 
 app.get('/outcomes', function(request, response) {
 	response.status(200).json(outcomes);
-});
-
-app.post('/rounds', parseUrlencoded, function(request, response) {
-	var newRound = request.body;
-	response.status(201).json(newRound);
 });
 
 app.get('/tab', function(request, response) {
@@ -48,28 +36,41 @@ app.post('/tab', parseUrlencoded, function(request, response) {});
 
 app.delete('/tab', function(request, response) {});
 
+app.get('/search', function(request, response) {	
+	var requestQuery = request.query;
+	requestName			 = requestQuery.name;
+	beerQuery	       = requestName.split(' ').join('+');
+	beerChoice(response);
+});
+
 app.get('/queries', function(request, response) {
 	response.status(200).json();
 });
 
-var allBeers  = [{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
-		{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 12},
-		{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 12},
-		{name: "Stronger", abv: 10, "img": "images/bottle.png", ounces: 12}];
+var beers  = [
+	{name: "Light", abv: 4, img: "images/bottle.png", ounces: 12},
+	{name: "Standard", abv: 5, img: "images/bottle.png", ounces: 12},
+	{name: "Strong", abv: 7, "img": "images/bottle.png", ounces: 12},
+	{name: "Stronger", abv: 10, "img": "images/bottle.png", ounces: 12}
+];
 
-var allLiquor = [{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
-		{name: "Lowball", abv: 40, img: "images/low.png", ounces: 7},
-		{name: "Highball", abv: 40, img: "images/high.png", ounces: 8},
-		{name: "Cocktail", abv: 45, img: "images/cocktail.png", ounces: 5},
-		{name: "Margarita", abv: 25, img: "images/margarita.png", ounces: 9},
-		{name: "Cordial", abv: 20, img: "images/cordial.png", ounces: 2}];
+var liquor = [
+	{name: "shot", abv: 40, img: "images/shot.png", ounces: 1.5},
+	{name: "Lowball", abv: 40, img: "images/low.png", ounces: 7},
+	{name: "Highball", abv: 40, img: "images/high.png", ounces: 8},
+	{name: "Cocktail", abv: 45, img: "images/cocktail.png", ounces: 5},
+	{name: "Margarita", abv: 25, img: "images/margarita.png", ounces: 9},
+	{name: "Cordial", abv: 20, img: "images/cordial.png", ounces: 2}
+];
 
-var allWine		= [{name: "Red", abv: 13, img: "images/redglass.png", ounces: 5},
-		{name: "White", abv: 12.5, img: "images/whiteglass.png", ounces: 5},
-		{name: "Champagne", abv: 12, img: "images/champagneglass.png", ounces: 5.5},
-		{name: "Red", abv: 13, img: "images/bottle-red.png", ounces: 25},
-		{name: "White", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
-		{name: "Champagne", abv: 12, img: "images/bottle-champagne.png", ounces: 25}]
+var wine		= [
+	{name: "Red", abv: 13, img: "images/redglass.png", ounces: 5},
+	{name: "White", abv: 12.5, img: "images/whiteglass.png", ounces: 5},
+	{name: "Champagne", abv: 12, img: "images/champagneglass.png", ounces: 5.5},
+	{name: "Red", abv: 13, img: "images/bottle-red.png", ounces: 25},
+	{name: "White", abv: 12.5, img: "images/bottle-white.png", ounces: 25},
+	{name: "Champagne", abv: 12, img: "images/bottle-champagne.png", ounces: 25}
+];
 
 var outcomes = [
 	{name: "stage-zero", description: "No significant trace of alcohol in your blood", color: "zero", id: 0},
@@ -82,7 +83,8 @@ var outcomes = [
 	{name: "stage-seven", description: "Dysphoria predominates, nausea may appear. The drinker has the appearance of a 'sloppy drunk'", color: "four", id: 7},
 	{name: "stage-eight", description: "Feeling dazed, confused or otherwise disoriented. May need help to stand or walk. If you injure yourself you may not feel the pain. Some people experience nausea and vomiting at this level. The gag reflex is impaired and you can choke if you do vomit. Blackouts are likely at this level so you may not remember what has happened", color: "four", id: 8},
 	{name: "stage-nine", description: "You have little comprehension of where you are. You may pass out suddenly and be difficult to awaken. Coma is possible. This is the level of surgical anesthesia", color: "five", id: 9},
-	{name: "stage-ten", description: "Onset of coma, probable death due to respitory arrest", color: "five", id: 10}]
+	{name: "stage-ten", description: "Onset of coma, probable death due to respitory arrest", color: "five", id: 10}
+];
 
 var beerChoice = function(responseObject) {
 	var	beersList = [];
