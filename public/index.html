@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alculator</title>
 	<link rel="icon" type="image/png" href="images/alc-icon.png">
-		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/lib/bootstrap-theme.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/lib/font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
 <body>
@@ -153,20 +154,9 @@
 	<script type="text/template" id="user-input-template">
 		<div class="col-xs-12 col-sm-12" id="user-form">
 			<form>
-				<div class="col-xs-12 col-sm-3">
-			  	<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary active">
-    <input type="radio" name="options" id="male" autocomplete="off" checked> MALE
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="female" autocomplete="off"> FEMALE
-  </label>
-</div>
-				</div>
-				
-				<div class="col-xs-12 col-sm-3">
+
+				<div class="col-xs-6 col-sm-2 col-sm-offset-2">
 					<div class="form-group">
-						<label for="hours">HOURS SINCE 1st DRINK</label>
 						<select class="form-control input-lg" name="hours" id="hours">
 							<option>0</option>
 							<option>1</option>
@@ -182,20 +172,34 @@
 							<option>11</option>
 							<option>12</option>
 						</select>
+						<label for="hours">HOURS DRINKING</label>
 					</div>
 				</div>
 					
-				<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-6 col-sm-2">
 					<div class="form-group">
-						<label for="lbs">WEIGHT IN LBS</label>
 					  <input class="form-control input-lg" type="password" id="lbs" name="lbs" placeholder="&#x95;&#x95;&#x95;">
+						<label for="lbs">WEIGHT IN LBS</label>
 					</div>
 				</div>
-				
-				<div class="col-xs-12 col-sm-3"
+
+				<div class="col-xs-6 col-sm-2">
+			  	<div class="btn-group" data-toggle="buttons">
+  					<label class="btn btn-default active">
+    					<input type="radio" name="options" id="male" autocomplete="off" checked> <i class="fa fa-male fa-2x"></i>
+  					</label>
+  					<label class="btn btn-default">
+    					<input type="radio" name="options" id="female" autocomplete="off"> <i class="fa fa-female fa-2x"></i>
+  					</label>
+						<label>MALE OR FEMALE</label>
+					</div>
+				</div>
+		
+				<div class="col-xs-6 col-sm-2"
 					<div class="form-group">
-						<label for="lbs">SUBMIT</label>
-						<input class="form-control input-lg" type="submit" value="DONE" id="bac-btn" data-toggle="modal" data-target="#modal">
+							<button class="form-control input-lg" type="button" id="bac-btn" data-toggle="modal" data-target="#modal"> <span><i class="fa fa-thumbs-up"></i></span></button>
+							<label>SUBMIT</label>
+						
 					</div>
 				</div>
 			</form>
