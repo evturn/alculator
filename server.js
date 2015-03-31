@@ -59,7 +59,7 @@ var liquor = [
 	{name: "Lowball", abv: 40, img: "images/low.png", ounces: 7},
 	{name: "Highball", abv: 40, img: "images/high.png", ounces: 8},
 	{name: "Cocktail", abv: 45, img: "images/cocktail.png", ounces: 5},
-	{name: "Margarita", abv: 25, img: "images/margarita.png", ounces: 9},
+	{name: "Margarita", abv: 10, img: "images/margarita.png", ounces: 9},
 	{name: "Cordial", abv: 20, img: "images/cordial.png", ounces: 2}
 ];
 
