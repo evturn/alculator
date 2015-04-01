@@ -22,7 +22,7 @@ var UserInput = Backbone.View.extend({
 		var abvs  		 = [];
 		var ozs 	     = [];
 		
-		var Drinker = function(){
+		var Drinker = function() {
 	 		this.lbs	  = parseInt($('#lbs').val());
 			this.hours  = parseInt($('#hours').val());
 	 		this.rate   = $('#male').val() === 'male' ? 0.73 : 0.66;
