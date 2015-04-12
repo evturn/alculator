@@ -2,6 +2,7 @@ body {
 	background-image: url('../images/low_contrast_linen.png');
 	background-repeat: repeat;
   background-position: center center;
+  font-family: 'PT Sans', sans-serif;
   color: #fff;
 }
 
