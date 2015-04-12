@@ -1,0 +1,27 @@
+{
+  "name": "Alculator",
+  "version": "1.0.0",
+  "description": "Alculator is an alcohol calculator.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.9.8",
+    "body-parser": "^1.10.1",
+    "request": "^2.51.0",
+    "nodemon": "^1.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evturn/alculator-node.git"
+  },
+  "author": "Evan Turner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evturn/alculator-node/issues"
+  },
+  "homepage": "https://github.com/evturn/alculator-node"
+}
