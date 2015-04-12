@@ -11,13 +11,31 @@ label.block {
 }
 
 label.btn.btn-default {
+	background-color: transparent;
 	height: 45px;
 	font-size: 22px;
+	color: #a3a3a3;
+}
+
+label.btn.btn-default.active {
+	background-color: #a3a3a3;
+	color: #fff;
+}
+
+.form-control {
+  background-color: transparent !important;
+  border: 1px solid #fff;
+  color: #fff;
+  height: 46px;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: #a3a3a3;
 }
 
 p.step {
 	text-align: center;
-	font-size: 36px;
+	font-size: 28px;
 }
 
 .inline-block {
