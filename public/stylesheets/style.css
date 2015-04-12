@@ -10,6 +10,11 @@ label.block {
 	display: block;
 }
 
+label.btn.btn-default {
+	height: 45px;
+	font-size: 22px;
+}
+
 p.step {
 	text-align: center;
 	font-size: 36px;
@@ -203,3 +208,41 @@ h1.results {
 .red {
 	color: #bd574b;
 }
+
+
+
+@media (min-width: 1190px) {
+	label.btn.btn-default {
+		display: inline-block;
+		height: 45px;
+		width: 38px;
+		font-size: 22px;
+		padding-left: 5px
+	}
+	.user-radio {
+		width: 9.3%;
+	}	
+}
+
+@media (min-width: 992px) {
+	label.btn.btn-default {
+		display: inline-block;
+		height: 45px;
+		width: 28px;
+		font-size: 22px;
+		padding-left: 5px
+	}
+	.user-radio {
+		width: 9.3%;
+	}	
+
+}
+
+@media (max-width: 767px) {
+	label.btn.btn-default {
+		height: 45px;
+		width: 38px;
+		font-size: 22px;
+	}
+}
+
