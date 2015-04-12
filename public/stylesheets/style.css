@@ -46,6 +46,10 @@ p.step {
 	min-height: 160px;
 }
 
+#bar h5 {
+	color: #fcfcfc;
+}
+
 #tab {
   position: relative;
 }
@@ -60,6 +64,11 @@ p.step {
 
 #counter {
 	padding-top: 20px;
+}
+
+span.badge {
+	background: #000;
+	color: #fcfcfc;
 }
 
 #tab-list {
