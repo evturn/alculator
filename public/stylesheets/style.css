@@ -10,6 +10,15 @@ label.block {
 	display: block;
 }
 
+p.step {
+	text-align: center;
+	font-size: 36px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
 #title {
 	font-size: 55px;
 	margin-top: 0;
