@@ -81,10 +81,6 @@ span.badge {
 	border: none;
 }
 
-a {
-	font-size: 19px;
-}
-
 a:hover {
 	text-decoration: none;
 	color: #000;
@@ -129,7 +125,7 @@ ul#tab-list li img:hover {
 
 li.beverage-item {
 	text-align: center;
-	padding-top: 15px;
+	padding-top: 25px;
 }
 
 ul#beverages-list li {
@@ -154,6 +150,17 @@ h1.results {
 
 #search-query {
 	padding-top: 6%;
+}
+
+.footer {
+	bottom: 0;
+	padding-top: 15px;
+	color: #a3a3a3;
+}
+
+.footer a {
+	background: none;
+	color: #a3a3a3;
 }
 
 .zero {
