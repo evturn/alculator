@@ -34,6 +34,9 @@ var Navbar = Backbone.View.extend({
 		var beveragesList = new BeveragesListView({collection: collection});
 	},
 	init: function() {
+		userTab  		= new Tab({reset: true, merge: false});
+		userTab.pop();
+		tabListView = new TabListView({collection: userTab});
 		new UserInput();
 		this.alternate();
 		outcomes = new Outcomes({reset: true});

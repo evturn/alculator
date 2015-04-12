@@ -50,10 +50,10 @@ var BacResults = Backbone.View.extend({
 		this.render(outcome);
 	},
 	reset: function() {
+		userTab  			= new Tab({reset: true, merge: false});
+		tabListView 	= new TabListView({collection: userTab});
 		userTab.length = 0;
 		$('#tab-list').empty()
 		var alculator = new Navbar();
-		userTab  			= new Tab({reset: true, merge: false});
-		tabListView 	= new TabListView({collection: userTab});
 	}
 });
