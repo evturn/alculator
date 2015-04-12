@@ -55,6 +55,7 @@
 		
 	<div class="container">
 		<div class="row text-center" id="tab">
+			<div class="border"></div>
 			<div class="col-xs-12 col-sm-12 text-center" id="counter">
 				
 				<!-- COUNTER -->
@@ -145,7 +146,7 @@
 	</script>
 
 	<script type="text/template" id="tab-counter-template">
-		<span class="badge" id="booze-queue" ><strong><%= userTab.length %></strong> <%= userTab.length === 1 ? 'item' : 'items' %> on your tab</span>
+		<span class="badge counter"><strong><%= userTab.length %></strong> <%= userTab.length === 1 ? 'item' : 'items' %> on your tab</span>
 	</script>
 
 	<script type="text/template" id="user-input-template">
