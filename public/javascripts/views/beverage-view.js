@@ -1,6 +1,6 @@
 var BeverageView = Backbone.View.extend({
 	tagName: 'li',
-	className: 'beverage-item',
+	className: 'beverage-item wow fadeInUp',
 	template: _.template($('#beverage-template').html()),
 	initialize: function() {
 		userTab  		= new Tab({reset: true, merge: false});

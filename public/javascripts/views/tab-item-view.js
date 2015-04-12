@@ -1,5 +1,6 @@
 var TabItemView = Backbone.View.extend({
 	tagName: 'li',
+	className: 'wow fadeInDown',
 	tabTemplate: _.template($('#tab-item-template').html()),
 	events: {
 		'click img': 'destroy',
