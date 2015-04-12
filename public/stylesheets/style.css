@@ -169,6 +169,7 @@ li {
 
 h1.results {
 	font-size: 100px;
+	margin-top: 0px;
 }
 
 #search-query {
@@ -225,6 +226,16 @@ h1.results {
 }
 .red {
 	color: #bd574b;
+}
+
+ul#color-bar li {
+	display: inline-block;
+}
+
+#color-bar li {
+	width: 19%;
+	padding: 0;
+	margin: 0;
 }
 
 
