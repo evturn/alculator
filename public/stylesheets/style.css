@@ -174,7 +174,8 @@ li {
 h1.results {
 	font-size: 100px;
 	margin-top: 0px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Merriweather', serif;
+	font-weight: 800;
 }
 
 #search-query {
