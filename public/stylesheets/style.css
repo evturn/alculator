@@ -20,8 +20,9 @@ p.step {
 }
 
 #title {
-	font-size: 55px;
+	font-size: 50px;
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .modal-backdrop {
