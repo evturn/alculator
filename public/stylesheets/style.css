@@ -243,6 +243,11 @@ ul#color-bar li {
 	margin: 0;
 }
 
+.color-bar-desc {
+	padding-top: 5px;
+	color: #000;
+}
+
 
 
 @media (min-width: 1190px) {
