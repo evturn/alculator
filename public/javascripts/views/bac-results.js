@@ -5,6 +5,9 @@ var BacResults = Backbone.View.extend({
 		var bac = this.model.get('bac');
 		this.diagnosis(bac);
 	},
+	events: {
+		'click .modal-btn' : 'reset'
+	},
 	render: function(model) {
 		var outcome = model.toJSON();
 		this.$el.html(this.resultsTemplate(outcome));
@@ -46,5 +49,11 @@ var BacResults = Backbone.View.extend({
 		var outcome = result.set({bac: bac});
 		this.render(outcome);
 	},
-		
+	reset: function() {
+		userTab.length = 0;
+		$('#tab-list').empty()
+		var alculator = new Navbar();
+		userTab  			= new Tab({reset: true, merge: false});
+		tabListView 	= new TabListView({collection: userTab});
+	}
 });
