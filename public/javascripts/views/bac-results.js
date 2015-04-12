@@ -11,33 +11,34 @@ var BacResults = Backbone.View.extend({
 		return this;
 	},
 	diagnosis: function(bac){
-		console.log('bac', bac);
-		if (bac < 0.02) {
-			var i = 0;	
-			} else if (bac < 0.04) {
-			var i = 1;
-			} else if (bac < 0.06) {
-			var i = 2;
-			} else if (bac < 0.07) {
-			var i = 3;
-			} else if (bac < 0.10) {
-			var i = 4;	
-			} else if (bac < 0.13) {
-			var i = 5;
-			} else if (bac < 0.16) {
-			var i = 6;
-			} else if (bac < 0.20) {
-			var i = 7;
-			} else if (bac < 0.25) {
-			var i = 8;
-			} else if (bac < 0.30) {
-			var i = 9;
-			} else if (bac >= 0.30) {
-			var i = 10;
-			} else {
-				alert('You sure you entered all your info?');
+		var i;
+		switch (true) {
+			case (bac < 0.02): i = 0;
+			break
+			case (bac < 0.04): i = 1;
+			break
+			case (bac < 0.06): i = 2;
+			break
+			case (bac < 0.07): i = 3;
+			break
+			case (bac < 0.10): i = 4;
+			break
+			case (bac < 0.13): i = 5;
+			break
+			case (bac < 0.16): i = 6;
+			break
+			case (bac < 0.20): i = 7;
+			break
+			case (bac < 0.25): i = 8;
+			break
+			case (bac < 0.30): i = 9;
+			break
+			case (bac >= 0.30): i = 10;
+			break
+			default: alert('You sure you entered all your info?');
 			}
 
+		console.log('bac', bac, 'i', i);
 		this.description(i, bac);	
 	},
 	description: function(id, bac) {
