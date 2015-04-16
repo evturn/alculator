@@ -11,6 +11,8 @@ label.block {
 }
 
 label.btn.btn-default {
+	padding-left: 10%;
+	padding-right: 10%;
 	height: 45px;
 	font-size: 22px;
 	color: #000066;
@@ -24,6 +26,7 @@ label.btn.btn-default.active {
 
 .user-radio.btn-group {
 	width: 17%;
+	min-width: 200px;
 }
 
 .form-control {
