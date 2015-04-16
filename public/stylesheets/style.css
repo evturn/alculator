@@ -1,5 +1,5 @@
 body {
-	background-image: url('../images/low_contrast_linen.png');
+	background: #000066;
 	background-repeat: repeat;
   background-position: center center;
   font-family: 'PT Sans', sans-serif;
@@ -11,21 +11,25 @@ label.block {
 }
 
 label.btn.btn-default {
-	background-color: transparent;
 	height: 45px;
 	font-size: 22px;
-	color: #a3a3a3;
+	color: #000066;
 }
 
 label.btn.btn-default.active {
-	background-color: #a3a3a3;
+	background-color: #000066;
+	font-size: 22px;
 	color: #fff;
 }
 
+.user-radio.btn-group {
+	width: 17%;
+}
+
 .form-control {
-  background-color: transparent !important;
+  background-color: #fcfcfc !important;
   border: 1px solid #fff;
-  color: #fff;
+  color: #ccc;
   height: 46px;
 }
 
@@ -33,9 +37,13 @@ label.btn.btn-default.active {
 	color: #a3a3a3;
 }
 
+#bac-btn {
+	color: #000;
+}
+
 p.step {
 	text-align: center;
-	font-size: 28px;
+	font-size: 18px;
 }
 
 .inline-block {
@@ -257,7 +265,7 @@ ul#color-bar li {
 }
 
 
-
+/*
 @media (min-width: 1190px) {
 	label.btn.btn-default {
 		display: inline-block;
@@ -291,5 +299,5 @@ ul#color-bar li {
 		width: 38px;
 		font-size: 22px;
 	}
-}
+}*/
 
