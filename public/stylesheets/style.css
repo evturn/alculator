@@ -29,6 +29,10 @@ label.btn.btn-default.active {
 	min-width: 200px;
 }
 
+.radio-radio {
+	float: left;
+}
+
 .form-control {
   background-color: #fcfcfc !important;
   border: 1px solid #fff;
@@ -266,6 +270,14 @@ ul#color-bar li {
 	padding-top: 5px;
 	color: #000;
 }
+
+@media (max-width: 992px){
+.radio-radio {
+  text-align: center;
+}
+}
+
+
 
 
 /*
