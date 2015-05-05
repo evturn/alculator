@@ -6,7 +6,7 @@ var BeverageView = Backbone.View.extend({
 		this.render();
 	},
 	events: {
-		'click .beverage-image': 'select'
+		'click .img-beverage': 'select'
 	},
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
