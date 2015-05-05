@@ -1,9 +1,9 @@
 body {
-	background: #ccc;
+	background: #fff;
 	background-repeat: repeat;
   background-position: center center;
-  font-family: 'PT Sans', sans-serif;
-  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
 }
 
 label.block {
