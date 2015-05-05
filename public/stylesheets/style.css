@@ -1,9 +1,28 @@
+/*
+yellow #FFD464
+red    #F26964
+blue   #1253A4
+white  #F4F4F2
+black  #30302F
+*/
+
 body {
-	background: #ccc;
+	background: #FFD464;
 	background-repeat: repeat;
   background-position: center center;
   font-family: 'Open Sans', sans-serif;
-  color: #000;
+  color: #F4F4F2;
+}
+
+
+.btn-default.active {
+	background: #F4F4F2;
+	color: #30302F;
+}
+
+.btn-default {
+	background: #1253A4;
+	color: #F4F4F2;
 }
 
 label.block {
@@ -16,6 +35,7 @@ label.btn.btn-default {
 	height: 45px;
 	font-size: 22px;
 	color: #000;
+	text-transform: uppercase
 }
 
 label.btn.btn-default.active {
@@ -114,13 +134,13 @@ img.beverage-image {
 }
 
 img.beverage-image:hover {
-	background-color: #fff;
+	background-color: #1253A4;
 	border-radius: 6px;
 	
 }
 
 ul#tab-list li img:hover {
-	background-color: darkred;
+	background-color: #F26964;
 	border-radius: 6px;
 	
 }

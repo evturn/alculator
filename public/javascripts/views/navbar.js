@@ -17,7 +17,7 @@ var Navbar = Backbone.View.extend({
 		var target = $(e.currentTarget);
 		var button = target.find('button');
 		var id = button.data('id');
-		target.find('button.active').removeClass('active');
+		$('.active').removeClass('active');
 		button.addClass('active');
 		this.alternate(id);
 	},
