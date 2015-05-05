@@ -13,7 +13,7 @@ var TabListView = Backbone.View.extend({
     return this;
   },
 	counter: function() {
-		$('.counter-tab').html(this.counterTemplate());
+		$('.tab-counter').html(this.counterTemplate());
 		return this;
 	},
 });

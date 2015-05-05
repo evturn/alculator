@@ -14,10 +14,15 @@ body {
   color: #AE9C96;
 }
 
+h5, h4 {
+	font-family: 'Open Sans', sans-serif;
+}
+
 .btn-bar.active {
 	color: #FFFFFF;
 	background: #A6D8DE;
-	
+	border: 2px solid #fff;
+
 }
 
 .btn-bar {
