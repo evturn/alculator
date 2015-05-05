@@ -1,43 +1,13 @@
-	<div class="container-fluid" id="alculator">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 page-header text-center">
-				<h1 id="title"><em><span class="yellow">A</span><span class="orange">L</span><span class="red">C</span></em>ULATOR</h1>
-			</div>
-		</div>
-	</div>
+<% include ../partials/page-header %>
 
-	<div id="results"></div>
-	<div class="container-fluid" id="nav"></div>
+<div id="results"></div>
+
+<div class="container-fluid" id="nav"></div>
+
+<% include ../partials/bar %>	
+
+<% include ../partials/tab %>	
 	
-	<div class="container">
-		<div class="row text-center" id="bar"> 
-	  	<div class="col-xs-12 col-sm-12 text-center">
-	  		<ul id="beverages-list">
-	  			<!-- BEVERAGES -->
-	  		</ul>
-	  		<h5>Click to add</h5>
-			</div>
-  	</div>
-	</div>
-		
-	<div class="container">
-		<div class="row text-center" id="tab">
-			<div class="border"></div>
-			<div class="col-xs-12 col-sm-12 text-center" id="counter">
-				<!-- COUNTER -->
-			</div>
-			<div class="col-xs-12 col-sm-12 text-center">
-				<ul id="tab-list">			
-					<!-- USER SELECTIONS -->				
-				</ul>
-			</div>
-		</div>
-	</div>
+<div class="container" id="user-input"></div>
 
-	<div class="container" id="user-input"></div>
-
-	<div class="container">
-		<div class="col-xs-12 col-sm-12 text-center footer">
-			<p>&#169; 2015 <a href="http://evturn.com">evturn.com</a> | All Rights Reserved</p>
-		</div>
-	</div>
+<% include ../partials/footer %>
