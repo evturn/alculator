@@ -78,8 +78,9 @@ ul#beverages-list li {
 	min-width: 200px;
 }
 
-.radio-radio {
-	float: left;
+.btn-radio {
+	background: #fff;
+	height: 45px;
 }
 
 #bac-btn {

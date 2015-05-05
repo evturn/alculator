@@ -1,29 +1,9 @@
 <div class="container-fluid container-bar">
 	<div class="row"> 
 
-  	<div class="col-md-5 col-md-offset-1 bar-section text-center">
-  		<ul id="beverages-list">
-  			<!-- BEVERAGES -->
-  		</ul>
-			<div class="row">
-				<div class="col-md-4 nav-bar-section">
-					<button data-id="1" class="btn-bar">liquor</button>
-				</div>
-				<div class="col-md-4 nav-bar-section">
-					<button data-id="2" class="btn-bar active">wine</button>
-				</div>
-				<div class="col-md-4 nav-bar-section">
-					<button data-id="3" class="btn-bar">beer</button>
-				</div>
-			</div>
-  	</div>
+	<% include ./beverages-section %>
 
-  	<div class="col-md-5" class="tab-section">
-			<ul id="tab-list">			
-				<!-- USER SELECTIONS -->				
-			</ul>
-			<div class="tab-counter text-center"></div>
-		</div>
+	<% include ./tab-section %>
 
 	</div>
 </div>
