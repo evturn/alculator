@@ -1,5 +1,5 @@
 var TabListView = Backbone.View.extend({
-	el: '#tab',
+	el: '.tab-section',
 	counterTemplate: _.template($('#tab-counter-template').html()),
   initialize: function() {
   	this.counter();
