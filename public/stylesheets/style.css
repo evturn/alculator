@@ -53,10 +53,6 @@ p.step {
 	font-size: 18px;
 }
 
-.inline-block {
-	display: inline-block;
-}
-
 #title {
 	font-size: 50px;
 	margin-top: 0;
@@ -103,15 +99,6 @@ p.step {
 	text-align: center;
 }
 
-#counter {
-	padding-top: 20px;
-}
-
-span.badge {
-	background: #000;
-	color: #fcfcfc;
-}
-
 #tab-list {
 	min-height: 160px;
 	padding-top: 20px;
@@ -119,31 +106,6 @@ span.badge {
 
 .page-header {
 	border: none;
-}
-
-a:hover {
-	text-decoration: none;
-	color: #000;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	background-color: #fff;
-	color: #000;
-	font-size: 25px;
-	-webkit-box-shadow: 0px 4px 17px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 4px 17px -5px rgba(0,0,0,0.75);
-	box-shadow: 0px 4px 17px -5px rgba(0,0,0,0.75);
-}
-
-.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:focus {
-	border: 0.5px solid #fff;
-}
-
-.nav-tabs.nav-justified > li > a {
-	border: 1px solid #000;
-	-webkit-box-shadow: 0px 4px 17px -5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 4px 17px -5px rgba(0,0,0,0.75);
-	box-shadow: 0px 4px 17px -5px rgba(0,0,0,0.75);
 }
 
 img.beverage-image {
