@@ -18,6 +18,13 @@ body {
 	height:100%;
 }
 
+input.user-input-field, button#bac-btn.form-control.input-lg.user-input-field, select#hours.form-control.input-lg.user-input-field {
+	background: #AE9C96;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 1px;
+}
+
 .wrapper {
 	min-height: 100vh;
  	position: relative;
@@ -101,10 +108,6 @@ ul#beverages-list li {
 
 .user-input {
 	padding-top: 15px;
-}
-
-#bac-btn {
-	color: #000;
 }
 
 p.step {
