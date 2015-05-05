@@ -16,13 +16,21 @@ body {
 
 
 .btn-default.active {
-	background: #F4F4F2;
-	color: #30302F;
+	background: #1253A4;
+	
+	border: transparent;
+	height: 42px;
+	margin-top: 8px;
+	color: #F4F4F2;
 }
 
 .btn-default {
 	background: #1253A4;
+	height: 50px;
 	color: #F4F4F2;
+	border-left: 8px solid #F26964;
+	border-bottom: 8px solid #F4F4F2;
+	text-transform: uppercase;
 }
 
 label.block {
@@ -51,17 +59,6 @@ label.btn.btn-default.active {
 
 .radio-radio {
 	float: left;
-}
-
-.form-control {
-  background-color: #fcfcfc !important;
-  border: 1px solid #fff;
-  color: #ccc;
-  height: 46px;
-}
-
-.form-control::-webkit-input-placeholder {
-	color: #a3a3a3;
 }
 
 #bac-btn {
