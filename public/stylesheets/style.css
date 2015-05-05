@@ -29,6 +29,7 @@ label.btn.user-input-field {
 	border: 2px solid #A6D8DE;
 	width: 133px;
 	height: 45px;
+	text-transform: uppercase;
 }
 
 label.btn.user-input-field.active {
@@ -42,6 +43,10 @@ input.user-input-field, button#bac-btn.form-control.input-lg.user-input-field, s
 	color: #fff;
 	border: 1px solid #fff;
 	border-radius: 1px;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: #fff;
 }
 
 /*.btn-radio {
