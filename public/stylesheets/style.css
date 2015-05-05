@@ -1,5 +1,5 @@
 body {
-	background: #fff;
+	background: #ccc;
 	background-repeat: repeat;
   background-position: center center;
   font-family: 'Open Sans', sans-serif;
@@ -91,15 +91,6 @@ p.step {
 	font-family: 'PT Sans', sans-serif;
 }
 
-#bar {
-	min-height: 160px;
-}
-
-#bar h5 {
-	padding: 10px;
-	color: #fcfcfc;
-}
-
 #tab {
   position: relative;
 }
@@ -174,7 +165,6 @@ ul#tab-list li img:hover {
 
 li.beverage-item {
 	text-align: center;
-	padding-top: 25px;
 }
 
 ul#beverages-list li {
@@ -270,49 +260,3 @@ ul#color-bar li {
 	padding-top: 5px;
 	color: #000;
 }
-
-@media (max-width: 992px){
-.radio-radio {
-  text-align: center;
-}
-}
-
-
-
-
-/*
-@media (min-width: 1190px) {
-	label.btn.btn-default {
-		display: inline-block;
-		height: 45px;
-		width: 38px;
-		font-size: 22px;
-		padding-left: 5px
-	}
-	.user-radio {
-		width: 9.3%;
-	}	
-}
-
-@media (min-width: 992px) {
-	label.btn.btn-default {
-		display: inline-block;
-		height: 45px;
-		width: 28px;
-		font-size: 22px;
-		padding-left: 5px
-	}
-	.user-radio {
-		width: 9.3%;
-	}	
-
-}
-
-@media (max-width: 767px) {
-	label.btn.btn-default {
-		height: 45px;
-		width: 38px;
-		font-size: 22px;
-	}
-}*/
-
