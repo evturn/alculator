@@ -12,19 +12,35 @@ body {
   background-position: center center;
   font-family: 'Open Sans', sans-serif;
   color: #AE9C96;
-	margin:0;
-	padding:0;
-	padding-bottom:60px;
+	margin: 0;
+	padding: 0;
+	/*padding-bottom: 60px;*/
 	height:100%;
 }
 
 .wrapper {
-	min-height: 100%;
+	min-height: 100vh;
  	position: relative;
+}
+
+.footer {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer a {
+	background: transparent;
+	color: #AE9C96;
 }
 
 h5, h4 {
 	font-family: 'Open Sans', sans-serif;
+}
+
+.app-header {
+	padding-bottom: 30px;
 }
 
 h1.app-header {
@@ -83,6 +99,10 @@ ul#beverages-list li {
 	height: 45px;
 }
 
+.user-input {
+	padding-top: 15px;
+}
+
 #bac-btn {
 	color: #000;
 }
@@ -121,15 +141,6 @@ h1.results {
 	font-weight: 800;
 }
 
-.footer {
-   position:absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-   background:#6cf;
-   background: #DDDAD6;
-}
-
 .modal-backdrop {
   background-color: #000;
 }
@@ -156,10 +167,6 @@ h1.results {
 
 .modal-body h4 {
 	font-family: 'PT Sans', sans-serif;
-}
-
-.footer a {
-	background: transparent;
 }
 
 .zero {
