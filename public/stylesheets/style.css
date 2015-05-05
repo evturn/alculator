@@ -15,8 +15,9 @@ body {
 }
 
 .btn-bar.active {
-	color: #000;
-	background: #fff;
+	color: #FFFFFF;
+	background: #A6D8DE;
+	
 }
 
 .btn-bar {
@@ -27,10 +28,6 @@ body {
 	text-transform: uppercase;
 	text-shadow: none;
 	border: 2px solid #A6D8DE;
-}
-
-.btn-bar:hover {
-	margin-bottom: -8px;
 }
 
 img.beverage-image {
@@ -56,25 +53,6 @@ li.beverage-item {
 
 ul#beverages-list li {
 	display: inline-block;
-}
-
-label.block {
-	display: block;
-}
-
-label.btn.btn-default {
-	padding-left: 10%;
-	padding-right: 10%;
-	height: 45px;
-	font-size: 22px;
-	color: #000;
-	text-transform: uppercase
-}
-
-label.btn.btn-default.active {
-	background-color: #000;
-	font-size: 22px;
-	color: #fff;
 }
 
 .user-radio.btn-group {
@@ -129,21 +107,8 @@ p.step {
 	font-family: 'PT Sans', sans-serif;
 }
 
-#tab {
-  position: relative;
-}
-
-.border {
-	position: absolute;
-	width: 75%;
-	margin-left: 12%;
-	border-top: 1px solid #a3a3a3;
-	text-align: center;
-}
-
 #tab-list {
-	min-height: 160px;
-	padding-top: 20px;
+	min-height: 130px;
 }
 
 ul#tab-list li {

@@ -1,23 +1,18 @@
 var Navbar = Backbone.View.extend({
-	el: '.container-nav',
-	navTemplate: _.template($('#nav-template').html()),
+	el: '.container-bar',
 	initialize: function() {
 		this.init();
-		this.render();
 		tabListView.counter();
 	},
 	events: {
 		'click .nav-bar-section' : 'active'	
-	},
-	render: function() {
-		this.$el.html(this.navTemplate());
-		return this;
 	},
 	active: function(e) {
 		e.preventDefault();
 		var target = $(e.currentTarget);
 		var button = target.find('button');
 		var id = button.data('id');
+		console.log(id);
 		$('.active').removeClass('active');
 		button.addClass('active');
 		this.alternate(id);

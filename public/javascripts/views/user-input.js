@@ -1,16 +1,11 @@
 var UserInput = Backbone.View.extend({
-	el: '#user-input',
-	template: _.template($('#user-input-template').html()),
+	el: '.user-input',
 	initialize: function() {
 		this.render();
 	},
 	events: {
 		'click #bac-btn'   		: 'checkout',
 		'keypress #user-form' : 'submit'
-	},
-	render: function() {
-		this.$el.html(this.template());
-		return this;
 	},
 	submit: function(e) {
 	  if (e.which === ENTER_KEY) {
