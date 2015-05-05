@@ -18,7 +18,19 @@ body {
 	height:100%;
 }
 
+.user-input {
+	padding-top: 15px;
+}
+
 input.user-input-field, button#bac-btn.form-control.input-lg.user-input-field, select#hours.form-control.input-lg.user-input-field {
+	background: #AE9C96;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 1px;
+}
+
+.btn-radio {
+	height: 45px;
 	background: #AE9C96;
 	color: #fff;
 	border: 1px solid #fff;
@@ -94,20 +106,6 @@ li.beverage-item {
 
 ul#beverages-list li {
 	display: inline-block;
-}
-
-.user-radio.btn-group {
-	width: 17%;
-	min-width: 200px;
-}
-
-.btn-radio {
-	background: #fff;
-	height: 45px;
-}
-
-.user-input {
-	padding-top: 15px;
 }
 
 p.step {
