@@ -1,36 +1,61 @@
 /*
-yellow #FFD464
-red    #F26964
-blue   #1253A4
-white  #F4F4F2
-black  #30302F
+grey  	 #DDDAD6
+white 	 #FFFFFF
+yellow	 #F9F1B5
+blue   	 #A6D8DE
+darkgrey #AE9C96
 */
 
 body {
-	background: #FFD464;
+	background: #DDDAD6;
 	background-repeat: repeat;
   background-position: center center;
   font-family: 'Open Sans', sans-serif;
-  color: #F4F4F2;
+  color: #AE9C96;
 }
 
-
-.btn-default.active {
-	background: #1253A4;
-	
-	border: transparent;
-	height: 42px;
-	margin-top: 8px;
-	color: #F4F4F2;
+.btn-bar.active {
+	color: #000;
+	background: #fff;
 }
 
-.btn-default {
-	background: #1253A4;
+.btn-bar {
+	width: 100%;
+	background: #F9F1B5;
 	height: 50px;
-	color: #F4F4F2;
-	border-left: 8px solid #F26964;
-	border-bottom: 8px solid #F4F4F2;
+	color: #AE9C96;
 	text-transform: uppercase;
+	text-shadow: none;
+	border: 2px solid #A6D8DE;
+}
+
+.btn-bar:hover {
+	margin-bottom: -8px;
+}
+
+img.beverage-image {
+	max-width: 80px;
+	max-height: 80px;
+}
+
+img.beverage-image:hover {
+	background-color: #A6D8DE;
+	border-radius: 6px;
+	
+}
+
+ul#tab-list li img:hover {
+	background-color: #F26964;
+	border-radius: 6px;
+	
+}
+
+li.beverage-item {
+	text-align: center;
+}
+
+ul#beverages-list li {
+	display: inline-block;
 }
 
 label.block {
@@ -121,35 +146,6 @@ p.step {
 	padding-top: 20px;
 }
 
-.page-header {
-	border: none;
-}
-
-img.beverage-image {
-	max-width: 80px;
-	max-height: 80px;
-}
-
-img.beverage-image:hover {
-	background-color: #1253A4;
-	border-radius: 6px;
-	
-}
-
-ul#tab-list li img:hover {
-	background-color: #F26964;
-	border-radius: 6px;
-	
-}
-
-li.beverage-item {
-	text-align: center;
-}
-
-ul#beverages-list li {
-	display: inline-block;
-}
-
 ul#tab-list li {
 	display: inline-block;
 }
@@ -167,10 +163,6 @@ h1.results {
 	margin-top: 0px;
 	font-family: 'Merriweather', serif;
 	font-weight: 800;
-}
-
-#search-query {
-	padding-top: 6%;
 }
 
 .footer {

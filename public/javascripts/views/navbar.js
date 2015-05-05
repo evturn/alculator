@@ -4,6 +4,7 @@ var Navbar = Backbone.View.extend({
 	initialize: function() {
 		this.init();
 		this.render();
+		tabListView.counter();
 	},
 	events: {
 		'click .nav-bar-section' : 'active'	
