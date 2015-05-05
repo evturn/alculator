@@ -14,12 +14,27 @@ body {
   color: #AE9C96;
 	margin: 0;
 	padding: 0;
-	/*padding-bottom: 60px;*/
 	height:100%;
 }
 
 .user-input {
 	padding-top: 15px;
+}
+
+label.btn.user-input-field {
+	font-size: 18px;
+	color: #A6D8DE;
+	border-radius: 1px;
+	background: #F9F1B5;
+	border: 2px solid #A6D8DE;
+	width: 133px;
+	height: 45px;
+}
+
+label.btn.user-input-field.active {
+	color: #fff;
+	background: #A6D8DE;
+	border: 2px solid #fff;
 }
 
 input.user-input-field, button#bac-btn.form-control.input-lg.user-input-field, select#hours.form-control.input-lg.user-input-field {
@@ -29,13 +44,13 @@ input.user-input-field, button#bac-btn.form-control.input-lg.user-input-field, s
 	border-radius: 1px;
 }
 
-.btn-radio {
+/*.btn-radio {
 	height: 45px;
 	background: #AE9C96;
 	color: #fff;
 	border: 1px solid #fff;
 	border-radius: 1px;
-}
+}*/
 
 .wrapper {
 	min-height: 100vh;
