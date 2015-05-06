@@ -258,4 +258,26 @@ ul#color-bar li {
   	max-width: 50px;
   	max-height: 50px;
 	}
+
+	.user-input {
+		bottom: 0;
+		position: absolute;
+	  margin-bottom: -65%;
+	}
+
+	.beverages-section {
+		position: relative;
+	}
+
+	#tab-list {
+  	min-height: 60px;
+	}
+	ul#tab-list {
+  	margin-top: 25px;
+	}
+	
+	p.color-bar-desc {
+		font-size: 10px;
+	}
+
 }
