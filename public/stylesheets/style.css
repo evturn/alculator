@@ -245,3 +245,17 @@ ul#color-bar li {
 	padding-top: 5px;
 	color: #000;
 }
+
+@media (max-width: 420px) {
+	label.btn.user-input-field {
+		width: 48%;
+		height: 45px;
+		font-size: 15px;
+	  line-height: 1.8em;
+	}
+
+	.img-beverage {
+  	max-width: 50px;
+  	max-height: 50px;
+	}
+}
